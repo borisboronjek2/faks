@@ -1,0 +1,6 @@
+#Start recording tcl command: 12/3/2020 12:05:40
+#Project Location: C:/Users/boris/slova; Project name: slova
+prj_project open "C:/Users/boris/slova/slova.ldf"
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+#Stop recording: 12/3/2020 12:44:34

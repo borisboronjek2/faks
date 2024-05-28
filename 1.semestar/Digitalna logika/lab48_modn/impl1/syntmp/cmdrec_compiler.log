@@ -1,0 +1,9 @@
+C:\lscc\diamond\3.11_x64\synpbase\bin64\c_hdl.exe  -osyn  C:\Users\boris\lab48_modn\impl1\synwork\lab48_modn_impl1_comp.srs  -top  count  -hdllog  C:\Users\boris\lab48_modn\impl1\synlog\lab48_modn_impl1_compiler.srr  -encrypt  -mp  4  -verification_mode 0  -vhdl  -prodtype  synplify_pro  -fixsmult -infer_seqShift -nram -sdff_counter -divnmod -nostructver  -encrypt  -pro  -dmgen  C:\Users\boris\lab48_modn\impl1\dm  -lite -ui -fid2 -ram -sharing on -ll 2000 -autosm  -ignore_undefined_lib  -lib work C:\lscc\diamond\3.11_x64\cae_library\synthesis\vhdl\xp2.vhd -lib work C:\Users\boris\lab48_modn\debouncer.vhd -lib work C:\Users\boris\lab48_modn\count8_modn.vhd  -jobname  "compiler" 
+relcom:..\..\..\..\..\lscc\diamond\3.11_x64\synpbase\bin64\c_hdl.exe -osyn ..\synwork\lab48_modn_impl1_comp.srs -top count -hdllog ..\synlog\lab48_modn_impl1_compiler.srr -encrypt -mp 4 -verification_mode 0 -vhdl -prodtype synplify_pro -fixsmult -infer_seqShift -nram -sdff_counter -divnmod -nostructver -encrypt -pro -dmgen ..\dm -lite -ui -fid2 -ram -sharing on -ll 2000 -autosm -ignore_undefined_lib -lib work ..\..\..\..\..\lscc\diamond\3.11_x64\cae_library\synthesis\vhdl\xp2.vhd -lib work ..\..\debouncer.vhd -lib work ..\..\count8_modn.vhd -jobname "compiler"
+rc:0 success:1 runtime:1
+file:..\synwork\lab48_modn_impl1_comp.srs|io:o|time:1607631964|size:3352|exec:0|csum:
+file:..\synlog\lab48_modn_impl1_compiler.srr|io:o|time:1607631964|size:4228|exec:0|csum:
+file:..\..\..\..\..\lscc\diamond\3.11_x64\cae_library\synthesis\vhdl\xp2.vhd|io:i|time:1542238336|size:146261|exec:0|csum:39E3C05F2F228E6747F370884BDFBB67
+file:..\..\debouncer.vhd|io:i|time:1607604504|size:689|exec:0|csum:9EEA47C0373117B2070F8F2846C9F004
+file:..\..\count8_modn.vhd|io:i|time:1607631958|size:757|exec:0|csum:0812BC4DF5DBD9611992E909553DA3BF
+file:..\..\..\..\..\lscc\diamond\3.11_x64\synpbase\bin64\c_hdl.exe|io:i|time:1554103094|size:5681664|exec:1|csum:39598EA786684F7CB53832C08B4CCDF5

@@ -1,0 +1,7 @@
+C:\lscc\diamond\3.11_x64\synpbase\bin64\syn_nfilter.exe  -link  -top  count  -multisrs  C:\Users\boris\lab4f\impl1\synwork\lab4f_impl1_comp.srs  -osyn  C:\Users\boris\lab4f\impl1\synwork\lab4f_impl1_mult.srs  -log  C:\Users\boris\lab4f\impl1\synlog\lab4f_impl1_multi_srs_gen.srr 
+relcom:..\..\..\..\..\lscc\diamond\3.11_x64\synpbase\bin64\syn_nfilter.exe -link -top count -multisrs ..\synwork\lab4f_impl1_comp.srs -osyn ..\synwork\lab4f_impl1_mult.srs -log ..\synlog\lab4f_impl1_multi_srs_gen.srr
+rc:0 success:1 runtime:0
+file:..\synwork\lab4f_impl1_comp.srs|io:i|time:1610640809|size:2955|exec:0|csum:47FEE02EA8811F8C8C4A2B4A4741122B
+file:..\synwork\lab4f_impl1_mult.srs|io:o|time:1610640811|size:1967|exec:0|csum:
+file:..\synlog\lab4f_impl1_multi_srs_gen.srr|io:o|time:1610640811|size:1099|exec:0|csum:
+file:..\..\..\..\..\lscc\diamond\3.11_x64\synpbase\bin64\syn_nfilter.exe|io:i|time:1554103352|size:8734720|exec:1|csum:0A206A5298321BBDD627E7975EAE3EC2

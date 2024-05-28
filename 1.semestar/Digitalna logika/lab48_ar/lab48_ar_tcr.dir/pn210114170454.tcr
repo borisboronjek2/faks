@@ -1,0 +1,10 @@
+#Start recording tcl command: 1/14/2021 17:04:45
+#Project Location: C:/Users/boris/lab48_ar; Project name: lab48_ar
+C:/Users/boris/lab4f
+lab4f
+#Start recording tcl command: 1/14/2021 17:04:54
+#Project Location: C:/Users/boris/lab4f; Project name: lab4f
+prj_project open "C:/Users/boris/lab48_ar/lab48_ar.ldf"
+prj_project close
+prj_project open "C:/Users/boris/lab4f/lab4f.ldf"
+#Stop recording: 1/14/2021 17:04:54

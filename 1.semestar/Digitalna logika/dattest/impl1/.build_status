@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Convert_HDL" build_result="2" build_time="1604568192">
+            <Task name="HDL_Conv" build_result="2" update_result="0" update_time="1604568192"/>
+        </Milestone>
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="IBIS" build_result="2" update_result="0" update_time="1604568227"/>
+            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1604568229"/>
+            <Task name="TimingSimFileVHD" build_result="2" update_result="0" update_time="1604568231"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1604568234"/>
+        </Milestone>
+        <Milestone name="Generate_HDL" build_result="2" build_time="1604568192">
+            <Task name="HDL_Gen" build_result="2" update_result="0" update_time="1604568192"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1604568216">
+            <Task name="Map" build_result="2" update_result="0" update_time="1604568216"/>
+            <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1604568225">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1604568225"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1604568227"/>
+            <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1604568213">
+            <Task name="Synplify_Synthesis" build_result="2" update_result="0" update_time="1604568213"/>
+        </Milestone>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1604568192"/>
+        </Milestone>
+        <Milestone name="Translate" build_result="2" build_time="1604568214">
+            <Task name="Translate" build_result="2" update_result="0" update_time="1604568214"/>
+        </Milestone>
+        <Report name="IBIS/uf_impl1.ibs" last_build_time="1604568227" last_build_size="84332"/>
+        <Report name="lab2.v" last_build_time="1604568192" last_build_size="1287"/>
+        <Report name="uf_impl1.bgn" last_build_time="1604568234" last_build_size="3469"/>
+        <Report name="uf_impl1.edi" last_build_time="1604568210" last_build_size="143448"/>
+        <Report name="uf_impl1.jed" last_build_time="1604568234" last_build_size="2006286"/>
+        <Report name="uf_impl1.ncd" last_build_time="1604568225" last_build_size="133174"/>
+        <Report name="uf_impl1.ngd" last_build_time="1604568214" last_build_size="131849"/>
+        <Report name="uf_impl1.twr" last_build_time="1604568226" last_build_size="45921"/>
+        <Report name="uf_impl1_map.ncd" last_build_time="1604568216" last_build_size="85674"/>
+        <Report name="uf_impl1_vho.sdf" last_build_time="1604568231" last_build_size="126026"/>
+        <Report name="uf_impl1_vho.vho" last_build_time="1604568230" last_build_size="123861"/>
+        <Report name="uf_impl1_vo.sdf" last_build_time="1604568229" last_build_size="126067"/>
+        <Report name="uf_impl1_vo.vo" last_build_time="1604568229" last_build_size="69464"/>
+    </Strategy>
+</BuildStatus>

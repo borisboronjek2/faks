@@ -1,0 +1,2905 @@
+
+-- VHDL netlist produced by program ldbanno, Version Diamond (64-bit) 3.11.0.396.4
+
+-- ldbanno -n VHDL -o uf_impl1_vho.vho -w -neg -gui -msgset C:/Users/boris/dattest/promote.xml uf_impl1.ncd 
+-- Netlist created on Thu Nov 05 10:23:34 2020
+-- Netlist written on Thu Nov 05 10:23:50 2020
+-- Design is for device LFXP2-8E
+-- Design is for package TQFP144
+-- Design is for performance grade 5
+
+-- entity ec2iobuf
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity ec2iobuf is
+    port (I: in Std_logic; PAD: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF ec2iobuf : ENTITY IS TRUE;
+
+  end ec2iobuf;
+
+  architecture Structure of ec2iobuf is
+    component OB
+      port (I: in Std_logic; O: out Std_logic);
+    end component;
+  begin
+    INST5: OB
+      port map (I=>I, O=>PAD);
+  end Structure;
+
+-- entity led_7_B
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity led_7_B is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "led_7_B";
+
+      tipd_PADDO  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_PADDO_led7	 : VitalDelayType01Z := (0 ns, 0 ns, 0 ns , 0 ns, 0 ns, 0 ns)
+        );
+
+    port (PADDO: in Std_logic; led7: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF led_7_B : ENTITY IS TRUE;
+
+  end led_7_B;
+
+  architecture Structure of led_7_B is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal PADDO_ipd 	: std_logic := 'X';
+    signal led7_out 	: std_logic := 'X';
+
+    component ec2iobuf
+      port (I: in Std_logic; PAD: out Std_logic);
+    end component;
+  begin
+    I25: ec2iobuf
+      port map (I=>PADDO_ipd, PAD=>led7_out);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(PADDO_ipd, PADDO, tipd_PADDO);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (PADDO_ipd, led7_out)
+    VARIABLE led7_zd         	: std_logic := 'X';
+    VARIABLE led7_GlitchData 	: VitalGlitchDataType;
+
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+
+    END IF;
+
+    led7_zd 	:= led7_out;
+
+    VitalPathDelay01Z (
+      OutSignal => led7, OutSignalName => "led7", OutTemp => led7_zd,
+      Paths      => (0 => (InputChangeTime => PADDO_ipd'last_event,
+                           PathDelay => tpd_PADDO_led7,
+                           PathCondition => TRUE)),
+      GlitchData => led7_GlitchData,
+      Mode       => vitaltransport, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity ec2iobuf0001
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity ec2iobuf0001 is
+    port (Z: out Std_logic; PAD: in Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF ec2iobuf0001 : ENTITY IS TRUE;
+
+  end ec2iobuf0001;
+
+  architecture Structure of ec2iobuf0001 is
+    component IBPD
+      port (I: in Std_logic; O: out Std_logic);
+    end component;
+  begin
+    INST1: IBPD
+      port map (I=>PAD, O=>Z);
+  end Structure;
+
+-- entity btn_centerB
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity btn_centerB is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "btn_centerB";
+
+      tipd_btncenter  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_btncenter_PADDI	 : VitalDelayType01 := (0 ns, 0 ns);
+      tperiod_btncenter 	: VitalDelayType := 0 ns;
+      tpw_btncenter_posedge	: VitalDelayType := 0 ns;
+      tpw_btncenter_negedge	: VitalDelayType := 0 ns);
+
+    port (PADDI: out Std_logic; btncenter: in Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF btn_centerB : ENTITY IS TRUE;
+
+  end btn_centerB;
+
+  architecture Structure of btn_centerB is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal PADDI_out 	: std_logic := 'X';
+    signal btncenter_ipd 	: std_logic := 'X';
+
+    component ec2iobuf0001
+      port (Z: out Std_logic; PAD: in Std_logic);
+    end component;
+  begin
+    btn_center_pad: ec2iobuf0001
+      port map (Z=>PADDI_out, PAD=>btncenter_ipd);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(btncenter_ipd, btncenter, tipd_btncenter);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (PADDI_out, btncenter_ipd)
+    VARIABLE PADDI_zd         	: std_logic := 'X';
+    VARIABLE PADDI_GlitchData 	: VitalGlitchDataType;
+
+    VARIABLE tviol_btncenter_btncenter          	: x01 := '0';
+    VARIABLE periodcheckinfo_btncenter	: VitalPeriodDataType;
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+      VitalPeriodPulseCheck (
+        TestSignal => btncenter_ipd,
+        TestSignalName => "btncenter",
+        Period => tperiod_btncenter,
+        PulseWidthHigh => tpw_btncenter_posedge,
+        PulseWidthLow => tpw_btncenter_negedge,
+        PeriodData => periodcheckinfo_btncenter,
+        Violation => tviol_btncenter_btncenter,
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        CheckEnabled => TRUE,
+        MsgSeverity => warning);
+
+    END IF;
+
+    PADDI_zd 	:= PADDI_out;
+
+    VitalPathDelay01 (
+      OutSignal => PADDI, OutSignalName => "PADDI", OutTemp => PADDI_zd,
+      Paths      => (0 => (InputChangeTime => btncenter_ipd'last_event,
+                           PathDelay => tpd_btncenter_PADDI,
+                           PathCondition => TRUE)),
+      GlitchData => PADDI_GlitchData,
+      Mode       => vitaltransport, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity rs232_txB
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity rs232_txB is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "rs232_txB";
+
+      tipd_IOLDO  	: VitalDelayType01 := (0 ns, 0 ns);
+
+        tpd_IOLDO_rs232tx	 : VitalDelayType01Z := (0 ns, 0 ns, 0 ns , 0 ns, 0 ns, 0 ns)
+        );
+
+    port (IOLDO: in Std_logic; rs232tx: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF rs232_txB : ENTITY IS TRUE;
+
+  end rs232_txB;
+
+  architecture Structure of rs232_txB is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal IOLDO_ipd 	: std_logic := 'X';
+    signal rs232tx_out 	: std_logic := 'X';
+
+    component ec2iobuf
+      port (I: in Std_logic; PAD: out Std_logic);
+    end component;
+  begin
+    rs232_tx_pad: ec2iobuf
+      port map (I=>IOLDO_ipd, PAD=>rs232tx_out);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(IOLDO_ipd, IOLDO, tipd_IOLDO);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (IOLDO_ipd, rs232tx_out)
+    VARIABLE rs232tx_zd         	: std_logic := 'X';
+    VARIABLE rs232tx_GlitchData 	: VitalGlitchDataType;
+
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+
+    END IF;
+
+    rs232tx_zd 	:= rs232tx_out;
+
+    VitalPathDelay01Z (
+      OutSignal => rs232tx, OutSignalName => "rs232tx", OutTemp => rs232tx_zd,
+      Paths      => (0 => (InputChangeTime => IOLDO_ipd'last_event,
+                           PathDelay => tpd_IOLDO_rs232tx,
+                           PathCondition => TRUE)),
+      GlitchData => rs232tx_GlitchData,
+      Mode       => vitaltransport, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity mfflsre
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity mfflsre is
+    port (D0: in Std_logic; SP: in Std_logic; CK: in Std_logic; 
+          LSR: in Std_logic; Q: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF mfflsre : ENTITY IS TRUE;
+
+  end mfflsre;
+
+  architecture Structure of mfflsre is
+    component FD1P3BX
+      generic (GSR: String);
+      port (D: in Std_logic; SP: in Std_logic; CK: in Std_logic; 
+            PD: in Std_logic; Q: out Std_logic);
+    end component;
+  begin
+    INST01: FD1P3BX
+      generic map (GSR => "DISABLED")
+      port map (D=>D0, SP=>SP, CK=>CK, PD=>LSR, Q=>Q);
+  end Structure;
+
+-- entity gndB
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity gndB is
+    port (PWR0: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF gndB : ENTITY IS TRUE;
+
+  end gndB;
+
+  architecture Structure of gndB is
+    component VLO
+      port (Z: out Std_logic);
+    end component;
+  begin
+    INST1: VLO
+      port map (Z=>PWR0);
+  end Structure;
+
+-- entity rs232_tx_MGIOL
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity rs232_tx_MGIOL is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "rs232_tx_MGIOL";
+
+      tipd_ONEG0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_CE  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_CLK  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_CLK_IOLDO	 : VitalDelayType01 := (0 ns, 0 ns);
+      ticd_CLK	: VitalDelayType := 0 ns;
+      tisd_ONEG0_CLK	: VitalDelayType := 0 ns;
+      tsetup_ONEG0_CLK_noedge_posedge	: VitalDelayType := 0 ns;
+      thold_ONEG0_CLK_noedge_posedge	: VitalDelayType := 0 ns;
+      tisd_CE_CLK	: VitalDelayType := 0 ns;
+      tsetup_CE_CLK_noedge_posedge	: VitalDelayType := 0 ns;
+      thold_CE_CLK_noedge_posedge	: VitalDelayType := 0 ns);
+
+    port (IOLDO: out Std_logic; ONEG0: in Std_logic; CE: in Std_logic; 
+          CLK: in Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF rs232_tx_MGIOL : ENTITY IS TRUE;
+
+  end rs232_tx_MGIOL;
+
+  architecture Structure of rs232_tx_MGIOL is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal IOLDO_out 	: std_logic := 'X';
+    signal ONEG0_ipd 	: std_logic := 'X';
+    signal ONEG0_dly 	: std_logic := 'X';
+    signal CE_ipd 	: std_logic := 'X';
+    signal CE_dly 	: std_logic := 'X';
+    signal CLK_ipd 	: std_logic := 'X';
+    signal CLK_dly 	: std_logic := 'X';
+
+    signal GNDI: Std_logic;
+    component gndB
+      port (PWR0: out Std_logic);
+    end component;
+    component mfflsre
+      port (D0: in Std_logic; SP: in Std_logic; CK: in Std_logic; 
+            LSR: in Std_logic; Q: out Std_logic);
+    end component;
+  begin
+    I1_R_tx_serio_0: mfflsre
+      port map (D0=>ONEG0_dly, SP=>CE_dly, CK=>CLK_dly, LSR=>GNDI, 
+                Q=>IOLDO_out);
+    DRIVEGND: gndB
+      port map (PWR0=>GNDI);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(ONEG0_ipd, ONEG0, tipd_ONEG0);
+      VitalWireDelay(CE_ipd, CE, tipd_CE);
+      VitalWireDelay(CLK_ipd, CLK, tipd_CLK);
+    END BLOCK;
+
+    --  Setup and Hold DELAYs
+    SignalDelay : BLOCK
+    BEGIN
+      VitalSignalDelay(ONEG0_dly, ONEG0_ipd, tisd_ONEG0_CLK);
+      VitalSignalDelay(CE_dly, CE_ipd, tisd_CE_CLK);
+      VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (IOLDO_out, ONEG0_dly, CE_dly, CLK_dly)
+    VARIABLE IOLDO_zd         	: std_logic := 'X';
+    VARIABLE IOLDO_GlitchData 	: VitalGlitchDataType;
+
+    VARIABLE tviol_ONEG0_CLK       	: x01 := '0';
+    VARIABLE ONEG0_CLK_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_CE_CLK       	: x01 := '0';
+    VARIABLE CE_CLK_TimingDatash	: VitalTimingDataType;
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+      VitalSetupHoldCheck (
+        TestSignal => ONEG0_dly,
+        TestSignalName => "ONEG0",
+        TestDelay => tisd_ONEG0_CLK,
+        RefSignal => CLK_dly,
+        RefSignalName => "CLK",
+        RefDelay => ticd_CLK,
+        SetupHigh => tsetup_ONEG0_CLK_noedge_posedge,
+        SetupLow => tsetup_ONEG0_CLK_noedge_posedge,
+        HoldHigh => thold_ONEG0_CLK_noedge_posedge,
+        HoldLow => thold_ONEG0_CLK_noedge_posedge,
+        CheckEnabled => TRUE,
+        RefTransition => '/',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => ONEG0_CLK_TimingDatash,
+        Violation => tviol_ONEG0_CLK,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => CE_dly,
+        TestSignalName => "CE",
+        TestDelay => tisd_CE_CLK,
+        RefSignal => CLK_dly,
+        RefSignalName => "CLK",
+        RefDelay => ticd_CLK,
+        SetupHigh => tsetup_CE_CLK_noedge_posedge,
+        SetupLow => tsetup_CE_CLK_noedge_posedge,
+        HoldHigh => thold_CE_CLK_noedge_posedge,
+        HoldLow => thold_CE_CLK_noedge_posedge,
+        CheckEnabled => TRUE,
+        RefTransition => '/',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => CE_CLK_TimingDatash,
+        Violation => tviol_CE_CLK,
+        MsgSeverity => warning);
+
+    END IF;
+
+    IOLDO_zd 	:= IOLDO_out;
+
+    VitalPathDelay01 (
+      OutSignal => IOLDO, OutSignalName => "IOLDO", OutTemp => IOLDO_zd,
+      Paths      => (0 => (InputChangeTime => CLK_dly'last_event,
+                           PathDelay => tpd_CLK_IOLDO,
+                           PathCondition => TRUE)),
+      GlitchData => IOLDO_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity ec2iobuf0002
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity ec2iobuf0002 is
+    port (Z: out Std_logic; PAD: in Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF ec2iobuf0002 : ENTITY IS TRUE;
+
+  end ec2iobuf0002;
+
+  architecture Structure of ec2iobuf0002 is
+    component IB
+      port (I: in Std_logic; O: out Std_logic);
+    end component;
+  begin
+    INST1: IB
+      port map (I=>PAD, O=>Z);
+  end Structure;
+
+-- entity clk_25mB
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity clk_25mB is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "clk_25mB";
+
+      tipd_clk25m  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_clk25m_PADDI	 : VitalDelayType01 := (0 ns, 0 ns);
+      tperiod_clk25m 	: VitalDelayType := 0 ns;
+      tpw_clk25m_posedge	: VitalDelayType := 0 ns;
+      tpw_clk25m_negedge	: VitalDelayType := 0 ns);
+
+    port (PADDI: out Std_logic; clk25m: in Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF clk_25mB : ENTITY IS TRUE;
+
+  end clk_25mB;
+
+  architecture Structure of clk_25mB is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal PADDI_out 	: std_logic := 'X';
+    signal clk25m_ipd 	: std_logic := 'X';
+
+    component ec2iobuf0002
+      port (Z: out Std_logic; PAD: in Std_logic);
+    end component;
+  begin
+    clk_25m_pad: ec2iobuf0002
+      port map (Z=>PADDI_out, PAD=>clk25m_ipd);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(clk25m_ipd, clk25m, tipd_clk25m);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (PADDI_out, clk25m_ipd)
+    VARIABLE PADDI_zd         	: std_logic := 'X';
+    VARIABLE PADDI_GlitchData 	: VitalGlitchDataType;
+
+    VARIABLE tviol_clk25m_clk25m          	: x01 := '0';
+    VARIABLE periodcheckinfo_clk25m	: VitalPeriodDataType;
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+      VitalPeriodPulseCheck (
+        TestSignal => clk25m_ipd,
+        TestSignalName => "clk25m",
+        Period => tperiod_clk25m,
+        PulseWidthHigh => tpw_clk25m_posedge,
+        PulseWidthLow => tpw_clk25m_negedge,
+        PeriodData => periodcheckinfo_clk25m,
+        Violation => tviol_clk25m_clk25m,
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        CheckEnabled => TRUE,
+        MsgSeverity => warning);
+
+    END IF;
+
+    PADDI_zd 	:= PADDI_out;
+
+    VitalPathDelay01 (
+      OutSignal => PADDI, OutSignalName => "PADDI", OutTemp => PADDI_zd,
+      Paths      => (0 => (InputChangeTime => clk25m_ipd'last_event,
+                           PathDelay => tpd_clk25m_PADDI,
+                           PathCondition => TRUE)),
+      GlitchData => PADDI_GlitchData,
+      Mode       => vitaltransport, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity btn_upB
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity btn_upB is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "btn_upB";
+
+      tipd_btnup  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_btnup_PADDI	 : VitalDelayType01 := (0 ns, 0 ns);
+      tperiod_btnup 	: VitalDelayType := 0 ns;
+      tpw_btnup_posedge	: VitalDelayType := 0 ns;
+      tpw_btnup_negedge	: VitalDelayType := 0 ns);
+
+    port (PADDI: out Std_logic; btnup: in Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF btn_upB : ENTITY IS TRUE;
+
+  end btn_upB;
+
+  architecture Structure of btn_upB is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal PADDI_out 	: std_logic := 'X';
+    signal btnup_ipd 	: std_logic := 'X';
+
+    component ec2iobuf0001
+      port (Z: out Std_logic; PAD: in Std_logic);
+    end component;
+  begin
+    btn_up_pad: ec2iobuf0001
+      port map (Z=>PADDI_out, PAD=>btnup_ipd);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(btnup_ipd, btnup, tipd_btnup);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (PADDI_out, btnup_ipd)
+    VARIABLE PADDI_zd         	: std_logic := 'X';
+    VARIABLE PADDI_GlitchData 	: VitalGlitchDataType;
+
+    VARIABLE tviol_btnup_btnup          	: x01 := '0';
+    VARIABLE periodcheckinfo_btnup	: VitalPeriodDataType;
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+      VitalPeriodPulseCheck (
+        TestSignal => btnup_ipd,
+        TestSignalName => "btnup",
+        Period => tperiod_btnup,
+        PulseWidthHigh => tpw_btnup_posedge,
+        PulseWidthLow => tpw_btnup_negedge,
+        PeriodData => periodcheckinfo_btnup,
+        Violation => tviol_btnup_btnup,
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        CheckEnabled => TRUE,
+        MsgSeverity => warning);
+
+    END IF;
+
+    PADDI_zd 	:= PADDI_out;
+
+    VitalPathDelay01 (
+      OutSignal => PADDI, OutSignalName => "PADDI", OutTemp => PADDI_zd,
+      Paths      => (0 => (InputChangeTime => btnup_ipd'last_event,
+                           PathDelay => tpd_btnup_PADDI,
+                           PathCondition => TRUE)),
+      GlitchData => PADDI_GlitchData,
+      Mode       => vitaltransport, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity smuxlregsre
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity smuxlregsre is
+    port (D0: in Std_logic; SP: in Std_logic; CK: in Std_logic; 
+          LSR: in Std_logic; Q: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF smuxlregsre : ENTITY IS TRUE;
+
+  end smuxlregsre;
+
+  architecture Structure of smuxlregsre is
+    component IFS1P3DX
+      generic (GSR: String);
+      port (D: in Std_logic; SP: in Std_logic; SCLK: in Std_logic; 
+            CD: in Std_logic; Q: out Std_logic);
+    end component;
+  begin
+    INST01: IFS1P3DX
+      generic map (GSR => "DISABLED")
+      port map (D=>D0, SP=>SP, SCLK=>CK, CD=>LSR, Q=>Q);
+  end Structure;
+
+-- entity vcc
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity vcc is
+    port (PWR1: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF vcc : ENTITY IS TRUE;
+
+  end vcc;
+
+  architecture Structure of vcc is
+    component VHI
+      port (Z: out Std_logic);
+    end component;
+  begin
+    INST1: VHI
+      port map (Z=>PWR1);
+  end Structure;
+
+-- entity btn_up_MGIOL
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity btn_up_MGIOL is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "btn_up_MGIOL";
+
+      tipd_DI  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_CLK  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_CLK_INFF	 : VitalDelayType01 := (0 ns, 0 ns);
+      ticd_CLK	: VitalDelayType := 0 ns;
+      tisd_DI_CLK	: VitalDelayType := 0 ns;
+      tsetup_DI_CLK_noedge_posedge	: VitalDelayType := 0 ns;
+      thold_DI_CLK_noedge_posedge	: VitalDelayType := 0 ns);
+
+    port (DI: in Std_logic; CLK: in Std_logic; INFF: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF btn_up_MGIOL : ENTITY IS TRUE;
+
+  end btn_up_MGIOL;
+
+  architecture Structure of btn_up_MGIOL is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal DI_ipd 	: std_logic := 'X';
+    signal DI_dly 	: std_logic := 'X';
+    signal CLK_ipd 	: std_logic := 'X';
+    signal CLK_dly 	: std_logic := 'X';
+    signal INFF_out 	: std_logic := 'X';
+
+    signal VCCI: Std_logic;
+    signal GNDI: Std_logic;
+    component gndB
+      port (PWR0: out Std_logic);
+    end component;
+    component smuxlregsre
+      port (D0: in Std_logic; SP: in Std_logic; CK: in Std_logic; 
+            LSR: in Std_logic; Q: out Std_logic);
+    end component;
+    component vcc
+      port (PWR1: out Std_logic);
+    end component;
+  begin
+    I1_R_byte_old_fastio_4: smuxlregsre
+      port map (D0=>DI_dly, SP=>VCCI, CK=>CLK_dly, LSR=>GNDI, Q=>INFF_out);
+    DRIVEVCC: vcc
+      port map (PWR1=>VCCI);
+    DRIVEGND: gndB
+      port map (PWR0=>GNDI);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(DI_ipd, DI, tipd_DI);
+      VitalWireDelay(CLK_ipd, CLK, tipd_CLK);
+    END BLOCK;
+
+    --  Setup and Hold DELAYs
+    SignalDelay : BLOCK
+    BEGIN
+      VitalSignalDelay(DI_dly, DI_ipd, tisd_DI_CLK);
+      VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (DI_dly, CLK_dly, INFF_out)
+    VARIABLE INFF_zd         	: std_logic := 'X';
+    VARIABLE INFF_GlitchData 	: VitalGlitchDataType;
+
+    VARIABLE tviol_DI_CLK       	: x01 := '0';
+    VARIABLE DI_CLK_TimingDatash	: VitalTimingDataType;
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+      VitalSetupHoldCheck (
+        TestSignal => DI_dly,
+        TestSignalName => "DI",
+        TestDelay => tisd_DI_CLK,
+        RefSignal => CLK_dly,
+        RefSignalName => "CLK",
+        RefDelay => ticd_CLK,
+        SetupHigh => tsetup_DI_CLK_noedge_posedge,
+        SetupLow => tsetup_DI_CLK_noedge_posedge,
+        HoldHigh => thold_DI_CLK_noedge_posedge,
+        HoldLow => thold_DI_CLK_noedge_posedge,
+        CheckEnabled => TRUE,
+        RefTransition => '/',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => DI_CLK_TimingDatash,
+        Violation => tviol_DI_CLK,
+        MsgSeverity => warning);
+
+    END IF;
+
+    INFF_zd 	:= INFF_out;
+
+    VitalPathDelay01 (
+      OutSignal => INFF, OutSignalName => "INFF", OutTemp => INFF_zd,
+      Paths      => (0 => (InputChangeTime => CLK_dly'last_event,
+                           PathDelay => tpd_CLK_INFF,
+                           PathCondition => TRUE)),
+      GlitchData => INFF_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity btn_rightB
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity btn_rightB is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "btn_rightB";
+
+      tipd_btnright  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_btnright_PADDI	 : VitalDelayType01 := (0 ns, 0 ns);
+      tperiod_btnright 	: VitalDelayType := 0 ns;
+      tpw_btnright_posedge	: VitalDelayType := 0 ns;
+      tpw_btnright_negedge	: VitalDelayType := 0 ns);
+
+    port (PADDI: out Std_logic; btnright: in Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF btn_rightB : ENTITY IS TRUE;
+
+  end btn_rightB;
+
+  architecture Structure of btn_rightB is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal PADDI_out 	: std_logic := 'X';
+    signal btnright_ipd 	: std_logic := 'X';
+
+    component ec2iobuf0001
+      port (Z: out Std_logic; PAD: in Std_logic);
+    end component;
+  begin
+    btn_right_pad: ec2iobuf0001
+      port map (Z=>PADDI_out, PAD=>btnright_ipd);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(btnright_ipd, btnright, tipd_btnright);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (PADDI_out, btnright_ipd)
+    VARIABLE PADDI_zd         	: std_logic := 'X';
+    VARIABLE PADDI_GlitchData 	: VitalGlitchDataType;
+
+    VARIABLE tviol_btnright_btnright          	: x01 := '0';
+    VARIABLE periodcheckinfo_btnright	: VitalPeriodDataType;
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+      VitalPeriodPulseCheck (
+        TestSignal => btnright_ipd,
+        TestSignalName => "btnright",
+        Period => tperiod_btnright,
+        PulseWidthHigh => tpw_btnright_posedge,
+        PulseWidthLow => tpw_btnright_negedge,
+        PeriodData => periodcheckinfo_btnright,
+        Violation => tviol_btnright_btnright,
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        CheckEnabled => TRUE,
+        MsgSeverity => warning);
+
+    END IF;
+
+    PADDI_zd 	:= PADDI_out;
+
+    VitalPathDelay01 (
+      OutSignal => PADDI, OutSignalName => "PADDI", OutTemp => PADDI_zd,
+      Paths      => (0 => (InputChangeTime => btnright_ipd'last_event,
+                           PathDelay => tpd_btnright_PADDI,
+                           PathCondition => TRUE)),
+      GlitchData => PADDI_GlitchData,
+      Mode       => vitaltransport, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity btn_leftB
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity btn_leftB is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "btn_leftB";
+
+      tipd_btnleft  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_btnleft_PADDI	 : VitalDelayType01 := (0 ns, 0 ns);
+      tperiod_btnleft 	: VitalDelayType := 0 ns;
+      tpw_btnleft_posedge	: VitalDelayType := 0 ns;
+      tpw_btnleft_negedge	: VitalDelayType := 0 ns);
+
+    port (PADDI: out Std_logic; btnleft: in Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF btn_leftB : ENTITY IS TRUE;
+
+  end btn_leftB;
+
+  architecture Structure of btn_leftB is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal PADDI_out 	: std_logic := 'X';
+    signal btnleft_ipd 	: std_logic := 'X';
+
+    component ec2iobuf0001
+      port (Z: out Std_logic; PAD: in Std_logic);
+    end component;
+  begin
+    btn_left_pad: ec2iobuf0001
+      port map (Z=>PADDI_out, PAD=>btnleft_ipd);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(btnleft_ipd, btnleft, tipd_btnleft);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (PADDI_out, btnleft_ipd)
+    VARIABLE PADDI_zd         	: std_logic := 'X';
+    VARIABLE PADDI_GlitchData 	: VitalGlitchDataType;
+
+    VARIABLE tviol_btnleft_btnleft          	: x01 := '0';
+    VARIABLE periodcheckinfo_btnleft	: VitalPeriodDataType;
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+      VitalPeriodPulseCheck (
+        TestSignal => btnleft_ipd,
+        TestSignalName => "btnleft",
+        Period => tperiod_btnleft,
+        PulseWidthHigh => tpw_btnleft_posedge,
+        PulseWidthLow => tpw_btnleft_negedge,
+        PeriodData => periodcheckinfo_btnleft,
+        Violation => tviol_btnleft_btnleft,
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        CheckEnabled => TRUE,
+        MsgSeverity => warning);
+
+    END IF;
+
+    PADDI_zd 	:= PADDI_out;
+
+    VitalPathDelay01 (
+      OutSignal => PADDI, OutSignalName => "PADDI", OutTemp => PADDI_zd,
+      Paths      => (0 => (InputChangeTime => btnleft_ipd'last_event,
+                           PathDelay => tpd_btnleft_PADDI,
+                           PathCondition => TRUE)),
+      GlitchData => PADDI_GlitchData,
+      Mode       => vitaltransport, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity btn_downB
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity btn_downB is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "btn_downB";
+
+      tipd_btndown  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_btndown_PADDI	 : VitalDelayType01 := (0 ns, 0 ns);
+      tperiod_btndown 	: VitalDelayType := 0 ns;
+      tpw_btndown_posedge	: VitalDelayType := 0 ns;
+      tpw_btndown_negedge	: VitalDelayType := 0 ns);
+
+    port (PADDI: out Std_logic; btndown: in Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF btn_downB : ENTITY IS TRUE;
+
+  end btn_downB;
+
+  architecture Structure of btn_downB is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal PADDI_out 	: std_logic := 'X';
+    signal btndown_ipd 	: std_logic := 'X';
+
+    component ec2iobuf0001
+      port (Z: out Std_logic; PAD: in Std_logic);
+    end component;
+  begin
+    btn_down_pad: ec2iobuf0001
+      port map (Z=>PADDI_out, PAD=>btndown_ipd);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(btndown_ipd, btndown, tipd_btndown);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (PADDI_out, btndown_ipd)
+    VARIABLE PADDI_zd         	: std_logic := 'X';
+    VARIABLE PADDI_GlitchData 	: VitalGlitchDataType;
+
+    VARIABLE tviol_btndown_btndown          	: x01 := '0';
+    VARIABLE periodcheckinfo_btndown	: VitalPeriodDataType;
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+      VitalPeriodPulseCheck (
+        TestSignal => btndown_ipd,
+        TestSignalName => "btndown",
+        Period => tperiod_btndown,
+        PulseWidthHigh => tpw_btndown_posedge,
+        PulseWidthLow => tpw_btndown_negedge,
+        PeriodData => periodcheckinfo_btndown,
+        Violation => tviol_btndown_btndown,
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        CheckEnabled => TRUE,
+        MsgSeverity => warning);
+
+    END IF;
+
+    PADDI_zd 	:= PADDI_out;
+
+    VitalPathDelay01 (
+      OutSignal => PADDI, OutSignalName => "PADDI", OutTemp => PADDI_zd,
+      Paths      => (0 => (InputChangeTime => btndown_ipd'last_event,
+                           PathDelay => tpd_btndown_PADDI,
+                           PathCondition => TRUE)),
+      GlitchData => PADDI_GlitchData,
+      Mode       => vitaltransport, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity led_3_B
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity led_3_B is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "led_3_B";
+
+      tipd_PADDO  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_PADDO_led3	 : VitalDelayType01Z := (0 ns, 0 ns, 0 ns , 0 ns, 0 ns, 0 ns)
+        );
+
+    port (PADDO: in Std_logic; led3: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF led_3_B : ENTITY IS TRUE;
+
+  end led_3_B;
+
+  architecture Structure of led_3_B is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal PADDO_ipd 	: std_logic := 'X';
+    signal led3_out 	: std_logic := 'X';
+
+    component ec2iobuf
+      port (I: in Std_logic; PAD: out Std_logic);
+    end component;
+  begin
+    I19: ec2iobuf
+      port map (I=>PADDO_ipd, PAD=>led3_out);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(PADDO_ipd, PADDO, tipd_PADDO);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (PADDO_ipd, led3_out)
+    VARIABLE led3_zd         	: std_logic := 'X';
+    VARIABLE led3_GlitchData 	: VitalGlitchDataType;
+
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+
+    END IF;
+
+    led3_zd 	:= led3_out;
+
+    VitalPathDelay01Z (
+      OutSignal => led3, OutSignalName => "led3", OutTemp => led3_zd,
+      Paths      => (0 => (InputChangeTime => PADDO_ipd'last_event,
+                           PathDelay => tpd_PADDO_led3,
+                           PathCondition => TRUE)),
+      GlitchData => led3_GlitchData,
+      Mode       => vitaltransport, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity led_1_B
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity led_1_B is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "led_1_B";
+
+      tipd_PADDO  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_PADDO_led1	 : VitalDelayType01Z := (0 ns, 0 ns, 0 ns , 0 ns, 0 ns, 0 ns)
+        );
+
+    port (PADDO: in Std_logic; led1: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF led_1_B : ENTITY IS TRUE;
+
+  end led_1_B;
+
+  architecture Structure of led_1_B is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal PADDO_ipd 	: std_logic := 'X';
+    signal led1_out 	: std_logic := 'X';
+
+    component ec2iobuf
+      port (I: in Std_logic; PAD: out Std_logic);
+    end component;
+  begin
+    I18: ec2iobuf
+      port map (I=>PADDO_ipd, PAD=>led1_out);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(PADDO_ipd, PADDO, tipd_PADDO);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (PADDO_ipd, led1_out)
+    VARIABLE led1_zd         	: std_logic := 'X';
+    VARIABLE led1_GlitchData 	: VitalGlitchDataType;
+
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+
+    END IF;
+
+    led1_zd 	:= led1_out;
+
+    VitalPathDelay01Z (
+      OutSignal => led1, OutSignalName => "led1", OutTemp => led1_zd,
+      Paths      => (0 => (InputChangeTime => PADDO_ipd'last_event,
+                           PathDelay => tpd_PADDO_led1,
+                           PathCondition => TRUE)),
+      GlitchData => led1_GlitchData,
+      Mode       => vitaltransport, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity led_2_B
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity led_2_B is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "led_2_B";
+
+      tipd_PADDO  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_PADDO_led2	 : VitalDelayType01Z := (0 ns, 0 ns, 0 ns , 0 ns, 0 ns, 0 ns)
+        );
+
+    port (PADDO: in Std_logic; led2: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF led_2_B : ENTITY IS TRUE;
+
+  end led_2_B;
+
+  architecture Structure of led_2_B is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal PADDO_ipd 	: std_logic := 'X';
+    signal led2_out 	: std_logic := 'X';
+
+    component ec2iobuf
+      port (I: in Std_logic; PAD: out Std_logic);
+    end component;
+  begin
+    I20: ec2iobuf
+      port map (I=>PADDO_ipd, PAD=>led2_out);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(PADDO_ipd, PADDO, tipd_PADDO);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (PADDO_ipd, led2_out)
+    VARIABLE led2_zd         	: std_logic := 'X';
+    VARIABLE led2_GlitchData 	: VitalGlitchDataType;
+
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+
+    END IF;
+
+    led2_zd 	:= led2_out;
+
+    VitalPathDelay01Z (
+      OutSignal => led2, OutSignalName => "led2", OutTemp => led2_zd,
+      Paths      => (0 => (InputChangeTime => PADDO_ipd'last_event,
+                           PathDelay => tpd_PADDO_led2,
+                           PathCondition => TRUE)),
+      GlitchData => led2_GlitchData,
+      Mode       => vitaltransport, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity led_0_B
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity led_0_B is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "led_0_B";
+
+      tipd_PADDO  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_PADDO_led0	 : VitalDelayType01Z := (0 ns, 0 ns, 0 ns , 0 ns, 0 ns, 0 ns)
+        );
+
+    port (PADDO: in Std_logic; led0: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF led_0_B : ENTITY IS TRUE;
+
+  end led_0_B;
+
+  architecture Structure of led_0_B is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal PADDO_ipd 	: std_logic := 'X';
+    signal led0_out 	: std_logic := 'X';
+
+    component ec2iobuf
+      port (I: in Std_logic; PAD: out Std_logic);
+    end component;
+  begin
+    I21: ec2iobuf
+      port map (I=>PADDO_ipd, PAD=>led0_out);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(PADDO_ipd, PADDO, tipd_PADDO);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (PADDO_ipd, led0_out)
+    VARIABLE led0_zd         	: std_logic := 'X';
+    VARIABLE led0_GlitchData 	: VitalGlitchDataType;
+
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+
+    END IF;
+
+    led0_zd 	:= led0_out;
+
+    VitalPathDelay01Z (
+      OutSignal => led0, OutSignalName => "led0", OutTemp => led0_zd,
+      Paths      => (0 => (InputChangeTime => PADDO_ipd'last_event,
+                           PathDelay => tpd_PADDO_led0,
+                           PathCondition => TRUE)),
+      GlitchData => led0_GlitchData,
+      Mode       => vitaltransport, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity led_4_B
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity led_4_B is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "led_4_B";
+
+      tipd_PADDO  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_PADDO_led4	 : VitalDelayType01Z := (0 ns, 0 ns, 0 ns , 0 ns, 0 ns, 0 ns)
+        );
+
+    port (PADDO: in Std_logic; led4: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF led_4_B : ENTITY IS TRUE;
+
+  end led_4_B;
+
+  architecture Structure of led_4_B is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal PADDO_ipd 	: std_logic := 'X';
+    signal led4_out 	: std_logic := 'X';
+
+    component ec2iobuf
+      port (I: in Std_logic; PAD: out Std_logic);
+    end component;
+  begin
+    I22: ec2iobuf
+      port map (I=>PADDO_ipd, PAD=>led4_out);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(PADDO_ipd, PADDO, tipd_PADDO);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (PADDO_ipd, led4_out)
+    VARIABLE led4_zd         	: std_logic := 'X';
+    VARIABLE led4_GlitchData 	: VitalGlitchDataType;
+
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+
+    END IF;
+
+    led4_zd 	:= led4_out;
+
+    VitalPathDelay01Z (
+      OutSignal => led4, OutSignalName => "led4", OutTemp => led4_zd,
+      Paths      => (0 => (InputChangeTime => PADDO_ipd'last_event,
+                           PathDelay => tpd_PADDO_led4,
+                           PathCondition => TRUE)),
+      GlitchData => led4_GlitchData,
+      Mode       => vitaltransport, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity led_6_B
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity led_6_B is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "led_6_B";
+
+      tipd_PADDO  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_PADDO_led6	 : VitalDelayType01Z := (0 ns, 0 ns, 0 ns , 0 ns, 0 ns, 0 ns)
+        );
+
+    port (PADDO: in Std_logic; led6: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF led_6_B : ENTITY IS TRUE;
+
+  end led_6_B;
+
+  architecture Structure of led_6_B is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal PADDO_ipd 	: std_logic := 'X';
+    signal led6_out 	: std_logic := 'X';
+
+    component ec2iobuf
+      port (I: in Std_logic; PAD: out Std_logic);
+    end component;
+  begin
+    I23: ec2iobuf
+      port map (I=>PADDO_ipd, PAD=>led6_out);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(PADDO_ipd, PADDO, tipd_PADDO);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (PADDO_ipd, led6_out)
+    VARIABLE led6_zd         	: std_logic := 'X';
+    VARIABLE led6_GlitchData 	: VitalGlitchDataType;
+
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+
+    END IF;
+
+    led6_zd 	:= led6_out;
+
+    VitalPathDelay01Z (
+      OutSignal => led6, OutSignalName => "led6", OutTemp => led6_zd,
+      Paths      => (0 => (InputChangeTime => PADDO_ipd'last_event,
+                           PathDelay => tpd_PADDO_led6,
+                           PathCondition => TRUE)),
+      GlitchData => led6_GlitchData,
+      Mode       => vitaltransport, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity led_5_B
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity led_5_B is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "led_5_B";
+
+      tipd_PADDO  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_PADDO_led5	 : VitalDelayType01Z := (0 ns, 0 ns, 0 ns , 0 ns, 0 ns, 0 ns)
+        );
+
+    port (PADDO: in Std_logic; led5: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF led_5_B : ENTITY IS TRUE;
+
+  end led_5_B;
+
+  architecture Structure of led_5_B is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal PADDO_ipd 	: std_logic := 'X';
+    signal led5_out 	: std_logic := 'X';
+
+    component ec2iobuf
+      port (I: in Std_logic; PAD: out Std_logic);
+    end component;
+  begin
+    I24: ec2iobuf
+      port map (I=>PADDO_ipd, PAD=>led5_out);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(PADDO_ipd, PADDO, tipd_PADDO);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (PADDO_ipd, led5_out)
+    VARIABLE led5_zd         	: std_logic := 'X';
+    VARIABLE led5_GlitchData 	: VitalGlitchDataType;
+
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+
+    END IF;
+
+    led5_zd 	:= led5_out;
+
+    VitalPathDelay01Z (
+      OutSignal => led5, OutSignalName => "led5", OutTemp => led5_zd,
+      Paths      => (0 => (InputChangeTime => PADDO_ipd'last_event,
+                           PathDelay => tpd_PADDO_led5,
+                           PathCondition => TRUE)),
+      GlitchData => led5_GlitchData,
+      Mode       => vitaltransport, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity lab2
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity lab2 is
+    port (btn_center: in Std_logic; btn_down: in Std_logic; 
+          btn_left: in Std_logic; btn_right: in Std_logic; 
+          btn_up: in Std_logic; clk_25m: in Std_logic; 
+          led: out Std_logic_vector (7 downto 0); rs232_tx: out Std_logic);
+
+
+
+  end lab2;
+
+  architecture Structure of lab2 is
+    signal I1_VCC: Std_logic;
+    signal I1_R_debounce_cnt_0: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_cry_0_s1: Std_logic;
+    signal N_9: Std_logic;
+    signal I1_R_byte_old_6: Std_logic;
+    signal I1_un1_byte_in_0_data_tmp_2: Std_logic;
+    signal I1_un1_byte_in_i: Std_logic;
+    signal btn_up_c: Std_logic;
+    signal N_8: Std_logic;
+    signal I1_R_byte_old_fast_5: Std_logic;
+    signal I1_R_byte_old_fast_4: Std_logic;
+    signal I1_R_byte_old_fast_3: Std_logic;
+    signal N_12: Std_logic;
+    signal I1_R_byte_old_fast_0: Std_logic;
+    signal N_11: Std_logic;
+    signal I1_un1_byte_in_0_data_tmp_0: Std_logic;
+    signal I1_R_byte_old_fast_1: Std_logic;
+    signal N_13: Std_logic;
+    signal I1_R_baudgen_15: Std_logic;
+    signal I1_un4_r_baudgen_16: Std_logic;
+    signal I1_un4_r_baudgen_15: Std_logic;
+    signal clk_25m_c: Std_logic;
+    signal I1_un4_r_baudgen_cry_14: Std_logic;
+    signal I1_R_baudgen_16: Std_logic;
+    signal I1_R_baudgen_14: Std_logic;
+    signal I1_R_baudgen_13: Std_logic;
+    signal I1_un4_r_baudgen_14: Std_logic;
+    signal I1_un4_r_baudgen_13: Std_logic;
+    signal I1_un4_r_baudgen_cry_12: Std_logic;
+    signal I1_R_baudgen_12: Std_logic;
+    signal I1_R_baudgen_11: Std_logic;
+    signal I1_un4_r_baudgen_12: Std_logic;
+    signal I1_un4_r_baudgen_11: Std_logic;
+    signal I1_un4_r_baudgen_cry_10: Std_logic;
+    signal I1_R_baudgen_10: Std_logic;
+    signal I1_R_baudgen_9: Std_logic;
+    signal I1_un4_r_baudgen_10: Std_logic;
+    signal I1_un4_r_baudgen_9: Std_logic;
+    signal I1_un4_r_baudgen_cry_8: Std_logic;
+    signal I1_R_baudgen_8: Std_logic;
+    signal I1_R_baudgen_7: Std_logic;
+    signal I1_un4_r_baudgen_8: Std_logic;
+    signal I1_un4_r_baudgen_7: Std_logic;
+    signal I1_un4_r_baudgen_cry_6: Std_logic;
+    signal I1_R_baudgen_6: Std_logic;
+    signal I1_R_baudgen_5: Std_logic;
+    signal I1_un4_r_baudgen_6: Std_logic;
+    signal I1_un4_r_baudgen_5: Std_logic;
+    signal I1_un4_r_baudgen_cry_4: Std_logic;
+    signal I1_R_baudgen_4: Std_logic;
+    signal I1_R_baudgen_3: Std_logic;
+    signal I1_un4_r_baudgen_4: Std_logic;
+    signal I1_un4_r_baudgen_3: Std_logic;
+    signal I1_un4_r_baudgen_cry_2: Std_logic;
+    signal I1_R_baudgen_2: Std_logic;
+    signal I1_R_baudgen_1: Std_logic;
+    signal I1_un4_r_baudgen_2: Std_logic;
+    signal I1_un4_r_baudgen_1: Std_logic;
+    signal I1_un4_r_baudgen_cry_0: Std_logic;
+    signal I1_R_baudgen_0: Std_logic;
+    signal I1_R_debounce_cnt_31: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_0: Std_logic;
+    signal I1_un1_R_debounce_cnt_1_i: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_cry_30_s1: Std_logic;
+    signal I1_R_debounce_cnt_30: Std_logic;
+    signal I1_R_debounce_cnt_29: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_1: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_2: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_cry_28_s1: Std_logic;
+    signal I1_R_debounce_cnt_28: Std_logic;
+    signal I1_R_debounce_cnt_27: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_3: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_4: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_cry_26_s1: Std_logic;
+    signal I1_R_debounce_cnt_26: Std_logic;
+    signal I1_R_debounce_cnt_25: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_5: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_6: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_cry_24_s1: Std_logic;
+    signal I1_R_debounce_cnt_24: Std_logic;
+    signal I1_R_debounce_cnt_23: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_7: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_8: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_cry_22_s1: Std_logic;
+    signal I1_R_debounce_cnt_22: Std_logic;
+    signal I1_R_debounce_cnt_21: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_9: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_10: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_cry_20_s1: Std_logic;
+    signal I1_R_debounce_cnt_20: Std_logic;
+    signal I1_R_debounce_cnt_19: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_11: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_12: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_cry_18_s1: Std_logic;
+    signal I1_R_debounce_cnt_18: Std_logic;
+    signal I1_R_debounce_cnt_17: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_13: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_14: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_cry_16_s1: Std_logic;
+    signal I1_R_debounce_cnt_16: Std_logic;
+    signal I1_R_debounce_cnt_15: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_15: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_16: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_cry_14_s1: Std_logic;
+    signal I1_R_debounce_cnt_14: Std_logic;
+    signal I1_R_debounce_cnt_13: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_17: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_18: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_cry_12_s1: Std_logic;
+    signal I1_R_debounce_cnt_12: Std_logic;
+    signal I1_R_debounce_cnt_11: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_19: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_20: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_cry_10_s1: Std_logic;
+    signal I1_R_debounce_cnt_fast_11: Std_logic;
+    signal I1_R_debounce_cnt_10: Std_logic;
+    signal I1_R_debounce_cnt_9: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_21: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_22: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_cry_8_s1: Std_logic;
+    signal I1_R_debounce_cnt_fast_10: Std_logic;
+    signal I1_R_debounce_cnt_8: Std_logic;
+    signal I1_R_debounce_cnt_7: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_23: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_cry_6_s1: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_24: Std_logic;
+    signal I1_R_debounce_cnt_6: Std_logic;
+    signal I1_R_debounce_cnt_5: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_26: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_cry_4_s1: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_25: Std_logic;
+    signal I1_R_debounce_cnt_4: Std_logic;
+    signal I1_R_debounce_cnt_3: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_28: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_cry_2_s1: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_27: Std_logic;
+    signal I1_R_debounce_cnt_2: Std_logic;
+    signal I1_R_debounce_cnt_1: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_29: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_s1_30: Std_logic;
+    signal I1_R_baudgen_i_0: Std_logic;
+    signal btn_left_c: Std_logic;
+    signal N_6: Std_logic;
+    signal btn_center_c: Std_logic;
+    signal btn_right_c: Std_logic;
+    signal I1_R_byte_old_0: Std_logic;
+    signal I1_R_byte_old_1: Std_logic;
+    signal btn_down_c: Std_logic;
+    signal I1_R_byte_old_3: Std_logic;
+    signal I1_R_byte_old_4: Std_logic;
+    signal I1_R_byte_old_5: Std_logic;
+    signal I1_un1_R_debounce_cnt_1_0_a2_27: Std_logic;
+    signal I1_un1_R_debounce_cnt_1_0_a2_28: Std_logic;
+    signal I1_un1_R_debounce_cnt_3_31: Std_logic;
+    signal I1_g0_0_6_0: Std_logic;
+    signal I1_R_debounce_cntd_0_6: Std_logic;
+    signal I1_R_debounce_cntd_0_4: Std_logic;
+    signal I1_R_debounce_cntd_0_7: Std_logic;
+    signal I1_m11_0_a2_4: Std_logic;
+    signal I1_R_debounce_cnt_fast_8: Std_logic;
+    signal I1_R_debounce_cnt_fast_9: Std_logic;
+    signal I1_N_48: Std_logic;
+    signal I1_g1_0_0_0: Std_logic;
+    signal I1_R_debounce_cnt_RNI0AK3A_15: Std_logic;
+    signal I1_g1_0_0: Std_logic;
+    signal I1_R_tx_phase_0: Std_logic;
+    signal I1_g0_0_a3_4: Std_logic;
+    signal I1_N_63: Std_logic;
+    signal I1_R_tx_phase_7_1: Std_logic;
+    signal I1_R_tx_phase_7_0: Std_logic;
+    signal I1_R_tx_phase_0_sqmuxa: Std_logic;
+    signal I1_R_tx_phase_1: Std_logic;
+    signal I1_R_tx_phase_7_RNO_3: Std_logic;
+    signal I1_g1: Std_logic;
+    signal I1_R_tx_phase_7_3: Std_logic;
+    signal I1_R_tx_phase_7_2: Std_logic;
+    signal I1_R_tx_phase_2: Std_logic;
+    signal I1_R_tx_phase_3: Std_logic;
+    signal I1_R_tx_ser_3: Std_logic;
+    signal I1_R_tx_ser_2: Std_logic;
+    signal I1_N_69: Std_logic;
+    signal I1_N_70: Std_logic;
+    signal N_38: Std_logic;
+    signal I1_R_tx_ser_1: Std_logic;
+    signal I1_R_tx_ser_5: Std_logic;
+    signal I1_R_tx_ser_4: Std_logic;
+    signal I1_N_67: Std_logic;
+    signal I1_N_68: Std_logic;
+    signal I1_R_tx_ser_7: Std_logic;
+    signal I1_R_tx_ser_6: Std_logic;
+    signal I1_N_65: Std_logic;
+    signal I1_N_66: Std_logic;
+    signal I1_r_tx_tickcnt12_i_o2: Std_logic;
+    signal I1_R_tx_tickcnt_3: Std_logic;
+    signal I1_N_45: Std_logic;
+    signal I1_R_baudgen_fast_16: Std_logic;
+    signal I1_R_tx_ser_8: Std_logic;
+    signal I1_N_48_i: Std_logic;
+    signal I1_N_64: Std_logic;
+    signal I1_R_tx_tickcnt_0: Std_logic;
+    signal I1_N_58_i_i: Std_logic;
+    signal I1_R_tx_tickcnt_1: Std_logic;
+    signal I1_R_tx_tickcnt_2: Std_logic;
+    signal I1_N_55_i_i: Std_logic;
+    signal I1_N_50_i: Std_logic;
+    signal I1_N_56_i: Std_logic;
+    signal I1_R_tx_phase_0_sqmuxa_0_o2_0_0: Std_logic;
+    signal I1_R_tx_tickcnt_fast_1: Std_logic;
+    signal I1_R_tx_tickcnt_fast_0: Std_logic;
+    signal I1_N_57_i_i: Std_logic;
+    signal I1_N_58_i_i_fast: Std_logic;
+    signal I1_N_50_i_fast: Std_logic;
+    signal I1_R_tx_phase_0_sqmuxa_0_a3_1: Std_logic;
+    signal I1_R_tx_ser_5_0: Std_logic;
+    signal I1_un1_m2_0_a2_3: Std_logic;
+    signal I1_un1_m2_0_a2_2: Std_logic;
+    signal I1_r_tx_tickcnt12_i_o2_x: Std_logic;
+    signal I1_g2_0: Std_logic;
+    signal I1_g0_0_8: Std_logic;
+    signal I1_un1_R_debounce_cnt_1_0_a2_22: Std_logic;
+    signal I1_g0_0_5_0: Std_logic;
+    signal I1_m11_0_a2_9: Std_logic;
+    signal I1_g2_13: Std_logic;
+    signal I1_g2_9: Std_logic;
+    signal I1_g2_10: Std_logic;
+    signal I1_g0_3_sn: Std_logic;
+    signal I1_g2_14: Std_logic;
+    signal I1_g2_15: Std_logic;
+    signal I1_g0_6_0: Std_logic;
+    signal I1_un1_R_debounce_cnt_1_0_a2_21: Std_logic;
+    signal I1_un1_R_debounce_cnt_1_0_a2_20: Std_logic;
+    signal I1_g0_6_3: Std_logic;
+    signal I1_g2_8_0: Std_logic;
+    signal I1_g0_7: Std_logic;
+    signal I1_g0_2_1: Std_logic;
+    signal I1_g0_8: Std_logic;
+    signal I1_g0_0_9_0: Std_logic;
+    signal I1_g0_3_5: Std_logic;
+    signal I1_g0_3_4: Std_logic;
+    signal I1_N_34_mux: Std_logic;
+    signal I1_m11_0_a2_5: Std_logic;
+    signal I1_m19_0_a2_4: Std_logic;
+    signal I1_m19_0_a2_3: Std_logic;
+    signal I1_g0_4_3: Std_logic;
+    signal I1_g0_0_11: Std_logic;
+    signal I1_g0_4_2: Std_logic;
+    signal I1_g0_0_a3_4_1: Std_logic;
+    signal I1_g0_0_7_1: Std_logic;
+    signal I1_g0_1_4: Std_logic;
+    signal I1_g0_1_3: Std_logic;
+    signal I1_g0_0_8_1: Std_logic;
+    signal I1_m7_e_5_sx: Std_logic;
+    signal I1_g0_0_8_0: Std_logic;
+    signal I1_g0_1_5: Std_logic;
+    signal I1_g0_6: Std_logic;
+    signal I1_m7_e_5: Std_logic;
+    signal I1_g0_1_4_0: Std_logic;
+    signal I1_m5_0_a2_3: Std_logic;
+    signal I1_m10_e_2: Std_logic;
+    signal I1_g0_0_7_0: Std_logic;
+    signal I1_m13_0_a2_3: Std_logic;
+    signal I1_m5_e_2: Std_logic;
+    signal I1_m5_e_3: Std_logic;
+    signal I1_G_13_1: Std_logic;
+    signal I1_R_tx_phase_RNO_2_1: Std_logic;
+    signal GND: Std_logic;
+    signal rs232_tx_c: Std_logic;
+    signal VCCI: Std_logic;
+    component VHI
+      port (Z: out Std_logic);
+    end component;
+    component PUR
+      port (PUR: in Std_logic);
+    end component;
+    component GSR
+      port (GSR: in Std_logic);
+    end component;
+    component led_7_B
+      port (PADDO: in Std_logic; led7: out Std_logic);
+    end component;
+    component btn_centerB
+      port (PADDI: out Std_logic; btncenter: in Std_logic);
+    end component;
+    component rs232_txB
+      port (IOLDO: in Std_logic; rs232tx: out Std_logic);
+    end component;
+    component rs232_tx_MGIOL
+      port (IOLDO: out Std_logic; ONEG0: in Std_logic; CE: in Std_logic; 
+            CLK: in Std_logic);
+    end component;
+    component clk_25mB
+      port (PADDI: out Std_logic; clk25m: in Std_logic);
+    end component;
+    component btn_upB
+      port (PADDI: out Std_logic; btnup: in Std_logic);
+    end component;
+    component btn_up_MGIOL
+      port (DI: in Std_logic; CLK: in Std_logic; INFF: out Std_logic);
+    end component;
+    component btn_rightB
+      port (PADDI: out Std_logic; btnright: in Std_logic);
+    end component;
+    component btn_leftB
+      port (PADDI: out Std_logic; btnleft: in Std_logic);
+    end component;
+    component btn_downB
+      port (PADDI: out Std_logic; btndown: in Std_logic);
+    end component;
+    component led_3_B
+      port (PADDO: in Std_logic; led3: out Std_logic);
+    end component;
+    component led_1_B
+      port (PADDO: in Std_logic; led1: out Std_logic);
+    end component;
+    component led_2_B
+      port (PADDO: in Std_logic; led2: out Std_logic);
+    end component;
+    component led_0_B
+      port (PADDO: in Std_logic; led0: out Std_logic);
+    end component;
+    component led_4_B
+      port (PADDO: in Std_logic; led4: out Std_logic);
+    end component;
+    component led_6_B
+      port (PADDO: in Std_logic; led6: out Std_logic);
+    end component;
+    component led_5_B
+      port (PADDO: in Std_logic; led5: out Std_logic);
+    end component;
+  begin
+    I1_SLICE_0I: SCCU2B
+      generic map (CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
+                   INIT0_INITVAL=>"0x0000", INIT1_INITVAL=>"0x33CC")
+      port map (M1=>'X', A1=>'X', B1=>I1_R_debounce_cnt_0, C1=>'X', D1=>I1_VCC, 
+                DI1=>'X', DI0=>'X', A0=>'X', B0=>'X', C0=>'X', D0=>'X', 
+                FCI=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                FCO=>I1_un1_R_debounce_cnt_3_cry_0_s1, F1=>open, Q1=>open, 
+                F0=>open, Q0=>open);
+    I1_SLICE_1I: SCCU2B
+      generic map (CCU2_INJECT1_1=>"NO", INIT0_INITVAL=>"0x9999", 
+                   INIT1_INITVAL=>"0xFF00")
+      port map (M1=>'X', A1=>'X', B1=>'X', C1=>'X', D1=>I1_VCC, DI1=>'X', 
+                DI0=>'X', A0=>I1_R_byte_old_6, B0=>N_9, C0=>'X', D0=>'X', 
+                FCI=>I1_un1_byte_in_0_data_tmp_2, M0=>'X', CE=>'X', CLK=>'X', 
+                LSR=>'X', FCO=>open, F1=>I1_un1_byte_in_i, Q1=>open, F0=>open, 
+                Q0=>open);
+    I1_SLICE_2I: SCCU2B
+      generic map (INIT0_INITVAL=>"0x9009", INIT1_INITVAL=>"0x8241")
+      port map (M1=>'X', A1=>I1_R_byte_old_fast_4, B1=>I1_R_byte_old_fast_5, 
+                C1=>N_8, D1=>btn_up_c, DI1=>'X', DI0=>'X', A0=>N_11, 
+                B0=>I1_R_byte_old_fast_0, C0=>N_12, D0=>I1_R_byte_old_fast_3, 
+                FCI=>I1_un1_byte_in_0_data_tmp_0, M0=>'X', CE=>'X', CLK=>'X', 
+                LSR=>'X', FCO=>I1_un1_byte_in_0_data_tmp_2, F1=>open, Q1=>open, 
+                F0=>open, Q0=>open);
+    I1_SLICE_3I: SCCU2B
+      generic map (CCU2_INJECT1_0=>"NO", INIT0_INITVAL=>"0x00FF", 
+                   INIT1_INITVAL=>"0x9009")
+      port map (M1=>'X', A1=>N_13, B1=>I1_R_byte_old_fast_1, C1=>N_11, 
+                D1=>I1_R_byte_old_fast_0, DI1=>'X', DI0=>'X', A0=>'X', B0=>'X', 
+                C0=>'X', D0=>I1_VCC, FCI=>'X', M0=>'X', CE=>'X', CLK=>'X', 
+                LSR=>'X', FCO=>I1_un1_byte_in_0_data_tmp_0, F1=>open, Q1=>open, 
+                F0=>open, Q0=>open);
+    I1_SLICE_4I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"VHI", CCU2_INJECT1_0=>"NO", 
+                   CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", SRMODE=>"ASYNC", 
+                   LSRONMUX=>"OFF", INIT0_INITVAL=>"0xAA00", 
+                   INIT1_INITVAL=>"0x0000", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>'X', C1=>'X', D1=>'X', 
+                DI1=>I1_un4_r_baudgen_16, DI0=>I1_un4_r_baudgen_15, 
+                A0=>I1_R_baudgen_15, B0=>'X', C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un4_r_baudgen_cry_14, M0=>'X', CE=>'X', CLK=>clk_25m_c, 
+                LSR=>'X', FCO=>open, F1=>I1_un4_r_baudgen_16, 
+                Q1=>I1_R_baudgen_16, F0=>I1_un4_r_baudgen_15, 
+                Q0=>I1_R_baudgen_15);
+    I1_SLICE_5I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"VHI", CCU2_INJECT1_0=>"NO", 
+                   CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", SRMODE=>"ASYNC", 
+                   LSRONMUX=>"OFF", INIT0_INITVAL=>"0xCC00", 
+                   INIT1_INITVAL=>"0xCC00", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_baudgen_14, C1=>'X', D1=>I1_VCC, 
+                DI1=>I1_un4_r_baudgen_14, DI0=>I1_un4_r_baudgen_13, A0=>'X', 
+                B0=>I1_R_baudgen_13, C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un4_r_baudgen_cry_12, M0=>'X', CE=>'X', CLK=>clk_25m_c, 
+                LSR=>'X', FCO=>I1_un4_r_baudgen_cry_14, 
+                F1=>I1_un4_r_baudgen_14, Q1=>I1_R_baudgen_14, 
+                F0=>I1_un4_r_baudgen_13, Q0=>I1_R_baudgen_13);
+    I1_SLICE_6I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"VHI", CCU2_INJECT1_0=>"NO", 
+                   CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", SRMODE=>"ASYNC", 
+                   LSRONMUX=>"OFF", INIT0_INITVAL=>"0xCC00", 
+                   INIT1_INITVAL=>"0x33CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_baudgen_12, C1=>'X', D1=>I1_VCC, 
+                DI1=>I1_un4_r_baudgen_12, DI0=>I1_un4_r_baudgen_11, A0=>'X', 
+                B0=>I1_R_baudgen_11, C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un4_r_baudgen_cry_10, M0=>'X', CE=>'X', CLK=>clk_25m_c, 
+                LSR=>'X', FCO=>I1_un4_r_baudgen_cry_12, 
+                F1=>I1_un4_r_baudgen_12, Q1=>I1_R_baudgen_12, 
+                F0=>I1_un4_r_baudgen_11, Q0=>I1_R_baudgen_11);
+    I1_SLICE_7I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"VHI", CCU2_INJECT1_0=>"NO", 
+                   CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", SRMODE=>"ASYNC", 
+                   LSRONMUX=>"OFF", INIT0_INITVAL=>"0x55AA", 
+                   INIT1_INITVAL=>"0xCC00", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_baudgen_10, C1=>'X', D1=>I1_VCC, 
+                DI1=>I1_un4_r_baudgen_10, DI0=>I1_un4_r_baudgen_9, 
+                A0=>I1_R_baudgen_9, B0=>'X', C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un4_r_baudgen_cry_8, M0=>'X', CE=>'X', CLK=>clk_25m_c, 
+                LSR=>'X', FCO=>I1_un4_r_baudgen_cry_10, 
+                F1=>I1_un4_r_baudgen_10, Q1=>I1_R_baudgen_10, 
+                F0=>I1_un4_r_baudgen_9, Q0=>I1_R_baudgen_9);
+    I1_SLICE_8I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"VHI", CCU2_INJECT1_0=>"NO", 
+                   CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", SRMODE=>"ASYNC", 
+                   LSRONMUX=>"OFF", INIT0_INITVAL=>"0x33CC", 
+                   INIT1_INITVAL=>"0xCC00", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_baudgen_8, C1=>'X', D1=>I1_VCC, 
+                DI1=>I1_un4_r_baudgen_8, DI0=>I1_un4_r_baudgen_7, A0=>'X', 
+                B0=>I1_R_baudgen_7, C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un4_r_baudgen_cry_6, M0=>'X', CE=>'X', CLK=>clk_25m_c, 
+                LSR=>'X', FCO=>I1_un4_r_baudgen_cry_8, F1=>I1_un4_r_baudgen_8, 
+                Q1=>I1_R_baudgen_8, F0=>I1_un4_r_baudgen_7, Q0=>I1_R_baudgen_7);
+    I1_SLICE_9I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"VHI", CCU2_INJECT1_0=>"NO", 
+                   CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", SRMODE=>"ASYNC", 
+                   LSRONMUX=>"OFF", INIT0_INITVAL=>"0xCC00", 
+                   INIT1_INITVAL=>"0x33CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_baudgen_6, C1=>'X', D1=>I1_VCC, 
+                DI1=>I1_un4_r_baudgen_6, DI0=>I1_un4_r_baudgen_5, A0=>'X', 
+                B0=>I1_R_baudgen_5, C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un4_r_baudgen_cry_4, M0=>'X', CE=>'X', CLK=>clk_25m_c, 
+                LSR=>'X', FCO=>I1_un4_r_baudgen_cry_6, F1=>I1_un4_r_baudgen_6, 
+                Q1=>I1_R_baudgen_6, F0=>I1_un4_r_baudgen_5, Q0=>I1_R_baudgen_5);
+    I1_SLICE_10I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"VHI", CCU2_INJECT1_0=>"NO", 
+                   CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", SRMODE=>"ASYNC", 
+                   LSRONMUX=>"OFF", INIT0_INITVAL=>"0x55AA", 
+                   INIT1_INITVAL=>"0x33CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_baudgen_4, C1=>'X', D1=>I1_VCC, 
+                DI1=>I1_un4_r_baudgen_4, DI0=>I1_un4_r_baudgen_3, 
+                A0=>I1_R_baudgen_3, B0=>'X', C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un4_r_baudgen_cry_2, M0=>'X', CE=>'X', CLK=>clk_25m_c, 
+                LSR=>'X', FCO=>I1_un4_r_baudgen_cry_4, F1=>I1_un4_r_baudgen_4, 
+                Q1=>I1_R_baudgen_4, F0=>I1_un4_r_baudgen_3, Q0=>I1_R_baudgen_3);
+    I1_SLICE_11I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"VHI", CCU2_INJECT1_0=>"NO", 
+                   CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", SRMODE=>"ASYNC", 
+                   LSRONMUX=>"OFF", INIT0_INITVAL=>"0x33CC", 
+                   INIT1_INITVAL=>"0x33CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_baudgen_2, C1=>'X', D1=>I1_VCC, 
+                DI1=>I1_un4_r_baudgen_2, DI0=>I1_un4_r_baudgen_1, A0=>'X', 
+                B0=>I1_R_baudgen_1, C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un4_r_baudgen_cry_0, M0=>'X', CE=>'X', CLK=>clk_25m_c, 
+                LSR=>'X', FCO=>I1_un4_r_baudgen_cry_2, F1=>I1_un4_r_baudgen_2, 
+                Q1=>I1_R_baudgen_2, F0=>I1_un4_r_baudgen_1, Q0=>I1_R_baudgen_1);
+    I1_SLICE_12I: SCCU2B
+      generic map (CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
+                   INIT0_INITVAL=>"0x0000", INIT1_INITVAL=>"0x55AA")
+      port map (M1=>'X', A1=>I1_R_baudgen_0, B1=>'X', C1=>'X', D1=>I1_VCC, 
+                DI1=>'X', DI0=>'X', A0=>'X', B0=>'X', C0=>'X', D0=>'X', 
+                FCI=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                FCO=>I1_un4_r_baudgen_cry_0, F1=>open, Q1=>open, F0=>open, 
+                Q0=>open);
+    I1_SLICE_13I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
+                   CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", 
+                   INIT0_INITVAL=>"0x3300", INIT1_INITVAL=>"0x0000", 
+                   REG0_SD=>"VHI", CHECK_DI0=>TRUE, CHECK_CE=>TRUE, 
+                   CHECK_LSR=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>'X', C1=>'X', D1=>'X', DI1=>'X', 
+                DI0=>I1_un1_R_debounce_cnt_3_s1_0, A0=>'X', 
+                B0=>I1_R_debounce_cnt_31, C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un1_R_debounce_cnt_3_cry_30_s1, M0=>'X', 
+                CE=>I1_un1_R_debounce_cnt_1_i, CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, FCO=>open, F1=>open, Q1=>open, 
+                F0=>I1_un1_R_debounce_cnt_3_s1_0, Q0=>I1_R_debounce_cnt_31);
+    I1_SLICE_14I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
+                   CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", 
+                   INIT0_INITVAL=>"0x33CC", INIT1_INITVAL=>"0x33CC", 
+                   REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
+                   CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_debounce_cnt_30, C1=>'X', 
+                D1=>I1_VCC, DI1=>I1_un1_R_debounce_cnt_3_s1_1, 
+                DI0=>I1_un1_R_debounce_cnt_3_s1_2, A0=>'X', 
+                B0=>I1_R_debounce_cnt_29, C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un1_R_debounce_cnt_3_cry_28_s1, M0=>'X', 
+                CE=>I1_un1_R_debounce_cnt_1_i, CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, FCO=>I1_un1_R_debounce_cnt_3_cry_30_s1, 
+                F1=>I1_un1_R_debounce_cnt_3_s1_1, Q1=>I1_R_debounce_cnt_30, 
+                F0=>I1_un1_R_debounce_cnt_3_s1_2, Q0=>I1_R_debounce_cnt_29);
+    I1_SLICE_15I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
+                   CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", 
+                   INIT0_INITVAL=>"0x55AA", INIT1_INITVAL=>"0x33CC", 
+                   REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
+                   CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_debounce_cnt_28, C1=>'X', 
+                D1=>I1_VCC, DI1=>I1_un1_R_debounce_cnt_3_s1_3, 
+                DI0=>I1_un1_R_debounce_cnt_3_s1_4, A0=>I1_R_debounce_cnt_27, 
+                B0=>'X', C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un1_R_debounce_cnt_3_cry_26_s1, M0=>'X', 
+                CE=>I1_un1_R_debounce_cnt_1_i, CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, FCO=>I1_un1_R_debounce_cnt_3_cry_28_s1, 
+                F1=>I1_un1_R_debounce_cnt_3_s1_3, Q1=>I1_R_debounce_cnt_28, 
+                F0=>I1_un1_R_debounce_cnt_3_s1_4, Q0=>I1_R_debounce_cnt_27);
+    I1_SLICE_16I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
+                   CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", 
+                   INIT0_INITVAL=>"0x33CC", INIT1_INITVAL=>"0x33CC", 
+                   REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
+                   CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_debounce_cnt_26, C1=>'X', 
+                D1=>I1_VCC, DI1=>I1_un1_R_debounce_cnt_3_s1_5, 
+                DI0=>I1_un1_R_debounce_cnt_3_s1_6, A0=>'X', 
+                B0=>I1_R_debounce_cnt_25, C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un1_R_debounce_cnt_3_cry_24_s1, M0=>'X', 
+                CE=>I1_un1_R_debounce_cnt_1_i, CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, FCO=>I1_un1_R_debounce_cnt_3_cry_26_s1, 
+                F1=>I1_un1_R_debounce_cnt_3_s1_5, Q1=>I1_R_debounce_cnt_26, 
+                F0=>I1_un1_R_debounce_cnt_3_s1_6, Q0=>I1_R_debounce_cnt_25);
+    I1_SLICE_17I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
+                   CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", 
+                   INIT0_INITVAL=>"0x33CC", INIT1_INITVAL=>"0x33CC", 
+                   REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
+                   CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_debounce_cnt_24, C1=>'X', 
+                D1=>I1_VCC, DI1=>I1_un1_R_debounce_cnt_3_s1_7, 
+                DI0=>I1_un1_R_debounce_cnt_3_s1_8, A0=>'X', 
+                B0=>I1_R_debounce_cnt_23, C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un1_R_debounce_cnt_3_cry_22_s1, M0=>'X', 
+                CE=>I1_un1_R_debounce_cnt_1_i, CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, FCO=>I1_un1_R_debounce_cnt_3_cry_24_s1, 
+                F1=>I1_un1_R_debounce_cnt_3_s1_7, Q1=>I1_R_debounce_cnt_24, 
+                F0=>I1_un1_R_debounce_cnt_3_s1_8, Q0=>I1_R_debounce_cnt_23);
+    I1_SLICE_18I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
+                   CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", 
+                   INIT0_INITVAL=>"0x55AA", INIT1_INITVAL=>"0x33CC", 
+                   REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
+                   CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_debounce_cnt_22, C1=>'X', 
+                D1=>I1_VCC, DI1=>I1_un1_R_debounce_cnt_3_s1_9, 
+                DI0=>I1_un1_R_debounce_cnt_3_s1_10, A0=>I1_R_debounce_cnt_21, 
+                B0=>'X', C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un1_R_debounce_cnt_3_cry_20_s1, M0=>'X', 
+                CE=>I1_un1_R_debounce_cnt_1_i, CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, FCO=>I1_un1_R_debounce_cnt_3_cry_22_s1, 
+                F1=>I1_un1_R_debounce_cnt_3_s1_9, Q1=>I1_R_debounce_cnt_22, 
+                F0=>I1_un1_R_debounce_cnt_3_s1_10, Q0=>I1_R_debounce_cnt_21);
+    I1_SLICE_19I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
+                   CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
+                   REG1_REGSET=>"SET", GSR=>"DISABLED", 
+                   INIT0_INITVAL=>"0x33CC", INIT1_INITVAL=>"0x33CC", 
+                   REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
+                   CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_debounce_cnt_20, C1=>'X', 
+                D1=>I1_VCC, DI1=>I1_un1_R_debounce_cnt_3_s1_11, 
+                DI0=>I1_un1_R_debounce_cnt_3_s1_12, A0=>'X', 
+                B0=>I1_R_debounce_cnt_19, C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un1_R_debounce_cnt_3_cry_18_s1, M0=>'X', 
+                CE=>I1_un1_R_debounce_cnt_1_i, CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, FCO=>I1_un1_R_debounce_cnt_3_cry_20_s1, 
+                F1=>I1_un1_R_debounce_cnt_3_s1_11, Q1=>I1_R_debounce_cnt_20, 
+                F0=>I1_un1_R_debounce_cnt_3_s1_12, Q0=>I1_R_debounce_cnt_19);
+    I1_SLICE_20I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
+                   CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
+                   REG0_REGSET=>"SET", GSR=>"DISABLED", 
+                   INIT0_INITVAL=>"0x33CC", INIT1_INITVAL=>"0x33CC", 
+                   REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
+                   CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_debounce_cnt_18, C1=>'X', 
+                D1=>I1_VCC, DI1=>I1_un1_R_debounce_cnt_3_s1_13, 
+                DI0=>I1_un1_R_debounce_cnt_3_s1_14, A0=>'X', 
+                B0=>I1_R_debounce_cnt_17, C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un1_R_debounce_cnt_3_cry_16_s1, M0=>'X', 
+                CE=>I1_un1_R_debounce_cnt_1_i, CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, FCO=>I1_un1_R_debounce_cnt_3_cry_18_s1, 
+                F1=>I1_un1_R_debounce_cnt_3_s1_13, Q1=>I1_R_debounce_cnt_18, 
+                F0=>I1_un1_R_debounce_cnt_3_s1_14, Q0=>I1_R_debounce_cnt_17);
+    I1_SLICE_21I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
+                   CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
+                   REG1_REGSET=>"SET", GSR=>"DISABLED", 
+                   INIT0_INITVAL=>"0x55AA", INIT1_INITVAL=>"0x33CC", 
+                   REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
+                   CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_debounce_cnt_16, C1=>'X', 
+                D1=>I1_VCC, DI1=>I1_un1_R_debounce_cnt_3_s1_15, 
+                DI0=>I1_un1_R_debounce_cnt_3_s1_16, A0=>I1_R_debounce_cnt_15, 
+                B0=>'X', C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un1_R_debounce_cnt_3_cry_14_s1, M0=>'X', 
+                CE=>I1_un1_R_debounce_cnt_1_i, CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, FCO=>I1_un1_R_debounce_cnt_3_cry_16_s1, 
+                F1=>I1_un1_R_debounce_cnt_3_s1_15, Q1=>I1_R_debounce_cnt_16, 
+                F0=>I1_un1_R_debounce_cnt_3_s1_16, Q0=>I1_R_debounce_cnt_15);
+    I1_SLICE_22I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
+                   CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", 
+                   INIT0_INITVAL=>"0x33CC", INIT1_INITVAL=>"0x33CC", 
+                   REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
+                   CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_debounce_cnt_14, C1=>'X', 
+                D1=>I1_VCC, DI1=>I1_un1_R_debounce_cnt_3_s1_17, 
+                DI0=>I1_un1_R_debounce_cnt_3_s1_18, A0=>'X', 
+                B0=>I1_R_debounce_cnt_13, C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un1_R_debounce_cnt_3_cry_12_s1, M0=>'X', 
+                CE=>I1_un1_R_debounce_cnt_1_i, CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, FCO=>I1_un1_R_debounce_cnt_3_cry_14_s1, 
+                F1=>I1_un1_R_debounce_cnt_3_s1_17, Q1=>I1_R_debounce_cnt_14, 
+                F0=>I1_un1_R_debounce_cnt_3_s1_18, Q0=>I1_R_debounce_cnt_13);
+    I1_SLICE_23I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
+                   CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
+                   REG1_REGSET=>"SET", GSR=>"DISABLED", 
+                   INIT0_INITVAL=>"0x55AA", INIT1_INITVAL=>"0x33CC", 
+                   REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
+                   CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_debounce_cnt_12, C1=>'X', 
+                D1=>I1_VCC, DI1=>I1_un1_R_debounce_cnt_3_s1_19, 
+                DI0=>I1_un1_R_debounce_cnt_3_s1_20, A0=>I1_R_debounce_cnt_11, 
+                B0=>'X', C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un1_R_debounce_cnt_3_cry_10_s1, M0=>'X', 
+                CE=>I1_un1_R_debounce_cnt_1_i, CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, FCO=>I1_un1_R_debounce_cnt_3_cry_12_s1, 
+                F1=>I1_un1_R_debounce_cnt_3_s1_19, Q1=>I1_R_debounce_cnt_12, 
+                F0=>I1_un1_R_debounce_cnt_3_s1_20, 
+                Q0=>I1_R_debounce_cnt_fast_11);
+    I1_SLICE_24I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
+                   CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
+                   REG0_REGSET=>"SET", GSR=>"DISABLED", 
+                   INIT0_INITVAL=>"0x55AA", INIT1_INITVAL=>"0x33CC", 
+                   REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
+                   CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_debounce_cnt_10, C1=>'X', 
+                D1=>I1_VCC, DI1=>I1_un1_R_debounce_cnt_3_s1_21, 
+                DI0=>I1_un1_R_debounce_cnt_3_s1_22, A0=>I1_R_debounce_cnt_9, 
+                B0=>'X', C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un1_R_debounce_cnt_3_cry_8_s1, M0=>'X', 
+                CE=>I1_un1_R_debounce_cnt_1_i, CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, FCO=>I1_un1_R_debounce_cnt_3_cry_10_s1, 
+                F1=>I1_un1_R_debounce_cnt_3_s1_21, 
+                Q1=>I1_R_debounce_cnt_fast_10, 
+                F0=>I1_un1_R_debounce_cnt_3_s1_22, Q0=>I1_R_debounce_cnt_9);
+    I1_SLICE_25I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
+                   CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", 
+                   INIT0_INITVAL=>"0x33CC", INIT1_INITVAL=>"0x33CC", 
+                   REG1_SD=>"VHI", CHECK_DI1=>TRUE, CHECK_CE=>TRUE, 
+                   CHECK_LSR=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_debounce_cnt_8, C1=>'X', D1=>I1_VCC, 
+                DI1=>I1_un1_R_debounce_cnt_3_s1_23, DI0=>'X', A0=>'X', 
+                B0=>I1_R_debounce_cnt_7, C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un1_R_debounce_cnt_3_cry_6_s1, M0=>'X', 
+                CE=>I1_un1_R_debounce_cnt_1_i, CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, FCO=>I1_un1_R_debounce_cnt_3_cry_8_s1, 
+                F1=>I1_un1_R_debounce_cnt_3_s1_23, Q1=>I1_R_debounce_cnt_8, 
+                F0=>I1_un1_R_debounce_cnt_3_s1_24, Q0=>open);
+    I1_SLICE_26I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
+                   CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", 
+                   INIT0_INITVAL=>"0x55AA", INIT1_INITVAL=>"0x33CC", 
+                   REG0_SD=>"VHI", CHECK_DI0=>TRUE, CHECK_CE=>TRUE, 
+                   CHECK_LSR=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_debounce_cnt_6, C1=>'X', D1=>I1_VCC, 
+                DI1=>'X', DI0=>I1_un1_R_debounce_cnt_3_s1_26, 
+                A0=>I1_R_debounce_cnt_5, B0=>'X', C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un1_R_debounce_cnt_3_cry_4_s1, M0=>'X', 
+                CE=>I1_un1_R_debounce_cnt_1_i, CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, FCO=>I1_un1_R_debounce_cnt_3_cry_6_s1, 
+                F1=>I1_un1_R_debounce_cnt_3_s1_25, Q1=>open, 
+                F0=>I1_un1_R_debounce_cnt_3_s1_26, Q0=>I1_R_debounce_cnt_5);
+    I1_SLICE_27I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
+                   CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", 
+                   INIT0_INITVAL=>"0x33CC", INIT1_INITVAL=>"0x33CC", 
+                   REG0_SD=>"VHI", CHECK_DI0=>TRUE, CHECK_CE=>TRUE, 
+                   CHECK_LSR=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_debounce_cnt_4, C1=>'X', D1=>I1_VCC, 
+                DI1=>'X', DI0=>I1_un1_R_debounce_cnt_3_s1_28, A0=>'X', 
+                B0=>I1_R_debounce_cnt_3, C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un1_R_debounce_cnt_3_cry_2_s1, M0=>'X', 
+                CE=>I1_un1_R_debounce_cnt_1_i, CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, FCO=>I1_un1_R_debounce_cnt_3_cry_4_s1, 
+                F1=>I1_un1_R_debounce_cnt_3_s1_27, Q1=>open, 
+                F0=>I1_un1_R_debounce_cnt_3_s1_28, Q0=>I1_R_debounce_cnt_3);
+    I1_SLICE_28I: SCCU2B
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
+                   CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", 
+                   INIT0_INITVAL=>"0x33CC", INIT1_INITVAL=>"0x33CC", 
+                   REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
+                   CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
+      port map (M1=>'X', A1=>'X', B1=>I1_R_debounce_cnt_2, C1=>'X', D1=>I1_VCC, 
+                DI1=>I1_un1_R_debounce_cnt_3_s1_29, 
+                DI0=>I1_un1_R_debounce_cnt_3_s1_30, A0=>'X', 
+                B0=>I1_R_debounce_cnt_1, C0=>'X', D0=>I1_VCC, 
+                FCI=>I1_un1_R_debounce_cnt_3_cry_0_s1, M0=>'X', 
+                CE=>I1_un1_R_debounce_cnt_1_i, CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, FCO=>I1_un1_R_debounce_cnt_3_cry_2_s1, 
+                F1=>I1_un1_R_debounce_cnt_3_s1_29, Q1=>I1_R_debounce_cnt_2, 
+                F0=>I1_un1_R_debounce_cnt_3_s1_30, Q0=>I1_R_debounce_cnt_1);
+    I1_SLICE_29I: SLOGICB
+      generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
+                   SRMODE=>"ASYNC", LSRONMUX=>"OFF", LUT0_INITVAL=>X"00FF", 
+                   REG0_SD=>"VHI", CHECK_DI0=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
+                D1=>'X', DI1=>'X', DI0=>I1_R_baudgen_i_0, A0=>'X', B0=>'X', 
+                C0=>'X', D0=>I1_R_baudgen_0, M0=>'X', CE=>'X', CLK=>clk_25m_c, 
+                LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
+                F0=>I1_R_baudgen_i_0, Q0=>I1_R_baudgen_0);
+    SLICE_31I: SLOGICB
+      generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
+                   SRMODE=>"ASYNC", LSRONMUX=>"OFF", LUT0_INITVAL=>X"FFAA", 
+                   LUT1_INITVAL=>X"FFFE", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>btn_up_c, B1=>btn_center_c, 
+                C1=>N_6, D1=>btn_left_c, DI1=>N_13, DI0=>N_11, A0=>btn_right_c, 
+                B0=>'X', C0=>'X', D0=>btn_center_c, M0=>'X', CE=>'X', 
+                CLK=>clk_25m_c, LSR=>'X', OFX1=>open, F1=>N_13, 
+                Q1=>I1_R_byte_old_1, OFX0=>open, F0=>N_11, Q0=>I1_R_byte_old_0);
+    SLICE_32I: SLOGICB
+      generic map (M1MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
+                   SRMODE=>"ASYNC", LSRONMUX=>"OFF", LUT0_INITVAL=>X"FAF0", 
+                   REG0_SD=>"VHI", CHECK_DI0=>TRUE, CHECK_M1=>TRUE)
+      port map (M1=>btn_up_c, FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
+                D1=>'X', DI1=>'X', DI0=>N_12, A0=>btn_right_c, B0=>'X', 
+                C0=>btn_center_c, D0=>btn_down_c, M0=>'X', CE=>'X', 
+                CLK=>clk_25m_c, LSR=>'X', OFX1=>open, F1=>open, 
+                Q1=>I1_R_byte_old_4, OFX0=>open, F0=>N_12, Q0=>I1_R_byte_old_3);
+    SLICE_33I: SLOGICB
+      generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
+                   SRMODE=>"ASYNC", LSRONMUX=>"OFF", LUT0_INITVAL=>X"FEFE", 
+                   LUT1_INITVAL=>X"FFFE", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>btn_right_c, B1=>btn_up_c, 
+                C1=>btn_left_c, D1=>btn_center_c, DI1=>N_9, DI0=>N_8, 
+                A0=>btn_right_c, B0=>btn_center_c, C0=>btn_up_c, D0=>'X', 
+                M0=>'X', CE=>'X', CLK=>clk_25m_c, LSR=>'X', OFX1=>open, 
+                F1=>N_9, Q1=>I1_R_byte_old_6, OFX0=>open, F0=>N_8, 
+                Q0=>I1_R_byte_old_5);
+    I1_SLICE_34I: SLOGICB
+      generic map (M0MUX=>"SIG", M1MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", 
+                   GSR=>"DISABLED", SRMODE=>"ASYNC", LSRONMUX=>"OFF", 
+                   CHECK_M1=>TRUE, CHECK_M0=>TRUE)
+      port map (M1=>N_13, FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>'X', C0=>'X', 
+                D0=>'X', M0=>N_11, CE=>'X', CLK=>clk_25m_c, LSR=>'X', 
+                OFX1=>open, F1=>open, Q1=>I1_R_byte_old_fast_1, OFX0=>open, 
+                F0=>open, Q0=>I1_R_byte_old_fast_0);
+    I1_SLICE_35I: SLOGICB
+      generic map (M0MUX=>"SIG", M1MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", 
+                   GSR=>"DISABLED", SRMODE=>"ASYNC", LSRONMUX=>"OFF", 
+                   CHECK_M1=>TRUE, CHECK_M0=>TRUE)
+      port map (M1=>N_8, FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>'X', C0=>'X', 
+                D0=>'X', M0=>N_12, CE=>'X', CLK=>clk_25m_c, LSR=>'X', 
+                OFX1=>open, F1=>open, Q1=>I1_R_byte_old_fast_5, OFX0=>open, 
+                F0=>open, Q0=>I1_R_byte_old_fast_3);
+    I1_SLICE_36I: SLOGICB
+      generic map (CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", GSR=>"DISABLED", 
+                   LUT0_INITVAL=>X"0077", LUT1_INITVAL=>X"0001", 
+                   REG0_SD=>"VHI", CHECK_DI0=>TRUE, CHECK_LSR=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_debounce_cnt_5, 
+                B1=>I1_R_debounce_cnt_26, C1=>I1_R_debounce_cnt_28, 
+                D1=>I1_R_debounce_cnt_29, DI1=>'X', 
+                DI0=>I1_un1_R_debounce_cnt_3_31, 
+                A0=>I1_un1_R_debounce_cnt_1_0_a2_28, 
+                B0=>I1_un1_R_debounce_cnt_1_0_a2_27, C0=>'X', 
+                D0=>I1_R_debounce_cnt_0, M0=>'X', CE=>'X', CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, OFX1=>open, F1=>I1_g0_0_6_0, Q1=>open, 
+                OFX0=>open, F0=>I1_un1_R_debounce_cnt_3_31, 
+                Q0=>I1_R_debounce_cnt_0);
+    I1_SLICE_37I: SLOGICB
+      generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
+                   SRMODE=>"ASYNC", LSRONMUX=>"OFF", LUT0_INITVAL=>X"FDF8", 
+                   LUT1_INITVAL=>X"FFD8", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_un1_R_debounce_cnt_1_i, 
+                B1=>I1_un1_R_debounce_cnt_3_s1_25, C1=>I1_R_debounce_cnt_6, 
+                D1=>I1_un1_byte_in_i, DI1=>I1_R_debounce_cntd_0_6, 
+                DI0=>I1_R_debounce_cntd_0_4, A0=>I1_un1_R_debounce_cnt_1_i, 
+                B0=>I1_un1_R_debounce_cnt_3_s1_27, C0=>I1_un1_byte_in_i, 
+                D0=>I1_R_debounce_cnt_4, M0=>'X', CE=>'X', CLK=>clk_25m_c, 
+                LSR=>'X', OFX1=>open, F1=>I1_R_debounce_cntd_0_6, 
+                Q1=>I1_R_debounce_cnt_6, OFX0=>open, 
+                F0=>I1_R_debounce_cntd_0_4, Q0=>I1_R_debounce_cnt_4);
+    I1_SLICE_38I: SLOGICB
+      generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
+                   SRMODE=>"ASYNC", LSRONMUX=>"OFF", LUT0_INITVAL=>X"EEFA", 
+                   LUT1_INITVAL=>X"0001", REG0_SD=>"VHI", CHECK_DI0=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_debounce_cnt_9, 
+                B1=>I1_R_debounce_cnt_18, C1=>I1_R_debounce_cnt_8, 
+                D1=>I1_R_debounce_cnt_19, DI1=>'X', 
+                DI0=>I1_R_debounce_cntd_0_7, A0=>I1_un1_byte_in_i, 
+                B0=>I1_un1_R_debounce_cnt_3_s1_24, C0=>I1_R_debounce_cnt_7, 
+                D0=>I1_un1_R_debounce_cnt_1_i, M0=>'X', CE=>'X', 
+                CLK=>clk_25m_c, LSR=>'X', OFX1=>open, F1=>I1_m11_0_a2_4, 
+                Q1=>open, OFX0=>open, F0=>I1_R_debounce_cntd_0_7, 
+                Q0=>I1_R_debounce_cnt_7);
+    I1_SLICE_39I: SLOGICB
+      generic map (M0MUX=>"SIG", M1MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"SIG", 
+                   LSRMUX=>"SIG", GSR=>"DISABLED", CHECK_M1=>TRUE, 
+                   CHECK_M0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
+      port map (M1=>I1_un1_R_debounce_cnt_3_s1_20, FXA=>'X', FXB=>'X', A1=>'X', 
+                B1=>'X', C1=>'X', D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', 
+                B0=>'X', C0=>'X', D0=>'X', M0=>I1_un1_R_debounce_cnt_3_s1_21, 
+                CE=>I1_un1_R_debounce_cnt_1_i, CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, OFX1=>open, F1=>open, 
+                Q1=>I1_R_debounce_cnt_11, OFX0=>open, F0=>open, 
+                Q0=>I1_R_debounce_cnt_10);
+    I1_SLICE_40I: SLOGICB
+      generic map (M0MUX=>"SIG", M1MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"SIG", 
+                   LSRMUX=>"SIG", REG1_REGSET=>"SET", GSR=>"DISABLED", 
+                   CHECK_M1=>TRUE, CHECK_M0=>TRUE, CHECK_CE=>TRUE, 
+                   CHECK_LSR=>TRUE)
+      port map (M1=>I1_un1_R_debounce_cnt_3_s1_22, FXA=>'X', FXB=>'X', A1=>'X', 
+                B1=>'X', C1=>'X', D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', 
+                B0=>'X', C0=>'X', D0=>'X', M0=>I1_un1_R_debounce_cnt_3_s1_23, 
+                CE=>I1_un1_R_debounce_cnt_1_i, CLK=>clk_25m_c, 
+                LSR=>I1_un1_byte_in_i, OFX1=>open, F1=>open, 
+                Q1=>I1_R_debounce_cnt_fast_9, OFX0=>open, F0=>open, 
+                Q0=>I1_R_debounce_cnt_fast_8);
+    I1_SLICE_41I: SLOGICB
+      generic map (CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", GSR=>"DISABLED", 
+                   LUT0_INITVAL=>X"F88F", LUT1_INITVAL=>X"A2AA", 
+                   REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
+                   CHECK_DI0=>TRUE, CHECK_LSR=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_g1_0_0, 
+                B1=>I1_R_debounce_cnt_RNI0AK3A_15, C1=>I1_g1_0_0_0, 
+                D1=>I1_N_48, DI1=>I1_R_tx_phase_7_1, DI0=>I1_R_tx_phase_7_0, 
+                A0=>I1_N_63, B0=>I1_g0_0_a3_4, C0=>I1_R_tx_phase_0, 
+                D0=>I1_N_48, M0=>'X', CE=>'X', CLK=>clk_25m_c, 
+                LSR=>I1_R_tx_phase_0_sqmuxa, OFX1=>open, F1=>I1_R_tx_phase_7_1, 
+                Q1=>I1_R_tx_phase_1, OFX0=>open, F0=>I1_R_tx_phase_7_0, 
+                Q0=>I1_R_tx_phase_0);
+    I1_SLICE_42I: SLOGICB
+      generic map (CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", GSR=>"DISABLED", 
+                   LUT0_INITVAL=>X"70F0", LUT1_INITVAL=>X"70F0", 
+                   REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
+                   CHECK_DI0=>TRUE, CHECK_LSR=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_N_63, B1=>I1_N_48, 
+                C1=>I1_R_tx_phase_7_RNO_3, D1=>I1_R_debounce_cnt_RNI0AK3A_15, 
+                DI1=>I1_R_tx_phase_7_3, DI0=>I1_R_tx_phase_7_2, A0=>I1_N_63, 
+                B0=>I1_N_48, C0=>I1_g1, D0=>I1_R_debounce_cnt_RNI0AK3A_15, 
+                M0=>'X', CE=>'X', CLK=>clk_25m_c, LSR=>I1_R_tx_phase_0_sqmuxa, 
+                OFX1=>open, F1=>I1_R_tx_phase_7_3, Q1=>I1_R_tx_phase_3, 
+                OFX0=>open, F0=>I1_R_tx_phase_7_2, Q0=>I1_R_tx_phase_2);
+    I1_SLICE_43I: SLOGICB
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", REG0_REGSET=>"SET", 
+                   REG1_REGSET=>"SET", GSR=>"DISABLED", SRMODE=>"ASYNC", 
+                   LSRONMUX=>"OFF", LUT0_INITVAL=>X"FA0A", 
+                   LUT1_INITVAL=>X"CFC0", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>I1_R_byte_old_1, 
+                C1=>I1_N_48, D1=>I1_R_tx_ser_3, DI1=>I1_N_69, DI0=>I1_N_70, 
+                A0=>I1_R_tx_ser_2, B0=>'X', C0=>I1_N_48, D0=>I1_R_byte_old_0, 
+                M0=>'X', CE=>N_38, CLK=>clk_25m_c, LSR=>'X', OFX1=>open, 
+                F1=>I1_N_69, Q1=>I1_R_tx_ser_2, OFX0=>open, F0=>I1_N_70, 
+                Q0=>I1_R_tx_ser_1);
+    I1_SLICE_44I: SLOGICB
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", REG0_REGSET=>"SET", 
+                   REG1_REGSET=>"SET", GSR=>"DISABLED", SRMODE=>"ASYNC", 
+                   LSRONMUX=>"OFF", LUT0_INITVAL=>X"FC0C", 
+                   LUT1_INITVAL=>X"FA0A", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_tx_ser_5, B1=>'X', 
+                C1=>I1_N_48, D1=>I1_R_byte_old_3, DI1=>I1_N_67, DI0=>I1_N_68, 
+                A0=>'X', B0=>I1_R_tx_ser_4, C0=>I1_N_48, D0=>I1_R_byte_old_0, 
+                M0=>'X', CE=>N_38, CLK=>clk_25m_c, LSR=>'X', OFX1=>open, 
+                F1=>I1_N_67, Q1=>I1_R_tx_ser_4, OFX0=>open, F0=>I1_N_68, 
+                Q0=>I1_R_tx_ser_3);
+    I1_SLICE_45I: SLOGICB
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", REG0_REGSET=>"SET", 
+                   REG1_REGSET=>"SET", GSR=>"DISABLED", SRMODE=>"ASYNC", 
+                   LSRONMUX=>"OFF", LUT0_INITVAL=>X"ACAC", 
+                   LUT1_INITVAL=>X"FA0A", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_tx_ser_7, B1=>'X', 
+                C1=>I1_N_48, D1=>I1_R_byte_old_5, DI1=>I1_N_65, DI0=>I1_N_66, 
+                A0=>I1_R_byte_old_4, B0=>I1_R_tx_ser_6, C0=>I1_N_48, D0=>'X', 
+                M0=>'X', CE=>N_38, CLK=>clk_25m_c, LSR=>'X', OFX1=>open, 
+                F1=>I1_N_65, Q1=>I1_R_tx_ser_6, OFX0=>open, F0=>I1_N_66, 
+                Q0=>I1_R_tx_ser_5);
+    I1_SLICE_46I: SLOGICB
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", REG0_REGSET=>"SET", 
+                   REG1_REGSET=>"SET", GSR=>"DISABLED", SRMODE=>"ASYNC", 
+                   LSRONMUX=>"OFF", LUT0_INITVAL=>X"ACAC", 
+                   LUT1_INITVAL=>X"2000", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_baudgen_fast_16, 
+                B1=>I1_N_45, C1=>I1_R_tx_tickcnt_3, D1=>I1_r_tx_tickcnt12_i_o2, 
+                DI1=>I1_N_48_i, DI0=>I1_N_64, A0=>I1_R_byte_old_6, 
+                B0=>I1_R_tx_ser_8, C0=>I1_N_48, D0=>'X', M0=>'X', CE=>N_38, 
+                CLK=>clk_25m_c, LSR=>'X', OFX1=>open, F1=>I1_N_48_i, 
+                Q1=>I1_R_tx_ser_8, OFX0=>open, F0=>I1_N_64, Q0=>I1_R_tx_ser_7);
+    I1_SLICE_47I: SLOGICB
+      generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
+                   SRMODE=>"ASYNC", LSRONMUX=>"OFF", LUT0_INITVAL=>X"66CC", 
+                   REG0_SD=>"VHI", CHECK_DI0=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
+                D1=>'X', DI1=>'X', DI0=>I1_N_58_i_i, 
+                A0=>I1_r_tx_tickcnt12_i_o2, B0=>I1_R_tx_tickcnt_0, C0=>'X', 
+                D0=>I1_R_baudgen_16, M0=>'X', CE=>'X', CLK=>clk_25m_c, 
+                LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
+                F0=>I1_N_58_i_i, Q0=>I1_R_tx_tickcnt_0);
+    I1_SLICE_48I: SLOGICB
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
+                   SRMODE=>"ASYNC", LSRONMUX=>"OFF", LUT0_INITVAL=>X"0FF0", 
+                   LUT1_INITVAL=>X"3CCC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>I1_R_tx_tickcnt_2, 
+                C1=>I1_R_tx_tickcnt_1, D1=>I1_R_tx_tickcnt_0, DI1=>I1_N_55_i_i, 
+                DI0=>I1_N_50_i, A0=>'X', B0=>'X', C0=>I1_R_tx_tickcnt_1, 
+                D0=>I1_R_tx_tickcnt_0, M0=>'X', CE=>I1_N_56_i, CLK=>clk_25m_c, 
+                LSR=>'X', OFX1=>open, F1=>I1_N_55_i_i, Q1=>I1_R_tx_tickcnt_2, 
+                OFX0=>open, F0=>I1_N_50_i, Q0=>I1_R_tx_tickcnt_1);
+    I1_SLICE_49I: SLOGICB
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
+                   SRMODE=>"ASYNC", LSRONMUX=>"OFF", LUT0_INITVAL=>X"7F80", 
+                   LUT1_INITVAL=>X"FB04", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
+                   CHECK_CE=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', 
+                A1=>I1_R_tx_phase_0_sqmuxa_0_o2_0_0, B1=>I1_R_tx_phase_0, 
+                C1=>I1_N_45, D1=>I1_R_tx_phase_1, DI1=>'X', DI0=>I1_N_57_i_i, 
+                A0=>I1_R_tx_tickcnt_2, B0=>I1_R_tx_tickcnt_fast_0, 
+                C0=>I1_R_tx_tickcnt_fast_1, D0=>I1_R_tx_tickcnt_3, M0=>'X', 
+                CE=>I1_N_56_i, CLK=>clk_25m_c, LSR=>'X', OFX1=>open, 
+                F1=>I1_g1_0_0, Q1=>open, OFX0=>open, F0=>I1_N_57_i_i, 
+                Q0=>I1_R_tx_tickcnt_3);
+    I1_SLICE_50I: SLOGICB
+      generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
+                   SRMODE=>"ASYNC", LSRONMUX=>"OFF", LUT0_INITVAL=>X"7788", 
+                   REG0_SD=>"VHI", CHECK_DI0=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
+                D1=>'X', DI1=>'X', DI0=>I1_N_58_i_i_fast, 
+                A0=>I1_r_tx_tickcnt12_i_o2, B0=>I1_R_baudgen_16, C0=>'X', 
+                D0=>I1_R_tx_tickcnt_fast_0, M0=>'X', CE=>'X', CLK=>clk_25m_c, 
+                LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
+                F0=>I1_N_58_i_i_fast, Q0=>I1_R_tx_tickcnt_fast_0);
+    I1_SLICE_51I: SLOGICB
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
+                   SRMODE=>"ASYNC", LSRONMUX=>"OFF", LUT0_INITVAL=>X"55AA", 
+                   REG0_SD=>"VHI", CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
+                D1=>'X', DI1=>'X', DI0=>I1_N_50_i_fast, A0=>I1_R_tx_tickcnt_0, 
+                B0=>'X', C0=>'X', D0=>I1_R_tx_tickcnt_fast_1, M0=>'X', 
+                CE=>I1_N_56_i, CLK=>clk_25m_c, LSR=>'X', OFX1=>open, F1=>open, 
+                Q1=>open, OFX0=>open, F0=>I1_N_50_i_fast, 
+                Q0=>I1_R_tx_tickcnt_fast_1);
+    I1_SLICE_52I: SLOGICB
+      generic map (LUT0_INITVAL=>X"4000", LUT1_INITVAL=>X"1000")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_tx_phase_0, 
+                B1=>I1_R_tx_phase_2, C1=>I1_R_tx_phase_1, D1=>I1_R_tx_phase_3, 
+                DI1=>'X', DI0=>'X', A0=>I1_N_45, B0=>I1_R_baudgen_fast_16, 
+                C0=>I1_R_tx_tickcnt_3, D0=>I1_R_tx_phase_0_sqmuxa_0_a3_1, 
+                M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
+                F1=>I1_R_tx_phase_0_sqmuxa_0_a3_1, Q1=>open, OFX0=>open, 
+                F0=>I1_R_tx_phase_0_sqmuxa, Q0=>open);
+    I1_SLICE_53I: SLOGICB
+      generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
+                   SRMODE=>"ASYNC", LSRONMUX=>"OFF", LUT0_INITVAL=>X"0020", 
+                   LUT1_INITVAL=>X"0FFF", CHECK_M0=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', 
+                C1=>I1_R_baudgen_fast_16, D1=>I1_R_tx_tickcnt_3, DI1=>'X', 
+                DI0=>'X', A0=>I1_r_tx_tickcnt12_i_o2, 
+                B0=>I1_R_tx_phase_0_sqmuxa_0_o2_0_0, C0=>I1_R_tx_ser_1, 
+                D0=>I1_N_45, M0=>I1_un4_r_baudgen_16, CE=>'X', CLK=>clk_25m_c, 
+                LSR=>'X', OFX1=>open, F1=>I1_R_tx_phase_0_sqmuxa_0_o2_0_0, 
+                Q1=>open, OFX0=>open, F0=>I1_R_tx_ser_5_0, 
+                Q0=>I1_R_baudgen_fast_16);
+    I1_SLICE_54I: SLOGICB
+      generic map (LUT0_INITVAL=>X"CC00", LUT1_INITVAL=>X"FFFE")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_tx_phase_0, 
+                B1=>I1_R_tx_phase_3, C1=>I1_R_tx_phase_2, D1=>I1_R_tx_phase_1, 
+                DI1=>'X', DI0=>'X', A0=>'X', B0=>I1_R_baudgen_16, C0=>'X', 
+                D0=>I1_r_tx_tickcnt12_i_o2, M0=>'X', CE=>'X', CLK=>'X', 
+                LSR=>'X', OFX1=>open, F1=>I1_r_tx_tickcnt12_i_o2, Q1=>open, 
+                OFX0=>open, F0=>I1_N_56_i, Q0=>open);
+    I1_SLICE_55I: SLOGICB
+      generic map (LUT0_INITVAL=>X"66AA", LUT1_INITVAL=>X"8000")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_tx_tickcnt_0, 
+                B1=>I1_R_baudgen_16, C1=>I1_R_tx_tickcnt_1, 
+                D1=>I1_R_tx_tickcnt_3, DI1=>'X', DI0=>'X', A0=>I1_R_tx_phase_3, 
+                B0=>I1_un1_m2_0_a2_2, C0=>'X', D0=>I1_un1_m2_0_a2_3, M0=>'X', 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>I1_un1_m2_0_a2_3, 
+                Q1=>open, OFX0=>open, F0=>I1_R_tx_phase_7_RNO_3, Q0=>open);
+    I1_SLICE_56I: SLOGICB
+      generic map (LUT0_INITVAL=>X"5FFF", LUT1_INITVAL=>X"FFAB")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', 
+                A1=>I1_R_tx_phase_0_sqmuxa_0_o2_0_0, 
+                B1=>I1_r_tx_tickcnt12_i_o2_x, C1=>I1_R_tx_phase_0, D1=>I1_N_45, 
+                DI1=>'X', DI0=>'X', A0=>I1_R_tx_tickcnt_2, B0=>'X', 
+                C0=>I1_R_tx_tickcnt_fast_1, D0=>I1_R_tx_tickcnt_fast_0, 
+                M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>I1_N_48, 
+                Q1=>open, OFX0=>open, F0=>I1_N_45, Q0=>open);
+    I1_SLICE_57I: SLOGICB
+      generic map (LUT0_INITVAL=>X"CC9C", LUT1_INITVAL=>X"F000")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', 
+                C1=>I1_R_tx_phase_0, D1=>I1_R_tx_phase_1, DI1=>'X', DI0=>'X', 
+                A0=>I1_R_tx_phase_0_sqmuxa_0_o2_0_0, B0=>I1_R_tx_phase_2, 
+                C0=>I1_g2_0, D0=>I1_N_45, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>I1_g2_0, Q1=>open, OFX0=>open, F0=>I1_g1, 
+                Q0=>open);
+    I1_SLICE_58I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0001", LUT1_INITVAL=>X"8000")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_g0_0_6_0, B1=>I1_g0_0_5_0, 
+                C1=>I1_un1_R_debounce_cnt_1_0_a2_22, D1=>I1_g0_0_8, DI1=>'X', 
+                DI0=>'X', A0=>I1_R_debounce_cnt_6, B0=>I1_R_debounce_cnt_2, 
+                C0=>I1_R_debounce_cnt_4, D0=>I1_R_debounce_cnt_7, M0=>'X', 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>I1_m11_0_a2_9, 
+                Q1=>open, OFX0=>open, F0=>I1_g0_0_8, Q0=>open);
+    I1_SLICE_59I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0001", LUT1_INITVAL=>X"8000")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_g0_0_5_0, B1=>I1_g0_0_6_0, 
+                C1=>I1_g0_0_8, D1=>I1_un1_R_debounce_cnt_1_0_a2_22, DI1=>'X', 
+                DI0=>'X', A0=>I1_R_debounce_cnt_22, B0=>I1_R_debounce_cnt_23, 
+                C0=>I1_R_debounce_cnt_24, D0=>I1_R_debounce_cnt_25, M0=>'X', 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
+                F1=>I1_un1_R_debounce_cnt_1_0_a2_28, Q1=>open, OFX0=>open, 
+                F0=>I1_un1_R_debounce_cnt_1_0_a2_22, Q0=>open);
+    I1_SLICE_60I: SLOGICB
+      generic map (LUT0_INITVAL=>X"F000", LUT1_INITVAL=>X"FD00")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_r_tx_tickcnt12_i_o2, 
+                B1=>I1_R_tx_phase_0_sqmuxa_0_o2_0_0, C1=>I1_N_45, D1=>I1_g2_13, 
+                DI1=>'X', DI0=>'X', A0=>'X', B0=>'X', C0=>I1_g2_10, 
+                D0=>I1_g2_9, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
+                F1=>I1_g0_3_sn, Q1=>open, OFX0=>open, F0=>I1_g2_13, Q0=>open);
+    I1_SLICE_61I: SLOGICB
+      generic map (LUT0_INITVAL=>X"C080", LUT1_INITVAL=>X"E222")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_N_48_i, B1=>I1_g0_3_sn, 
+                C1=>I1_g2_15, D1=>I1_g2_14, DI1=>'X', DI0=>'X', A0=>I1_g0_6_3, 
+                B0=>I1_un1_R_debounce_cnt_1_0_a2_20, 
+                C0=>I1_un1_R_debounce_cnt_1_0_a2_21, D0=>I1_g0_6_0, M0=>'X', 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>N_38, Q1=>open, 
+                OFX0=>open, F0=>I1_g2_14, Q0=>open);
+    I1_SLICE_62I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0001", LUT1_INITVAL=>X"8000")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_g0_8, B1=>I1_g0_2_1, 
+                C1=>I1_g0_7, D1=>I1_g2_8_0, DI1=>'X', DI0=>'X', 
+                A0=>I1_R_debounce_cnt_25, B0=>I1_R_debounce_cnt_12, 
+                C0=>I1_R_debounce_cnt_24, D0=>I1_R_debounce_cnt_13, M0=>'X', 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>I1_g2_15, 
+                Q1=>open, OFX0=>open, F0=>I1_g2_8_0, Q0=>open);
+    I1_SLICE_63I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0001", LUT1_INITVAL=>X"2000")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_g0_3_4, 
+                B1=>I1_R_debounce_cnt_14, C1=>I1_g0_3_5, D1=>I1_g0_0_9_0, 
+                DI1=>'X', DI0=>'X', A0=>I1_R_debounce_cnt_8, 
+                B0=>I1_R_debounce_cnt_15, C0=>I1_R_debounce_cnt_21, 
+                D0=>I1_R_debounce_cnt_9, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>I1_un1_R_debounce_cnt_1_0_a2_27, Q1=>open, 
+                OFX0=>open, F0=>I1_g0_0_9_0, Q0=>open);
+    I1_SLICE_64I: SLOGICB
+      generic map (LUT0_INITVAL=>X"1000", LUT1_INITVAL=>X"7FFF")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_m11_0_a2_9, 
+                B1=>I1_m11_0_a2_4, C1=>I1_m11_0_a2_5, D1=>I1_N_34_mux, 
+                DI1=>'X', DI0=>'X', A0=>I1_R_debounce_cnt_12, 
+                B0=>I1_R_debounce_cnt_20, C0=>I1_m19_0_a2_3, D0=>I1_m19_0_a2_4, 
+                M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
+                F1=>I1_un1_R_debounce_cnt_1_i, Q1=>open, OFX0=>open, 
+                F0=>I1_N_34_mux, Q0=>open);
+    I1_SLICE_65I: SLOGICB
+      generic map (LUT0_INITVAL=>X"FFFC", LUT1_INITVAL=>X"FFFE")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_byte_old_4, 
+                B1=>I1_R_byte_old_3, C1=>I1_R_byte_old_1, D1=>I1_R_byte_old_6, 
+                DI1=>'X', DI0=>'X', A0=>'X', B0=>I1_R_byte_old_0, 
+                C0=>I1_R_byte_old_5, D0=>I1_g0_4_3, M0=>'X', CE=>'X', CLK=>'X', 
+                LSR=>'X', OFX1=>open, F1=>I1_g0_4_3, Q1=>open, OFX0=>open, 
+                F0=>I1_N_63, Q0=>open);
+    I1_SLICE_66I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0200", LUT1_INITVAL=>X"8000")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_g0_0_7_1, 
+                B1=>I1_g0_0_a3_4_1, C1=>I1_g0_4_2, D1=>I1_g0_0_11, DI1=>'X', 
+                DI0=>'X', A0=>I1_g0_1_3, B0=>I1_R_debounce_cnt_6, 
+                C0=>I1_R_debounce_cnt_7, D0=>I1_g0_1_4, M0=>'X', CE=>'X', 
+                CLK=>'X', LSR=>'X', OFX1=>open, F1=>I1_g0_0_a3_4, Q1=>open, 
+                OFX0=>open, F0=>I1_g0_0_11, Q0=>open);
+    I1_SLICE_67I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0C0C", LUT1_INITVAL=>X"0001")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_debounce_cnt_31, 
+                B1=>I1_R_debounce_cnt_20, C1=>I1_R_debounce_cnt_5, 
+                D1=>I1_R_debounce_cnt_21, DI1=>'X', DI0=>'X', A0=>'X', 
+                B0=>I1_g0_0_8_1, C0=>I1_R_debounce_cnt_4, D0=>'X', M0=>'X', 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>I1_g0_0_8_1, 
+                Q1=>open, OFX0=>open, F0=>I1_g0_1_3, Q0=>open);
+    I1_SLICE_68I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0001", LUT1_INITVAL=>X"0080")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_g0_6, B1=>I1_g0_1_5, 
+                C1=>I1_g0_0_8_0, D1=>I1_m7_e_5_sx, DI1=>'X', DI0=>'X', 
+                A0=>I1_R_debounce_cnt_fast_8, B0=>I1_R_debounce_cnt_fast_10, 
+                C0=>I1_R_debounce_cnt_fast_11, D0=>I1_R_debounce_cnt_fast_9, 
+                M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
+                F1=>I1_m7_e_5, Q1=>open, OFX0=>open, F0=>I1_g0_1_5, Q0=>open);
+    I1_SLICE_69I: SLOGICB
+      generic map (LUT0_INITVAL=>X"C0C0", LUT1_INITVAL=>X"0001")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_debounce_cnt_16, 
+                B1=>I1_R_debounce_cnt_18, C1=>I1_R_debounce_cnt_19, 
+                D1=>I1_R_debounce_cnt_17, DI1=>'X', DI0=>'X', A0=>'X', 
+                B0=>I1_g0_1_4_0, C0=>I1_g0_1_5, D0=>'X', M0=>'X', CE=>'X', 
+                CLK=>'X', LSR=>'X', OFX1=>open, F1=>I1_g0_1_4_0, Q1=>open, 
+                OFX0=>open, F0=>I1_g0_4_2, Q0=>open);
+    I1_SLICE_70I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0001", LUT1_INITVAL=>X"0100")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_debounce_cnt_21, 
+                B1=>I1_R_debounce_cnt_26, C1=>I1_R_debounce_cnt_7, 
+                D1=>I1_m5_0_a2_3, DI1=>'X', DI0=>'X', A0=>I1_R_debounce_cnt_2, 
+                B0=>I1_R_debounce_cnt_4, C0=>I1_R_debounce_cnt_1, 
+                D0=>I1_R_debounce_cnt_5, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>I1_m10_e_2, Q1=>open, OFX0=>open, 
+                F0=>I1_m5_0_a2_3, Q0=>open);
+    I1_SLICE_71I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0001", LUT1_INITVAL=>X"4000")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_tx_phase_0, 
+                B1=>I1_un1_R_debounce_cnt_1_0_a2_21, C1=>I1_R_debounce_cnt_0, 
+                D1=>I1_g0_0_7_0, DI1=>'X', DI0=>'X', A0=>I1_R_debounce_cnt_27, 
+                B0=>I1_R_debounce_cnt_26, C0=>I1_R_debounce_cnt_28, 
+                D0=>I1_R_debounce_cnt_29, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>I1_g0_0_a3_4_1, Q1=>open, OFX0=>open, 
+                F0=>I1_un1_R_debounce_cnt_1_0_a2_21, Q0=>open);
+    I1_SLICE_72I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0001", LUT1_INITVAL=>X"3300")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>I1_R_debounce_cnt_15, 
+                C1=>'X', D1=>I1_m13_0_a2_3, DI1=>'X', DI0=>'X', 
+                A0=>I1_R_debounce_cnt_3, B0=>I1_R_debounce_cnt_24, 
+                C0=>I1_R_debounce_cnt_14, D0=>I1_R_debounce_cnt_19, M0=>'X', 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>I1_m5_e_2, 
+                Q1=>open, OFX0=>open, F0=>I1_m13_0_a2_3, Q0=>open);
+    I1_SLICE_73I: SLOGICB
+      generic map (LUT0_INITVAL=>X"8000", LUT1_INITVAL=>X"0001")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_debounce_cnt_27, 
+                B1=>I1_R_debounce_cnt_18, C1=>I1_R_debounce_cnt_28, 
+                D1=>I1_R_debounce_cnt_29, DI1=>'X', DI0=>'X', A0=>I1_m7_e_5, 
+                B0=>I1_m5_e_2, C0=>I1_m5_e_3, D0=>I1_m10_e_2, M0=>'X', CE=>'X', 
+                CLK=>'X', LSR=>'X', OFX1=>open, F1=>I1_m5_e_3, Q1=>open, 
+                OFX0=>open, F0=>I1_R_debounce_cnt_RNI0AK3A_15, Q0=>open);
+    I1_SLICE_74I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0101", LUT1_INITVAL=>X"0010")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_debounce_cnt_20, 
+                B1=>I1_R_debounce_cnt_13, C1=>I1_G_13_1, 
+                D1=>I1_R_debounce_cnt_31, DI1=>'X', DI0=>'X', 
+                A0=>I1_R_debounce_cnt_18, B0=>I1_R_debounce_cnt_12, 
+                C0=>I1_R_debounce_cnt_19, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', 
+                LSR=>'X', OFX1=>open, F1=>I1_g0_3_4, Q1=>open, OFX0=>open, 
+                F0=>I1_G_13_1, Q0=>open);
+    I1_SLICE_75I: SLOGICB
+      generic map (LUT0_INITVAL=>X"FFFA", LUT1_INITVAL=>X"0001")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_tx_phase_RNO_2_1, 
+                B1=>I1_R_byte_old_0, C1=>I1_R_byte_old_5, D1=>I1_R_byte_old_6, 
+                DI1=>'X', DI0=>'X', A0=>I1_R_byte_old_4, B0=>'X', 
+                C0=>I1_R_byte_old_1, D0=>I1_R_byte_old_3, M0=>'X', CE=>'X', 
+                CLK=>'X', LSR=>'X', OFX1=>open, F1=>I1_g1_0_0_0, Q1=>open, 
+                OFX0=>open, F0=>I1_R_tx_phase_RNO_2_1, Q0=>open);
+    I1_SLICE_76I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0001", LUT1_INITVAL=>X"0001")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_debounce_cnt_16, 
+                B1=>I1_R_debounce_cnt_10, C1=>I1_R_debounce_cnt_11, 
+                D1=>I1_R_debounce_cnt_17, DI1=>'X', DI0=>'X', 
+                A0=>I1_R_debounce_cnt_16, B0=>I1_R_debounce_cnt_10, 
+                C0=>I1_R_debounce_cnt_11, D0=>I1_R_debounce_cnt_17, M0=>'X', 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>I1_m19_0_a2_4, 
+                Q1=>open, OFX0=>open, F0=>I1_g0_3_5, Q0=>open);
+    I1_SLICE_77I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0001", LUT1_INITVAL=>X"0001")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_debounce_cnt_30, 
+                B1=>I1_R_debounce_cnt_3, C1=>I1_R_debounce_cnt_2, 
+                D1=>I1_R_debounce_cnt_1, DI1=>'X', DI0=>'X', 
+                A0=>I1_R_debounce_cnt_30, B0=>I1_R_debounce_cnt_3, 
+                C0=>I1_R_debounce_cnt_2, D0=>I1_R_debounce_cnt_1, M0=>'X', 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>I1_g0_1_4, 
+                Q1=>open, OFX0=>open, F0=>I1_un1_R_debounce_cnt_1_0_a2_20, 
+                Q0=>open);
+    I1_SLICE_78I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0001", LUT1_INITVAL=>X"0002")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_debounce_cnt_0, 
+                B1=>I1_R_debounce_cnt_14, C1=>I1_R_debounce_cnt_15, 
+                D1=>I1_R_debounce_cnt_4, DI1=>'X', DI0=>'X', 
+                A0=>I1_R_debounce_cnt_15, B0=>I1_R_debounce_cnt_14, 
+                C0=>I1_R_debounce_cnt_21, D0=>I1_R_debounce_cnt_0, M0=>'X', 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>I1_g0_2_1, 
+                Q1=>open, OFX0=>open, F0=>I1_m11_0_a2_5, Q0=>open);
+    I1_SLICE_79I: SLOGICB
+      generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"FFF0")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', 
+                C1=>I1_R_byte_old_5, D1=>I1_R_byte_old_0, DI1=>'X', DI0=>'X', 
+                A0=>I1_R_byte_old_6, B0=>I1_R_byte_old_1, C0=>I1_R_byte_old_4, 
+                D0=>I1_R_byte_old_3, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>I1_g0_6_0, Q1=>open, OFX0=>open, F0=>I1_g0_6_3, 
+                Q0=>open);
+    I1_SLICE_80I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0001", LUT1_INITVAL=>X"0001")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_debounce_cnt_18, 
+                B1=>I1_R_debounce_cnt_17, C1=>I1_R_debounce_cnt_16, 
+                D1=>I1_R_debounce_cnt_19, DI1=>'X', DI0=>'X', 
+                A0=>I1_R_debounce_cnt_9, B0=>I1_R_debounce_cnt_10, 
+                C0=>I1_R_debounce_cnt_11, D0=>I1_R_debounce_cnt_8, M0=>'X', 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>I1_g0_7, Q1=>open, 
+                OFX0=>open, F0=>I1_g0_8, Q0=>open);
+    I1_SLICE_81I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0001", LUT1_INITVAL=>X"0100")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_debounce_cnt_22, 
+                B1=>I1_R_debounce_cnt_23, C1=>I1_R_debounce_cnt_6, 
+                D1=>I1_R_debounce_cnt_0, DI1=>'X', DI0=>'X', 
+                A0=>I1_R_debounce_cnt_22, B0=>I1_R_debounce_cnt_23, 
+                C0=>I1_R_debounce_cnt_24, D0=>I1_R_debounce_cnt_25, M0=>'X', 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>I1_g0_6, Q1=>open, 
+                OFX0=>open, F0=>I1_g0_0_7_1, Q0=>open);
+    I1_SLICE_82I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0001", LUT1_INITVAL=>X"FFFE")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_debounce_cnt_25, 
+                B1=>I1_R_debounce_cnt_20, C1=>I1_R_debounce_cnt_30, 
+                D1=>I1_R_debounce_cnt_31, DI1=>'X', DI0=>'X', 
+                A0=>I1_R_debounce_cnt_1, B0=>I1_R_debounce_cnt_30, 
+                C0=>I1_R_debounce_cnt_3, D0=>I1_R_debounce_cnt_27, M0=>'X', 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>I1_m7_e_5_sx, 
+                Q1=>open, OFX0=>open, F0=>I1_g0_0_5_0, Q0=>open);
+    I1_SLICE_83I: SLOGICB
+      generic map (LUT0_INITVAL=>X"FFEE", LUT1_INITVAL=>X"8000")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>I1_R_tx_tickcnt_2, 
+                B1=>I1_R_tx_phase_0, C1=>I1_R_tx_phase_1, D1=>I1_R_tx_phase_2, 
+                DI1=>'X', DI0=>'X', A0=>I1_R_tx_phase_1, B0=>I1_R_tx_phase_3, 
+                C0=>'X', D0=>I1_R_tx_phase_2, M0=>'X', CE=>'X', CLK=>'X', 
+                LSR=>'X', OFX1=>open, F1=>I1_un1_m2_0_a2_2, Q1=>open, 
+                OFX0=>open, F0=>I1_r_tx_tickcnt12_i_o2_x, Q0=>open);
+    I1_SLICE_84I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0001")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>I1_R_debounce_cnt_22, 
+                B0=>I1_R_debounce_cnt_23, C0=>I1_R_debounce_cnt_21, 
+                D0=>I1_R_debounce_cnt_31, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>open, Q1=>open, OFX0=>open, F0=>I1_g2_9, 
+                Q0=>open);
+    I1_SLICE_85I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0001")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>I1_R_debounce_cnt_6, 
+                B0=>I1_R_debounce_cnt_20, C0=>I1_R_debounce_cnt_7, 
+                D0=>I1_R_debounce_cnt_5, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>open, Q1=>open, OFX0=>open, F0=>I1_g2_10, 
+                Q0=>open);
+    I1_SLICE_86I: SLOGICB
+      generic map (LUT0_INITVAL=>X"000F")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>'X', 
+                C0=>I1_R_debounce_cnt_13, D0=>I1_R_debounce_cnt_31, M0=>'X', 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
+                OFX0=>open, F0=>I1_m19_0_a2_3, Q0=>open);
+    I1_SLICE_87I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0001")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>I1_R_debounce_cnt_14, 
+                B0=>I1_R_debounce_cnt_12, C0=>I1_R_debounce_cnt_15, 
+                D0=>I1_R_debounce_cnt_13, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>open, Q1=>open, OFX0=>open, F0=>I1_g0_0_7_0, 
+                Q0=>open);
+    I1_SLICE_88I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0001")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>I1_R_debounce_cnt_13, 
+                B0=>I1_R_debounce_cnt_12, C0=>I1_R_debounce_cnt_16, 
+                D0=>I1_R_debounce_cnt_17, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>open, Q1=>open, OFX0=>open, F0=>I1_g0_0_8_0, 
+                Q0=>open);
+    I1_SLICE_89I: SLOGICB
+      generic map (LUT0_INITVAL=>X"FFFF")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>'X', C0=>'X', 
+                D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
+                F1=>open, Q1=>open, OFX0=>open, F0=>I1_VCC, Q0=>open);
+    SLICE_90I: SLOGICB
+      generic map (LUT0_INITVAL=>X"A0A0")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>btn_right_c, B0=>'X', 
+                C0=>btn_down_c, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>open, Q1=>open, OFX0=>open, F0=>N_6, Q0=>open);
+    SLICE_91I: SLOGICB
+      generic map (LUT0_INITVAL=>X"0000")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>'X', C0=>'X', 
+                D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
+                F1=>open, Q1=>open, OFX0=>open, F0=>GND, Q0=>open);
+    led_7_I: led_7_B
+      port map (PADDO=>GND, led7=>led(7));
+    btn_centerI: btn_centerB
+      port map (PADDI=>btn_center_c, btncenter=>btn_center);
+    rs232_txI: rs232_txB
+      port map (IOLDO=>rs232_tx_c, rs232tx=>rs232_tx);
+    rs232_tx_MGIOLI: rs232_tx_MGIOL
+      port map (IOLDO=>rs232_tx_c, ONEG0=>I1_R_tx_ser_5_0, CE=>N_38, 
+                CLK=>clk_25m_c);
+    clk_25mI: clk_25mB
+      port map (PADDI=>clk_25m_c, clk25m=>clk_25m);
+    btn_upI: btn_upB
+      port map (PADDI=>btn_up_c, btnup=>btn_up);
+    btn_up_MGIOLI: btn_up_MGIOL
+      port map (DI=>btn_up_c, CLK=>clk_25m_c, INFF=>I1_R_byte_old_fast_4);
+    btn_rightI: btn_rightB
+      port map (PADDI=>btn_right_c, btnright=>btn_right);
+    btn_leftI: btn_leftB
+      port map (PADDI=>btn_left_c, btnleft=>btn_left);
+    btn_downI: btn_downB
+      port map (PADDI=>btn_down_c, btndown=>btn_down);
+    led_3_I: led_3_B
+      port map (PADDO=>N_12, led3=>led(3));
+    led_1_I: led_1_B
+      port map (PADDO=>N_13, led1=>led(1));
+    led_2_I: led_2_B
+      port map (PADDO=>N_11, led2=>led(2));
+    led_0_I: led_0_B
+      port map (PADDO=>N_11, led0=>led(0));
+    led_4_I: led_4_B
+      port map (PADDO=>btn_up_c, led4=>led(4));
+    led_6_I: led_6_B
+      port map (PADDO=>N_9, led6=>led(6));
+    led_5_I: led_5_B
+      port map (PADDO=>N_8, led5=>led(5));
+    VHI_INST: VHI
+      port map (Z=>VCCI);
+    PUR_INST: PUR
+      port map (PUR=>VCCI);
+    GSR_INST: GSR
+      port map (GSR=>VCCI);
+  end Structure;
+
+
+
+  library IEEE, vital2000, XP2;
+  configuration Structure_CON of lab2 is
+    for Structure
+    end for;
+  end Structure_CON;
+
+

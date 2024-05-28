@@ -1,0 +1,49 @@
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-PNMJ1CD
+
+Implementation : impl1
+Synopsys HDL compiler and linker, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
+
+Modified Files: 1
+FID:  path (prevtimestamp, timestamp)
+2        C:\Users\boris\slova\slova.vhd (2020-12-02 20:05:14, 2020-12-02 23:21:58)
+
+*******************************************************************
+Modules that may have changed as a result of file changes: 3
+MID:  lib.cell.view
+0        work.brojke.behavioral may have changed because the following files changed:
+                        C:\Users\boris\slova\slova.vhd (2020-12-02 20:05:14, 2020-12-02 23:21:58) <-- (may instantiate this module)
+2        work.serial_tx.behavioral may have changed because the following files changed:
+                        C:\Users\boris\slova\slova.vhd (2020-12-02 20:05:14, 2020-12-02 23:21:58) <-- (may instantiate this module)
+4        work.slova.behavioral may have changed because the following files changed:
+                        C:\Users\boris\slova\slova.vhd (2020-12-02 20:05:14, 2020-12-02 23:21:58) <-- (architecture and entity definition)
+
+*******************************************************************
+Unmodified files: 12
+FID:  path (timestamp)
+0        C:\Users\boris\slova\brojke.vhd (2020-12-02 18:43:30)
+1        C:\Users\boris\slova\serial_tx.vhd (2020-12-01 16:52:14)
+3        C:\lscc\diamond\3.11_x64\cae_library\synthesis\vhdl\xp2.vhd (2018-11-15 00:32:16)
+4        C:\lscc\diamond\3.11_x64\synpbase\lib\vhd\arith.vhd (2019-04-01 09:07:44)
+5        C:\lscc\diamond\3.11_x64\synpbase\lib\vhd\hyperents.vhd (2019-04-01 09:07:44)
+6        C:\lscc\diamond\3.11_x64\synpbase\lib\vhd\location.map (2019-04-01 16:01:20)
+7        C:\lscc\diamond\3.11_x64\synpbase\lib\vhd\numeric.vhd (2019-04-01 09:07:44)
+8        C:\lscc\diamond\3.11_x64\synpbase\lib\vhd\snps_haps_pkg.vhd (2019-04-01 09:07:44)
+9        C:\lscc\diamond\3.11_x64\synpbase\lib\vhd\std.vhd (2019-04-01 09:07:44)
+10       C:\lscc\diamond\3.11_x64\synpbase\lib\vhd\std1164.vhd (2019-04-01 09:07:44)
+11       C:\lscc\diamond\3.11_x64\synpbase\lib\vhd\umr_capim.vhd (2019-04-01 09:07:44)
+12       C:\lscc\diamond\3.11_x64\synpbase\lib\vhd\unsigned.vhd (2019-04-01 09:07:44)
+
+*******************************************************************
+Unchanged modules: 0
+MID:  lib.cell.view

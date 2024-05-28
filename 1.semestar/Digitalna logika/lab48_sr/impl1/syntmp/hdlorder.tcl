@@ -1,0 +1,1 @@
+project -fileorder "C:/lscc/diamond/3.11_x64/cae_library/synthesis/vhdl/xp2.vhd" "C:/Users/boris/lab48_sr/debouncer.vhd" "C:/Users/boris/lab48_sr/count8_sr.vhd" 

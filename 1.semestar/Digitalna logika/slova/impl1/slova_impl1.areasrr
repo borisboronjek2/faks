@@ -1,0 +1,56 @@
+----------------------------------------------------------------------
+Report for cell slova.behavioral
+
+Register bits: 77 of 8352 (1%)
+PIC Latch:       0
+I/O cells:       16
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2B       29       100.0
+                            FD1P3AY        8       100.0
+                            FD1P3IX       23       100.0
+                            FD1P3JX        8       100.0
+                            FD1S3AX       32       100.0
+                            FD1S3IX        5       100.0
+                                GSR        1       100.0
+                                 IB        7       100.0
+                                INV        1       100.0
+                                 OB        9       100.0
+                           OFS1P3BX        1       100.0
+                           ORCALUT4      115       100.0
+                              PFUMX        1       100.0
+                                PUR        1       100.0
+                                VHI        2       100.0
+                                VLO        3       100.0
+SUB MODULES 
+                             brojke        1       100.0
+                          serial_tx        1       100.0
+                            
+                         TOTAL           248           
+----------------------------------------------------------------------
+Report for cell brojke.netlist
+     Instance path:  modul_brojke
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                           ORCALUT4        2         1.7
+                                VLO        1        33.3
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell serial_tx.netlist
+     Instance path:  serializer
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2B       29       100.0
+                            FD1P3AY        8       100.0
+                            FD1P3IX       23       100.0
+                            FD1P3JX        8       100.0
+                            FD1S3AX       32       100.0
+                            FD1S3IX        5       100.0
+                                INV        1       100.0
+                           ORCALUT4      113        98.3
+                              PFUMX        1       100.0
+                                VHI        1        50.0
+                                VLO        1        33.3
+                            
+                         TOTAL           222           

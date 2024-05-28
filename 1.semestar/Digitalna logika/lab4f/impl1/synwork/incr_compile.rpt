@@ -1,0 +1,47 @@
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-PNMJ1CD
+
+Implementation : impl1
+Synopsys HDL compiler and linker, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
+
+Modified Files: 2
+FID:  path (prevtimestamp, timestamp)
+12       C:\Users\boris\lab4f\count8_ar.vhd (N/A, 2020-12-10 21:14:19)
+0        C:\Users\boris\lab4f\count8_modn.vhd (2020-12-11 10:15:51, N/A)
+
+*******************************************************************
+Modules that may have changed as a result of file changes: 2
+MID:  lib.cell.view
+1        work.count.x may have changed because the following files changed:
+                        C:\Users\boris\lab4f\count8_ar.vhd (N/A, 2020-12-10 21:14:19) <-- (architecture and entity definition)
+3        work.debouncer.x may have changed because the following files changed:
+                        C:\Users\boris\lab4f\count8_ar.vhd (N/A, 2020-12-10 21:14:19) <-- (may instantiate this module)
+
+*******************************************************************
+Unmodified files: 11
+FID:  path (timestamp)
+1        C:\Users\boris\lab4f\debouncer.vhd (2020-12-10 13:48:24)
+2        C:\lscc\diamond\3.11_x64\cae_library\synthesis\vhdl\xp2.vhd (2018-11-15 00:32:16)
+3        C:\lscc\diamond\3.11_x64\synpbase\lib\vhd\arith.vhd (2019-04-01 09:07:44)
+4        C:\lscc\diamond\3.11_x64\synpbase\lib\vhd\hyperents.vhd (2019-04-01 09:07:44)
+5        C:\lscc\diamond\3.11_x64\synpbase\lib\vhd\location.map (2019-04-01 16:01:20)
+6        C:\lscc\diamond\3.11_x64\synpbase\lib\vhd\numeric.vhd (2019-04-01 09:07:44)
+7        C:\lscc\diamond\3.11_x64\synpbase\lib\vhd\snps_haps_pkg.vhd (2019-04-01 09:07:44)
+8        C:\lscc\diamond\3.11_x64\synpbase\lib\vhd\std.vhd (2019-04-01 09:07:44)
+9        C:\lscc\diamond\3.11_x64\synpbase\lib\vhd\std1164.vhd (2019-04-01 09:07:44)
+10       C:\lscc\diamond\3.11_x64\synpbase\lib\vhd\umr_capim.vhd (2019-04-01 09:07:44)
+11       C:\lscc\diamond\3.11_x64\synpbase\lib\vhd\unsigned.vhd (2019-04-01 09:07:44)
+
+*******************************************************************
+Unchanged modules: 0
+MID:  lib.cell.view

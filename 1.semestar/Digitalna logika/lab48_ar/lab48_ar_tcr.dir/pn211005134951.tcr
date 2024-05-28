@@ -1,0 +1,8 @@
+#Start recording tcl command: 10/5/2021 13:48:25
+#Project Location: C:/Users/boris/lab48_ar; Project name: lab48_ar
+prj_project open "C:/Users/boris/lab48_ar/lab48_ar.ldf"
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+#Stop recording: 10/5/2021 13:49:51

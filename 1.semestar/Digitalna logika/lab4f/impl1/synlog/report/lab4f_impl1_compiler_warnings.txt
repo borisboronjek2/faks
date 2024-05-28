@@ -1,0 +1,3 @@
+@W: CG296 :"C:\Users\boris\lab4f\count8_modn.vhd":20:4:20:10|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"C:\Users\boris\lab4f\count8_modn.vhd":22:4:22:8|Referenced variable reset is not in sensitivity list.
+

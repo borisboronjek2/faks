@@ -1,0 +1,460 @@
+# Wed Dec  2 23:22:14 2020
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-PNMJ1CD
+
+Implementation : impl1
+Synopsys Lattice Technology Mapper, Version maplat2018q2p1, Build 055R, Built Apr  3 2019 09:51:54
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 114MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 142MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N: FX493 |Applying initial value "111111111" on instance serializer.R_tx_ser[8:0].
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 142MB)
+
+@N: MO231 :"c:\users\boris\slova\serial_tx.vhd":78:1:78:2|Found counter in view:work.serial_tx(behavioral) instance R_tx_tickcnt[3:0] 
+@N: MF179 :"c:\users\boris\slova\serial_tx.vhd":81:8:81:28|Found 8 by 8 bit equality operator ('==') un1_byte_in (in view: work.serial_tx(behavioral))
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+
+@N: BN362 :"c:\users\boris\slova\serial_tx.vhd":78:1:78:2|Removing sequential instance serializer.R_byte_old[7] (in view: work.slova(behavioral)) because it does not drive other instances.
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 142MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 142MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 142MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 142MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 143MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:00s		    -0.35ns		  58 /        73
+   2		0h:00m:00s		    -0.35ns		  64 /        73
+@N: FX271 :"c:\users\boris\slova\serial_tx.vhd":78:1:78:2|Replicating instance serializer.R_tx_tickcnt[1] (in view: work.slova(behavioral)) with 5 loads 1 time to improve timing.
+@N: FX271 :"c:\users\boris\slova\serial_tx.vhd":78:1:78:2|Replicating instance serializer.R_tx_tickcnt[0] (in view: work.slova(behavioral)) with 5 loads 1 time to improve timing.
+@N: FX271 :"c:\users\boris\slova\serial_tx.vhd":78:1:78:2|Replicating instance serializer.R_tx_tickcnt[2] (in view: work.slova(behavioral)) with 4 loads 1 time to improve timing.
+Timing driven replication report
+Added 3 Registers via timing driven replication
+Added 3 LUTs via timing driven replication
+
+   3		0h:00m:01s		    -0.13ns		 110 /        76
+   4		0h:00m:01s		     0.03ns		 111 /        76
+   5		0h:00m:01s		     0.18ns		 113 /        76
+   6		0h:00m:01s		    -0.14ns		 113 /        76
+
+@N: FX271 :"c:\users\boris\slova\serial_tx.vhd":78:1:78:2|Replicating instance serializer.R_tx_tickcnt[3] (in view: work.slova(behavioral)) with 4 loads 1 time to improve timing.
+Added 1 Registers via timing driven replication
+Added 1 LUTs via timing driven replication
+
+   7		0h:00m:01s		     0.07ns		 114 /        77
+   8		0h:00m:01s		     0.07ns		 116 /        77
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 143MB peak: 144MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 143MB peak: 144MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 109MB peak: 144MB)
+
+Writing Analyst data base C:\Users\boris\slova\impl1\synwork\slova_impl1_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 144MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: C:\Users\boris\slova\impl1\slova_impl1.edi
+N-2018.03L-SP1-1
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 146MB peak: 148MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 146MB peak: 148MB)
+
+@W: MT420 |Found inferred clock slova|clk_25m with period 5.00ns. Please declare a user-defined clock on port clk_25m.
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Wed Dec  2 23:22:16 2020
+#
+
+
+Top view:               slova
+Requested Frequency:    200.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -0.605
+
+                   Requested     Estimated     Requested     Estimated                Clock        Clock              
+Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group              
+----------------------------------------------------------------------------------------------------------------------
+slova|clk_25m      200.0 MHz     178.4 MHz     5.000         5.605         -0.605     inferred     Inferred_clkgroup_0
+======================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                        |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------------------
+Starting       Ending         |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+---------------------------------------------------------------------------------------------------------------------
+slova|clk_25m  slova|clk_25m  |  5.000       -0.605  |  No paths    -      |  No paths    -      |  No paths    -    
+=====================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: slova|clk_25m
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                  Starting                                                     Arrival           
+Instance                          Reference         Type        Pin     Net                    Time        Slack 
+                                  Clock                                                                          
+-----------------------------------------------------------------------------------------------------------------
+serializer.R_byte_old[0]          slova|clk_25m     FD1S3AX     Q       R_byte_old[0]          1.166       -0.605
+serializer.R_byte_old[1]          slova|clk_25m     FD1S3AX     Q       R_byte_old[1]          1.166       -0.605
+serializer.R_byte_old[3]          slova|clk_25m     FD1S3AX     Q       R_byte_old[3]          1.166       -0.605
+serializer.R_byte_old[5]          slova|clk_25m     FD1S3AX     Q       R_byte_old[5]          1.166       -0.605
+serializer.R_debounce_cnt[2]      slova|clk_25m     FD1P3IX     Q       R_debounce_cnt[2]      1.279       -0.473
+serializer.R_debounce_cnt[3]      slova|clk_25m     FD1P3IX     Q       R_debounce_cnt[3]      1.279       -0.473
+serializer.R_debounce_cnt[6]      slova|clk_25m     FD1P3JX     Q       R_debounce_cnt[6]      1.279       -0.473
+serializer.R_debounce_cnt[21]     slova|clk_25m     FD1P3IX     Q       R_debounce_cnt[21]     1.279       -0.473
+serializer.R_debounce_cnt[8]      slova|clk_25m     FD1P3IX     Q       R_debounce_cnt[8]      1.213       -0.304
+serializer.R_debounce_cnt[9]      slova|clk_25m     FD1P3JX     Q       R_debounce_cnt[9]      1.213       -0.304
+=================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                             Starting                                                                  Required           
+Instance                     Reference         Type         Pin     Net                                Time         Slack 
+                             Clock                                                                                        
+--------------------------------------------------------------------------------------------------------------------------
+serializer.R_tx_ser[1]       slova|clk_25m     FD1P3AY      SP      R_tx_ser_1_sqmuxa_i                4.640        -0.605
+serializer.R_tx_ser[2]       slova|clk_25m     FD1P3AY      SP      R_tx_ser_1_sqmuxa_i                4.640        -0.605
+serializer.R_tx_ser[3]       slova|clk_25m     FD1P3AY      SP      R_tx_ser_1_sqmuxa_i                4.640        -0.605
+serializer.R_tx_ser[4]       slova|clk_25m     FD1P3AY      SP      R_tx_ser_1_sqmuxa_i                4.640        -0.605
+serializer.R_tx_ser[5]       slova|clk_25m     FD1P3AY      SP      R_tx_ser_1_sqmuxa_i                4.640        -0.605
+serializer.R_tx_ser[6]       slova|clk_25m     FD1P3AY      SP      R_tx_ser_1_sqmuxa_i                4.640        -0.605
+serializer.R_tx_ser[7]       slova|clk_25m     FD1P3AY      SP      R_tx_ser_1_sqmuxa_i                4.640        -0.605
+serializer.R_tx_ser[8]       slova|clk_25m     FD1P3AY      SP      R_tx_ser_1_sqmuxa_i                4.640        -0.605
+serializer_R_tx_serio[0]     slova|clk_25m     OFS1P3BX     SP      serializer.R_tx_ser_1_sqmuxa_i     4.640        -0.605
+serializer.R_tx_phase[0]     slova|clk_25m     FD1S3IX      D       R_tx_phase_7[0]                    4.264        -0.342
+==========================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.360
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.640
+
+    - Propagation time:                      5.245
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.605
+
+    Number of logic level(s):                4
+    Starting point:                          serializer.R_byte_old[0] / Q
+    Ending point:                            serializer.R_tx_ser[1] / SP
+    The start point is clocked by            slova|clk_25m [rising] on pin CK
+    The end   point is clocked by            slova|clk_25m [rising] on pin CK
+
+Instance / Net                                          Pin      Pin               Arrival     No. of    
+Name                                       Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------
+serializer.R_byte_old[0]                   FD1S3AX      Q        Out     1.166     1.166       -         
+R_byte_old[0]                              Net          -        -       -         -           3         
+serializer.R_byte_old_RNILBPQ1[0]          ORCALUT4     A        In      0.000     1.166       -         
+serializer.R_byte_old_RNILBPQ1[0]          ORCALUT4     Z        Out     0.883     2.050       -         
+g0_2_4                                     Net          -        -       -         -           1         
+serializer.R_byte_old_RNIQHS63[2]          ORCALUT4     D        In      0.000     2.050       -         
+serializer.R_byte_old_RNIQHS63[2]          ORCALUT4     Z        Out     1.128     3.177       -         
+g2                                         Net          -        -       -         -           5         
+serializer.R_debounce_cnt_RNIQ40E6[23]     ORCALUT4     D        In      0.000     3.177       -         
+serializer.R_debounce_cnt_RNIQ40E6[23]     ORCALUT4     Z        Out     0.883     4.061       -         
+R_debounce_cnt_RNIQ40E6[23]                Net          -        -       -         -           1         
+serializer.un6_r_tx_tickcnt_RNIVARKD       ORCALUT4     C        In      0.000     4.061       -         
+serializer.un6_r_tx_tickcnt_RNIVARKD       ORCALUT4     Z        Out     1.184     5.245       -         
+R_tx_ser_1_sqmuxa_i                        Net          -        -       -         -           9         
+serializer.R_tx_ser[1]                     FD1P3AY      SP       In      0.000     5.245       -         
+=========================================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      5.000
+    - Setup time:                            0.360
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.640
+
+    - Propagation time:                      5.245
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.605
+
+    Number of logic level(s):                4
+    Starting point:                          serializer.R_byte_old[1] / Q
+    Ending point:                            serializer.R_tx_ser[1] / SP
+    The start point is clocked by            slova|clk_25m [rising] on pin CK
+    The end   point is clocked by            slova|clk_25m [rising] on pin CK
+
+Instance / Net                                          Pin      Pin               Arrival     No. of    
+Name                                       Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------
+serializer.R_byte_old[1]                   FD1S3AX      Q        Out     1.166     1.166       -         
+R_byte_old[1]                              Net          -        -       -         -           3         
+serializer.R_byte_old_RNILBPQ1[0]          ORCALUT4     B        In      0.000     1.166       -         
+serializer.R_byte_old_RNILBPQ1[0]          ORCALUT4     Z        Out     0.883     2.050       -         
+g0_2_4                                     Net          -        -       -         -           1         
+serializer.R_byte_old_RNIQHS63[2]          ORCALUT4     D        In      0.000     2.050       -         
+serializer.R_byte_old_RNIQHS63[2]          ORCALUT4     Z        Out     1.128     3.177       -         
+g2                                         Net          -        -       -         -           5         
+serializer.R_debounce_cnt_RNIQ40E6[23]     ORCALUT4     D        In      0.000     3.177       -         
+serializer.R_debounce_cnt_RNIQ40E6[23]     ORCALUT4     Z        Out     0.883     4.061       -         
+R_debounce_cnt_RNIQ40E6[23]                Net          -        -       -         -           1         
+serializer.un6_r_tx_tickcnt_RNIVARKD       ORCALUT4     C        In      0.000     4.061       -         
+serializer.un6_r_tx_tickcnt_RNIVARKD       ORCALUT4     Z        Out     1.184     5.245       -         
+R_tx_ser_1_sqmuxa_i                        Net          -        -       -         -           9         
+serializer.R_tx_ser[1]                     FD1P3AY      SP       In      0.000     5.245       -         
+=========================================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      5.000
+    - Setup time:                            0.360
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.640
+
+    - Propagation time:                      5.245
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.605
+
+    Number of logic level(s):                4
+    Starting point:                          serializer.R_byte_old[3] / Q
+    Ending point:                            serializer.R_tx_ser[1] / SP
+    The start point is clocked by            slova|clk_25m [rising] on pin CK
+    The end   point is clocked by            slova|clk_25m [rising] on pin CK
+
+Instance / Net                                          Pin      Pin               Arrival     No. of    
+Name                                       Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------
+serializer.R_byte_old[3]                   FD1S3AX      Q        Out     1.166     1.166       -         
+R_byte_old[3]                              Net          -        -       -         -           3         
+serializer.R_byte_old_RNILBPQ1[0]          ORCALUT4     C        In      0.000     1.166       -         
+serializer.R_byte_old_RNILBPQ1[0]          ORCALUT4     Z        Out     0.883     2.050       -         
+g0_2_4                                     Net          -        -       -         -           1         
+serializer.R_byte_old_RNIQHS63[2]          ORCALUT4     D        In      0.000     2.050       -         
+serializer.R_byte_old_RNIQHS63[2]          ORCALUT4     Z        Out     1.128     3.177       -         
+g2                                         Net          -        -       -         -           5         
+serializer.R_debounce_cnt_RNIQ40E6[23]     ORCALUT4     D        In      0.000     3.177       -         
+serializer.R_debounce_cnt_RNIQ40E6[23]     ORCALUT4     Z        Out     0.883     4.061       -         
+R_debounce_cnt_RNIQ40E6[23]                Net          -        -       -         -           1         
+serializer.un6_r_tx_tickcnt_RNIVARKD       ORCALUT4     C        In      0.000     4.061       -         
+serializer.un6_r_tx_tickcnt_RNIVARKD       ORCALUT4     Z        Out     1.184     5.245       -         
+R_tx_ser_1_sqmuxa_i                        Net          -        -       -         -           9         
+serializer.R_tx_ser[1]                     FD1P3AY      SP       In      0.000     5.245       -         
+=========================================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      5.000
+    - Setup time:                            0.360
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.640
+
+    - Propagation time:                      5.245
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.605
+
+    Number of logic level(s):                4
+    Starting point:                          serializer.R_byte_old[5] / Q
+    Ending point:                            serializer.R_tx_ser[1] / SP
+    The start point is clocked by            slova|clk_25m [rising] on pin CK
+    The end   point is clocked by            slova|clk_25m [rising] on pin CK
+
+Instance / Net                                          Pin      Pin               Arrival     No. of    
+Name                                       Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------
+serializer.R_byte_old[5]                   FD1S3AX      Q        Out     1.166     1.166       -         
+R_byte_old[5]                              Net          -        -       -         -           3         
+serializer.R_byte_old_RNILBPQ1[0]          ORCALUT4     D        In      0.000     1.166       -         
+serializer.R_byte_old_RNILBPQ1[0]          ORCALUT4     Z        Out     0.883     2.050       -         
+g0_2_4                                     Net          -        -       -         -           1         
+serializer.R_byte_old_RNIQHS63[2]          ORCALUT4     D        In      0.000     2.050       -         
+serializer.R_byte_old_RNIQHS63[2]          ORCALUT4     Z        Out     1.128     3.177       -         
+g2                                         Net          -        -       -         -           5         
+serializer.R_debounce_cnt_RNIQ40E6[23]     ORCALUT4     D        In      0.000     3.177       -         
+serializer.R_debounce_cnt_RNIQ40E6[23]     ORCALUT4     Z        Out     0.883     4.061       -         
+R_debounce_cnt_RNIQ40E6[23]                Net          -        -       -         -           1         
+serializer.un6_r_tx_tickcnt_RNIVARKD       ORCALUT4     C        In      0.000     4.061       -         
+serializer.un6_r_tx_tickcnt_RNIVARKD       ORCALUT4     Z        Out     1.184     5.245       -         
+R_tx_ser_1_sqmuxa_i                        Net          -        -       -         -           9         
+serializer.R_tx_ser[1]                     FD1P3AY      SP       In      0.000     5.245       -         
+=========================================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      5.000
+    - Setup time:                            0.360
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.640
+
+    - Propagation time:                      5.245
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.605
+
+    Number of logic level(s):                4
+    Starting point:                          serializer.R_byte_old[0] / Q
+    Ending point:                            serializer.R_tx_ser[8] / SP
+    The start point is clocked by            slova|clk_25m [rising] on pin CK
+    The end   point is clocked by            slova|clk_25m [rising] on pin CK
+
+Instance / Net                                          Pin      Pin               Arrival     No. of    
+Name                                       Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------
+serializer.R_byte_old[0]                   FD1S3AX      Q        Out     1.166     1.166       -         
+R_byte_old[0]                              Net          -        -       -         -           3         
+serializer.R_byte_old_RNILBPQ1[0]          ORCALUT4     A        In      0.000     1.166       -         
+serializer.R_byte_old_RNILBPQ1[0]          ORCALUT4     Z        Out     0.883     2.050       -         
+g0_2_4                                     Net          -        -       -         -           1         
+serializer.R_byte_old_RNIQHS63[2]          ORCALUT4     D        In      0.000     2.050       -         
+serializer.R_byte_old_RNIQHS63[2]          ORCALUT4     Z        Out     1.128     3.177       -         
+g2                                         Net          -        -       -         -           5         
+serializer.R_debounce_cnt_RNIQ40E6[23]     ORCALUT4     D        In      0.000     3.177       -         
+serializer.R_debounce_cnt_RNIQ40E6[23]     ORCALUT4     Z        Out     0.883     4.061       -         
+R_debounce_cnt_RNIQ40E6[23]                Net          -        -       -         -           1         
+serializer.un6_r_tx_tickcnt_RNIVARKD       ORCALUT4     C        In      0.000     4.061       -         
+serializer.un6_r_tx_tickcnt_RNIVARKD       ORCALUT4     Z        Out     1.184     5.245       -         
+R_tx_ser_1_sqmuxa_i                        Net          -        -       -         -           9         
+serializer.R_tx_ser[8]                     FD1P3AY      SP       In      0.000     5.245       -         
+=========================================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 147MB peak: 148MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 147MB peak: 148MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lfxp2_8e-5
+
+Register bits: 77 of 8352 (1%)
+PIC Latch:       0
+I/O cells:       16
+
+
+Details:
+CCU2B:          29
+FD1P3AY:        8
+FD1P3IX:        23
+FD1P3JX:        8
+FD1S3AX:        32
+FD1S3IX:        5
+GSR:            1
+IB:             7
+INV:            1
+OB:             9
+OFS1P3BX:       1
+ORCALUT4:       115
+PFUMX:          1
+PUR:            1
+VHI:            2
+VLO:            3
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 33MB peak: 148MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Wed Dec  2 23:22:16 2020
+
+###########################################################]

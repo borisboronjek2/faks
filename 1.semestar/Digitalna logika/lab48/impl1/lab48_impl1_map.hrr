@@ -1,0 +1,24 @@
+---------------------------------------------------
+Report for cell count
+   Instance path: count
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      27.00        100.0
+                                 IOLGC	       1.00        100.0
+                                  LUT4	       5.00        100.0
+                                 IOREG	          1        100.0
+                                 IOBUF	         10        100.0
+                                PFUREG	         41        100.0
+                                RIPPLE	         22        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                             debouncer	          1        77.8
+---------------------------------------------------
+Report for cell debouncer
+   Instance path: count/I_debouncer
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      21.00        77.8
+                                  LUT4	       4.00        80.0
+                                PFUREG	         33        80.5
+                                RIPPLE	         17        77.3

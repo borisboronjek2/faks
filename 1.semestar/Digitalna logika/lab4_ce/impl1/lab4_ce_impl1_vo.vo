@@ -1,0 +1,425 @@
+
+// Verilog netlist produced by program ldbanno, Version Diamond (64-bit) 3.11.0.396.4
+// ldbanno -n Verilog -o lab4_ce_impl1_vo.vo -w -neg -gui lab4_ce_impl1.ncd 
+// Netlist created on Thu Dec 10 21:19:08 2020
+// Netlist written on Thu Dec 10 21:19:24 2020
+// Design is for device LFXP2-8E
+// Design is for package TQFP144
+// Design is for performance grade 5
+
+`timescale 1 ns / 1 ps
+
+module count ( btn_left, clk_25m, btn_down, sw, led );
+  input  btn_left, clk_25m, btn_down;
+  input  [3:0] sw;
+  output [7:0] led;
+  wire   \R[0] , \sw_c[0] , btn_left_c, R_2_cry_0, VCC, \R[31] , \R_2[31] , 
+         clk_25m_c, R_2_cry_30, \R[30] , \R[29] , \R_2[30] , \R_2[29] , 
+         R_2_cry_28, \R[28] , \R[27] , \R_2[28] , \R_2[27] , R_2_cry_26, 
+         \R[26] , \R[25] , \R_2[26] , \R_2[25] , R_2_cry_24, \R[24] , \R[23] , 
+         \R_2[24] , \R_2[23] , R_2_cry_22, \R[22] , \R[21] , \R_2[22] , 
+         \R_2[21] , R_2_cry_20, \R[20] , \R[19] , \R_2[20] , \R_2[19] , 
+         R_2_cry_18, \R[18] , \R[17] , \R_2[18] , \R_2[17] , R_2_cry_16, 
+         \R[16] , \R[15] , \R_2[16] , \R_2[15] , R_2_cry_14, \R[14] , \R[13] , 
+         \R_2[14] , \R_2[13] , R_2_cry_12, \R[12] , \R[11] , \R_2[12] , 
+         \R_2[11] , R_2_cry_10, \R[10] , \R[9] , \R_2[10] , \R_2[9] , 
+         R_2_cry_8, \R[8] , \R[7] , \R_2[8] , \R_2[7] , R_2_cry_6, \R[6] , 
+         \R[5] , \R_2[6] , \R_2[5] , R_2_cry_4, \R[4] , \R[3] , \sw_c[3] , 
+         \R_2[4] , \R_2[3] , R_2_cry_2, \R[2] , \sw_c[2] , \R[1] , \sw_c[1] , 
+         \R_2[2] , \R_2[1] , \R_2[0] , btn_down_c, \led_c[7] , \led_c[0] , 
+         \led_c[1] , \led_c[2] , \led_c[3] , \led_c[4] , \led_c[5] , 
+         \led_c[6] , VCCI;
+
+  SCCU2B #(.CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), 
+    .INIT0_INITVAL(16'h0000), .INIT1_INITVAL(16'h7878)) SLICE_0( .M1(1'bX), 
+    .A1(btn_left_c), .B1(\sw_c[0] ), .C1(\R[0] ), .D1(1'bX), .DI1(1'bX), 
+    .DI0(1'bX), .A0(1'bX), .B0(1'bX), .C0(1'bX), .D0(1'bX), .FCI(1'bX), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .FCO(R_2_cry_0), .F1(), 
+    .Q1(), .F0(), .Q0());
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'hCC00), .INIT1_INITVAL(16'h0000), .REG0_SD("VHI"), 
+    .CHECK_DI0(1'b1)) SLICE_1( .M1(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), 
+    .D1(1'bX), .DI1(1'bX), .DI0(\R_2[31] ), .A0(1'bX), .B0(\R[31] ), .C0(1'bX), 
+    .D0(VCC), .FCI(R_2_cry_30), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), 
+    .LSR(1'bX), .FCO(), .F1(), .Q1(), .F0(\R_2[31] ), .Q0(\R[31] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'hCC00), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) SLICE_2( .M1(1'bX), 
+    .A1(1'bX), .B1(\R[30] ), .C1(1'bX), .D1(VCC), .DI1(\R_2[30] ), 
+    .DI0(\R_2[29] ), .A0(1'bX), .B0(\R[29] ), .C0(1'bX), .D0(VCC), 
+    .FCI(R_2_cry_28), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), 
+    .FCO(R_2_cry_30), .F1(\R_2[30] ), .Q1(\R[30] ), .F0(\R_2[29] ), 
+    .Q0(\R[29] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'hAA00), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) SLICE_3( .M1(1'bX), 
+    .A1(1'bX), .B1(\R[28] ), .C1(1'bX), .D1(VCC), .DI1(\R_2[28] ), 
+    .DI0(\R_2[27] ), .A0(\R[27] ), .B0(1'bX), .C0(1'bX), .D0(VCC), 
+    .FCI(R_2_cry_26), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), 
+    .FCO(R_2_cry_28), .F1(\R_2[28] ), .Q1(\R[28] ), .F0(\R_2[27] ), 
+    .Q0(\R[27] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'hCC00), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) SLICE_4( .M1(1'bX), 
+    .A1(1'bX), .B1(\R[26] ), .C1(1'bX), .D1(VCC), .DI1(\R_2[26] ), 
+    .DI0(\R_2[25] ), .A0(1'bX), .B0(\R[25] ), .C0(1'bX), .D0(VCC), 
+    .FCI(R_2_cry_24), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), 
+    .FCO(R_2_cry_26), .F1(\R_2[26] ), .Q1(\R[26] ), .F0(\R_2[25] ), 
+    .Q0(\R[25] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'hCC00), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) SLICE_5( .M1(1'bX), 
+    .A1(1'bX), .B1(\R[24] ), .C1(1'bX), .D1(VCC), .DI1(\R_2[24] ), 
+    .DI0(\R_2[23] ), .A0(1'bX), .B0(\R[23] ), .C0(1'bX), .D0(VCC), 
+    .FCI(R_2_cry_22), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), 
+    .FCO(R_2_cry_24), .F1(\R_2[24] ), .Q1(\R[24] ), .F0(\R_2[23] ), 
+    .Q0(\R[23] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'hAA00), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) SLICE_6( .M1(1'bX), 
+    .A1(1'bX), .B1(\R[22] ), .C1(1'bX), .D1(VCC), .DI1(\R_2[22] ), 
+    .DI0(\R_2[21] ), .A0(\R[21] ), .B0(1'bX), .C0(1'bX), .D0(VCC), 
+    .FCI(R_2_cry_20), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), 
+    .FCO(R_2_cry_22), .F1(\R_2[22] ), .Q1(\R[22] ), .F0(\R_2[21] ), 
+    .Q0(\R[21] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'hCC00), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) SLICE_7( .M1(1'bX), 
+    .A1(1'bX), .B1(\R[20] ), .C1(1'bX), .D1(VCC), .DI1(\R_2[20] ), 
+    .DI0(\R_2[19] ), .A0(1'bX), .B0(\R[19] ), .C0(1'bX), .D0(VCC), 
+    .FCI(R_2_cry_18), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), 
+    .FCO(R_2_cry_20), .F1(\R_2[20] ), .Q1(\R[20] ), .F0(\R_2[19] ), 
+    .Q0(\R[19] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'hCC00), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) SLICE_8( .M1(1'bX), 
+    .A1(1'bX), .B1(\R[18] ), .C1(1'bX), .D1(VCC), .DI1(\R_2[18] ), 
+    .DI0(\R_2[17] ), .A0(1'bX), .B0(\R[17] ), .C0(1'bX), .D0(VCC), 
+    .FCI(R_2_cry_16), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), 
+    .FCO(R_2_cry_18), .F1(\R_2[18] ), .Q1(\R[18] ), .F0(\R_2[17] ), 
+    .Q0(\R[17] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'hAA00), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) SLICE_9( .M1(1'bX), 
+    .A1(1'bX), .B1(\R[16] ), .C1(1'bX), .D1(VCC), .DI1(\R_2[16] ), 
+    .DI0(\R_2[15] ), .A0(\R[15] ), .B0(1'bX), .C0(1'bX), .D0(VCC), 
+    .FCI(R_2_cry_14), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), 
+    .FCO(R_2_cry_16), .F1(\R_2[16] ), .Q1(\R[16] ), .F0(\R_2[15] ), 
+    .Q0(\R[15] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'hCC00), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) SLICE_10( .M1(1'bX), 
+    .A1(1'bX), .B1(\R[14] ), .C1(1'bX), .D1(VCC), .DI1(\R_2[14] ), 
+    .DI0(\R_2[13] ), .A0(1'bX), .B0(\R[13] ), .C0(1'bX), .D0(VCC), 
+    .FCI(R_2_cry_12), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), 
+    .FCO(R_2_cry_14), .F1(\R_2[14] ), .Q1(\R[14] ), .F0(\R_2[13] ), 
+    .Q0(\R[13] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'hCC00), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) SLICE_11( .M1(1'bX), 
+    .A1(1'bX), .B1(\R[12] ), .C1(1'bX), .D1(VCC), .DI1(\R_2[12] ), 
+    .DI0(\R_2[11] ), .A0(1'bX), .B0(\R[11] ), .C0(1'bX), .D0(VCC), 
+    .FCI(R_2_cry_10), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), 
+    .FCO(R_2_cry_12), .F1(\R_2[12] ), .Q1(\R[12] ), .F0(\R_2[11] ), 
+    .Q0(\R[11] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'hAA00), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) SLICE_12( .M1(1'bX), 
+    .A1(1'bX), .B1(\R[10] ), .C1(1'bX), .D1(VCC), .DI1(\R_2[10] ), 
+    .DI0(\R_2[9] ), .A0(\R[9] ), .B0(1'bX), .C0(1'bX), .D0(VCC), 
+    .FCI(R_2_cry_8), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), 
+    .FCO(R_2_cry_10), .F1(\R_2[10] ), .Q1(\R[10] ), .F0(\R_2[9] ), .Q0(\R[9] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'hCC00), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) SLICE_13( .M1(1'bX), 
+    .A1(1'bX), .B1(\R[8] ), .C1(1'bX), .D1(VCC), .DI1(\R_2[8] ), 
+    .DI0(\R_2[7] ), .A0(1'bX), .B0(\R[7] ), .C0(1'bX), .D0(VCC), 
+    .FCI(R_2_cry_6), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), 
+    .FCO(R_2_cry_8), .F1(\R_2[8] ), .Q1(\R[8] ), .F0(\R_2[7] ), .Q0(\R[7] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'hCC00), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) SLICE_14( .M1(1'bX), 
+    .A1(1'bX), .B1(\R[6] ), .C1(1'bX), .D1(VCC), .DI1(\R_2[6] ), 
+    .DI0(\R_2[5] ), .A0(1'bX), .B0(\R[5] ), .C0(1'bX), .D0(VCC), 
+    .FCI(R_2_cry_4), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), 
+    .FCO(R_2_cry_6), .F1(\R_2[6] ), .Q1(\R[6] ), .F0(\R_2[5] ), .Q0(\R[5] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'h7878), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) SLICE_15( .M1(1'bX), 
+    .A1(1'bX), .B1(\R[4] ), .C1(1'bX), .D1(VCC), .DI1(\R_2[4] ), 
+    .DI0(\R_2[3] ), .A0(btn_left_c), .B0(\sw_c[3] ), .C0(\R[3] ), .D0(1'bX), 
+    .FCI(R_2_cry_2), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), 
+    .FCO(R_2_cry_4), .F1(\R_2[4] ), .Q1(\R[4] ), .F0(\R_2[3] ), .Q0(\R[3] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'h7878), .INIT1_INITVAL(16'h7878), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) SLICE_16( .M1(1'bX), 
+    .A1(\sw_c[2] ), .B1(btn_left_c), .C1(\R[2] ), .D1(1'bX), .DI1(\R_2[2] ), 
+    .DI0(\R_2[1] ), .A0(\sw_c[1] ), .B0(btn_left_c), .C0(\R[1] ), .D0(1'bX), 
+    .FCI(R_2_cry_0), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), 
+    .FCO(R_2_cry_2), .F1(\R_2[2] ), .Q1(\R[2] ), .F0(\R_2[1] ), .Q0(\R[1] ));
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("VHI"), .GSR("DISABLED"), .SRMODE("ASYNC"), 
+    .LSRONMUX(0), .LUT0_INITVAL(16'h7788), .REG0_SD("VHI"), .CHECK_DI0(1'b1)) 
+    SLICE_17( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), .A1(1'bX), .B1(1'bX), 
+    .C1(1'bX), .D1(1'bX), .DI1(1'bX), .DI0(\R_2[0] ), .A0(btn_left_c), 
+    .B0(\sw_c[0] ), .C0(1'bX), .D0(\R[0] ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(1'bX), .OFX1(), .F1(), .Q1(), .OFX0(), .F0(\R_2[0] ), 
+    .Q0(\R[0] ));
+  SLOGICB #(.LUT0_INITVAL(16'hFA0A)) SLICE_18( .M1(1'bX), .FXA(1'bX), 
+    .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), 
+    .DI0(1'bX), .A0(\R[31] ), .B0(1'bX), .C0(btn_down_c), .D0(\R[23] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(), .Q1(), 
+    .OFX0(), .F0(\led_c[7] ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'hCCAA)) SLICE_19( .M1(1'bX), .FXA(1'bX), 
+    .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), 
+    .DI0(1'bX), .A0(\R[24] ), .B0(\R[16] ), .C0(1'bX), .D0(btn_down_c), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(), .Q1(), 
+    .OFX0(), .F0(\led_c[0] ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'hF3C0)) SLICE_20( .M1(1'bX), .FXA(1'bX), 
+    .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), 
+    .DI0(1'bX), .A0(1'bX), .B0(btn_down_c), .C0(\R[17] ), .D0(\R[25] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(), .Q1(), 
+    .OFX0(), .F0(\led_c[1] ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'hDD88)) SLICE_21( .M1(1'bX), .FXA(1'bX), 
+    .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), 
+    .DI0(1'bX), .A0(btn_down_c), .B0(\R[18] ), .C0(1'bX), .D0(\R[26] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(), .Q1(), 
+    .OFX0(), .F0(\led_c[2] ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'hF0CC)) SLICE_22( .M1(1'bX), .FXA(1'bX), 
+    .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), 
+    .DI0(1'bX), .A0(1'bX), .B0(\R[27] ), .C0(\R[19] ), .D0(btn_down_c), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(), .Q1(), 
+    .OFX0(), .F0(\led_c[3] ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'hCCAA)) SLICE_23( .M1(1'bX), .FXA(1'bX), 
+    .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), 
+    .DI0(1'bX), .A0(\R[28] ), .B0(\R[20] ), .C0(1'bX), .D0(btn_down_c), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(), .Q1(), 
+    .OFX0(), .F0(\led_c[4] ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'hFC30)) SLICE_24( .M1(1'bX), .FXA(1'bX), 
+    .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), 
+    .DI0(1'bX), .A0(1'bX), .B0(btn_down_c), .C0(\R[29] ), .D0(\R[21] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(), .Q1(), 
+    .OFX0(), .F0(\led_c[5] ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'hCCAA)) SLICE_25( .M1(1'bX), .FXA(1'bX), 
+    .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), 
+    .DI0(1'bX), .A0(\R[30] ), .B0(\R[22] ), .C0(1'bX), .D0(btn_down_c), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(), .Q1(), 
+    .OFX0(), .F0(\led_c[6] ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'hFFFF)) SLICE_26( .M1(1'bX), .FXA(1'bX), 
+    .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), 
+    .DI0(1'bX), .A0(1'bX), .B0(1'bX), .C0(1'bX), .D0(1'bX), .M0(1'bX), 
+    .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(), .Q1(), .OFX0(), 
+    .F0(VCC), .Q0());
+  led_0_ \led[0]_I ( .PADDO(\led_c[0] ), .led0(led[0]));
+  btn_left btn_left_I( .PADDI(btn_left_c), .btn_left(btn_left));
+  led_7_ \led[7]_I ( .PADDO(\led_c[7] ), .led7(led[7]));
+  led_6_ \led[6]_I ( .PADDO(\led_c[6] ), .led6(led[6]));
+  led_5_ \led[5]_I ( .PADDO(\led_c[5] ), .led5(led[5]));
+  led_4_ \led[4]_I ( .PADDO(\led_c[4] ), .led4(led[4]));
+  led_3_ \led[3]_I ( .PADDO(\led_c[3] ), .led3(led[3]));
+  led_2_ \led[2]_I ( .PADDO(\led_c[2] ), .led2(led[2]));
+  led_1_ \led[1]_I ( .PADDO(\led_c[1] ), .led1(led[1]));
+  sw_3_ \sw[3]_I ( .PADDI(\sw_c[3] ), .sw3(sw[3]));
+  sw_2_ \sw[2]_I ( .PADDI(\sw_c[2] ), .sw2(sw[2]));
+  sw_1_ \sw[1]_I ( .PADDI(\sw_c[1] ), .sw1(sw[1]));
+  sw_0_ \sw[0]_I ( .PADDI(\sw_c[0] ), .sw0(sw[0]));
+  btn_down btn_down_I( .PADDI(btn_down_c), .btn_down(btn_down));
+  clk_25m clk_25m_I( .PADDI(clk_25m_c), .clk_25m(clk_25m));
+  VHI VHI_INST( .Z(VCCI));
+  PUR PUR_INST( .PUR(VCCI));
+  GSR GSR_INST( .GSR(VCCI));
+endmodule
+
+module led_0_ ( input PADDO, output led0 );
+
+  ec2iobuf \led_pad[0] ( .I(PADDO), .PAD(led0));
+
+  specify
+    (PADDO => led0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module ec2iobuf ( input I, output PAD );
+
+  OB INST5( .I(I), .O(PAD));
+endmodule
+
+module btn_left ( output PADDI, input btn_left );
+
+  ec2iobuf0001 btn_left_pad( .Z(PADDI), .PAD(btn_left));
+
+  specify
+    (btn_left => PADDI) = (0:0:0,0:0:0);
+    $width (posedge btn_left, 0:0:0);
+    $width (negedge btn_left, 0:0:0);
+  endspecify
+
+endmodule
+
+module ec2iobuf0001 ( output Z, input PAD );
+
+  IBPD INST1( .I(PAD), .O(Z));
+endmodule
+
+module led_7_ ( input PADDO, output led7 );
+
+  ec2iobuf \led_pad[7] ( .I(PADDO), .PAD(led7));
+
+  specify
+    (PADDO => led7) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_6_ ( input PADDO, output led6 );
+
+  ec2iobuf \led_pad[6] ( .I(PADDO), .PAD(led6));
+
+  specify
+    (PADDO => led6) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_5_ ( input PADDO, output led5 );
+
+  ec2iobuf \led_pad[5] ( .I(PADDO), .PAD(led5));
+
+  specify
+    (PADDO => led5) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_4_ ( input PADDO, output led4 );
+
+  ec2iobuf \led_pad[4] ( .I(PADDO), .PAD(led4));
+
+  specify
+    (PADDO => led4) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_3_ ( input PADDO, output led3 );
+
+  ec2iobuf \led_pad[3] ( .I(PADDO), .PAD(led3));
+
+  specify
+    (PADDO => led3) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_2_ ( input PADDO, output led2 );
+
+  ec2iobuf \led_pad[2] ( .I(PADDO), .PAD(led2));
+
+  specify
+    (PADDO => led2) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_1_ ( input PADDO, output led1 );
+
+  ec2iobuf \led_pad[1] ( .I(PADDO), .PAD(led1));
+
+  specify
+    (PADDO => led1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module sw_3_ ( output PADDI, input sw3 );
+
+  ec2iobuf0001 \sw_pad[3] ( .Z(PADDI), .PAD(sw3));
+
+  specify
+    (sw3 => PADDI) = (0:0:0,0:0:0);
+    $width (posedge sw3, 0:0:0);
+    $width (negedge sw3, 0:0:0);
+  endspecify
+
+endmodule
+
+module sw_2_ ( output PADDI, input sw2 );
+
+  ec2iobuf0001 \sw_pad[2] ( .Z(PADDI), .PAD(sw2));
+
+  specify
+    (sw2 => PADDI) = (0:0:0,0:0:0);
+    $width (posedge sw2, 0:0:0);
+    $width (negedge sw2, 0:0:0);
+  endspecify
+
+endmodule
+
+module sw_1_ ( output PADDI, input sw1 );
+
+  ec2iobuf0001 \sw_pad[1] ( .Z(PADDI), .PAD(sw1));
+
+  specify
+    (sw1 => PADDI) = (0:0:0,0:0:0);
+    $width (posedge sw1, 0:0:0);
+    $width (negedge sw1, 0:0:0);
+  endspecify
+
+endmodule
+
+module sw_0_ ( output PADDI, input sw0 );
+
+  ec2iobuf0001 \sw_pad[0] ( .Z(PADDI), .PAD(sw0));
+
+  specify
+    (sw0 => PADDI) = (0:0:0,0:0:0);
+    $width (posedge sw0, 0:0:0);
+    $width (negedge sw0, 0:0:0);
+  endspecify
+
+endmodule
+
+module btn_down ( output PADDI, input btn_down );
+
+  ec2iobuf0001 btn_down_pad( .Z(PADDI), .PAD(btn_down));
+
+  specify
+    (btn_down => PADDI) = (0:0:0,0:0:0);
+    $width (posedge btn_down, 0:0:0);
+    $width (negedge btn_down, 0:0:0);
+  endspecify
+
+endmodule
+
+module clk_25m ( output PADDI, input clk_25m );
+
+  ec2iobuf0002 clk_25m_pad( .Z(PADDI), .PAD(clk_25m));
+
+  specify
+    (clk_25m => PADDI) = (0:0:0,0:0:0);
+    $width (posedge clk_25m, 0:0:0);
+    $width (negedge clk_25m, 0:0:0);
+  endspecify
+
+endmodule
+
+module ec2iobuf0002 ( output Z, input PAD );
+
+  IB INST1( .I(PAD), .O(Z));
+endmodule

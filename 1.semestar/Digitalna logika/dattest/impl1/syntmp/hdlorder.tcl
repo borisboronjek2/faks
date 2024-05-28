@@ -1,0 +1,1 @@
+project -fileorder "C:/Users/boris/dattest/serial_tx.vhd" 

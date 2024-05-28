@@ -1,0 +1,7 @@
+#Start recording tcl command: 11/4/2020 19:06:57
+#Project Location: C:/Users/boris/dattest; Project name: uf
+prj_project new -name "uf" -impl "impl1" -dev LFXP2-8E-5TN144C -synthesis "synplify" -lpf "C:/Users/boris/dattest/ulx2s.lpf"
+prj_src add "C:/Users/boris/dattest/lab2.sch" "C:/Users/boris/dattest/serial_tx.vhd"
+prj_project save
+prj_run Export -impl impl1
+#Stop recording: 11/4/2020 19:12:53

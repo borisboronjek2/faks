@@ -1,0 +1,1653 @@
+
+synpwrap -msg -prj "test_impl1_synplify.tcl" -log "test_impl1.srf"
+Copyright (C) 1992-2019 Lattice Semiconductor Corporation. All rights reserved.
+Lattice Diamond Version 3.11.0.396.4
+    <postMsg mid="2011000" type="Info"    dynamic="0" navigation="0"  />
+
+==contents of test_impl1.srf
+#Build: Synplify Pro (R) N-2018.03L-SP1-1, Build 443R, Apr  1 2019
+#install: C:\lscc\diamond\3.11_x64\synpbase
+#OS: Windows 8 6.2
+#Hostname: DESKTOP-PNMJ1CD
+
+# Wed Nov  4 18:44:50 2020
+
+#Implementation: impl1
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-PNMJ1CD
+
+Implementation : impl1
+Synopsys HDL Compiler, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
+
+@N|Running in 64-bit mode
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-PNMJ1CD
+
+Implementation : impl1
+Synopsys VHDL Compiler, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
+
+@N|Running in 64-bit mode
+@N:"C:\Users\boris\test\serial_tx.vhd":34:7:34:15|Top entity is set to serial_tx.
+VHDL syntax check successful!
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 69MB)
+
+
+Process completed successfully.
+# Wed Nov  4 18:44:50 2020
+
+###########################################################]
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-PNMJ1CD
+
+Implementation : impl1
+Synopsys Verilog Compiler, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
+
+@N|Running in 64-bit mode
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\xp2.v" (library work)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\pmi_def.v" (library work)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\Users\boris\test\impl1\lab2.v" (library work)
+Verilog syntax check successful!
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 70MB peak: 71MB)
+
+
+Process completed successfully.
+# Wed Nov  4 18:44:50 2020
+
+###########################################################]
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\xp2.v" (library work)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\pmi_def.v" (library work)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\Users\boris\test\impl1\lab2.v" (library work)
+Verilog syntax check successful!
+@N: CG364 :"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\xp2.v":1099:7:1099:9|Synthesizing module OR3 in library work.
+Running optimization stage 1 on OR3 .......
+@N: CG364 :"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\xp2.v":797:7:797:9|Synthesizing module INV in library work.
+Running optimization stage 1 on INV .......
+@N: CG364 :"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\xp2.v":147:7:147:10|Synthesizing module AND2 in library work.
+Running optimization stage 1 on AND2 .......
+@N: CG364 :"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\xp2.v":1093:7:1093:9|Synthesizing module OR2 in library work.
+Running optimization stage 1 on OR2 .......
+@N: CG364 :"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\xp2.v":1106:7:1106:9|Synthesizing module OR4 in library work.
+Running optimization stage 1 on OR4 .......
+@N: CG364 :"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\xp2.v":970:7:970:8|Synthesizing module OB in library work.
+Running optimization stage 1 on OB .......
+@N: CG364 :"C:\Users\boris\test\impl1\lab2.v":3:7:3:10|Synthesizing module lab2 in library work.
+@N: CG794 :"C:\Users\boris\test\impl1\lab2.v":56:10:56:11|Using module serial_tx from library work
+@W: CG360 :"C:\Users\boris\test\impl1\lab2.v":28:5:28:7|Removing wire N_1, as there is no assignment to it.
+Running optimization stage 1 on lab2 .......
+@W: CL318 :"C:\Users\boris\test\impl1\lab2.v":10:13:10:15|*Output led has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+Running optimization stage 2 on lab2 .......
+@W: CL156 :"C:\Users\boris\test\impl1\lab2.v":28:5:28:7|*Input N_1 to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"C:\Users\boris\test\impl1\lab2.v":56:26:56:64|*Input un1_N_45[7:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+Running optimization stage 2 on OB .......
+Running optimization stage 2 on OR4 .......
+Running optimization stage 2 on OR2 .......
+Running optimization stage 2 on AND2 .......
+Running optimization stage 2 on INV .......
+Running optimization stage 2 on OR3 .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\Users\boris\test\impl1\synwork\layer0.rt.csv
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 71MB peak: 72MB)
+
+
+Process completed successfully.
+# Wed Nov  4 18:44:51 2020
+
+###########################################################]
+@N:"C:\Users\boris\test\serial_tx.vhd":34:7:34:15|Top entity is set to serial_tx.
+VHDL syntax check successful!
+@N: CD630 :"C:\Users\boris\test\serial_tx.vhd":34:7:34:15|Synthesizing work.serial_tx.behavioral.
+Post processing for work.serial_tx.behavioral
+Running optimization stage 1 on serial_tx .......
+Running optimization stage 2 on serial_tx .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\Users\boris\test\impl1\synwork\layer1.rt.csv
+
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 75MB peak: 77MB)
+
+
+Process completed successfully.
+# Wed Nov  4 18:44:51 2020
+
+###########################################################]
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-PNMJ1CD
+
+Implementation : impl1
+Synopsys Synopsys Netlist Linker, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
+
+@N|Running in 64-bit mode
+
+=======================================================================================
+For a summary of linker messages for components that did not bind, please see log file:
+@L: C:\Users\boris\test\impl1\synwork\test_impl1_comp.linkerlog
+=======================================================================================
+
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Nov  4 18:44:51 2020
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: C:\Users\boris\test\impl1\synwork\test_impl1_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Nov  4 18:44:51 2020
+
+###########################################################]
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-PNMJ1CD
+
+Database state : C:\Users\boris\test\impl1\synwork\|impl1
+Synopsys Synopsys Netlist Linker, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Nov  4 18:44:53 2020
+
+###########################################################]
+Premap Report
+
+# Wed Nov  4 18:44:53 2020
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-PNMJ1CD
+
+Implementation : impl1
+Synopsys Lattice Technology Pre-mapping, Version maplat2018q2p1, Build 055R, Built Apr  3 2019 09:51:54
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@A: MF827 |No constraint file specified.
+@N: MF284 |Setting synthesis effort to medium for the design
+@L: C:\Users\boris\test\impl1\test_impl1_scck.rpt 
+Printing clock  summary report in "C:\Users\boris\test\impl1\test_impl1_scck.rpt" file 
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 102MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 102MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 112MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 114MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: MH105 |UMR3 is only supported for HAPS-80.
+@N: MH105 |UMR3 is only supported for HAPS-80.
+syn_allowed_resources : blockrams=12  set on top level netlist lab2
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+
+
+
+Clock Summary
+******************
+
+          Start            Requested     Requested     Clock        Clock                   Clock
+Level     Clock            Frequency     Period        Type         Group                   Load 
+-------------------------------------------------------------------------------------------------
+0 -       System           200.0 MHz     5.000         system       system_clkgroup         0    
+                                                                                                 
+0 -       lab2|clk_25m     200.0 MHz     5.000         inferred     Inferred_clkgroup_0     74   
+=================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                 Clock     Source            Clock Pin                Non-clock Pin     Non-clock Pin
+Clock            Load      Pin               Seq Example              Seq Example       Comb Example 
+-----------------------------------------------------------------------------------------------------
+System           0         -                 -                        -                 -            
+                                                                                                     
+lab2|clk_25m     74        clk_25m(port)     I1.R_byte_old[7:0].C     -                 -            
+=====================================================================================================
+
+@W: MT529 :"c:\users\boris\test\serial_tx.vhd":78:1:78:2|Found inferred clock lab2|clk_25m which controls 74 sequential elements including I1.R_tx_ser[0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+1 non-gated/non-generated clock tree(s) driving 74 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+@KP:ckid0_0       clk_25m             Unconstrained_port     74         I1.R_tx_ser[0] 
+=======================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 56MB peak: 142MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Nov  4 18:44:54 2020
+
+###########################################################]
+Map & Optimize Report
+
+# Wed Nov  4 18:44:54 2020
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-PNMJ1CD
+
+Implementation : impl1
+Synopsys Lattice Technology Mapper, Version maplat2018q2p1, Build 055R, Built Apr  3 2019 09:51:54
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 114MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 142MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N: FX493 |Applying initial value "111111111" on instance I1.R_tx_ser[8:0].
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 142MB)
+
+@N: MO231 :"c:\users\boris\test\serial_tx.vhd":78:1:78:2|Found counter in view:work.serial_tx(behavioral) instance R_tx_tickcnt[3:0] 
+@W: MO129 :"c:\users\boris\test\serial_tx.vhd":78:1:78:2|Sequential instance I1.R_byte_old[7] is reduced to a combinational gate by constant propagation.
+@N: MF179 :"c:\users\boris\test\serial_tx.vhd":81:8:81:28|Found 8 by 8 bit equality operator ('==') un1_byte_in (in view: work.serial_tx(behavioral))
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 142MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:00s		    -0.35ns		  44 /        73
+   2		0h:00m:00s		    -0.35ns		  50 /        73
+   3		0h:00m:00s		    -0.35ns		  47 /        73
+@N: FX271 :"c:\users\boris\test\serial_tx.vhd":78:1:78:2|Replicating instance I1.R_tx_tickcnt[0] (in view: work.lab2(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"c:\users\boris\test\serial_tx.vhd":78:1:78:2|Replicating instance I1.R_tx_tickcnt[1] (in view: work.lab2(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"c:\users\boris\test\serial_tx.vhd":78:1:78:2|Replicating instance I1.R_tx_tickcnt[2] (in view: work.lab2(verilog)) with 4 loads 1 time to improve timing.
+Timing driven replication report
+Added 3 Registers via timing driven replication
+Added 3 LUTs via timing driven replication
+
+   4		0h:00m:01s		    -0.13ns		  96 /        76
+@N: FX271 :"c:\users\boris\test\serial_tx.vhd":78:1:78:2|Replicating instance I1.R_byte_old[4] (in view: work.lab2(verilog)) with 4 loads 1 time to improve timing.
+Added 1 Registers via timing driven replication
+Added 0 LUTs via timing driven replication
+
+
+   5		0h:00m:01s		     0.06ns		  96 /        77
+   6		0h:00m:01s		     0.09ns		  96 /        77
+   7		0h:00m:01s		     0.09ns		  96 /        77
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 143MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 143MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 107MB peak: 143MB)
+
+Writing Analyst data base C:\Users\boris\test\impl1\synwork\test_impl1_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 141MB peak: 143MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: C:\Users\boris\test\impl1\test_impl1.edi
+N-2018.03L-SP1-1
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 145MB peak: 147MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 146MB peak: 147MB)
+
+@W: MT246 :"c:\users\boris\test\impl1\lab2.v":47:4:47:6|Blackbox OR4 is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT246 :"c:\users\boris\test\impl1\lab2.v":32:4:32:6|Blackbox OR3 is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT420 |Found inferred clock lab2|clk_25m with period 5.00ns. Please declare a user-defined clock on port clk_25m.
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Wed Nov  4 18:44:56 2020
+#
+
+
+Top view:               lab2
+Requested Frequency:    200.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -0.473
+
+@N: MT286 |System clock period 0.000 stretches to negative invalid value -- ignoring stretching.
+                   Requested     Estimated     Requested     Estimated                Clock        Clock              
+Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group              
+----------------------------------------------------------------------------------------------------------------------
+lab2|clk_25m       200.0 MHz     182.7 MHz     5.000         5.473         -0.473     inferred     Inferred_clkgroup_0
+System             200.0 MHz     280.9 MHz     5.000         3.560         1.440      system       system_clkgroup    
+======================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                      |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+-------------------------------------------------------------------------------------------------------------------
+Starting      Ending        |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+-------------------------------------------------------------------------------------------------------------------
+System        System        |  5.000       5.000   |  No paths    -      |  No paths    -      |  No paths    -    
+System        lab2|clk_25m  |  5.000       1.440   |  No paths    -      |  No paths    -      |  No paths    -    
+lab2|clk_25m  lab2|clk_25m  |  5.000       -0.473  |  No paths    -      |  No paths    -      |  No paths    -    
+===================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: lab2|clk_25m
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                          Starting                                                    Arrival           
+Instance                  Reference        Type        Pin     Net                    Time        Slack 
+                          Clock                                                                         
+--------------------------------------------------------------------------------------------------------
+I1.R_debounce_cnt[6]      lab2|clk_25m     FD1P3JX     Q       R_debounce_cnt[6]      1.279       -0.473
+I1.R_debounce_cnt[7]      lab2|clk_25m     FD1P3JX     Q       R_debounce_cnt[7]      1.279       -0.473
+I1.R_debounce_cnt[9]      lab2|clk_25m     FD1P3JX     Q       R_debounce_cnt[9]      1.279       -0.473
+I1.R_debounce_cnt[10]     lab2|clk_25m     FD1P3IX     Q       R_debounce_cnt[10]     1.279       -0.473
+I1.R_tx_phase[0]          lab2|clk_25m     FD1S3IX     Q       R_tx_phase[0]          1.279       -0.464
+I1.R_debounce_cnt[2]      lab2|clk_25m     FD1P3IX     Q       R_debounce_cnt[2]      1.260       -0.455
+I1.R_debounce_cnt[3]      lab2|clk_25m     FD1P3IX     Q       R_debounce_cnt[3]      1.260       -0.455
+I1.R_debounce_cnt[21]     lab2|clk_25m     FD1P3IX     Q       R_debounce_cnt[21]     1.260       -0.455
+I1.R_debounce_cnt[22]     lab2|clk_25m     FD1P3IX     Q       R_debounce_cnt[22]     1.260       -0.455
+I1.R_debounce_cnt[23]     lab2|clk_25m     FD1P3IX     Q       R_debounce_cnt[23]     1.260       -0.455
+========================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                     Starting                                                         Required           
+Instance             Reference        Type         Pin     Net                        Time         Slack 
+                     Clock                                                                               
+---------------------------------------------------------------------------------------------------------
+I1_R_tx_serio[0]     lab2|clk_25m     OFS1P3BX     SP      I1.R_tx_ser_1_sqmuxa_i     4.640        -0.473
+I1.R_tx_ser[1]       lab2|clk_25m     FD1P3AY      SP      R_tx_ser_1_sqmuxa_i        4.640        -0.473
+I1.R_tx_ser[2]       lab2|clk_25m     FD1P3AY      SP      R_tx_ser_1_sqmuxa_i        4.640        -0.473
+I1.R_tx_ser[3]       lab2|clk_25m     FD1P3AY      SP      R_tx_ser_1_sqmuxa_i        4.640        -0.473
+I1.R_tx_ser[4]       lab2|clk_25m     FD1P3AY      SP      R_tx_ser_1_sqmuxa_i        4.640        -0.473
+I1.R_tx_ser[5]       lab2|clk_25m     FD1P3AY      SP      R_tx_ser_1_sqmuxa_i        4.640        -0.473
+I1.R_tx_ser[6]       lab2|clk_25m     FD1P3AY      SP      R_tx_ser_1_sqmuxa_i        4.640        -0.473
+I1.R_tx_ser[7]       lab2|clk_25m     FD1P3AY      SP      R_tx_ser_1_sqmuxa_i        4.640        -0.473
+I1.R_tx_ser[8]       lab2|clk_25m     FD1P3AY      SP      R_tx_ser_1_sqmuxa_i        4.640        -0.473
+I1.R_tx_phase[3]     lab2|clk_25m     FD1S3IX      D       R_tx_phase_7[3]            4.264        -0.464
+=========================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.360
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.640
+
+    - Propagation time:                      5.113
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.473
+
+    Number of logic level(s):                4
+    Starting point:                          I1.R_debounce_cnt[6] / Q
+    Ending point:                            I1_R_tx_serio[0] / SP
+    The start point is clocked by            lab2|clk_25m [rising] on pin CK
+    The end   point is clocked by            lab2|clk_25m [rising] on pin SCLK
+
+Instance / Net                                        Pin      Pin               Arrival     No. of    
+Name                                     Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------
+I1.R_debounce_cnt[6]                     FD1P3JX      Q        Out     1.279     1.279       -         
+R_debounce_cnt[6]                        Net          -        -       -         -           7         
+I1.R_debounce_cnt_RNIFS8J[6]             ORCALUT4     A        In      0.000     1.279       -         
+I1.R_debounce_cnt_RNIFS8J[6]             ORCALUT4     Z        Out     0.883     2.162       -         
+m15_0_a3_12                              Net          -        -       -         -           1         
+I1.R_debounce_cnt_RNIS4PV4[2]            ORCALUT4     D        In      0.000     2.162       -         
+I1.R_debounce_cnt_RNIS4PV4[2]            ORCALUT4     Z        Out     0.883     3.046       -         
+R_debounce_cnt_RNIS4PV4[2]               Net          -        -       -         -           1         
+I1.un14_r_debounce_cnt_30_9_RNIURR48     ORCALUT4     D        In      0.000     3.046       -         
+I1.un14_r_debounce_cnt_30_9_RNIURR48     ORCALUT4     Z        Out     0.883     3.929       -         
+g0_0_mb_1                                Net          -        -       -         -           1         
+I1.un6_r_tx_tickcnt_RNIB69UE             ORCALUT4     C        In      0.000     3.929       -         
+I1.un6_r_tx_tickcnt_RNIB69UE             ORCALUT4     Z        Out     1.184     5.113       -         
+R_tx_ser_1_sqmuxa_i                      Net          -        -       -         -           9         
+I1_R_tx_serio[0]                         OFS1P3BX     SP       In      0.000     5.113       -         
+=======================================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      5.000
+    - Setup time:                            0.360
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.640
+
+    - Propagation time:                      5.113
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.473
+
+    Number of logic level(s):                4
+    Starting point:                          I1.R_debounce_cnt[7] / Q
+    Ending point:                            I1_R_tx_serio[0] / SP
+    The start point is clocked by            lab2|clk_25m [rising] on pin CK
+    The end   point is clocked by            lab2|clk_25m [rising] on pin SCLK
+
+Instance / Net                                        Pin      Pin               Arrival     No. of    
+Name                                     Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------
+I1.R_debounce_cnt[7]                     FD1P3JX      Q        Out     1.279     1.279       -         
+R_debounce_cnt[7]                        Net          -        -       -         -           7         
+I1.R_debounce_cnt_RNIFS8J[6]             ORCALUT4     B        In      0.000     1.279       -         
+I1.R_debounce_cnt_RNIFS8J[6]             ORCALUT4     Z        Out     0.883     2.162       -         
+m15_0_a3_12                              Net          -        -       -         -           1         
+I1.R_debounce_cnt_RNIS4PV4[2]            ORCALUT4     D        In      0.000     2.162       -         
+I1.R_debounce_cnt_RNIS4PV4[2]            ORCALUT4     Z        Out     0.883     3.046       -         
+R_debounce_cnt_RNIS4PV4[2]               Net          -        -       -         -           1         
+I1.un14_r_debounce_cnt_30_9_RNIURR48     ORCALUT4     D        In      0.000     3.046       -         
+I1.un14_r_debounce_cnt_30_9_RNIURR48     ORCALUT4     Z        Out     0.883     3.929       -         
+g0_0_mb_1                                Net          -        -       -         -           1         
+I1.un6_r_tx_tickcnt_RNIB69UE             ORCALUT4     C        In      0.000     3.929       -         
+I1.un6_r_tx_tickcnt_RNIB69UE             ORCALUT4     Z        Out     1.184     5.113       -         
+R_tx_ser_1_sqmuxa_i                      Net          -        -       -         -           9         
+I1_R_tx_serio[0]                         OFS1P3BX     SP       In      0.000     5.113       -         
+=======================================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      5.000
+    - Setup time:                            0.360
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.640
+
+    - Propagation time:                      5.113
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.473
+
+    Number of logic level(s):                4
+    Starting point:                          I1.R_debounce_cnt[9] / Q
+    Ending point:                            I1_R_tx_serio[0] / SP
+    The start point is clocked by            lab2|clk_25m [rising] on pin CK
+    The end   point is clocked by            lab2|clk_25m [rising] on pin SCLK
+
+Instance / Net                                        Pin      Pin               Arrival     No. of    
+Name                                     Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------
+I1.R_debounce_cnt[9]                     FD1P3JX      Q        Out     1.279     1.279       -         
+R_debounce_cnt[9]                        Net          -        -       -         -           7         
+I1.R_debounce_cnt_RNIFS8J[6]             ORCALUT4     C        In      0.000     1.279       -         
+I1.R_debounce_cnt_RNIFS8J[6]             ORCALUT4     Z        Out     0.883     2.162       -         
+m15_0_a3_12                              Net          -        -       -         -           1         
+I1.R_debounce_cnt_RNIS4PV4[2]            ORCALUT4     D        In      0.000     2.162       -         
+I1.R_debounce_cnt_RNIS4PV4[2]            ORCALUT4     Z        Out     0.883     3.046       -         
+R_debounce_cnt_RNIS4PV4[2]               Net          -        -       -         -           1         
+I1.un14_r_debounce_cnt_30_9_RNIURR48     ORCALUT4     D        In      0.000     3.046       -         
+I1.un14_r_debounce_cnt_30_9_RNIURR48     ORCALUT4     Z        Out     0.883     3.929       -         
+g0_0_mb_1                                Net          -        -       -         -           1         
+I1.un6_r_tx_tickcnt_RNIB69UE             ORCALUT4     C        In      0.000     3.929       -         
+I1.un6_r_tx_tickcnt_RNIB69UE             ORCALUT4     Z        Out     1.184     5.113       -         
+R_tx_ser_1_sqmuxa_i                      Net          -        -       -         -           9         
+I1_R_tx_serio[0]                         OFS1P3BX     SP       In      0.000     5.113       -         
+=======================================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      5.000
+    - Setup time:                            0.360
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.640
+
+    - Propagation time:                      5.113
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.473
+
+    Number of logic level(s):                4
+    Starting point:                          I1.R_debounce_cnt[10] / Q
+    Ending point:                            I1_R_tx_serio[0] / SP
+    The start point is clocked by            lab2|clk_25m [rising] on pin CK
+    The end   point is clocked by            lab2|clk_25m [rising] on pin SCLK
+
+Instance / Net                                        Pin      Pin               Arrival     No. of    
+Name                                     Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------
+I1.R_debounce_cnt[10]                    FD1P3IX      Q        Out     1.279     1.279       -         
+R_debounce_cnt[10]                       Net          -        -       -         -           7         
+I1.R_debounce_cnt_RNIFS8J[6]             ORCALUT4     D        In      0.000     1.279       -         
+I1.R_debounce_cnt_RNIFS8J[6]             ORCALUT4     Z        Out     0.883     2.162       -         
+m15_0_a3_12                              Net          -        -       -         -           1         
+I1.R_debounce_cnt_RNIS4PV4[2]            ORCALUT4     D        In      0.000     2.162       -         
+I1.R_debounce_cnt_RNIS4PV4[2]            ORCALUT4     Z        Out     0.883     3.046       -         
+R_debounce_cnt_RNIS4PV4[2]               Net          -        -       -         -           1         
+I1.un14_r_debounce_cnt_30_9_RNIURR48     ORCALUT4     D        In      0.000     3.046       -         
+I1.un14_r_debounce_cnt_30_9_RNIURR48     ORCALUT4     Z        Out     0.883     3.929       -         
+g0_0_mb_1                                Net          -        -       -         -           1         
+I1.un6_r_tx_tickcnt_RNIB69UE             ORCALUT4     C        In      0.000     3.929       -         
+I1.un6_r_tx_tickcnt_RNIB69UE             ORCALUT4     Z        Out     1.184     5.113       -         
+R_tx_ser_1_sqmuxa_i                      Net          -        -       -         -           9         
+I1_R_tx_serio[0]                         OFS1P3BX     SP       In      0.000     5.113       -         
+=======================================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      5.000
+    - Setup time:                            0.360
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.640
+
+    - Propagation time:                      5.113
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.473
+
+    Number of logic level(s):                4
+    Starting point:                          I1.R_debounce_cnt[6] / Q
+    Ending point:                            I1.R_tx_ser[8] / SP
+    The start point is clocked by            lab2|clk_25m [rising] on pin CK
+    The end   point is clocked by            lab2|clk_25m [rising] on pin CK
+
+Instance / Net                                        Pin      Pin               Arrival     No. of    
+Name                                     Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------
+I1.R_debounce_cnt[6]                     FD1P3JX      Q        Out     1.279     1.279       -         
+R_debounce_cnt[6]                        Net          -        -       -         -           7         
+I1.R_debounce_cnt_RNIFS8J[6]             ORCALUT4     A        In      0.000     1.279       -         
+I1.R_debounce_cnt_RNIFS8J[6]             ORCALUT4     Z        Out     0.883     2.162       -         
+m15_0_a3_12                              Net          -        -       -         -           1         
+I1.R_debounce_cnt_RNIS4PV4[2]            ORCALUT4     D        In      0.000     2.162       -         
+I1.R_debounce_cnt_RNIS4PV4[2]            ORCALUT4     Z        Out     0.883     3.046       -         
+R_debounce_cnt_RNIS4PV4[2]               Net          -        -       -         -           1         
+I1.un14_r_debounce_cnt_30_9_RNIURR48     ORCALUT4     D        In      0.000     3.046       -         
+I1.un14_r_debounce_cnt_30_9_RNIURR48     ORCALUT4     Z        Out     0.883     3.929       -         
+g0_0_mb_1                                Net          -        -       -         -           1         
+I1.un6_r_tx_tickcnt_RNIB69UE             ORCALUT4     C        In      0.000     3.929       -         
+I1.un6_r_tx_tickcnt_RNIB69UE             ORCALUT4     Z        Out     1.184     5.113       -         
+R_tx_ser_1_sqmuxa_i                      Net          -        -       -         -           9         
+I1.R_tx_ser[8]                           FD1P3AY      SP       In      0.000     5.113       -         
+=======================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+             Starting                                Arrival          
+Instance     Reference     Type     Pin     Net      Time        Slack
+             Clock                                                    
+----------------------------------------------------------------------
+I40          System        OR4      Z       N_45     0.000       1.440
+I43          System        OR2      Z       N_43     0.000       1.440
+I31          System        OR4      Z       N_12     0.000       1.528
+I33          System        OR2      Z       N_41     0.000       1.528
+I37          System        OR3      Z       N_42     0.000       1.528
+I42          System        AND2     Z       N_8      0.000       1.528
+I26          System        OR4      Z       N_11     0.000       3.223
+I29          System        AND2     Z       N_35     0.000       5.000
+I30          System        AND2     Z       N_32     0.000       5.000
+I32          System        OR2      Z       N_40     0.000       5.000
+======================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                         Starting                                            Required          
+Instance                 Reference     Type        Pin     Net               Time         Slack
+                         Clock                                                                 
+-----------------------------------------------------------------------------------------------
+I1.R_debounce_cnt[0]     System        FD1S3IX     CD      un1_byte_in_i     4.640        1.440
+I1.R_debounce_cnt[1]     System        FD1P3IX     CD      un1_byte_in_i     4.640        1.440
+I1.R_debounce_cnt[2]     System        FD1P3IX     CD      un1_byte_in_i     4.640        1.440
+I1.R_debounce_cnt[3]     System        FD1P3IX     CD      un1_byte_in_i     4.640        1.440
+I1.R_debounce_cnt[4]     System        FD1P3JX     PD      un1_byte_in_i     4.640        1.440
+I1.R_debounce_cnt[5]     System        FD1P3IX     CD      un1_byte_in_i     4.640        1.440
+I1.R_debounce_cnt[6]     System        FD1P3JX     PD      un1_byte_in_i     4.640        1.440
+I1.R_debounce_cnt[7]     System        FD1P3JX     PD      un1_byte_in_i     4.640        1.440
+I1.R_debounce_cnt[8]     System        FD1P3IX     CD      un1_byte_in_i     4.640        1.440
+I1.R_debounce_cnt[9]     System        FD1P3JX     PD      un1_byte_in_i     4.640        1.440
+===============================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.360
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.640
+
+    - Propagation time:                      3.200
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 1.440
+
+    Number of logic level(s):                3
+    Starting point:                          I40 / Z
+    Ending point:                            I1.R_debounce_cnt[0] / CD
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            lab2|clk_25m [rising] on pin CK
+
+Instance / Net                            Pin      Pin               Arrival     No. of    
+Name                          Type        Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------
+I40                           OR4         Z        Out     0.000     0.000       -         
+N_45                          Net         -        -       -         -           3         
+I1.un1_byte_in_0_I_1_0        CCU2B       A1       In      0.000     0.000       -         
+I1.un1_byte_in_0_I_1_0        CCU2B       COUT     Out     1.243     1.243       -         
+un1_byte_in_0_data_tmp[0]     Net         -        -       -         -           1         
+I1.un1_byte_in_0_I_21_0       CCU2B       CIN      In      0.000     1.243       -         
+I1.un1_byte_in_0_I_21_0       CCU2B       COUT     Out     0.088     1.331       -         
+un1_byte_in_0_data_tmp[2]     Net         -        -       -         -           1         
+I1.un1_byte_in_0_I_9_0        CCU2B       CIN      In      0.000     1.331       -         
+I1.un1_byte_in_0_I_9_0        CCU2B       S1       Out     1.869     3.200       -         
+un1_byte_in_i                 Net         -        -       -         -           32        
+I1.R_debounce_cnt[0]          FD1S3IX     CD       In      0.000     3.200       -         
+===========================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 146MB peak: 147MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 146MB peak: 147MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lfxp2_8e-5
+
+Register bits: 77 of 8352 (1%)
+PIC Latch:       0
+I/O cells:       15
+
+
+Details:
+AND2:           7
+CCU2B:          29
+FD1P3AY:        8
+FD1P3IX:        23
+FD1P3JX:        8
+FD1S3AX:        32
+FD1S3IX:        5
+GSR:            1
+IB:             6
+INV:            2
+OB:             9
+OFS1P3BX:       1
+OR2:            4
+OR3:            1
+OR4:            3
+ORCALUT4:       95
+PUR:            1
+VHI:            2
+VLO:            2
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 32MB peak: 147MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Wed Nov  4 18:44:57 2020
+
+###########################################################]
+
+
+Synthesis exit by 0.
+
+edif2ngd  -l "LatticeXP2" -d LFXP2-8E -path "C:/Users/boris/test/impl1" -path "C:/Users/boris/test"   "C:/Users/boris/test/impl1/test_impl1.edi" "test_impl1.ngo"   
+edif2ngd:  version Diamond (64-bit) 3.11.0.396.4
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="C_debounce_dly"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="C_baudrate"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="C_clk_freq"  />
+Writing the design to test_impl1.ngo...
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 11 MB
+
+
+ngdbuild  -a "LatticeXP2" -d LFXP2-8E  -p "C:/lscc/diamond/3.11_x64/ispfpga/mg5a00/data"  -p "C:/Users/boris/test/impl1" -p "C:/Users/boris/test"  "test_impl1.ngo" "test_impl1.ngd"  	
+ngdbuild:  version Diamond (64-bit) 3.11.0.396.4
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+Reading 'test_impl1.ngo' ...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/mg5a00/data/mg5alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/ep5a00/data/ep5alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/ep5g00/data/ep5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+DRC complete with no errors or warnings
+
+Design Results:
+    238 blocks expanded
+Complete the first expansion.
+Writing 'test_impl1.ngd' ...
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 18 MB
+
+
+map -a "LatticeXP2" -p LFXP2-8E -t TQFP144 -s 5 -oc Commercial   "test_impl1.ngd" -o "test_impl1_map.ncd" -pr "test_impl1.prf" -mp "test_impl1.mrp" -lpf "C:/Users/boris/test/impl1/test_impl1_synplify.lpf" -lpf "C:/Users/boris/test/test.lpf"            
+map:  version Diamond (64-bit) 3.11.0.396.4
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: test_impl1.ngd
+   Picdevice="LFXP2-8E"
+
+   Pictype="TQFP144"
+
+   Picspeed=5
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LFXP2-8ETQFP144, Performance used: 5.
+
+Loading device for application map from file 'mg5a33x38.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.47.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+120 CCU2 constant inputs absorbed.
+
+
+
+
+Design Summary:
+   Number of registers:     77 out of  6564 (1%)
+      PFU registers:           76 out of  6264 (1%)
+      PIO registers:            1 out of   300 (0%)
+   Number of SLICEs:        90 out of  4176 (2%)
+      SLICEs as Logic/ROM:     90 out of  4176 (2%)
+      SLICEs as RAM:            0 out of   756 (0%)
+      SLICEs as Carry:         29 out of  4176 (1%)
+   Number of LUT4s:        167 out of  8352 (2%)
+      Number used as logic LUTs:        109
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       58
+      Number used as shift registers:     0
+   Number of PIO sites used: 15 out of 100 (15%)
+   Number of PIO FIXEDDELAY:    0
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of block RAMs:  0 out of 12 (0%)
+   Number of CLKDIVs:  0 out of 2 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+
+   Number Of Mapped DSP Components:
+   --------------------------------
+   MULT36X36B          0
+   MULT18X18B          0
+   MULT18X18MACB       0
+   MULT18X18ADDSUBB    0
+   MULT18X18ADDSUBSUMB 0
+   MULT9X9B            0
+   MULT9X9ADDSUBB      0
+   MULT9X9ADDSUBSUMB   0
+   --------------------------------
+   Number of Used DSP Sites:  0 out of 32 (0 %)
+   Number of clocks:  1
+     Net clk_25m_c: 42 loads, 42 rising, 0 falling (Driver: PIO clk_25m )
+   Number of Clock Enables:  2
+     Net I1.R_tx_ser_1_sqmuxa_i: 5 loads, 4 LSLICEs
+     Net I1/un1_R_debounce_cnt_1_i: 16 loads, 16 LSLICEs
+   Number of LSRs:  2
+     Net I1/un1_byte_in_i: 17 loads, 17 LSLICEs
+     Net I1/R_tx_phase_0_sqmuxa: 2 loads, 2 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net I1/VCC: 50 loads
+     Net I1/un1_byte_in_i: 17 loads
+     Net I1/un1_R_debounce_cnt_1_i: 16 loads
+     Net I1/R_baudgen[16]: 14 loads
+     Net I1/un6_r_tx_tickcnt: 12 loads
+     Net I1/un1_R_tx_phase_1: 10 loads
+     Net I1/R_debounce_cnt[0]: 7 loads
+     Net I1/R_debounce_cnt[4]: 7 loads
+     Net I1/R_debounce_cnt[5]: 7 loads
+     Net I1/R_debounce_cnt[6]: 7 loads
+ 
+
+   Number of warnings:  0
+   Number of errors:    0
+
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 38 MB
+
+Dumping design to file test_impl1_map.ncd.
+
+mpartrce -p "test_impl1.p2t" -f "test_impl1.p3t" -tf "test_impl1.pt" "test_impl1_map.ncd" "test_impl1.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "test_impl1_map.ncd"
+Wed Nov 04 18:45:01 2020
+
+PAR: Place And Route Diamond (64-bit) 3.11.0.396.4.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF test_impl1_map.ncd test_impl1.dir/5_1.ncd test_impl1.prf
+Preference file: test_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file test_impl1_map.ncd.
+Design name: lab2
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-8E
+Package:     TQFP144
+Performance: 5
+Loading device for application par from file 'mg5a33x38.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.47.
+Performance Hardware Data Status:   Final          Version 11.5.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   IOLOGIC            1/260          <1% used
+   PIO (prelim)      15/238           6% used
+                     15/100          15% bonded
+   SLICE             90/4176          2% used
+
+
+
+Number of Signals: 266
+Number of Connections: 692
+
+Pin Constraint Summary:
+   0 out of 15 pins locked (0% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    clk_25m_c (driver: clk_25m, clk load #: 42)
+
+No signal is selected as DCS clock.
+
+No signal is selected as secondary clock.
+
+No signal is selected as Global Set/Reset.
+.
+Starting Placer Phase 0.
+.............
+Finished Placer Phase 0.  REAL time: 0 secs 
+
+Starting Placer Phase 1.
+...................
+Placer score = 25391.
+Finished Placer Phase 1.  REAL time: 4 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  25239
+Finished Placer Phase 2.  REAL time: 4 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 8 (12%)
+  PLL        : 0 out of 2 (0%)
+  CLKDIV     : 0 out of 2 (0%)
+
+Global Clocks:
+  PRIMARY "clk_25m_c" from comp "clk_25m" on CLK_PIN site "61 (PB20A)", clk load = 42
+
+  PRIMARY  : 1 out of 8 (12%)
+     DCS   : 0 out of 2 (0%)
+  SECONDARY: 0 out of 4 (0%)
+
+Edge Clocks:
+  No edge clock selected
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   15 out of 238 (6.3%) PIO sites used.
+   15 out of 100 (15.0%) bonded PIO sites used.
+   Number of PIO comps: 15; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+------------+------------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+---------------+------------+------------+------------+
+| 0        | 9 / 20 ( 45%) | 2.5V       | -          | -          |
+| 1        | 4 / 6 ( 66%)  | 2.5V       | -          | -          |
+| 2        | 0 / 18 (  0%) | -          | -          | -          |
+| 3        | 0 / 4 (  0%)  | -          | -          | -          |
+| 4        | 1 / 8 ( 12%)  | -          | -          | -          |
+| 5        | 0 / 18 (  0%) | -          | -          | -          |
+| 6        | 0 / 8 (  0%)  | -          | -          | -          |
+| 7        | 1 / 18 (  5%) | 2.5V       | -          | -          |
++----------+---------------+------------+------------+------------+
+
+
+DSP Utilization Summary:
+-------------------------------------
+DSP Block #:              1 2 3 4
+# of MULT36X36B                  
+# of MULT18X18B                  
+# of MULT18X18MACB               
+# of MULT18X18ADDSUBB            
+# of MULT18X18ADDSUBSUMB         
+# of MULT9X9B                    
+# of MULT9X9ADDSUBB              
+# of MULT9X9ADDSUBSUMB           
+
+Total placer CPU time: 4 secs 
+
+Dumping design to file test_impl1.dir/5_1.ncd.
+
+
+-----------------------------------------------------------------
+INFO - par: ASE feature is off due to non timing-driven settings.  
+-----------------------------------------------------------------
+
+0 connections routed; 692 unrouted.
+Starting router resource preassignment
+
+Completed router resource preassignment. Real time: 6 secs 
+
+Start NBR router at 18:45:07 11/04/20
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at 18:45:07 11/04/20
+
+Start NBR section for initial routing at 18:45:07 11/04/20
+Level 4, iteration 1
+15(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 6 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 18:45:07 11/04/20
+Level 4, iteration 1
+7(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 6 secs 
+Level 4, iteration 2
+4(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 6 secs 
+Level 4, iteration 3
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 6 secs 
+Level 4, iteration 4
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 6 secs 
+
+Start NBR section for re-routing at 18:45:07 11/04/20
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 6 secs 
+
+Start NBR section for post-routing at 18:45:07 11/04/20
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : <n/a>
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+Total CPU time 6 secs 
+Total REAL time: 6 secs 
+Completely routed.
+End of route.  692 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 0 
+
+Dumping design to file test_impl1.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = <n/a>
+PAR_SUMMARY::Timing score<setup/<ns>> = <n/a>
+PAR_SUMMARY::Worst  slack<hold /<ns>> = <n/a>
+PAR_SUMMARY::Timing score<hold /<ns>> = <n/a>
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 7 secs 
+Total REAL time to completion: 7 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+trce -f "test_impl1.pt" -o "test_impl1.twr" "test_impl1.ncd" "test_impl1.prf"
+trce:  version Diamond (64-bit) 3.11.0.396.4
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file test_impl1.ncd.
+Design name: lab2
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-8E
+Package:     TQFP144
+Performance: 5
+Loading device for application trce from file 'mg5a33x38.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.47.
+Performance Hardware Data Status:   Final          Version 11.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4
+Wed Nov 04 18:45:09 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o test_impl1.twr -gui test_impl1.ncd test_impl1.prf 
+Design file:     test_impl1.ncd
+Preference file: test_impl1.prf
+Device,speed:    LFXP2-8E,5
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 2000  Score: 5294611
+Cumulative negative slack: 5294611
+
+Constraints cover 2009 paths, 1 nets, and 636 connections (91.91% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4
+Wed Nov 04 18:45:09 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o test_impl1.twr -gui test_impl1.ncd test_impl1.prf 
+Design file:     test_impl1.ncd
+Preference file: test_impl1.prf
+Device,speed:    LFXP2-8E,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 2009 paths, 1 nets, and 636 connections (91.91% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 2000 (setup), 0 (hold)
+Score: 5294611 (setup), 0 (hold)
+Cumulative negative slack: 5294611 (5294611+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 1 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 167 MB
+
+
+ibisgen "test_impl1.pad" "C:/lscc/diamond/3.11_x64/cae_library/ibis/xp2.ibs"   
+IBIS Models Generator: Lattice Diamond (64-bit) 3.11.0.396.4
+
+Wed Nov 04 18:45:10 2020
+
+Comp: btn_center
+ Site: 113
+ Type: IN
+ IO_TYPE=LVCMOS25 
+ SLEW=FAST 
+ PULL=UP 
+-----------------------
+Comp: btn_down
+ Site: 127
+ Type: IN
+ IO_TYPE=LVCMOS25 
+ SLEW=FAST 
+ PULL=UP 
+-----------------------
+Comp: btn_left
+ Site: 122
+ Type: IN
+ IO_TYPE=LVCMOS25 
+ SLEW=FAST 
+ PULL=UP 
+-----------------------
+Comp: btn_right
+ Site: 123
+ Type: IN
+ IO_TYPE=LVCMOS25 
+ SLEW=FAST 
+ PULL=UP 
+-----------------------
+Comp: btn_up
+ Site: 125
+ Type: IN
+ IO_TYPE=LVCMOS25 
+ SLEW=FAST 
+ PULL=UP 
+-----------------------
+Comp: clk_25m
+ Site: 61
+ Type: IN
+ IO_TYPE=LVCMOS25 
+ SLEW=FAST 
+ PULL=UP 
+-----------------------
+Comp: led[0]
+ Site: 115
+ Type: OUT
+ IO_TYPE=LVCMOS25 
+ DRIVE=12mA 
+ SLEW=FAST 
+ PULL=UP 
+-----------------------
+Comp: led[1]
+ Site: 129
+ Type: OUT
+ IO_TYPE=LVCMOS25 
+ DRIVE=12mA 
+ SLEW=FAST 
+ PULL=UP 
+-----------------------
+Comp: led[2]
+ Site: 120
+ Type: OUT
+ IO_TYPE=LVCMOS25 
+ DRIVE=12mA 
+ SLEW=FAST 
+ PULL=UP 
+-----------------------
+Comp: led[3]
+ Site: 116
+ Type: OUT
+ IO_TYPE=LVCMOS25 
+ DRIVE=12mA 
+ SLEW=FAST 
+ PULL=UP 
+-----------------------
+Comp: led[4]
+ Site: 124
+ Type: OUT
+ IO_TYPE=LVCMOS25 
+ DRIVE=12mA 
+ SLEW=FAST 
+ PULL=UP 
+-----------------------
+Comp: led[5]
+ Site: 121
+ Type: OUT
+ IO_TYPE=LVCMOS25 
+ DRIVE=12mA 
+ SLEW=FAST 
+ PULL=UP 
+-----------------------
+Comp: led[6]
+ Site: 119
+ Type: OUT
+ IO_TYPE=LVCMOS25 
+ DRIVE=12mA 
+ SLEW=FAST 
+ PULL=UP 
+-----------------------
+Comp: led[7]
+ Site: 17
+ Type: OUT
+ IO_TYPE=LVCMOS25 
+ DRIVE=12mA 
+ SLEW=FAST 
+ PULL=UP 
+-----------------------
+Comp: rs232_tx
+ Site: 114
+ Type: OUT
+ IO_TYPE=LVCMOS25 
+ DRIVE=12mA 
+ SLEW=FAST 
+ PULL=UP 
+-----------------------
+Created design models.
+
+
+Generating: C:\Users\boris\test\impl1\IBIS\test_impl1.ibs
+
+
+    <postMsg mid="1191031" type="Info"    dynamic="0" navigation="0"  />
+
+ldbanno "test_impl1.ncd" -n Verilog  -o "test_impl1_vo.vo"        -w -neg
+ldbanno: version Diamond (64-bit) 3.11.0.396.4
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Writing a Verilog netlist using the orca library type based on the test_impl1 design file.
+
+
+Loading design for application ldbanno from file test_impl1.ncd.
+Design name: lab2
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-8E
+Package:     TQFP144
+Performance: 5
+Loading device for application ldbanno from file 'mg5a33x38.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.47.
+Performance Hardware Data Status:   Final          Version 11.5.
+Converting design test_impl1.ncd into .ldb format.
+Loading preferences from test_impl1.prf.
+Writing Verilog netlist to file test_impl1_vo.vo
+Writing SDF timing to file test_impl1_vo.sdf
+    <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
+Total CPU Time: 1 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 126 MB
+
+ldbanno "test_impl1.ncd" -n VHDL -o "test_impl1_vho.vho"        -w -neg 
+ldbanno: version Diamond (64-bit) 3.11.0.396.4
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Writing a VHDL netlist using the orca library type based on the test_impl1 design file.
+
+
+Loading design for application ldbanno from file test_impl1.ncd.
+Design name: lab2
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-8E
+Package:     TQFP144
+Performance: 5
+Loading device for application ldbanno from file 'mg5a33x38.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.47.
+Performance Hardware Data Status:   Final          Version 11.5.
+Converting design test_impl1.ncd into .ldb format.
+Loading preferences from test_impl1.prf.
+Writing VHDL netlist to file test_impl1_vho.vho
+Writing SDF timing to file test_impl1_vho.sdf
+    <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
+Total CPU Time: 1 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 126 MB
+
+tmcheck -par "test_impl1.par" 
+
+bitgen -f "test_impl1.t2b" -w "test_impl1.ncd" -jedec -e -s "C:/Users/boris/test/test.sec" -k "C:/Users/boris/test/test.bek" "test_impl1.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.11.0.396.4
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file test_impl1.ncd.
+Design name: lab2
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-8E
+Package:     TQFP144
+Performance: 5
+Loading device for application Bitgen from file 'mg5a33x38.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.47.
+Performance Hardware Data Status:   Final          Version 11.5.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from test_impl1.prf.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                        DONE_EX  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                        DONE_OD  |                           ON**  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                        WAKE_UP  |                           21**  |
++---------------------------------+---------------------------------+
+|                   WAKE_ON_LOCK  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                     TAG_MEMORY  |                       NORMAL**  |
++---------------------------------+---------------------------------+
+|                        MY_ASSP  |                          OFF**  |
++---------------------------------+---------------------------------+
+|               ONE_TIME_PROGRAM  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                     DisableUES  |                        FALSE**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+Saving bit stream in "test_impl1.jed".
+Total CPU Time: 2 secs 
+Total REAL Time: 3 secs 
+Peak Memory Usage: 295 MB

@@ -1,0 +1,7 @@
+C:\lscc\diamond\3.11_x64\synpbase\bin64\syn_nfilter.exe  -link  -top  slova  -multisrs  C:\Users\boris\slova\impl1\synwork\slova_impl1_comp.srs  -osyn  C:\Users\boris\slova\impl1\synwork\slova_impl1_mult.srs  -log  C:\Users\boris\slova\impl1\synlog\slova_impl1_multi_srs_gen.srr 
+relcom:..\..\..\..\..\lscc\diamond\3.11_x64\synpbase\bin64\syn_nfilter.exe -link -top slova -multisrs ..\synwork\slova_impl1_comp.srs -osyn ..\synwork\slova_impl1_mult.srs -log ..\synlog\slova_impl1_multi_srs_gen.srr
+rc:0 success:1 runtime:1
+file:..\synwork\slova_impl1_comp.srs|io:i|time:1606947731|size:6945|exec:0|csum:F2B69DEC7287F357CE95302165C1F62C
+file:..\synwork\slova_impl1_mult.srs|io:o|time:1606947733|size:3277|exec:0|csum:
+file:..\synlog\slova_impl1_multi_srs_gen.srr|io:o|time:1606947733|size:1099|exec:0|csum:
+file:..\..\..\..\..\lscc\diamond\3.11_x64\synpbase\bin64\syn_nfilter.exe|io:i|time:1554103352|size:8734720|exec:1|csum:0A206A5298321BBDD627E7975EAE3EC2

@@ -1,0 +1,15 @@
+@N: CD630 :"C:\Users\boris\lab48_sr\count8_sr.vhd":5:7:5:11|Synthesizing work.count.x.
+@W: CG296 :"C:\Users\boris\lab48_sr\count8_sr.vhd":20:4:20:10|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"C:\Users\boris\lab48_sr\count8_sr.vhd":22:4:22:8|Referenced variable reset is not in sensitivity list.
+@N: CD630 :"C:\Users\boris\lab48_sr\debouncer.vhd":7:7:7:15|Synthesizing work.debouncer.x.
+Post processing for work.debouncer.x
+Running optimization stage 1 on debouncer .......
+Post processing for work.count.x
+Running optimization stage 1 on count .......
+Running optimization stage 2 on debouncer .......
+Running optimization stage 2 on count .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\Users\boris\lab48_sr\impl1\synwork\layer0.rt.csv
+

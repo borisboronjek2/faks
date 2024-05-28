@@ -1,0 +1,1 @@
+project -fileorder "C:/lscc/diamond/3.11_x64/cae_library/synthesis/vhdl/xp2.vhd" "C:/Users/boris/slova/brojke.vhd" "C:/Users/boris/slova/serial_tx.vhd" "C:/Users/boris/slova/slova.vhd" 

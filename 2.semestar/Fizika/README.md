@@ -1,0 +1,5 @@
+# FIZ
+
+Ovo je jedan od najgore organiziranih predmeta na fakultetu. Na predavanjima slusat ces jedno, na laboratorijskim vjezbama radit ces drugo, a na ispitima ce te pitat nest skroz trece.
+
+Predavanja su beskorisna kao i na vecini predmeta na ovom fakultetu. Laboratorijske vjezbe se obavljaju u neboderu FER-a. Na njima ces raditi nekakve pokuse za koje ces morati napraviti pripremu. Bude to zanimljivo samo sto ne bude bas korisno. Na zadnjoj lab vjezbi postoji nekakav blic, ali to bude dosta lagano. Ispiti na ovom predmetu su tesko zlo. Kolokviji se sastoje svaki od 3 dijela. Izvodi, teorija i zadaci. Izvode sve nauci napamet, teoriju il znas il ne (na zaokruzivanje je, mislim da ima negativne bodove), a zadaci su ili shematski ili nerjesivi. stvar kod ispita na ovom predmetu je ta sto imaju jako neobican prag... moras jedan od zadataka u potpunosti tocno rijesiti. U mojoj generaciji stavili su takav ZI da je palo 600/700 upisanih. Ista stvar na rokovima. Prolaz predmeta ti vise manje ovisi o tome kakvi su zadatci na ispitu, a ne o tvojem znanju.

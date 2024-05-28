@@ -1,0 +1,7 @@
+C:\lscc\diamond\3.11_x64\synpbase\bin64\syn_nfilter.exe  -link  -top  count  -multisrs  C:\Users\boris\lab48\impl1\synwork\lab48_impl1_comp.srs  -osyn  C:\Users\boris\lab48\impl1\synwork\lab48_impl1_mult.srs  -log  C:\Users\boris\lab48\impl1\synlog\lab48_impl1_multi_srs_gen.srr 
+relcom:..\..\..\..\..\lscc\diamond\3.11_x64\synpbase\bin64\syn_nfilter.exe -link -top count -multisrs ..\synwork\lab48_impl1_comp.srs -osyn ..\synwork\lab48_impl1_mult.srs -log ..\synlog\lab48_impl1_multi_srs_gen.srr
+rc:0 success:1 runtime:0
+file:..\synwork\lab48_impl1_comp.srs|io:i|time:1607630651|size:2899|exec:0|csum:9658AB2A3348A95FEB267991174EE5CA
+file:..\synwork\lab48_impl1_mult.srs|io:o|time:1607630652|size:1906|exec:0|csum:
+file:..\synlog\lab48_impl1_multi_srs_gen.srr|io:o|time:1607630652|size:1015|exec:0|csum:
+file:..\..\..\..\..\lscc\diamond\3.11_x64\synpbase\bin64\syn_nfilter.exe|io:i|time:1554103352|size:8734720|exec:1|csum:0A206A5298321BBDD627E7975EAE3EC2

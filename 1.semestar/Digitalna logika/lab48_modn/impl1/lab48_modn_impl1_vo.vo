@@ -1,0 +1,628 @@
+
+// Verilog netlist produced by program ldbanno, Version Diamond (64-bit) 3.11.0.396.4
+
+// ldbanno -n Verilog -o lab48_modn_impl1_vo.vo -w -neg -gui lab48_modn_impl1.ncd 
+// Netlist created on Thu Dec 10 21:26:09 2020
+// Netlist written on Thu Dec 10 21:26:26 2020
+// Design is for device LFXP2-8E
+// Design is for package TQFP144
+// Design is for performance grade 5
+
+`timescale 1 ns / 1 ps
+
+module count ( clk_25m, btn_up, btn_right, led );
+  input  clk_25m, btn_up, btn_right;
+  output [7:0] led;
+  wire   \led_c[0] , VCC, un7_r_cry_0, \I_debouncer/VCC , 
+         \I_debouncer/R_debounce_cnt[31] , \I_debouncer/un1_r_debounce_cnt[1] , 
+         \I_debouncer/r_debounce_cnt12_i , clk_25m_c, 
+         \I_debouncer/un1_r_debounce_cnt_cry_30 , 
+         \I_debouncer/R_debounce_cnt[30] , \I_debouncer/R_debounce_cnt[29] , 
+         \I_debouncer/un1_r_debounce_cnt[2] , 
+         \I_debouncer/un1_r_debounce_cnt[3] , 
+         \I_debouncer/un1_r_debounce_cnt_cry_28 , 
+         \I_debouncer/R_debounce_cnt[28] , \I_debouncer/R_debounce_cnt[27] , 
+         \I_debouncer/un1_r_debounce_cnt[4] , 
+         \I_debouncer/un1_r_debounce_cnt[5] , 
+         \I_debouncer/un1_r_debounce_cnt_cry_26 , 
+         \I_debouncer/R_debounce_cnt[26] , \I_debouncer/R_debounce_cnt[25] , 
+         \I_debouncer/un1_r_debounce_cnt[6] , 
+         \I_debouncer/un1_r_debounce_cnt[7] , 
+         \I_debouncer/un1_r_debounce_cnt_cry_24 , 
+         \I_debouncer/R_debounce_cnt[24] , \I_debouncer/R_debounce_cnt[23] , 
+         \I_debouncer/un1_r_debounce_cnt[8] , 
+         \I_debouncer/un1_r_debounce_cnt[9] , 
+         \I_debouncer/un1_r_debounce_cnt_cry_22 , 
+         \I_debouncer/R_debounce_cnt[22] , \I_debouncer/R_debounce_cnt[21] , 
+         \I_debouncer/un1_r_debounce_cnt[10] , 
+         \I_debouncer/un1_r_debounce_cnt[11] , 
+         \I_debouncer/un1_r_debounce_cnt_cry_20 , 
+         \I_debouncer/R_debounce_cnt[20] , \I_debouncer/R_debounce_cnt[19] , 
+         \I_debouncer/un1_r_debounce_cnt[12] , 
+         \I_debouncer/un1_r_debounce_cnt[13] , 
+         \I_debouncer/un1_r_debounce_cnt_cry_18 , 
+         \I_debouncer/R_debounce_cnt[18] , \I_debouncer/R_debounce_cnt[17] , 
+         \I_debouncer/un1_r_debounce_cnt[14] , 
+         \I_debouncer/un1_r_debounce_cnt[15] , 
+         \I_debouncer/un1_r_debounce_cnt_cry_16 , 
+         \I_debouncer/R_debounce_cnt[16] , \I_debouncer/R_debounce_cnt[15] , 
+         \I_debouncer/un1_r_debounce_cnt[16] , 
+         \I_debouncer/un1_r_debounce_cnt[17] , 
+         \I_debouncer/un1_r_debounce_cnt_cry_14 , 
+         \I_debouncer/R_debounce_cnt[14] , \I_debouncer/R_debounce_cnt[13] , 
+         \I_debouncer/un1_r_debounce_cnt[18] , 
+         \I_debouncer/un1_r_debounce_cnt[19] , 
+         \I_debouncer/un1_r_debounce_cnt_cry_12 , 
+         \I_debouncer/R_debounce_cnt[12] , \I_debouncer/R_debounce_cnt[11] , 
+         \I_debouncer/un1_r_debounce_cnt[20] , 
+         \I_debouncer/un1_r_debounce_cnt[21] , 
+         \I_debouncer/un1_r_debounce_cnt_cry_10 , 
+         \I_debouncer/R_debounce_cnt[10] , \I_debouncer/R_debounce_cnt[9] , 
+         \I_debouncer/un1_r_debounce_cnt[22] , 
+         \I_debouncer/un1_r_debounce_cnt[23] , 
+         \I_debouncer/un1_r_debounce_cnt_cry_8 , 
+         \I_debouncer/R_debounce_cnt[8] , \I_debouncer/R_debounce_cnt[7] , 
+         \I_debouncer/un1_r_debounce_cnt[24] , 
+         \I_debouncer/un1_r_debounce_cnt[25] , 
+         \I_debouncer/un1_r_debounce_cnt_cry_6 , 
+         \I_debouncer/R_debounce_cnt[6] , \I_debouncer/R_debounce_cnt[5] , 
+         \I_debouncer/un1_r_debounce_cnt[26] , 
+         \I_debouncer/un1_r_debounce_cnt[27] , 
+         \I_debouncer/un1_r_debounce_cnt_cry_4 , 
+         \I_debouncer/R_debounce_cnt[4] , \I_debouncer/R_debounce_cnt[3] , 
+         \I_debouncer/un1_r_debounce_cnt[28] , 
+         \I_debouncer/un1_r_debounce_cnt[29] , 
+         \I_debouncer/un1_r_debounce_cnt_cry_2 , 
+         \I_debouncer/R_debounce_cnt[2] , \I_debouncer/R_debounce_cnt[1] , 
+         \I_debouncer/un1_r_debounce_cnt[30] , 
+         \I_debouncer/un1_r_debounce_cnt[31] , 
+         \I_debouncer/un1_r_debounce_cnt_cry_0 , 
+         \I_debouncer/R_debounce_cnt[0] , \led_c[7] , un7_r_s_7_0_S0, 
+         btn_right_c, clk_key, un7_r_cry_6, \led_c[6] , \led_c[5] , 
+         un7_r_cry_5_0_S0, un7_r_cry_4, un7_r_cry_5_0_S1, \led_c[4] , 
+         \led_c[3] , un7_r_cry_3_0_S1, un7_r_cry_2, un7_r_cry_3_0_S0, 
+         \led_c[2] , \led_c[1] , un7_r_cry_1_0_S1, un7_r_cry_1_0_S0, 
+         \I_debouncer/R_debounce_cnt_i[0] , un2_r_5, un2_r_4, Rc_1, 
+         \led_c_i[0] , Rc_0, Rc, \I_debouncer.R_key_sync , 
+         \I_debouncer/R_key_last_0_sqmuxa , btn_up_c, VCCI;
+
+  SCCU2B #(.CCU2_INJECT1_0("NO"), .INIT0_INITVAL(16'h00FF), 
+    .INIT1_INITVAL(16'hCCCC)) SLICE_0( .M1(1'bX), .A1(1'bX), .B1(\led_c[0] ), 
+    .C1(1'bX), .D1(1'bX), .DI1(1'bX), .DI0(1'bX), .A0(1'bX), .B0(1'bX), 
+    .C0(1'bX), .D0(VCC), .FCI(1'bX), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .FCO(un7_r_cry_0), .F1(), .Q1(), .F0(), .Q0());
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h3300), .INIT1_INITVAL(16'h0000), .REG0_SD("VHI"), 
+    .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) \I_debouncer/SLICE_1 ( .M1(1'bX), 
+    .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), 
+    .DI0(\I_debouncer/un1_r_debounce_cnt[1] ), .A0(1'bX), 
+    .B0(\I_debouncer/R_debounce_cnt[31] ), .C0(1'bX), .D0(\I_debouncer/VCC ), 
+    .FCI(\I_debouncer/un1_r_debounce_cnt_cry_30 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(\I_debouncer/r_debounce_cnt12_i ), .FCO(), .F1(), 
+    .Q1(), .F0(\I_debouncer/un1_r_debounce_cnt[1] ), 
+    .Q0(\I_debouncer/R_debounce_cnt[31] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33FF), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) 
+    \I_debouncer/SLICE_2 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\I_debouncer/R_debounce_cnt[30] ), .C1(1'bX), .D1(\I_debouncer/VCC ), 
+    .DI1(\I_debouncer/un1_r_debounce_cnt[2] ), 
+    .DI0(\I_debouncer/un1_r_debounce_cnt[3] ), .A0(1'bX), 
+    .B0(\I_debouncer/R_debounce_cnt[29] ), .C0(1'bX), .D0(\I_debouncer/VCC ), 
+    .FCI(\I_debouncer/un1_r_debounce_cnt_cry_28 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(\I_debouncer/r_debounce_cnt12_i ), 
+    .FCO(\I_debouncer/un1_r_debounce_cnt_cry_30 ), 
+    .F1(\I_debouncer/un1_r_debounce_cnt[2] ), 
+    .Q1(\I_debouncer/R_debounce_cnt[30] ), 
+    .F0(\I_debouncer/un1_r_debounce_cnt[3] ), 
+    .Q0(\I_debouncer/R_debounce_cnt[29] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h55AA), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) 
+    \I_debouncer/SLICE_3 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\I_debouncer/R_debounce_cnt[28] ), .C1(1'bX), .D1(\I_debouncer/VCC ), 
+    .DI1(\I_debouncer/un1_r_debounce_cnt[4] ), 
+    .DI0(\I_debouncer/un1_r_debounce_cnt[5] ), 
+    .A0(\I_debouncer/R_debounce_cnt[27] ), .B0(1'bX), .C0(1'bX), 
+    .D0(\I_debouncer/VCC ), .FCI(\I_debouncer/un1_r_debounce_cnt_cry_26 ), 
+    .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), 
+    .LSR(\I_debouncer/r_debounce_cnt12_i ), 
+    .FCO(\I_debouncer/un1_r_debounce_cnt_cry_28 ), 
+    .F1(\I_debouncer/un1_r_debounce_cnt[4] ), 
+    .Q1(\I_debouncer/R_debounce_cnt[28] ), 
+    .F0(\I_debouncer/un1_r_debounce_cnt[5] ), 
+    .Q0(\I_debouncer/R_debounce_cnt[27] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) 
+    \I_debouncer/SLICE_4 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\I_debouncer/R_debounce_cnt[26] ), .C1(1'bX), .D1(\I_debouncer/VCC ), 
+    .DI1(\I_debouncer/un1_r_debounce_cnt[6] ), 
+    .DI0(\I_debouncer/un1_r_debounce_cnt[7] ), .A0(1'bX), 
+    .B0(\I_debouncer/R_debounce_cnt[25] ), .C0(1'bX), .D0(\I_debouncer/VCC ), 
+    .FCI(\I_debouncer/un1_r_debounce_cnt_cry_24 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(\I_debouncer/r_debounce_cnt12_i ), 
+    .FCO(\I_debouncer/un1_r_debounce_cnt_cry_26 ), 
+    .F1(\I_debouncer/un1_r_debounce_cnt[6] ), 
+    .Q1(\I_debouncer/R_debounce_cnt[26] ), 
+    .F0(\I_debouncer/un1_r_debounce_cnt[7] ), 
+    .Q0(\I_debouncer/R_debounce_cnt[25] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) 
+    \I_debouncer/SLICE_5 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\I_debouncer/R_debounce_cnt[24] ), .C1(1'bX), .D1(\I_debouncer/VCC ), 
+    .DI1(\I_debouncer/un1_r_debounce_cnt[8] ), 
+    .DI0(\I_debouncer/un1_r_debounce_cnt[9] ), .A0(1'bX), 
+    .B0(\I_debouncer/R_debounce_cnt[23] ), .C0(1'bX), .D0(\I_debouncer/VCC ), 
+    .FCI(\I_debouncer/un1_r_debounce_cnt_cry_22 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(\I_debouncer/r_debounce_cnt12_i ), 
+    .FCO(\I_debouncer/un1_r_debounce_cnt_cry_24 ), 
+    .F1(\I_debouncer/un1_r_debounce_cnt[8] ), 
+    .Q1(\I_debouncer/R_debounce_cnt[24] ), 
+    .F0(\I_debouncer/un1_r_debounce_cnt[9] ), 
+    .Q0(\I_debouncer/R_debounce_cnt[23] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h55AA), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) 
+    \I_debouncer/SLICE_6 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\I_debouncer/R_debounce_cnt[22] ), .C1(1'bX), .D1(\I_debouncer/VCC ), 
+    .DI1(\I_debouncer/un1_r_debounce_cnt[10] ), 
+    .DI0(\I_debouncer/un1_r_debounce_cnt[11] ), 
+    .A0(\I_debouncer/R_debounce_cnt[21] ), .B0(1'bX), .C0(1'bX), 
+    .D0(\I_debouncer/VCC ), .FCI(\I_debouncer/un1_r_debounce_cnt_cry_20 ), 
+    .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), 
+    .LSR(\I_debouncer/r_debounce_cnt12_i ), 
+    .FCO(\I_debouncer/un1_r_debounce_cnt_cry_22 ), 
+    .F1(\I_debouncer/un1_r_debounce_cnt[10] ), 
+    .Q1(\I_debouncer/R_debounce_cnt[22] ), 
+    .F0(\I_debouncer/un1_r_debounce_cnt[11] ), 
+    .Q0(\I_debouncer/R_debounce_cnt[21] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) 
+    \I_debouncer/SLICE_7 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\I_debouncer/R_debounce_cnt[20] ), .C1(1'bX), .D1(\I_debouncer/VCC ), 
+    .DI1(\I_debouncer/un1_r_debounce_cnt[12] ), 
+    .DI0(\I_debouncer/un1_r_debounce_cnt[13] ), .A0(1'bX), 
+    .B0(\I_debouncer/R_debounce_cnt[19] ), .C0(1'bX), .D0(\I_debouncer/VCC ), 
+    .FCI(\I_debouncer/un1_r_debounce_cnt_cry_18 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(\I_debouncer/r_debounce_cnt12_i ), 
+    .FCO(\I_debouncer/un1_r_debounce_cnt_cry_20 ), 
+    .F1(\I_debouncer/un1_r_debounce_cnt[12] ), 
+    .Q1(\I_debouncer/R_debounce_cnt[20] ), 
+    .F0(\I_debouncer/un1_r_debounce_cnt[13] ), 
+    .Q0(\I_debouncer/R_debounce_cnt[19] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .REG0_REGSET("SET"), 
+    .REG1_REGSET("SET"), .GSR("DISABLED"), .INIT0_INITVAL(16'h33CC), 
+    .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), .REG0_SD("VHI"), 
+    .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) 
+    \I_debouncer/SLICE_8 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\I_debouncer/R_debounce_cnt[18] ), .C1(1'bX), .D1(\I_debouncer/VCC ), 
+    .DI1(\I_debouncer/un1_r_debounce_cnt[14] ), 
+    .DI0(\I_debouncer/un1_r_debounce_cnt[15] ), .A0(1'bX), 
+    .B0(\I_debouncer/R_debounce_cnt[17] ), .C0(1'bX), .D0(\I_debouncer/VCC ), 
+    .FCI(\I_debouncer/un1_r_debounce_cnt_cry_16 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(\I_debouncer/r_debounce_cnt12_i ), 
+    .FCO(\I_debouncer/un1_r_debounce_cnt_cry_18 ), 
+    .F1(\I_debouncer/un1_r_debounce_cnt[14] ), 
+    .Q1(\I_debouncer/R_debounce_cnt[18] ), 
+    .F0(\I_debouncer/un1_r_debounce_cnt[15] ), 
+    .Q0(\I_debouncer/R_debounce_cnt[17] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .REG0_REGSET("SET"), 
+    .REG1_REGSET("SET"), .GSR("DISABLED"), .INIT0_INITVAL(16'h55AA), 
+    .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), .REG0_SD("VHI"), 
+    .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) 
+    \I_debouncer/SLICE_9 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\I_debouncer/R_debounce_cnt[16] ), .C1(1'bX), .D1(\I_debouncer/VCC ), 
+    .DI1(\I_debouncer/un1_r_debounce_cnt[16] ), 
+    .DI0(\I_debouncer/un1_r_debounce_cnt[17] ), 
+    .A0(\I_debouncer/R_debounce_cnt[15] ), .B0(1'bX), .C0(1'bX), 
+    .D0(\I_debouncer/VCC ), .FCI(\I_debouncer/un1_r_debounce_cnt_cry_14 ), 
+    .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), 
+    .LSR(\I_debouncer/r_debounce_cnt12_i ), 
+    .FCO(\I_debouncer/un1_r_debounce_cnt_cry_16 ), 
+    .F1(\I_debouncer/un1_r_debounce_cnt[16] ), 
+    .Q1(\I_debouncer/R_debounce_cnt[16] ), 
+    .F0(\I_debouncer/un1_r_debounce_cnt[17] ), 
+    .Q0(\I_debouncer/R_debounce_cnt[15] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .REG0_REGSET("SET"), 
+    .GSR("DISABLED"), .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), 
+    .REG1_SD("VHI"), .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), 
+    .CHECK_LSR(1'b1)) \I_debouncer/SLICE_10 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\I_debouncer/R_debounce_cnt[14] ), .C1(1'bX), .D1(\I_debouncer/VCC ), 
+    .DI1(\I_debouncer/un1_r_debounce_cnt[18] ), 
+    .DI0(\I_debouncer/un1_r_debounce_cnt[19] ), .A0(1'bX), 
+    .B0(\I_debouncer/R_debounce_cnt[13] ), .C0(1'bX), .D0(\I_debouncer/VCC ), 
+    .FCI(\I_debouncer/un1_r_debounce_cnt_cry_12 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(\I_debouncer/r_debounce_cnt12_i ), 
+    .FCO(\I_debouncer/un1_r_debounce_cnt_cry_14 ), 
+    .F1(\I_debouncer/un1_r_debounce_cnt[18] ), 
+    .Q1(\I_debouncer/R_debounce_cnt[14] ), 
+    .F0(\I_debouncer/un1_r_debounce_cnt[19] ), 
+    .Q0(\I_debouncer/R_debounce_cnt[13] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) 
+    \I_debouncer/SLICE_11 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\I_debouncer/R_debounce_cnt[12] ), .C1(1'bX), .D1(\I_debouncer/VCC ), 
+    .DI1(\I_debouncer/un1_r_debounce_cnt[20] ), 
+    .DI0(\I_debouncer/un1_r_debounce_cnt[21] ), .A0(1'bX), 
+    .B0(\I_debouncer/R_debounce_cnt[11] ), .C0(1'bX), .D0(\I_debouncer/VCC ), 
+    .FCI(\I_debouncer/un1_r_debounce_cnt_cry_10 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(\I_debouncer/r_debounce_cnt12_i ), 
+    .FCO(\I_debouncer/un1_r_debounce_cnt_cry_12 ), 
+    .F1(\I_debouncer/un1_r_debounce_cnt[20] ), 
+    .Q1(\I_debouncer/R_debounce_cnt[12] ), 
+    .F0(\I_debouncer/un1_r_debounce_cnt[21] ), 
+    .Q0(\I_debouncer/R_debounce_cnt[11] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h55AA), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) 
+    \I_debouncer/SLICE_12 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\I_debouncer/R_debounce_cnt[10] ), .C1(1'bX), .D1(\I_debouncer/VCC ), 
+    .DI1(\I_debouncer/un1_r_debounce_cnt[22] ), 
+    .DI0(\I_debouncer/un1_r_debounce_cnt[23] ), 
+    .A0(\I_debouncer/R_debounce_cnt[9] ), .B0(1'bX), .C0(1'bX), 
+    .D0(\I_debouncer/VCC ), .FCI(\I_debouncer/un1_r_debounce_cnt_cry_8 ), 
+    .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), 
+    .LSR(\I_debouncer/r_debounce_cnt12_i ), 
+    .FCO(\I_debouncer/un1_r_debounce_cnt_cry_10 ), 
+    .F1(\I_debouncer/un1_r_debounce_cnt[22] ), 
+    .Q1(\I_debouncer/R_debounce_cnt[10] ), 
+    .F0(\I_debouncer/un1_r_debounce_cnt[23] ), 
+    .Q0(\I_debouncer/R_debounce_cnt[9] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .REG1_REGSET("SET"), 
+    .GSR("DISABLED"), .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), 
+    .REG1_SD("VHI"), .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), 
+    .CHECK_LSR(1'b1)) \I_debouncer/SLICE_13 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\I_debouncer/R_debounce_cnt[8] ), .C1(1'bX), .D1(\I_debouncer/VCC ), 
+    .DI1(\I_debouncer/un1_r_debounce_cnt[24] ), 
+    .DI0(\I_debouncer/un1_r_debounce_cnt[25] ), .A0(1'bX), 
+    .B0(\I_debouncer/R_debounce_cnt[7] ), .C0(1'bX), .D0(\I_debouncer/VCC ), 
+    .FCI(\I_debouncer/un1_r_debounce_cnt_cry_6 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(\I_debouncer/r_debounce_cnt12_i ), 
+    .FCO(\I_debouncer/un1_r_debounce_cnt_cry_8 ), 
+    .F1(\I_debouncer/un1_r_debounce_cnt[24] ), 
+    .Q1(\I_debouncer/R_debounce_cnt[8] ), 
+    .F0(\I_debouncer/un1_r_debounce_cnt[25] ), 
+    .Q0(\I_debouncer/R_debounce_cnt[7] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .REG0_REGSET("SET"), 
+    .GSR("DISABLED"), .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), 
+    .REG1_SD("VHI"), .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), 
+    .CHECK_LSR(1'b1)) \I_debouncer/SLICE_14 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\I_debouncer/R_debounce_cnt[6] ), .C1(1'bX), .D1(\I_debouncer/VCC ), 
+    .DI1(\I_debouncer/un1_r_debounce_cnt[26] ), 
+    .DI0(\I_debouncer/un1_r_debounce_cnt[27] ), .A0(1'bX), 
+    .B0(\I_debouncer/R_debounce_cnt[5] ), .C0(1'bX), .D0(\I_debouncer/VCC ), 
+    .FCI(\I_debouncer/un1_r_debounce_cnt_cry_4 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(\I_debouncer/r_debounce_cnt12_i ), 
+    .FCO(\I_debouncer/un1_r_debounce_cnt_cry_6 ), 
+    .F1(\I_debouncer/un1_r_debounce_cnt[26] ), 
+    .Q1(\I_debouncer/R_debounce_cnt[6] ), 
+    .F0(\I_debouncer/un1_r_debounce_cnt[27] ), 
+    .Q0(\I_debouncer/R_debounce_cnt[5] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h55AA), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) 
+    \I_debouncer/SLICE_15 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\I_debouncer/R_debounce_cnt[4] ), .C1(1'bX), .D1(\I_debouncer/VCC ), 
+    .DI1(\I_debouncer/un1_r_debounce_cnt[28] ), 
+    .DI0(\I_debouncer/un1_r_debounce_cnt[29] ), 
+    .A0(\I_debouncer/R_debounce_cnt[3] ), .B0(1'bX), .C0(1'bX), 
+    .D0(\I_debouncer/VCC ), .FCI(\I_debouncer/un1_r_debounce_cnt_cry_2 ), 
+    .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), 
+    .LSR(\I_debouncer/r_debounce_cnt12_i ), 
+    .FCO(\I_debouncer/un1_r_debounce_cnt_cry_4 ), 
+    .F1(\I_debouncer/un1_r_debounce_cnt[28] ), 
+    .Q1(\I_debouncer/R_debounce_cnt[4] ), 
+    .F0(\I_debouncer/un1_r_debounce_cnt[29] ), 
+    .Q0(\I_debouncer/R_debounce_cnt[3] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) 
+    \I_debouncer/SLICE_16 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\I_debouncer/R_debounce_cnt[2] ), .C1(1'bX), .D1(\I_debouncer/VCC ), 
+    .DI1(\I_debouncer/un1_r_debounce_cnt[30] ), 
+    .DI0(\I_debouncer/un1_r_debounce_cnt[31] ), .A0(1'bX), 
+    .B0(\I_debouncer/R_debounce_cnt[1] ), .C0(1'bX), .D0(\I_debouncer/VCC ), 
+    .FCI(\I_debouncer/un1_r_debounce_cnt_cry_0 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(\I_debouncer/r_debounce_cnt12_i ), 
+    .FCO(\I_debouncer/un1_r_debounce_cnt_cry_2 ), 
+    .F1(\I_debouncer/un1_r_debounce_cnt[30] ), 
+    .Q1(\I_debouncer/R_debounce_cnt[2] ), 
+    .F0(\I_debouncer/un1_r_debounce_cnt[31] ), 
+    .Q0(\I_debouncer/R_debounce_cnt[1] ));
+  SCCU2B #(.CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), 
+    .INIT0_INITVAL(16'h0000), .INIT1_INITVAL(16'h33CC)) \I_debouncer/SLICE_17 
+    ( .M1(1'bX), .A1(1'bX), .B1(\I_debouncer/R_debounce_cnt[0] ), .C1(1'bX), 
+    .D1(\I_debouncer/VCC ), .DI1(1'bX), .DI0(1'bX), .A0(1'bX), .B0(1'bX), 
+    .C0(1'bX), .D0(1'bX), .FCI(1'bX), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .FCO(\I_debouncer/un1_r_debounce_cnt_cry_0 ), .F1(), .Q1(), 
+    .F0(), .Q0());
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'hCC00), .INIT1_INITVAL(16'h0000), .REG0_SD("VHI"), 
+    .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) SLICE_18( .M1(1'bX), .A1(1'bX), 
+    .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), .DI0(un7_r_s_7_0_S0), 
+    .A0(1'bX), .B0(\led_c[7] ), .C0(1'bX), .D0(VCC), .FCI(un7_r_cry_6), 
+    .M0(1'bX), .CE(1'bX), .CLK(clk_key), .LSR(btn_right_c), .FCO(), .F1(), 
+    .Q1(), .F0(un7_r_s_7_0_S0), .Q0(\led_c[7] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'hCC00), .INIT1_INITVAL(16'hAA00), .REG0_SD("VHI"), 
+    .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) SLICE_19( .M1(1'bX), .A1(\led_c[6] ), 
+    .B1(1'bX), .C1(1'bX), .D1(VCC), .DI1(1'bX), .DI0(un7_r_cry_5_0_S0), 
+    .A0(1'bX), .B0(\led_c[5] ), .C0(1'bX), .D0(VCC), .FCI(un7_r_cry_4), 
+    .M0(1'bX), .CE(1'bX), .CLK(clk_key), .LSR(btn_right_c), .FCO(un7_r_cry_6), 
+    .F1(un7_r_cry_5_0_S1), .Q1(), .F0(un7_r_cry_5_0_S0), .Q0(\led_c[5] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'hCC00), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .CHECK_DI1(1'b1), .CHECK_LSR(1'b1)) SLICE_20( .M1(1'bX), .A1(1'bX), 
+    .B1(\led_c[4] ), .C1(1'bX), .D1(VCC), .DI1(un7_r_cry_3_0_S1), .DI0(1'bX), 
+    .A0(1'bX), .B0(\led_c[3] ), .C0(1'bX), .D0(VCC), .FCI(un7_r_cry_2), 
+    .M0(1'bX), .CE(1'bX), .CLK(clk_key), .LSR(btn_right_c), .FCO(un7_r_cry_4), 
+    .F1(un7_r_cry_3_0_S1), .Q1(\led_c[4] ), .F0(un7_r_cry_3_0_S0), .Q0());
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'hCC00), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .CHECK_DI1(1'b1), .CHECK_LSR(1'b1)) SLICE_21( .M1(1'bX), .A1(1'bX), 
+    .B1(\led_c[2] ), .C1(1'bX), .D1(VCC), .DI1(un7_r_cry_1_0_S1), .DI0(1'bX), 
+    .A0(1'bX), .B0(\led_c[1] ), .C0(1'bX), .D0(VCC), .FCI(un7_r_cry_0), 
+    .M0(1'bX), .CE(1'bX), .CLK(clk_key), .LSR(btn_right_c), .FCO(un7_r_cry_2), 
+    .F1(un7_r_cry_1_0_S1), .Q1(\led_c[2] ), .F0(un7_r_cry_1_0_S0), .Q0());
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), .GSR("DISABLED"), 
+    .LUT0_INITVAL(16'h00FF), .REG0_SD("VHI"), .CHECK_DI0(1'b1), 
+    .CHECK_LSR(1'b1)) \I_debouncer/SLICE_22 ( .M1(1'bX), .FXA(1'bX), 
+    .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), 
+    .DI0(\I_debouncer/R_debounce_cnt_i[0] ), .A0(1'bX), .B0(1'bX), .C0(1'bX), 
+    .D0(\I_debouncer/R_debounce_cnt[0] ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(\I_debouncer/r_debounce_cnt12_i ), .OFX1(), .F1(), 
+    .Q1(), .OFX0(), .F0(\I_debouncer/R_debounce_cnt_i[0] ), 
+    .Q0(\I_debouncer/R_debounce_cnt[0] ));
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), .GSR("DISABLED"), 
+    .LUT0_INITVAL(16'h00FF), .LUT1_INITVAL(16'h5F00), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) 
+    SLICE_24( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), .A1(un2_r_4), .B1(1'bX), 
+    .C1(un2_r_5), .D1(un7_r_cry_1_0_S0), .DI1(Rc_1), .DI0(\led_c_i[0] ), 
+    .A0(1'bX), .B0(1'bX), .C0(1'bX), .D0(\led_c[0] ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_key), .LSR(btn_right_c), .OFX1(), .F1(Rc_1), .Q1(\led_c[1] ), 
+    .OFX0(), .F0(\led_c_i[0] ), .Q0(\led_c[0] ));
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), .GSR("DISABLED"), 
+    .LUT0_INITVAL(16'h3F00), .LUT1_INITVAL(16'h0CCC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) 
+    SLICE_25( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), .A1(1'bX), 
+    .B1(un7_r_cry_5_0_S1), .C1(un2_r_4), .D1(un2_r_5), .DI1(Rc_0), .DI0(Rc), 
+    .A0(1'bX), .B0(un2_r_5), .C0(un2_r_4), .D0(un7_r_cry_3_0_S0), .M0(1'bX), 
+    .CE(1'bX), .CLK(clk_key), .LSR(btn_right_c), .OFX1(), .F1(Rc_0), 
+    .Q1(\led_c[6] ), .OFX0(), .F0(Rc), .Q0(\led_c[3] ));
+  SLOGICB #(.LUT0_INITVAL(16'h0100)) SLICE_26( .M1(1'bX), .FXA(1'bX), 
+    .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), 
+    .DI0(1'bX), .A0(\led_c[4] ), .B0(\led_c[7] ), .C0(\led_c[5] ), 
+    .D0(\led_c[0] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), 
+    .F1(), .Q1(), .OFX0(), .F0(un2_r_5), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h4848)) \I_debouncer/SLICE_27 ( .M1(1'bX), 
+    .FXA(1'bX), .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), 
+    .DI1(1'bX), .DI0(1'bX), .A0(clk_key), 
+    .B0(\I_debouncer/R_debounce_cnt[31] ), .C0(\I_debouncer.R_key_sync ), 
+    .D0(1'bX), .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(), 
+    .Q1(), .OFX0(), .F0(\I_debouncer/R_key_last_0_sqmuxa ), .Q0());
+  SLOGICB #(.M0MUX("SIG"), .CLKMUX("SIG"), .CEMUX("SIG"), .GSR("DISABLED"), 
+    .SRMODE("ASYNC"), .LSRONMUX(0), .LUT0_INITVAL(16'hF00F), .CHECK_M0(1'b1), 
+    .CHECK_CE(1'b1)) \I_debouncer/SLICE_28 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), .DI0(1'bX), 
+    .A0(1'bX), .B0(1'bX), .C0(\I_debouncer.R_key_sync ), .D0(clk_key), 
+    .M0(\I_debouncer.R_key_sync ), .CE(\I_debouncer/R_key_last_0_sqmuxa ), 
+    .CLK(clk_25m_c), .LSR(1'bX), .OFX1(), .F1(), .Q1(), .OFX0(), 
+    .F0(\I_debouncer/r_debounce_cnt12_i ), .Q0(clk_key));
+  SLOGICB #(.LUT0_INITVAL(16'hFFFF)) \I_debouncer/SLICE_29 ( .M1(1'bX), 
+    .FXA(1'bX), .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), 
+    .DI1(1'bX), .DI0(1'bX), .A0(1'bX), .B0(1'bX), .C0(1'bX), .D0(1'bX), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(), .Q1(), 
+    .OFX0(), .F0(\I_debouncer/VCC ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0008)) SLICE_30( .M1(1'bX), .FXA(1'bX), 
+    .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), 
+    .DI0(1'bX), .A0(\led_c[6] ), .B0(\led_c[3] ), .C0(\led_c[2] ), 
+    .D0(\led_c[1] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), 
+    .F1(), .Q1(), .OFX0(), .F0(un2_r_4), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'hFFFF)) SLICE_31( .M1(1'bX), .FXA(1'bX), 
+    .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), 
+    .DI0(1'bX), .A0(1'bX), .B0(1'bX), .C0(1'bX), .D0(1'bX), .M0(1'bX), 
+    .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(), .Q1(), .OFX0(), 
+    .F0(VCC), .Q0());
+  led_0_ \led[0]_I ( .PADDO(\led_c[0] ), .led0(led[0]));
+  clk_25m clk_25m_I( .PADDI(clk_25m_c), .clk_25m(clk_25m));
+  led_7_ \led[7]_I ( .PADDO(\led_c[7] ), .led7(led[7]));
+  led_6_ \led[6]_I ( .PADDO(\led_c[6] ), .led6(led[6]));
+  led_5_ \led[5]_I ( .PADDO(\led_c[5] ), .led5(led[5]));
+  led_4_ \led[4]_I ( .PADDO(\led_c[4] ), .led4(led[4]));
+  led_3_ \led[3]_I ( .PADDO(\led_c[3] ), .led3(led[3]));
+  led_2_ \led[2]_I ( .PADDO(\led_c[2] ), .led2(led[2]));
+  led_1_ \led[1]_I ( .PADDO(\led_c[1] ), .led1(led[1]));
+  btn_right btn_right_I( .PADDI(btn_right_c), .btn_right(btn_right));
+  btn_up btn_up_I( .PADDI(btn_up_c), .btn_up(btn_up));
+  btn_up_MGIOL btn_up_MGIOL( .DI(btn_up_c), .CLK(clk_25m_c), 
+    .INFF(\I_debouncer.R_key_sync ));
+  VHI VHI_INST( .Z(VCCI));
+  PUR PUR_INST( .PUR(VCCI));
+  GSR GSR_INST( .GSR(VCCI));
+endmodule
+
+module led_0_ ( input PADDO, output led0 );
+
+  ec2iobuf \led_pad[0] ( .I(PADDO), .PAD(led0));
+
+  specify
+    (PADDO => led0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module ec2iobuf ( input I, output PAD );
+
+  OB INST5( .I(I), .O(PAD));
+endmodule
+
+module gnd ( output PWR0 );
+
+  VLO INST1( .Z(PWR0));
+endmodule
+
+module clk_25m ( output PADDI, input clk_25m );
+
+  ec2iobuf0001 clk_25m_pad( .Z(PADDI), .PAD(clk_25m));
+
+  specify
+    (clk_25m => PADDI) = (0:0:0,0:0:0);
+    $width (posedge clk_25m, 0:0:0);
+    $width (negedge clk_25m, 0:0:0);
+  endspecify
+
+endmodule
+
+module ec2iobuf0001 ( output Z, input PAD );
+
+  IB INST1( .I(PAD), .O(Z));
+endmodule
+
+module led_7_ ( input PADDO, output led7 );
+
+  ec2iobuf \led_pad[7] ( .I(PADDO), .PAD(led7));
+
+  specify
+    (PADDO => led7) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_6_ ( input PADDO, output led6 );
+
+  ec2iobuf \led_pad[6] ( .I(PADDO), .PAD(led6));
+
+  specify
+    (PADDO => led6) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_5_ ( input PADDO, output led5 );
+
+  ec2iobuf \led_pad[5] ( .I(PADDO), .PAD(led5));
+
+  specify
+    (PADDO => led5) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_4_ ( input PADDO, output led4 );
+
+  ec2iobuf \led_pad[4] ( .I(PADDO), .PAD(led4));
+
+  specify
+    (PADDO => led4) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_3_ ( input PADDO, output led3 );
+
+  ec2iobuf \led_pad[3] ( .I(PADDO), .PAD(led3));
+
+  specify
+    (PADDO => led3) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_2_ ( input PADDO, output led2 );
+
+  ec2iobuf \led_pad[2] ( .I(PADDO), .PAD(led2));
+
+  specify
+    (PADDO => led2) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_1_ ( input PADDO, output led1 );
+
+  ec2iobuf \led_pad[1] ( .I(PADDO), .PAD(led1));
+
+  specify
+    (PADDO => led1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module btn_right ( output PADDI, input btn_right );
+
+  ec2iobuf0002 btn_right_pad( .Z(PADDI), .PAD(btn_right));
+
+  specify
+    (btn_right => PADDI) = (0:0:0,0:0:0);
+    $width (posedge btn_right, 0:0:0);
+    $width (negedge btn_right, 0:0:0);
+  endspecify
+
+endmodule
+
+module ec2iobuf0002 ( output Z, input PAD );
+
+  IBPD INST1( .I(PAD), .O(Z));
+endmodule
+
+module btn_up ( output PADDI, input btn_up );
+
+  ec2iobuf0002 btn_up_pad( .Z(PADDI), .PAD(btn_up));
+
+  specify
+    (btn_up => PADDI) = (0:0:0,0:0:0);
+    $width (posedge btn_up, 0:0:0);
+    $width (negedge btn_up, 0:0:0);
+  endspecify
+
+endmodule
+
+module btn_up_MGIOL ( input DI, CLK, output INFF );
+  wire   VCCI, GNDI, DI_dly, CLK_dly;
+
+  smuxlregsre I_debouncer_R_key_syncio( .D0(DI_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(INFF));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (CLK => INFF) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI, 0:0:0, 0:0:0,,,, CLK_dly, DI_dly);
+  endspecify
+
+endmodule
+
+module smuxlregsre ( input D0, SP, CK, LSR, output Q );
+
+  IFS1P3DX INST01( .D(D0), .SP(SP), .SCLK(CK), .CD(LSR), .Q(Q));
+  defparam INST01.GSR = "DISABLED";
+endmodule
+
+module vcc ( output PWR1 );
+
+  VHI INST1( .Z(PWR1));
+endmodule

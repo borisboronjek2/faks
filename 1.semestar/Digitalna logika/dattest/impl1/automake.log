@@ -1,0 +1,1797 @@
+
+synpwrap -msg -prj "uf_impl1_synplify.tcl" -log "uf_impl1.srf"
+Copyright (C) 1992-2019 Lattice Semiconductor Corporation. All rights reserved.
+Lattice Diamond Version 3.11.0.396.4
+    <postMsg mid="2011000" type="Info"    dynamic="0" navigation="0"  />
+
+==contents of uf_impl1.srf
+#Build: Synplify Pro (R) N-2018.03L-SP1-1, Build 443R, Apr  1 2019
+#install: C:\lscc\diamond\3.11_x64\synpbase
+#OS: Windows 8 6.2
+#Hostname: DESKTOP-PNMJ1CD
+
+# Thu Nov  5 10:23:23 2020
+
+#Implementation: impl1
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-PNMJ1CD
+
+Implementation : impl1
+Synopsys HDL Compiler, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
+
+@N|Running in 64-bit mode
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-PNMJ1CD
+
+Implementation : impl1
+Synopsys VHDL Compiler, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
+
+@N|Running in 64-bit mode
+@N:"C:\Users\boris\dattest\serial_tx.vhd":34:7:34:15|Top entity is set to serial_tx.
+VHDL syntax check successful!
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 69MB)
+
+
+Process completed successfully.
+# Thu Nov  5 10:23:23 2020
+
+###########################################################]
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-PNMJ1CD
+
+Implementation : impl1
+Synopsys Verilog Compiler, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
+
+@N|Running in 64-bit mode
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\xp2.v" (library work)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\pmi_def.v" (library work)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\Users\boris\dattest\impl1\lab2.v" (library work)
+Verilog syntax check successful!
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 70MB peak: 71MB)
+
+
+Process completed successfully.
+# Thu Nov  5 10:23:24 2020
+
+###########################################################]
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\xp2.v" (library work)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\pmi_def.v" (library work)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\Users\boris\dattest\impl1\lab2.v" (library work)
+Verilog syntax check successful!
+File C:\Users\boris\dattest\impl1\lab2.v changed - recompiling
+@N: CG364 :"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\xp2.v":1099:7:1099:9|Synthesizing module OR3 in library work.
+Running optimization stage 1 on OR3 .......
+@N: CG364 :"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\xp2.v":797:7:797:9|Synthesizing module INV in library work.
+Running optimization stage 1 on INV .......
+@N: CG364 :"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\xp2.v":147:7:147:10|Synthesizing module AND2 in library work.
+Running optimization stage 1 on AND2 .......
+@N: CG364 :"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\xp2.v":1093:7:1093:9|Synthesizing module OR2 in library work.
+Running optimization stage 1 on OR2 .......
+@N: CG364 :"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\xp2.v":1106:7:1106:9|Synthesizing module OR4 in library work.
+Running optimization stage 1 on OR4 .......
+@N: CG364 :"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\xp2.v":970:7:970:8|Synthesizing module OB in library work.
+Running optimization stage 1 on OB .......
+@N: CG364 :"C:\Users\boris\dattest\impl1\lab2.v":3:7:3:10|Synthesizing module lab2 in library work.
+@N: CG794 :"C:\Users\boris\dattest\impl1\lab2.v":40:10:40:11|Using module serial_tx from library work
+@W: CG360 :"C:\Users\boris\dattest\impl1\lab2.v":20:5:20:7|Removing wire N_1, as there is no assignment to it.
+Running optimization stage 1 on lab2 .......
+@W: CL318 :"C:\Users\boris\dattest\impl1\lab2.v":10:13:10:15|*Output led has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+Running optimization stage 2 on lab2 .......
+@W: CL156 :"C:\Users\boris\dattest\impl1\lab2.v":20:5:20:7|*Input N_1 to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"C:\Users\boris\dattest\impl1\lab2.v":40:26:40:65|*Input un1_N_11[7:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+Running optimization stage 2 on OB .......
+Running optimization stage 2 on OR4 .......
+Running optimization stage 2 on OR2 .......
+Running optimization stage 2 on AND2 .......
+Running optimization stage 2 on INV .......
+Running optimization stage 2 on OR3 .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\Users\boris\dattest\impl1\synwork\layer0.rt.csv
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 71MB peak: 72MB)
+
+
+Process completed successfully.
+# Thu Nov  5 10:23:24 2020
+
+###########################################################]
+@N:"C:\Users\boris\dattest\serial_tx.vhd":34:7:34:15|Top entity is set to serial_tx.
+
+File Dependency file is up to date.  It will not be rewritten.
+
+VHDL syntax check successful!
+@N: CD630 :"C:\Users\boris\dattest\serial_tx.vhd":34:7:34:15|Synthesizing work.serial_tx.behavioral.
+Post processing for work.serial_tx.behavioral
+Running optimization stage 1 on serial_tx .......
+Running optimization stage 2 on serial_tx .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\Users\boris\dattest\impl1\synwork\layer1.rt.csv
+
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 75MB peak: 77MB)
+
+
+Process completed successfully.
+# Thu Nov  5 10:23:24 2020
+
+###########################################################]
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-PNMJ1CD
+
+Implementation : impl1
+Synopsys Synopsys Netlist Linker, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
+
+@N|Running in 64-bit mode
+File C:\Users\boris\dattest\impl1\synwork\layer0.srs changed - recompiling
+File C:\Users\boris\dattest\impl1\synwork\layer1.srs changed - recompiling
+
+=======================================================================================
+For a summary of linker messages for components that did not bind, please see log file:
+@L: C:\Users\boris\dattest\impl1\synwork\uf_impl1_comp.linkerlog
+=======================================================================================
+
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Nov  5 10:23:25 2020
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: C:\Users\boris\dattest\impl1\synwork\uf_impl1_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Nov  5 10:23:25 2020
+
+###########################################################]
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-PNMJ1CD
+
+Database state : C:\Users\boris\dattest\impl1\synwork\|impl1
+Synopsys Synopsys Netlist Linker, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
+
+@N|Running in 64-bit mode
+File C:\Users\boris\dattest\impl1\synwork\uf_impl1_comp.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Nov  5 10:23:26 2020
+
+###########################################################]
+Premap Report
+
+# Thu Nov  5 10:23:26 2020
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-PNMJ1CD
+
+Implementation : impl1
+Synopsys Lattice Technology Pre-mapping, Version maplat2018q2p1, Build 055R, Built Apr  3 2019 09:51:54
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@A: MF827 |No constraint file specified.
+@N: MF284 |Setting synthesis effort to medium for the design
+@L: C:\Users\boris\dattest\impl1\uf_impl1_scck.rpt 
+Printing clock  summary report in "C:\Users\boris\dattest\impl1\uf_impl1_scck.rpt" file 
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 102MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 102MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 112MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 114MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: MH105 |UMR3 is only supported for HAPS-80.
+@N: MH105 |UMR3 is only supported for HAPS-80.
+syn_allowed_resources : blockrams=12  set on top level netlist lab2
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+
+
+
+Clock Summary
+******************
+
+          Start            Requested     Requested     Clock        Clock                   Clock
+Level     Clock            Frequency     Period        Type         Group                   Load 
+-------------------------------------------------------------------------------------------------
+0 -       System           200.0 MHz     5.000         system       system_clkgroup         0    
+                                                                                                 
+0 -       lab2|clk_25m     200.0 MHz     5.000         inferred     Inferred_clkgroup_0     74   
+=================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                 Clock     Source            Clock Pin                Non-clock Pin     Non-clock Pin
+Clock            Load      Pin               Seq Example              Seq Example       Comb Example 
+-----------------------------------------------------------------------------------------------------
+System           0         -                 -                        -                 -            
+                                                                                                     
+lab2|clk_25m     74        clk_25m(port)     I1.R_byte_old[7:0].C     -                 -            
+=====================================================================================================
+
+@W: MT529 :"c:\users\boris\dattest\serial_tx.vhd":78:1:78:2|Found inferred clock lab2|clk_25m which controls 74 sequential elements including I1.R_tx_ser[0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+1 non-gated/non-generated clock tree(s) driving 74 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+@KP:ckid0_0       clk_25m             Unconstrained_port     74         I1.R_tx_ser[0] 
+=======================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 55MB peak: 142MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Nov  5 10:23:27 2020
+
+###########################################################]
+Map & Optimize Report
+
+# Thu Nov  5 10:23:27 2020
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-PNMJ1CD
+
+Implementation : impl1
+Synopsys Lattice Technology Mapper, Version maplat2018q2p1, Build 055R, Built Apr  3 2019 09:51:54
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 114MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 142MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N: FX493 |Applying initial value "111111111" on instance I1.R_tx_ser[8:0].
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 142MB)
+
+@N: MO231 :"c:\users\boris\dattest\serial_tx.vhd":78:1:78:2|Found counter in view:work.serial_tx(behavioral) instance R_tx_tickcnt[3:0] 
+@W: MO129 :"c:\users\boris\dattest\serial_tx.vhd":78:1:78:2|Sequential instance I1.R_byte_old[7] is reduced to a combinational gate by constant propagation.
+@N: MF179 :"c:\users\boris\dattest\serial_tx.vhd":81:8:81:28|Found 8 by 8 bit equality operator ('==') un1_byte_in (in view: work.serial_tx(behavioral))
+@W: BN132 :"c:\users\boris\dattest\serial_tx.vhd":78:1:78:2|Removing instance I1.R_byte_old[2] because it is equivalent to instance I1.R_byte_old[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 142MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:00s		    -0.69ns		  46 /        72
+   2		0h:00m:00s		    -0.76ns		  49 /        72
+@N: FX271 :"c:\users\boris\dattest\serial_tx.vhd":78:1:78:2|Replicating instance I1.R_byte_old[0] (in view: work.lab2(verilog)) with 7 loads 1 time to improve timing.
+@N: FX271 :"c:\users\boris\dattest\serial_tx.vhd":78:1:78:2|Replicating instance I1.R_byte_old[1] (in view: work.lab2(verilog)) with 4 loads 1 time to improve timing.
+@N: FX271 :"c:\users\boris\dattest\serial_tx.vhd":78:1:78:2|Replicating instance I1.R_byte_old[5] (in view: work.lab2(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"c:\users\boris\dattest\serial_tx.vhd":78:1:78:2|Replicating instance I1.R_debounce_cnt[11] (in view: work.lab2(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"c:\users\boris\dattest\serial_tx.vhd":78:1:78:2|Replicating instance I1.R_debounce_cnt[8] (in view: work.lab2(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"c:\users\boris\dattest\serial_tx.vhd":78:1:78:2|Replicating instance I1.R_debounce_cnt[9] (in view: work.lab2(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"c:\users\boris\dattest\serial_tx.vhd":78:1:78:2|Replicating instance I1.R_debounce_cnt[10] (in view: work.lab2(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"c:\users\boris\dattest\serial_tx.vhd":78:1:78:2|Replicating instance I1.R_byte_old[3] (in view: work.lab2(verilog)) with 4 loads 1 time to improve timing.
+@N: FX271 :"c:\users\boris\dattest\serial_tx.vhd":78:1:78:2|Replicating instance I1.R_byte_old[4] (in view: work.lab2(verilog)) with 4 loads 1 time to improve timing.
+@N: FX271 :"c:\users\boris\dattest\serial_tx.vhd":78:1:78:2|Replicating instance I1.R_tx_tickcnt[0] (in view: work.lab2(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"c:\users\boris\dattest\serial_tx.vhd":78:1:78:2|Replicating instance I1.R_tx_tickcnt[1] (in view: work.lab2(verilog)) with 4 loads 1 time to improve timing.
+@N: FX271 :"c:\users\boris\dattest\serial_tx.vhd":78:1:78:2|Replicating instance I1.R_baudgen[16] (in view: work.lab2(verilog)) with 5 loads 1 time to improve timing.
+Timing driven replication report
+Added 12 Registers via timing driven replication
+Added 2 LUTs via timing driven replication
+
+   3		0h:00m:01s		    -0.25ns		  95 /        84
+   4		0h:00m:01s		    -0.25ns		  96 /        84
+
+
+   5		0h:00m:01s		    -0.25ns		  95 /        84
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 143MB peak: 144MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 143MB peak: 144MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 108MB peak: 144MB)
+
+Writing Analyst data base C:\Users\boris\dattest\impl1\synwork\uf_impl1_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 141MB peak: 144MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: C:\Users\boris\dattest\impl1\uf_impl1.edi
+N-2018.03L-SP1-1
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 145MB peak: 147MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 146MB peak: 147MB)
+
+@W: MT246 :"c:\users\boris\dattest\impl1\lab2.v":31:4:31:6|Blackbox OR4 is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT246 :"c:\users\boris\dattest\impl1\lab2.v":24:4:24:6|Blackbox OR3 is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT420 |Found inferred clock lab2|clk_25m with period 5.00ns. Please declare a user-defined clock on port clk_25m.
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Thu Nov  5 10:23:30 2020
+#
+
+
+Top view:               lab2
+Requested Frequency:    200.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -1.075
+
+@N: MT286 |System clock period 0.000 stretches to negative invalid value -- ignoring stretching.
+                   Requested     Estimated     Requested     Estimated                Clock        Clock              
+Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group              
+----------------------------------------------------------------------------------------------------------------------
+lab2|clk_25m       200.0 MHz     164.6 MHz     5.000         6.075         -1.075     inferred     Inferred_clkgroup_0
+System             200.0 MHz     222.6 MHz     5.000         4.493         0.507      system       system_clkgroup    
+======================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                      |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+-------------------------------------------------------------------------------------------------------------------
+Starting      Ending        |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+-------------------------------------------------------------------------------------------------------------------
+System        System        |  5.000       5.000   |  No paths    -      |  No paths    -      |  No paths    -    
+System        lab2|clk_25m  |  5.000       0.507   |  No paths    -      |  No paths    -      |  No paths    -    
+lab2|clk_25m  lab2|clk_25m  |  5.000       -1.075  |  No paths    -      |  No paths    -      |  No paths    -    
+===================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: lab2|clk_25m
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                          Starting                                                    Arrival           
+Instance                  Reference        Type        Pin     Net                    Time        Slack 
+                          Clock                                                                         
+--------------------------------------------------------------------------------------------------------
+I1.R_debounce_cnt[20]     lab2|clk_25m     FD1P3JX     Q       R_debounce_cnt[20]     1.260       -1.075
+I1.R_debounce_cnt[21]     lab2|clk_25m     FD1P3IX     Q       R_debounce_cnt[21]     1.260       -1.075
+I1.R_debounce_cnt[31]     lab2|clk_25m     FD1P3IX     Q       R_debounce_cnt[31]     1.260       -1.075
+I1.R_debounce_cnt[5]      lab2|clk_25m     FD1P3IX     Q       R_debounce_cnt[5]      1.251       -1.065
+I1.R_debounce_cnt[4]      lab2|clk_25m     FD1S3AX     Q       R_debounce_cnt[4]      1.260       -0.692
+I1.R_debounce_cnt[6]      lab2|clk_25m     FD1S3AX     Q       R_debounce_cnt[6]      1.260       -0.692
+I1.R_debounce_cnt[7]      lab2|clk_25m     FD1S3AX     Q       R_debounce_cnt[7]      1.260       -0.692
+I1.R_debounce_cnt[1]      lab2|clk_25m     FD1P3IX     Q       R_debounce_cnt[1]      1.251       -0.683
+I1.R_debounce_cnt[2]      lab2|clk_25m     FD1P3IX     Q       R_debounce_cnt[2]      1.251       -0.683
+I1.R_debounce_cnt[3]      lab2|clk_25m     FD1P3IX     Q       R_debounce_cnt[3]      1.251       -0.683
+========================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                         Starting                                                       Required           
+Instance                 Reference        Type         Pin     Net                      Time         Slack 
+                         Clock                                                                             
+-----------------------------------------------------------------------------------------------------------
+I1.R_tx_phase[0]         lab2|clk_25m     FD1S3IX      D       R_tx_phase_7[0]          4.264        -1.075
+I1.R_debounce_cnt[4]     lab2|clk_25m     FD1S3AX      D       R_debounce_cntd_0[4]     4.264        -0.692
+I1.R_debounce_cnt[6]     lab2|clk_25m     FD1S3AX      D       R_debounce_cntd_0[6]     4.264        -0.692
+I1.R_debounce_cnt[7]     lab2|clk_25m     FD1S3AX      D       R_debounce_cntd_0[7]     4.264        -0.692
+I1_R_tx_serio[0]         lab2|clk_25m     OFS1P3BX     SP      N_38                     4.640        -0.455
+I1.R_tx_ser[1]           lab2|clk_25m     FD1P3AY      SP      N_38                     4.640        -0.455
+I1.R_tx_ser[2]           lab2|clk_25m     FD1P3AY      SP      N_38                     4.640        -0.455
+I1.R_tx_ser[3]           lab2|clk_25m     FD1P3AY      SP      N_38                     4.640        -0.455
+I1.R_tx_ser[4]           lab2|clk_25m     FD1P3AY      SP      N_38                     4.640        -0.455
+I1.R_tx_ser[5]           lab2|clk_25m     FD1P3AY      SP      N_38                     4.640        -0.455
+===========================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.736
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.264
+
+    - Propagation time:                      5.339
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.075
+
+    Number of logic level(s):                5
+    Starting point:                          I1.R_debounce_cnt[20] / Q
+    Ending point:                            I1.R_tx_phase[0] / D
+    The start point is clocked by            lab2|clk_25m [rising] on pin CK
+    The end   point is clocked by            lab2|clk_25m [rising] on pin CK
+
+Instance / Net                          Pin      Pin               Arrival     No. of    
+Name                       Type         Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------
+I1.R_debounce_cnt[20]      FD1P3JX      Q        Out     1.260     1.260       -         
+R_debounce_cnt[20]         Net          -        -       -         -           6         
+I1.R_tx_phase_RNO_9[0]     ORCALUT4     B        In      0.000     1.260       -         
+I1.R_tx_phase_RNO_9[0]     ORCALUT4     Z        Out     0.883     2.144       -         
+g0_0_8_1                   Net          -        -       -         -           1         
+I1.R_tx_phase_RNO_5[0]     ORCALUT4     B        In      0.000     2.144       -         
+I1.R_tx_phase_RNO_5[0]     ORCALUT4     Z        Out     0.883     3.027       -         
+g0_1_3                     Net          -        -       -         -           1         
+I1.R_tx_phase_RNO_2[0]     ORCALUT4     C        In      0.000     3.027       -         
+I1.R_tx_phase_RNO_2[0]     ORCALUT4     Z        Out     0.883     3.910       -         
+g0_0_11                    Net          -        -       -         -           1         
+I1.R_tx_phase_RNO_0[0]     ORCALUT4     B        In      0.000     3.910       -         
+I1.R_tx_phase_RNO_0[0]     ORCALUT4     Z        Out     0.883     4.794       -         
+g0_0_a3_4                  Net          -        -       -         -           1         
+I1.R_tx_phase_RNO[0]       ORCALUT4     B        In      0.000     4.794       -         
+I1.R_tx_phase_RNO[0]       ORCALUT4     Z        Out     0.545     5.339       -         
+R_tx_phase_7[0]            Net          -        -       -         -           1         
+I1.R_tx_phase[0]           FD1S3IX      D        In      0.000     5.339       -         
+=========================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      5.000
+    - Setup time:                            0.736
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.264
+
+    - Propagation time:                      5.339
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.075
+
+    Number of logic level(s):                5
+    Starting point:                          I1.R_debounce_cnt[21] / Q
+    Ending point:                            I1.R_tx_phase[0] / D
+    The start point is clocked by            lab2|clk_25m [rising] on pin CK
+    The end   point is clocked by            lab2|clk_25m [rising] on pin CK
+
+Instance / Net                          Pin      Pin               Arrival     No. of    
+Name                       Type         Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------
+I1.R_debounce_cnt[21]      FD1P3IX      Q        Out     1.260     1.260       -         
+R_debounce_cnt[21]         Net          -        -       -         -           6         
+I1.R_tx_phase_RNO_9[0]     ORCALUT4     C        In      0.000     1.260       -         
+I1.R_tx_phase_RNO_9[0]     ORCALUT4     Z        Out     0.883     2.144       -         
+g0_0_8_1                   Net          -        -       -         -           1         
+I1.R_tx_phase_RNO_5[0]     ORCALUT4     B        In      0.000     2.144       -         
+I1.R_tx_phase_RNO_5[0]     ORCALUT4     Z        Out     0.883     3.027       -         
+g0_1_3                     Net          -        -       -         -           1         
+I1.R_tx_phase_RNO_2[0]     ORCALUT4     C        In      0.000     3.027       -         
+I1.R_tx_phase_RNO_2[0]     ORCALUT4     Z        Out     0.883     3.910       -         
+g0_0_11                    Net          -        -       -         -           1         
+I1.R_tx_phase_RNO_0[0]     ORCALUT4     B        In      0.000     3.910       -         
+I1.R_tx_phase_RNO_0[0]     ORCALUT4     Z        Out     0.883     4.794       -         
+g0_0_a3_4                  Net          -        -       -         -           1         
+I1.R_tx_phase_RNO[0]       ORCALUT4     B        In      0.000     4.794       -         
+I1.R_tx_phase_RNO[0]       ORCALUT4     Z        Out     0.545     5.339       -         
+R_tx_phase_7[0]            Net          -        -       -         -           1         
+I1.R_tx_phase[0]           FD1S3IX      D        In      0.000     5.339       -         
+=========================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      5.000
+    - Setup time:                            0.736
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.264
+
+    - Propagation time:                      5.339
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.075
+
+    Number of logic level(s):                5
+    Starting point:                          I1.R_debounce_cnt[31] / Q
+    Ending point:                            I1.R_tx_phase[0] / D
+    The start point is clocked by            lab2|clk_25m [rising] on pin CK
+    The end   point is clocked by            lab2|clk_25m [rising] on pin CK
+
+Instance / Net                          Pin      Pin               Arrival     No. of    
+Name                       Type         Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------
+I1.R_debounce_cnt[31]      FD1P3IX      Q        Out     1.260     1.260       -         
+R_debounce_cnt[31]         Net          -        -       -         -           6         
+I1.R_tx_phase_RNO_9[0]     ORCALUT4     D        In      0.000     1.260       -         
+I1.R_tx_phase_RNO_9[0]     ORCALUT4     Z        Out     0.883     2.144       -         
+g0_0_8_1                   Net          -        -       -         -           1         
+I1.R_tx_phase_RNO_5[0]     ORCALUT4     B        In      0.000     2.144       -         
+I1.R_tx_phase_RNO_5[0]     ORCALUT4     Z        Out     0.883     3.027       -         
+g0_1_3                     Net          -        -       -         -           1         
+I1.R_tx_phase_RNO_2[0]     ORCALUT4     C        In      0.000     3.027       -         
+I1.R_tx_phase_RNO_2[0]     ORCALUT4     Z        Out     0.883     3.910       -         
+g0_0_11                    Net          -        -       -         -           1         
+I1.R_tx_phase_RNO_0[0]     ORCALUT4     B        In      0.000     3.910       -         
+I1.R_tx_phase_RNO_0[0]     ORCALUT4     Z        Out     0.883     4.794       -         
+g0_0_a3_4                  Net          -        -       -         -           1         
+I1.R_tx_phase_RNO[0]       ORCALUT4     B        In      0.000     4.794       -         
+I1.R_tx_phase_RNO[0]       ORCALUT4     Z        Out     0.545     5.339       -         
+R_tx_phase_7[0]            Net          -        -       -         -           1         
+I1.R_tx_phase[0]           FD1S3IX      D        In      0.000     5.339       -         
+=========================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      5.000
+    - Setup time:                            0.736
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.264
+
+    - Propagation time:                      5.329
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.065
+
+    Number of logic level(s):                5
+    Starting point:                          I1.R_debounce_cnt[5] / Q
+    Ending point:                            I1.R_tx_phase[0] / D
+    The start point is clocked by            lab2|clk_25m [rising] on pin CK
+    The end   point is clocked by            lab2|clk_25m [rising] on pin CK
+
+Instance / Net                          Pin      Pin               Arrival     No. of    
+Name                       Type         Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------
+I1.R_debounce_cnt[5]       FD1P3IX      Q        Out     1.251     1.251       -         
+R_debounce_cnt[5]          Net          -        -       -         -           5         
+I1.R_tx_phase_RNO_9[0]     ORCALUT4     A        In      0.000     1.251       -         
+I1.R_tx_phase_RNO_9[0]     ORCALUT4     Z        Out     0.883     2.134       -         
+g0_0_8_1                   Net          -        -       -         -           1         
+I1.R_tx_phase_RNO_5[0]     ORCALUT4     B        In      0.000     2.134       -         
+I1.R_tx_phase_RNO_5[0]     ORCALUT4     Z        Out     0.883     3.018       -         
+g0_1_3                     Net          -        -       -         -           1         
+I1.R_tx_phase_RNO_2[0]     ORCALUT4     C        In      0.000     3.018       -         
+I1.R_tx_phase_RNO_2[0]     ORCALUT4     Z        Out     0.883     3.901       -         
+g0_0_11                    Net          -        -       -         -           1         
+I1.R_tx_phase_RNO_0[0]     ORCALUT4     B        In      0.000     3.901       -         
+I1.R_tx_phase_RNO_0[0]     ORCALUT4     Z        Out     0.883     4.784       -         
+g0_0_a3_4                  Net          -        -       -         -           1         
+I1.R_tx_phase_RNO[0]       ORCALUT4     B        In      0.000     4.784       -         
+I1.R_tx_phase_RNO[0]       ORCALUT4     Z        Out     0.545     5.329       -         
+R_tx_phase_7[0]            Net          -        -       -         -           1         
+I1.R_tx_phase[0]           FD1S3IX      D        In      0.000     5.329       -         
+=========================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      5.000
+    - Setup time:                            0.736
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.264
+
+    - Propagation time:                      4.956
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.692
+
+    Number of logic level(s):                4
+    Starting point:                          I1.R_debounce_cnt[4] / Q
+    Ending point:                            I1.R_debounce_cnt[4] / D
+    The start point is clocked by            lab2|clk_25m [rising] on pin CK
+    The end   point is clocked by            lab2|clk_25m [rising] on pin CK
+
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                              Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+I1.R_debounce_cnt[4]              FD1S3AX      Q        Out     1.260     1.260       -         
+R_debounce_cnt[4]                 Net          -        -       -         -           6         
+I1.R_debounce_cnt_RNIROF7[2]      ORCALUT4     B        In      0.000     1.260       -         
+I1.R_debounce_cnt_RNIROF7[2]      ORCALUT4     Z        Out     0.968     2.228       -         
+g0_0_8                            Net          -        -       -         -           2         
+I1.R_debounce_cnt_RNIBOA84[2]     ORCALUT4     C        In      0.000     2.228       -         
+I1.R_debounce_cnt_RNIBOA84[2]     ORCALUT4     Z        Out     0.883     3.112       -         
+m11_0_a2_9                        Net          -        -       -         -           1         
+I1.R_debounce_cnt_RNICUIV9[0]     ORCALUT4     D        In      0.000     3.112       -         
+I1.R_debounce_cnt_RNICUIV9[0]     ORCALUT4     Z        Out     1.300     4.411       -         
+un1_R_debounce_cnt_1_i            Net          -        -       -         -           35        
+I1.R_debounce_cntd[4]             ORCALUT4     B        In      0.000     4.411       -         
+I1.R_debounce_cntd[4]             ORCALUT4     Z        Out     0.545     4.956       -         
+R_debounce_cntd_0[4]              Net          -        -       -         -           1         
+I1.R_debounce_cnt[4]              FD1S3AX      D        In      0.000     4.956       -         
+================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+             Starting                                Arrival          
+Instance     Reference     Type     Pin     Net      Time        Slack
+             Clock                                                    
+----------------------------------------------------------------------
+I49          System        OR2      Z       N_11     0.000       0.507
+I51          System        OR4      Z       N_13     0.000       0.507
+I44          System        OR3      Z       N_8      0.000       0.595
+I48          System        OR2      Z       N_12     0.000       0.595
+I50          System        OR4      Z       N_9      0.000       2.290
+I46          System        AND2     Z       N_10     0.000       5.000
+I47          System        AND2     Z       N_6      0.000       5.000
+======================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                         Starting                                                   Required          
+Instance                 Reference     Type        Pin     Net                      Time         Slack
+                         Clock                                                                        
+------------------------------------------------------------------------------------------------------
+I1.R_debounce_cnt[4]     System        FD1S3AX     D       R_debounce_cntd_0[4]     4.264        0.507
+I1.R_debounce_cnt[6]     System        FD1S3AX     D       R_debounce_cntd_0[6]     4.264        0.507
+I1.R_debounce_cnt[7]     System        FD1S3AX     D       R_debounce_cntd_0[7]     4.264        0.507
+I1.R_debounce_cnt[0]     System        FD1S3IX     CD      un1_byte_in_i            4.640        1.428
+I1.R_debounce_cnt[1]     System        FD1P3IX     CD      un1_byte_in_i            4.640        1.428
+I1.R_debounce_cnt[2]     System        FD1P3IX     CD      un1_byte_in_i            4.640        1.428
+I1.R_debounce_cnt[3]     System        FD1P3IX     CD      un1_byte_in_i            4.640        1.428
+I1.R_debounce_cnt[5]     System        FD1P3IX     CD      un1_byte_in_i            4.640        1.428
+I1.R_debounce_cnt[8]     System        FD1P3IX     CD      un1_byte_in_i            4.640        1.428
+I1.R_debounce_cnt[9]     System        FD1P3JX     PD      un1_byte_in_i            4.640        1.428
+======================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.736
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.264
+
+    - Propagation time:                      3.757
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 0.507
+
+    Number of logic level(s):                4
+    Starting point:                          I49 / Z
+    Ending point:                            I1.R_debounce_cnt[4] / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            lab2|clk_25m [rising] on pin CK
+
+Instance / Net                             Pin      Pin               Arrival     No. of    
+Name                          Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------
+I49                           OR2          Z        Out     0.000     0.000       -         
+N_11                          Net          -        -       -         -           6         
+I1.un1_byte_in_0_I_1_0        CCU2B        C1       In      0.000     0.000       -         
+I1.un1_byte_in_0_I_1_0        CCU2B        COUT     Out     1.243     1.243       -         
+un1_byte_in_0_data_tmp[0]     Net          -        -       -         -           1         
+I1.un1_byte_in_0_I_21_0       CCU2B        CIN      In      0.000     1.243       -         
+I1.un1_byte_in_0_I_21_0       CCU2B        COUT     Out     0.088     1.331       -         
+un1_byte_in_0_data_tmp[2]     Net          -        -       -         -           1         
+I1.un1_byte_in_0_I_9_0        CCU2B        CIN      In      0.000     1.331       -         
+I1.un1_byte_in_0_I_9_0        CCU2B        S1       Out     1.881     3.212       -         
+un1_byte_in_i                 Net          -        -       -         -           36        
+I1.R_debounce_cntd[4]         ORCALUT4     D        In      0.000     3.212       -         
+I1.R_debounce_cntd[4]         ORCALUT4     Z        Out     0.545     3.757       -         
+R_debounce_cntd_0[4]          Net          -        -       -         -           1         
+I1.R_debounce_cnt[4]          FD1S3AX      D        In      0.000     3.757       -         
+============================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 146MB peak: 147MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 146MB peak: 147MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lfxp2_8e-5
+
+Register bits: 84 of 8352 (1%)
+PIC Latch:       0
+I/O cells:       15
+
+
+Details:
+AND2:           2
+CCU2B:          29
+FD1P3AX:        4
+FD1P3AY:        8
+FD1P3IX:        26
+FD1P3JX:        6
+FD1S3AX:        33
+FD1S3IX:        5
+GSR:            1
+IB:             6
+IFS1P3DX:       1
+INV:            2
+OB:             9
+OFS1P3BX:       1
+OR2:            2
+OR3:            1
+OR4:            2
+ORCALUT4:       94
+PUR:            1
+VHI:            2
+VLO:            2
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 32MB peak: 147MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Thu Nov  5 10:23:30 2020
+
+###########################################################]
+
+
+Synthesis exit by 0.
+
+edif2ngd  -l "LatticeXP2" -d LFXP2-8E -path "C:/Users/boris/dattest/impl1" -path "C:/Users/boris/dattest"   "C:/Users/boris/dattest/impl1/uf_impl1.edi" "uf_impl1.ngo"   
+edif2ngd:  version Diamond (64-bit) 3.11.0.396.4
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="C_debounce_dly"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="C_baudrate"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="C_clk_freq"  />
+Writing the design to uf_impl1.ngo...
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 11 MB
+
+
+ngdbuild  -a "LatticeXP2" -d LFXP2-8E  -p "C:/lscc/diamond/3.11_x64/ispfpga/mg5a00/data"  -p "C:/Users/boris/dattest/impl1" -p "C:/Users/boris/dattest"  "uf_impl1.ngo" "uf_impl1.ngd"  	
+ngdbuild:  version Diamond (64-bit) 3.11.0.396.4
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+Reading 'uf_impl1.ngo' ...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/mg5a00/data/mg5alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/ep5a00/data/ep5alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/ep5g00/data/ep5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+DRC complete with no errors or warnings
+
+Design Results:
+    236 blocks expanded
+Complete the first expansion.
+Writing 'uf_impl1.ngd' ...
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 18 MB
+
+
+map -a "LatticeXP2" -p LFXP2-8E -t TQFP144 -s 5 -oc Commercial   "uf_impl1.ngd" -o "uf_impl1_map.ncd" -pr "uf_impl1.prf" -mp "uf_impl1.mrp" -lpf "C:/Users/boris/dattest/impl1/uf_impl1_synplify.lpf" -lpf "C:/Users/boris/dattest/ulx2s.lpf"            
+map:  version Diamond (64-bit) 3.11.0.396.4
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: uf_impl1.ngd
+   Picdevice="LFXP2-8E"
+
+   Pictype="TQFP144"
+
+   Picspeed=5
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LFXP2-8ETQFP144, Performance used: 5.
+
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(18): Semantic error in &quot;LOCATE COMP &quot;rs232_rx&quot; SITE &quot;10&quot; ;&quot;: " arg1="rs232_rx" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="18"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(32): Semantic error in &quot;LOCATE COMP &quot;sw_0&quot; SITE &quot;45&quot; ;&quot;: " arg1="sw_0" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="32"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(33): Semantic error in &quot;LOCATE COMP &quot;sw_1&quot; SITE &quot;46&quot; ;&quot;: " arg1="sw_1" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="33"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(34): Semantic error in &quot;LOCATE COMP &quot;sw_2&quot; SITE &quot;129&quot; ;&quot;: " arg1="sw_2" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="34"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(35): Semantic error in &quot;LOCATE COMP &quot;sw_3&quot; SITE &quot;130&quot; ;&quot;: " arg1="sw_3" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="35"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(45): Semantic error in &quot;LOCATE COMP &quot;p_ring&quot; SITE &quot;44&quot; ;&quot;: " arg1="p_ring" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="45"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(46): Semantic error in &quot;LOCATE COMP &quot;p_tip_0&quot; SITE &quot;32&quot; ;&quot;: " arg1="p_tip_0" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="46"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(47): Semantic error in &quot;LOCATE COMP &quot;p_tip_1&quot; SITE &quot;27&quot; ;&quot;: " arg1="p_tip_1" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="47"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(48): Semantic error in &quot;LOCATE COMP &quot;p_tip_2&quot; SITE &quot;28&quot; ;&quot;: " arg1="p_tip_2" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="48"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(49): Semantic error in &quot;LOCATE COMP &quot;p_tip_3&quot; SITE &quot;43&quot; ;&quot;: " arg1="p_tip_3" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="49"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(52): Semantic error in &quot;LOCATE COMP &quot;flash_cen&quot; SITE &quot;13&quot; ;&quot;: " arg1="flash_cen" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="52"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(53): Semantic error in &quot;LOCATE COMP &quot;flash_sck&quot; SITE &quot;16&quot; ;&quot;: " arg1="flash_sck" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="53"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(54): Semantic error in &quot;LOCATE COMP &quot;flash_si&quot; SITE &quot;19&quot; ;&quot;: " arg1="flash_si" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="54"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(55): Semantic error in &quot;LOCATE COMP &quot;flash_so&quot; SITE &quot;18&quot; ;&quot;: " arg1="flash_so" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="55"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(58): Semantic error in &quot;LOCATE COMP &quot;sdcard_cen&quot; SITE &quot;15&quot; ;&quot;: " arg1="sdcard_cen" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="58"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(59): Semantic error in &quot;LOCATE COMP &quot;sdcard_sck&quot; SITE &quot;20&quot; ;&quot;: " arg1="sdcard_sck" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="59"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(60): Semantic error in &quot;LOCATE COMP &quot;sdcard_si&quot; SITE &quot;17&quot; ;&quot;: " arg1="sdcard_si" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="60"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(61): Semantic error in &quot;LOCATE COMP &quot;sdcard_so&quot; SITE &quot;21&quot; ;&quot;: " arg1="sdcard_so" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="61"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(64): Semantic error in &quot;LOCATE COMP &quot;sram_wel&quot; SITE &quot;93&quot; ;&quot;: " arg1="sram_wel" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="64"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(65): Semantic error in &quot;LOCATE COMP &quot;sram_lbl&quot; SITE &quot;120&quot; ;&quot;: " arg1="sram_lbl" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="65"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(66): Semantic error in &quot;LOCATE COMP &quot;sram_ubl&quot; SITE &quot;121&quot; ;&quot;: " arg1="sram_ubl" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="66"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(67): Semantic error in &quot;LOCATE COMP &quot;sram_a_0&quot; SITE &quot;101&quot; ;&quot;: " arg1="sram_a_0" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="67"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(68): Semantic error in &quot;LOCATE COMP &quot;sram_a_1&quot; SITE &quot;103&quot; ;&quot;: " arg1="sram_a_1" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="68"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(69): Semantic error in &quot;LOCATE COMP &quot;sram_a_2&quot; SITE &quot;104&quot; ;&quot;: " arg1="sram_a_2" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="69"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(70): Semantic error in &quot;LOCATE COMP &quot;sram_a_3&quot; SITE &quot;107&quot; ;&quot;: " arg1="sram_a_3" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="70"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(71): Semantic error in &quot;LOCATE COMP &quot;sram_a_4&quot; SITE &quot;108&quot; ;&quot;: " arg1="sram_a_4" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="71"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(72): Semantic error in &quot;LOCATE COMP &quot;sram_a_5&quot; SITE &quot;125&quot; ;&quot;: " arg1="sram_a_5" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="72"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(73): Semantic error in &quot;LOCATE COMP &quot;sram_a_6&quot; SITE &quot;127&quot; ;&quot;: " arg1="sram_a_6" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="73"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(74): Semantic error in &quot;LOCATE COMP &quot;sram_a_7&quot; SITE &quot;122&quot; ;&quot;: " arg1="sram_a_7" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="74"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(75): Semantic error in &quot;LOCATE COMP &quot;sram_a_8&quot; SITE &quot;58&quot; ;&quot;: " arg1="sram_a_8" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="75"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(76): Semantic error in &quot;LOCATE COMP &quot;sram_a_9&quot; SITE &quot;53&quot; ;&quot;: " arg1="sram_a_9" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="76"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(77): Semantic error in &quot;LOCATE COMP &quot;sram_a_10&quot; SITE &quot;54&quot; ;&quot;: " arg1="sram_a_10" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="77"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(78): Semantic error in &quot;LOCATE COMP &quot;sram_a_11&quot; SITE &quot;55&quot; ;&quot;: " arg1="sram_a_11" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="78"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(79): Semantic error in &quot;LOCATE COMP &quot;sram_a_12&quot; SITE &quot;56&quot; ;&quot;: " arg1="sram_a_12" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="79"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(80): Semantic error in &quot;LOCATE COMP &quot;sram_a_13&quot; SITE &quot;57&quot; ;&quot;: " arg1="sram_a_13" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="80"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(81): Semantic error in &quot;LOCATE COMP &quot;sram_a_14&quot; SITE &quot;73&quot; ;&quot;: " arg1="sram_a_14" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="81"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(82): Semantic error in &quot;LOCATE COMP &quot;sram_a_15&quot; SITE &quot;74&quot; ;&quot;: " arg1="sram_a_15" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="82"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(83): Semantic error in &quot;LOCATE COMP &quot;sram_a_16&quot; SITE &quot;77&quot; ;&quot;: " arg1="sram_a_16" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="83"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(84): Semantic error in &quot;LOCATE COMP &quot;sram_a_17&quot; SITE &quot;78&quot; ;&quot;: " arg1="sram_a_17" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="84"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(85): Semantic error in &quot;LOCATE COMP &quot;sram_a_18&quot; SITE &quot;94&quot; ;&quot;: " arg1="sram_a_18" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="85"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(86): Semantic error in &quot;LOCATE COMP &quot;sram_d_0&quot; SITE &quot;98&quot; ;&quot;: " arg1="sram_d_0" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="86"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(87): Semantic error in &quot;LOCATE COMP &quot;sram_d_1&quot; SITE &quot;96&quot; ;&quot;: " arg1="sram_d_1" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="87"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(88): Semantic error in &quot;LOCATE COMP &quot;sram_d_2&quot; SITE &quot;92&quot; ;&quot;: " arg1="sram_d_2" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="88"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(89): Semantic error in &quot;LOCATE COMP &quot;sram_d_3&quot; SITE &quot;91&quot; ;&quot;: " arg1="sram_d_3" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="89"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(90): Semantic error in &quot;LOCATE COMP &quot;sram_d_4&quot; SITE &quot;89&quot; ;&quot;: " arg1="sram_d_4" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="90"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(91): Semantic error in &quot;LOCATE COMP &quot;sram_d_5&quot; SITE &quot;88&quot; ;&quot;: " arg1="sram_d_5" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="91"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(92): Semantic error in &quot;LOCATE COMP &quot;sram_d_6&quot; SITE &quot;87&quot; ;&quot;: " arg1="sram_d_6" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="92"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(93): Semantic error in &quot;LOCATE COMP &quot;sram_d_7&quot; SITE &quot;90&quot; ;&quot;: " arg1="sram_d_7" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="93"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(94): Semantic error in &quot;LOCATE COMP &quot;sram_d_8&quot; SITE &quot;61&quot; ;&quot;: " arg1="sram_d_8" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="94"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(95): Semantic error in &quot;LOCATE COMP &quot;sram_d_9&quot; SITE &quot;62&quot; ;&quot;: " arg1="sram_d_9" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="95"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(96): Semantic error in &quot;LOCATE COMP &quot;sram_d_10&quot; SITE &quot;99&quot; ;&quot;: " arg1="sram_d_10" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="96"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(97): Semantic error in &quot;LOCATE COMP &quot;sram_d_11&quot; SITE &quot;100&quot; ;&quot;: " arg1="sram_d_11" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="97"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(98): Semantic error in &quot;LOCATE COMP &quot;sram_d_12&quot; SITE &quot;102&quot; ;&quot;: " arg1="sram_d_12" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="98"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(99): Semantic error in &quot;LOCATE COMP &quot;sram_d_13&quot; SITE &quot;113&quot; ;&quot;: " arg1="sram_d_13" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="99"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(100): Semantic error in &quot;LOCATE COMP &quot;sram_d_14&quot; SITE &quot;116&quot; ;&quot;: " arg1="sram_d_14" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="100"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(101): Semantic error in &quot;LOCATE COMP &quot;sram_d_15&quot; SITE &quot;119&quot; ;&quot;: " arg1="sram_d_15" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="101"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(105): Semantic error in &quot;LOCATE COMP &quot;j1_2&quot; SITE &quot;131&quot; ;&quot;: " arg1="j1_2" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="105"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(106): Semantic error in &quot;LOCATE COMP &quot;j1_3&quot; SITE &quot;134&quot; ;&quot;: " arg1="j1_3" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="106"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(107): Semantic error in &quot;LOCATE COMP &quot;j1_4&quot; SITE &quot;9&quot; ;&quot;: " arg1="j1_4" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="107"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(108): Semantic error in &quot;LOCATE COMP &quot;j1_5&quot; SITE &quot;138&quot; ;&quot;: " arg1="j1_5" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="108"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(109): Semantic error in &quot;LOCATE COMP &quot;j1_6&quot; SITE &quot;6&quot; ;&quot;: " arg1="j1_6" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="109"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(110): Semantic error in &quot;LOCATE COMP &quot;j1_7&quot; SITE &quot;5&quot; ;&quot;: " arg1="j1_7" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="110"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(111): Semantic error in &quot;LOCATE COMP &quot;j1_8&quot; SITE &quot;8&quot; ;&quot;: " arg1="j1_8" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="111"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(112): Semantic error in &quot;LOCATE COMP &quot;j1_9&quot; SITE &quot;7&quot; ;&quot;: " arg1="j1_9" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="112"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(113): Semantic error in &quot;LOCATE COMP &quot;j1_10&quot; SITE &quot;1&quot; ;&quot;: " arg1="j1_10" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="113"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(114): Semantic error in &quot;LOCATE COMP &quot;j1_11&quot; SITE &quot;2&quot; ;&quot;: " arg1="j1_11" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="114"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(115): Semantic error in &quot;LOCATE COMP &quot;j1_12&quot; SITE &quot;144&quot; ;&quot;: " arg1="j1_12" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="115"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(116): Semantic error in &quot;LOCATE COMP &quot;j1_13&quot; SITE &quot;143&quot; ;&quot;: " arg1="j1_13" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="116"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(117): Semantic error in &quot;LOCATE COMP &quot;j1_14&quot; SITE &quot;142&quot; ;&quot;: " arg1="j1_14" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="117"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(118): Semantic error in &quot;LOCATE COMP &quot;j1_15&quot; SITE &quot;141&quot; ;&quot;: " arg1="j1_15" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="118"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(119): Semantic error in &quot;LOCATE COMP &quot;j1_16&quot; SITE &quot;133&quot; ;&quot;: " arg1="j1_16" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="119"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(120): Semantic error in &quot;LOCATE COMP &quot;j1_17&quot; SITE &quot;132&quot; ;&quot;: " arg1="j1_17" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="120"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(121): Semantic error in &quot;LOCATE COMP &quot;j1_19&quot; SITE &quot;123&quot; ;&quot;: " arg1="j1_19" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="121"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(122): Semantic error in &quot;LOCATE COMP &quot;j1_18&quot; SITE &quot;124&quot; ;&quot;: " arg1="j1_18" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="122"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(123): Semantic error in &quot;LOCATE COMP &quot;j1_20&quot; SITE &quot;115&quot; ;&quot;: " arg1="j1_20" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="123"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(124): Semantic error in &quot;LOCATE COMP &quot;j1_21&quot; SITE &quot;114&quot; ;&quot;: " arg1="j1_21" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="124"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(125): Semantic error in &quot;LOCATE COMP &quot;j1_22&quot; SITE &quot;110&quot; ;&quot;: " arg1="j1_22" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="125"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(126): Semantic error in &quot;LOCATE COMP &quot;j1_23&quot; SITE &quot;109&quot; ;&quot;: " arg1="j1_23" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="126"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(131): Semantic error in &quot;LOCATE COMP &quot;j2_2&quot; SITE &quot;72&quot; ;&quot;: " arg1="j2_2" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="131"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(132): Semantic error in &quot;LOCATE COMP &quot;j2_3&quot; SITE &quot;71&quot; ;&quot;: " arg1="j2_3" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="132"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(133): Semantic error in &quot;LOCATE COMP &quot;j2_4&quot; SITE &quot;70&quot; ;&quot;: " arg1="j2_4" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="133"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(134): Semantic error in &quot;LOCATE COMP &quot;j2_5&quot; SITE &quot;69&quot; ;&quot;: " arg1="j2_5" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="134"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(135): Semantic error in &quot;LOCATE COMP &quot;j2_6&quot; SITE &quot;66&quot; ;&quot;: " arg1="j2_6" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="135"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(136): Semantic error in &quot;LOCATE COMP &quot;j2_7&quot; SITE &quot;65&quot; ;&quot;: " arg1="j2_7" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="136"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(137): Semantic error in &quot;LOCATE COMP &quot;j2_8&quot; SITE &quot;52&quot; ;&quot;: " arg1="j2_8" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="137"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(138): Semantic error in &quot;LOCATE COMP &quot;j2_9&quot; SITE &quot;50&quot; ;&quot;: " arg1="j2_9" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="138"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(139): Semantic error in &quot;LOCATE COMP &quot;j2_10&quot; SITE &quot;48&quot; ;&quot;: " arg1="j2_10" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="139"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(140): Semantic error in &quot;LOCATE COMP &quot;j2_11&quot; SITE &quot;47&quot; ;&quot;: " arg1="j2_11" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="140"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(141): Semantic error in &quot;LOCATE COMP &quot;j2_12&quot; SITE &quot;40&quot; ;&quot;: " arg1="j2_12" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="141"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(142): Semantic error in &quot;LOCATE COMP &quot;j2_13&quot; SITE &quot;39&quot; ;&quot;: " arg1="j2_13" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="142"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(143): Semantic error in &quot;LOCATE COMP &quot;j2_14&quot; SITE &quot;38&quot; ;&quot;: " arg1="j2_14" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="143"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(144): Semantic error in &quot;LOCATE COMP &quot;j2_15&quot; SITE &quot;22&quot; ;&quot;: " arg1="j2_15" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="144"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(145): Semantic error in &quot;LOCATE COMP &quot;j2_16&quot; SITE &quot;31&quot; ;&quot;: " arg1="j2_16" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="145"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(146): Semantic error in &quot;LOCATE COMP &quot;j2_17&quot; SITE &quot;29&quot; ;&quot;: " arg1="j2_17" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="146"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(147): Semantic error in &quot;LOCATE COMP &quot;j2_18&quot; SITE &quot;37&quot; ;&quot;: " arg1="j2_18" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="147"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(148): Semantic error in &quot;LOCATE COMP &quot;j2_19&quot; SITE &quot;36&quot; ;&quot;: " arg1="j2_19" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="148"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(149): Semantic error in &quot;LOCATE COMP &quot;j2_20&quot; SITE &quot;35&quot; ;&quot;: " arg1="j2_20" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="149"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(150): Semantic error in &quot;LOCATE COMP &quot;j2_21&quot; SITE &quot;32&quot; ;&quot;: " arg1="j2_21" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="150"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(151): Semantic error in &quot;LOCATE COMP &quot;j2_22&quot; SITE &quot;27&quot; ;&quot;: " arg1="j2_22" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="151"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(152): Semantic error in &quot;LOCATE COMP &quot;j2_23&quot; SITE &quot;28&quot; ;&quot;: " arg1="j2_23" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="152"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(158): Semantic error in &quot;LOCATE COMP &quot;lcd_data_0&quot; SITE &quot;8&quot; ;&quot;: " arg1="lcd_data_0" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="158"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(159): Semantic error in &quot;LOCATE COMP &quot;lcd_data_1&quot; SITE &quot;9&quot; ;&quot;: " arg1="lcd_data_1" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="159"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(160): Semantic error in &quot;LOCATE COMP &quot;lcd_data_2&quot; SITE &quot;134&quot; ;&quot;: " arg1="lcd_data_2" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="160"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(161): Semantic error in &quot;LOCATE COMP &quot;lcd_data_3&quot; SITE &quot;131&quot; ;&quot;: " arg1="lcd_data_3" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="161"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(162): Semantic error in &quot;LOCATE COMP &quot;lcd_rs&quot; SITE &quot;143&quot; ;&quot;: " arg1="lcd_rs" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="162"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(163): Semantic error in &quot;LOCATE COMP &quot;lcd_e&quot; SITE &quot;7&quot; ;&quot;: " arg1="lcd_e" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="163"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(173): Semantic error in &quot;IOBUF PORT &quot;sw_0&quot; PULLMODE=DOWN ;&quot;: " arg1="sw_0" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="173"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(174): Semantic error in &quot;IOBUF PORT &quot;sw_1&quot; PULLMODE=DOWN ;&quot;: " arg1="sw_1" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="174"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(175): Semantic error in &quot;IOBUF PORT &quot;sw_2&quot; PULLMODE=DOWN ;&quot;: " arg1="sw_2" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="175"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(176): Semantic error in &quot;IOBUF PORT &quot;sw_3&quot; PULLMODE=DOWN ;&quot;: " arg1="sw_3" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="176"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(184): Semantic error in &quot;IOBUF PORT &quot;sdcard_so&quot; PULLMODE=UP ;&quot;: " arg1="sdcard_so" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="184"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(187): Semantic error in &quot;IOBUF PORT &quot;p_ring&quot; DRIVE=20 PULLMODE=NONE ;&quot;: " arg1="p_ring" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="187"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(188): Semantic error in &quot;IOBUF PORT &quot;p_tip_0&quot; DRIVE=20 PULLMODE=NONE ;&quot;: " arg1="p_tip_0" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="188"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(189): Semantic error in &quot;IOBUF PORT &quot;p_tip_1&quot; DRIVE=20 PULLMODE=NONE ;&quot;: " arg1="p_tip_1" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="189"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(190): Semantic error in &quot;IOBUF PORT &quot;p_tip_2&quot; DRIVE=20 PULLMODE=NONE ;&quot;: " arg1="p_tip_2" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="190"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/boris/dattest/ulx2s.lpf(191): Semantic error in &quot;IOBUF PORT &quot;p_tip_3&quot; DRIVE=20 PULLMODE=NONE ;&quot;: " arg1="p_tip_3" arg2="C:/Users/boris/dattest/ulx2s.lpf" arg3="191"  />
+Loading device for application map from file 'mg5a33x38.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.47.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+120 CCU2 constant inputs absorbed.
+
+
+
+
+Design Summary:
+   Number of registers:     84 out of  6564 (1%)
+      PFU registers:           82 out of  6264 (1%)
+      PIO registers:            2 out of   300 (1%)
+   Number of SLICEs:        91 out of  4176 (2%)
+      SLICEs as Logic/ROM:     91 out of  4176 (2%)
+      SLICEs as RAM:            0 out of   756 (0%)
+      SLICEs as Carry:         29 out of  4176 (1%)
+   Number of LUT4s:        161 out of  8352 (2%)
+      Number used as logic LUTs:        103
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       58
+      Number used as shift registers:     0
+   Number of PIO sites used: 15 out of 100 (15%)
+   Number of PIO FIXEDDELAY:    0
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of block RAMs:  0 out of 12 (0%)
+   Number of CLKDIVs:  0 out of 2 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+
+   Number Of Mapped DSP Components:
+   --------------------------------
+   MULT36X36B          0
+   MULT18X18B          0
+   MULT18X18MACB       0
+   MULT18X18ADDSUBB    0
+   MULT18X18ADDSUBSUMB 0
+   MULT9X9B            0
+   MULT9X9ADDSUBB      0
+   MULT9X9ADDSUBSUMB   0
+   --------------------------------
+   Number of Used DSP Sites:  0 out of 32 (0 %)
+   Number of clocks:  1
+     Net clk_25m_c: 49 loads, 49 rising, 0 falling (Driver: PIO clk_25m )
+   Number of Clock Enables:  3
+     Net N_38: 5 loads, 4 LSLICEs
+     Net I1/un1_R_debounce_cnt_1_i: 18 loads, 18 LSLICEs
+     Net I1/N_56_i: 3 loads, 3 LSLICEs
+   Number of LSRs:  2
+     Net I1/un1_byte_in_i: 19 loads, 19 LSLICEs
+     Net I1/R_tx_phase_0_sqmuxa: 2 loads, 2 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net I1/VCC: 50 loads
+     Net I1/un1_byte_in_i: 22 loads
+     Net I1/un1_R_debounce_cnt_1_i: 21 loads
+     Net I1/N_48: 11 loads
+     Net I1/R_tx_phase[0]: 8 loads
+     Net btn_up_c: 7 loads
+     Net I1/N_45: 7 loads
+     Net I1/R_debounce_cnt[0]: 6 loads
+     Net I1/R_debounce_cnt[20]: 6 loads
+     Net I1/R_debounce_cnt[31]: 6 loads
+ 
+
+   Number of warnings:  116
+   Number of errors:    0
+
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 2 secs  
+Peak Memory Usage: 69 MB
+
+Dumping design to file uf_impl1_map.ncd.
+
+mpartrce -p "uf_impl1.p2t" -f "uf_impl1.p3t" -tf "uf_impl1.pt" "uf_impl1_map.ncd" "uf_impl1.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "uf_impl1_map.ncd"
+Thu Nov 05 10:23:36 2020
+
+PAR: Place And Route Diamond (64-bit) 3.11.0.396.4.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/Users/boris/dattest/promote.xml -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF uf_impl1_map.ncd uf_impl1.dir/5_1.ncd uf_impl1.prf
+Preference file: uf_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file uf_impl1_map.ncd.
+Design name: lab2
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-8E
+Package:     TQFP144
+Performance: 5
+Loading device for application par from file 'mg5a33x38.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.47.
+Performance Hardware Data Status:   Final          Version 11.5.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   IOLOGIC            2/260          <1% used
+   PIO (prelim)      15/238           6% used
+                     15/100          15% bonded
+   SLICE             91/4176          2% used
+
+
+
+Number of Signals: 267
+Number of Connections: 683
+
+Pin Constraint Summary:
+   15 out of 15 pins locked (100% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    clk_25m_c (driver: clk_25m, clk load #: 49)
+
+No signal is selected as DCS clock.
+
+No signal is selected as secondary clock.
+
+No signal is selected as Global Set/Reset.
+Starting Placer Phase 0.
+.........
+Finished Placer Phase 0.  REAL time: 2 secs 
+
+Starting Placer Phase 1.
+..................
+Placer score = 31308.
+Finished Placer Phase 1.  REAL time: 6 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  31187
+Finished Placer Phase 2.  REAL time: 6 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 0 out of 8 (0%)
+  General PIO: 1 out of 260 (0%)
+  PLL        : 0 out of 2 (0%)
+  CLKDIV     : 0 out of 2 (0%)
+
+Global Clocks:
+  PRIMARY "clk_25m_c" from comp "clk_25m" on PIO site "30 (PL18B)", clk load = 49
+
+  PRIMARY  : 1 out of 8 (12%)
+     DCS   : 0 out of 2 (0%)
+  SECONDARY: 0 out of 4 (0%)
+
+Edge Clocks:
+  No edge clock selected
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   15 out of 238 (6.3%) PIO sites used.
+   15 out of 100 (15.0%) bonded PIO sites used.
+   Number of PIO comps: 15; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+------------+------------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+---------------+------------+------------+------------+
+| 0        | 3 / 20 ( 15%) | 3.3V       | -          | -          |
+| 1        | 0 / 6 (  0%)  | -          | -          | -          |
+| 2        | 0 / 18 (  0%) | -          | -          | -          |
+| 3        | 0 / 4 (  0%)  | -          | -          | -          |
+| 4        | 0 / 8 (  0%)  | -          | -          | -          |
+| 5        | 2 / 18 ( 11%) | 3.3V       | -          | -          |
+| 6        | 4 / 8 ( 50%)  | 3.3V       | -          | -          |
+| 7        | 6 / 18 ( 33%) | 3.3V       | -          | -          |
++----------+---------------+------------+------------+------------+
+
+
+DSP Utilization Summary:
+-------------------------------------
+DSP Block #:              1 2 3 4
+# of MULT36X36B                  
+# of MULT18X18B                  
+# of MULT18X18MACB               
+# of MULT18X18ADDSUBB            
+# of MULT18X18ADDSUBSUMB         
+# of MULT9X9B                    
+# of MULT9X9ADDSUBB              
+# of MULT9X9ADDSUBSUMB           
+
+Total placer CPU time: 5 secs 
+
+Dumping design to file uf_impl1.dir/5_1.ncd.
+
+0 connections routed; 683 unrouted.
+Starting router resource preassignment
+    <postMsg mid="62071013" type="Warning" dynamic="1" navigation="0" arg0="clk_25m_c"  />
+
+Completed router resource preassignment. Real time: 7 secs 
+
+Start NBR router at 10:23:43 11/05/20
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at 10:23:43 11/05/20
+
+Start NBR section for initial routing at 10:23:43 11/05/20
+Level 4, iteration 1
+27(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 32.561ns/0.000ns; real time: 7 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 10:23:43 11/05/20
+Level 4, iteration 1
+18(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 32.168ns/0.000ns; real time: 7 secs 
+Level 4, iteration 2
+6(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 32.168ns/0.000ns; real time: 7 secs 
+Level 4, iteration 3
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 32.168ns/0.000ns; real time: 7 secs 
+Level 4, iteration 4
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 32.168ns/0.000ns; real time: 7 secs 
+Level 4, iteration 5
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 32.168ns/0.000ns; real time: 7 secs 
+Level 4, iteration 6
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 32.168ns/0.000ns; real time: 7 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 10:23:43 11/05/20
+
+Start NBR section for re-routing at 10:23:44 11/05/20
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 32.168ns/0.000ns; real time: 8 secs 
+
+Start NBR section for post-routing at 10:23:44 11/05/20
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : 32.168ns
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+Total CPU time 7 secs 
+Total REAL time: 9 secs 
+Completely routed.
+End of route.  683 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 0 
+
+Dumping design to file uf_impl1.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 32.168
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.235
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 8 secs 
+Total REAL time to completion: 9 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+trce -f "uf_impl1.pt" -o "uf_impl1.twr" "uf_impl1.ncd" "uf_impl1.prf"
+trce:  version Diamond (64-bit) 3.11.0.396.4
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file uf_impl1.ncd.
+Design name: lab2
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-8E
+Package:     TQFP144
+Performance: 5
+Loading device for application trce from file 'mg5a33x38.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.47.
+Performance Hardware Data Status:   Final          Version 11.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4
+Thu Nov 05 10:23:46 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o uf_impl1.twr -gui -msgset C:/Users/boris/dattest/promote.xml uf_impl1.ncd uf_impl1.prf 
+Design file:     uf_impl1.ncd
+Preference file: uf_impl1.prf
+Device,speed:    LFXP2-8E,5
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 2244 paths, 1 nets, and 639 connections (93.56% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4
+Thu Nov 05 10:23:46 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o uf_impl1.twr -gui -msgset C:/Users/boris/dattest/promote.xml uf_impl1.ncd uf_impl1.prf 
+Design file:     uf_impl1.ncd
+Preference file: uf_impl1.prf
+Device,speed:    LFXP2-8E,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 2244 paths, 1 nets, and 639 connections (93.56% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 1 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 164 MB
+
+
+ibisgen "uf_impl1.pad" "C:/lscc/diamond/3.11_x64/cae_library/ibis/xp2.ibs"   
+IBIS Models Generator: Lattice Diamond (64-bit) 3.11.0.396.4
+
+Thu Nov 05 10:23:47 2020
+
+Comp: btn_center
+ Site: 22
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ SLEW=FAST 
+ PULL=DOWN 
+-----------------------
+Comp: btn_down
+ Site: 1
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ SLEW=FAST 
+ PULL=DOWN 
+-----------------------
+Comp: btn_left
+ Site: 2
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ SLEW=FAST 
+ PULL=DOWN 
+-----------------------
+Comp: btn_right
+ Site: 38
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ SLEW=FAST 
+ PULL=DOWN 
+-----------------------
+Comp: btn_up
+ Site: 11
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ SLEW=FAST 
+ PULL=DOWN 
+-----------------------
+Comp: clk_25m
+ Site: 30
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ SLEW=FAST 
+-----------------------
+Comp: led[0]
+ Site: 29
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ SLEW=FAST 
+-----------------------
+Comp: led[1]
+ Site: 37
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ SLEW=FAST 
+-----------------------
+Comp: led[2]
+ Site: 36
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ SLEW=FAST 
+-----------------------
+Comp: led[3]
+ Site: 35
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ SLEW=FAST 
+-----------------------
+Comp: led[4]
+ Site: 144
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ SLEW=FAST 
+-----------------------
+Comp: led[5]
+ Site: 5
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ SLEW=FAST 
+-----------------------
+Comp: led[6]
+ Site: 6
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ SLEW=FAST 
+-----------------------
+Comp: led[7]
+ Site: 138
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ SLEW=FAST 
+-----------------------
+Comp: rs232_tx
+ Site: 137
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ SLEW=FAST 
+-----------------------
+Created design models.
+
+
+Generating: C:\Users\boris\dattest\impl1\IBIS\uf_impl1.ibs
+
+
+    <postMsg mid="1191031" type="Info"    dynamic="0" navigation="0"  />
+
+ldbanno "uf_impl1.ncd" -n Verilog  -o "uf_impl1_vo.vo"        -w -neg
+ldbanno: version Diamond (64-bit) 3.11.0.396.4
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Writing a Verilog netlist using the orca library type based on the uf_impl1 design file.
+
+
+Loading design for application ldbanno from file uf_impl1.ncd.
+Design name: lab2
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-8E
+Package:     TQFP144
+Performance: 5
+Loading device for application ldbanno from file 'mg5a33x38.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.47.
+Performance Hardware Data Status:   Final          Version 11.5.
+Converting design uf_impl1.ncd into .ldb format.
+Loading preferences from uf_impl1.prf.
+Writing Verilog netlist to file uf_impl1_vo.vo
+Writing SDF timing to file uf_impl1_vo.sdf
+    <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
+Total CPU Time: 1 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 126 MB
+
+ldbanno "uf_impl1.ncd" -n VHDL -o "uf_impl1_vho.vho"        -w -neg 
+ldbanno: version Diamond (64-bit) 3.11.0.396.4
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Writing a VHDL netlist using the orca library type based on the uf_impl1 design file.
+
+
+Loading design for application ldbanno from file uf_impl1.ncd.
+Design name: lab2
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-8E
+Package:     TQFP144
+Performance: 5
+Loading device for application ldbanno from file 'mg5a33x38.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.47.
+Performance Hardware Data Status:   Final          Version 11.5.
+Converting design uf_impl1.ncd into .ldb format.
+Loading preferences from uf_impl1.prf.
+Writing VHDL netlist to file uf_impl1_vho.vho
+Writing SDF timing to file uf_impl1_vho.sdf
+    <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
+Total CPU Time: 1 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 126 MB
+
+tmcheck -par "uf_impl1.par" 
+
+bitgen -f "uf_impl1.t2b" -w "uf_impl1.ncd" -jedec -e -s "C:/Users/boris/dattest/uf.sec" -k "C:/Users/boris/dattest/uf.bek" "uf_impl1.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.11.0.396.4
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file uf_impl1.ncd.
+Design name: lab2
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-8E
+Package:     TQFP144
+Performance: 5
+Loading device for application Bitgen from file 'mg5a33x38.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.47.
+Performance Hardware Data Status:   Final          Version 11.5.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from uf_impl1.prf.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                        DONE_EX  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                        DONE_OD  |                           ON**  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                        WAKE_UP  |                           21**  |
++---------------------------------+---------------------------------+
+|                   WAKE_ON_LOCK  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                     TAG_MEMORY  |                       NORMAL**  |
++---------------------------------+---------------------------------+
+|                        MY_ASSP  |                          OFF**  |
++---------------------------------+---------------------------------+
+|               ONE_TIME_PROGRAM  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                     DisableUES  |                        FALSE**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+Saving bit stream in "uf_impl1.jed".
+Total CPU Time: 2 secs 
+Total REAL Time: 3 secs 
+Peak Memory Usage: 295 MB

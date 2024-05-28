@@ -1,0 +1,7 @@
+C:\lscc\diamond\3.11_x64\synpbase\bin64\syn_nfilter.exe  -link  -top  lab2  -multisrs  C:\Users\boris\test\impl1\synwork\test_impl1_comp.srs  -osyn  C:\Users\boris\test\impl1\synwork\test_impl1_mult.srs  -log  C:\Users\boris\test\impl1\synlog\test_impl1_multi_srs_gen.srr 
+relcom:..\..\..\..\..\lscc\diamond\3.11_x64\synpbase\bin64\syn_nfilter.exe -link -top lab2 -multisrs ..\synwork\test_impl1_comp.srs -osyn ..\synwork\test_impl1_mult.srs -log ..\synlog\test_impl1_multi_srs_gen.srr
+rc:0 success:1 runtime:0
+file:..\synwork\test_impl1_comp.srs|io:i|time:1604511891|size:7156|exec:0|csum:A709A4A7201CA59BC46412C204693D89
+file:..\synwork\test_impl1_mult.srs|io:o|time:1604511893|size:4143|exec:0|csum:
+file:..\synlog\test_impl1_multi_srs_gen.srr|io:o|time:1604511893|size:1014|exec:0|csum:
+file:..\..\..\..\..\lscc\diamond\3.11_x64\synpbase\bin64\syn_nfilter.exe|io:i|time:1554103352|size:8734720|exec:1|csum:0A206A5298321BBDD627E7975EAE3EC2

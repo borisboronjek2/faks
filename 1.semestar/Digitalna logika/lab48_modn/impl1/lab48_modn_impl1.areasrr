@@ -1,0 +1,40 @@
+----------------------------------------------------------------------
+Report for cell count.x
+
+Register bits: 42 of 8352 (1%)
+PIC Latch:       0
+I/O cells:       11
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2B       22       100.0
+                            FD1P3AX        1       100.0
+                            FD1S3IX       33       100.0
+                            FD1S3JX        7       100.0
+                                GSR        1       100.0
+                                 IB        3       100.0
+                           IFS1P3DX        1       100.0
+                                INV        2       100.0
+                                 OB        8       100.0
+                           ORCALUT4        7       100.0
+                                PUR        1       100.0
+                                VHI        2       100.0
+                                VLO        2       100.0
+SUB MODULES 
+                          debouncer        1       100.0
+                            
+                         TOTAL            91           
+----------------------------------------------------------------------
+Report for cell debouncer.netlist
+     Instance path:  I_debouncer
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2B       17        77.3
+                            FD1P3AX        1       100.0
+                            FD1S3IX       25        75.8
+                            FD1S3JX        7       100.0
+                                INV        1        50.0
+                           ORCALUT4        2        28.6
+                                VHI        1        50.0
+                                VLO        1        50.0
+                            
+                         TOTAL            55           

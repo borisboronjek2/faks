@@ -1,0 +1,29 @@
+[ START MERGED ]
+N_44 btn_down_c
+[ END MERGED ]
+[ START CLIPPED ]
+VCC
+I1/un1_R_debounce_cnt_3_s_31_s1_0_S1
+I1/un1_R_debounce_cnt_3_s_31_s1_0_COUT
+I1/un4_r_baudgen_cry_0_0_S1
+I1/un4_r_baudgen_cry_0_0_S0
+I1/N_2
+I1/un4_r_baudgen_cry_15_0_COUT
+I1/un1_byte_in_0_I_1_0_S1
+I1/un1_byte_in_0_I_1_0_S0
+I1/N_3
+I1/un1_byte_in_0_I_21_0_S1
+I1/un1_byte_in_0_I_21_0_S0
+I1/un1_byte_in_0_I_9_0_S0
+I1/un1_byte_in_0_I_9_0_COUT
+I1/un1_R_debounce_cnt_3_cry_0_s1_0_S1
+I1/un1_R_debounce_cnt_3_cry_0_s1_0_S0
+I1/N_1
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.11.0.396.4 -- WARNING: Map write only section -- Wed Nov 04 18:45:00 2020
+
+SYSCONFIG DONE_OD=ON DONE_EX=OFF CONFIG_SECURE=OFF WAKE_UP=21 WAKE_ON_LOCK=OFF INBUF=ON MASTER_SPI_PORT=DISABLE SLAVE_SPI_PORT=DISABLE MY_ASSP=OFF ONE_TIME_PROGRAM=OFF ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

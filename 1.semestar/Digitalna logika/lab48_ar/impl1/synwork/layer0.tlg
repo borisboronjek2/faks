@@ -1,0 +1,13 @@
+@N: CD630 :"C:\Users\boris\lab48_ar\count8_ar.vhd":5:7:5:11|Synthesizing work.count.x.
+@N: CD630 :"C:\Users\boris\lab48_ar\debouncer.vhd":7:7:7:15|Synthesizing work.debouncer.x.
+Post processing for work.debouncer.x
+Running optimization stage 1 on debouncer .......
+Post processing for work.count.x
+Running optimization stage 1 on count .......
+Running optimization stage 2 on debouncer .......
+Running optimization stage 2 on count .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\Users\boris\lab48_ar\impl1\synwork\layer0.rt.csv
+

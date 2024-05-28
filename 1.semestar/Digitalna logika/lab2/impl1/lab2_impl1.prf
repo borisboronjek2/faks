@@ -1,0 +1,13 @@
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.11.0.396.4 -- WARNING: Map write only section -- Wed Nov 04 16:27:22 2020
+
+SYSCONFIG DONE_OD=ON DONE_EX=OFF CONFIG_SECURE=OFF WAKE_UP=21 WAKE_ON_LOCK=OFF INBUF=ON MASTER_SPI_PORT=DISABLE SLAVE_SPI_PORT=DISABLE MY_ASSP=OFF ONE_TIME_PROGRAM=OFF ;
+SCHEMATIC END ;
+BLOCK RESETPATHS ;
+BLOCK ASYNCPATHS ;
+COMMERCIAL ;
+
+// No timing preferences found. TRCE invokes auto-generation of timing preferences
+// Section Autogen
+FREQUENCY NET "clk_25m_c" 702.741 MHz ;
+// End Section Autogen

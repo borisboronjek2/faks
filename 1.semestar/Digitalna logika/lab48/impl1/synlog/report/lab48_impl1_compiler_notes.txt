@@ -1,0 +1,7 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N:"C:\Users\boris\lab48\count8.vhd":5:7:5:11|Top entity is set to count.
+@N: CD630 :"C:\Users\boris\lab48\count8.vhd":5:7:5:11|Synthesizing work.count.x.
+@N: CD630 :"C:\Users\boris\lab48\debouncer.vhd":7:7:7:15|Synthesizing work.debouncer.x.
+@N|Running in 64-bit mode
+

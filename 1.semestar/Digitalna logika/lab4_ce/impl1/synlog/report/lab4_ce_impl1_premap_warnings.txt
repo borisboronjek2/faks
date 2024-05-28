@@ -1,0 +1,1 @@
+@W: MT529 :"c:\users\boris\lab4_ce\count_ce.vhd":23:1:23:2|Found inferred clock count|clk_25m which controls 32 sequential elements including R[31:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

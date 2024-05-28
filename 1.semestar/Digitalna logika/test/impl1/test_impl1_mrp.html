@@ -1,0 +1,254 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+             Lattice Mapping Report File for Design Module 'lab2'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a LatticeXP2 -p LFXP2-8E -t TQFP144 -s 5 -oc Commercial
+     test_impl1.ngd -o test_impl1_map.ncd -pr test_impl1.prf -mp test_impl1.mrp
+     -lpf C:/Users/boris/test/impl1/test_impl1_synplify.lpf -lpf
+     C:/Users/boris/test/test.lpf -gui 
+Target Vendor:  LATTICE
+Target Device:  LFXP2-8ETQFP144
+Target Performance:   5
+Mapper:  mg5a00,  version:  Diamond (64-bit) 3.11.0.396.4
+Mapped on:  11/04/20  18:45:00
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:     77 out of  6564 (1%)
+      PFU registers:           76 out of  6264 (1%)
+      PIO registers:            1 out of   300 (0%)
+   Number of SLICEs:        90 out of  4176 (2%)
+      SLICEs as Logic/ROM:     90 out of  4176 (2%)
+      SLICEs as RAM:            0 out of   756 (0%)
+      SLICEs as Carry:         29 out of  4176 (1%)
+   Number of LUT4s:        167 out of  8352 (2%)
+      Number used as logic LUTs:        109
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       58
+      Number used as shift registers:     0
+   Number of PIO sites used: 15 out of 100 (15%)
+   Number of PIO FIXEDDELAY:    0
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of block RAMs:  0 out of 12 (0%)
+   Number of CLKDIVs:  0 out of 2 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT36X36B          0
+   MULT18X18B          0
+   MULT18X18MACB       0
+   MULT18X18ADDSUBB    0
+   MULT18X18ADDSUBSUMB 0
+   MULT9X9B            0
+   MULT9X9ADDSUBB      0
+   MULT9X9ADDSUBSUMB   0
+   --------------------------------
+   Number of Used DSP Sites:  0 out of 32 (0 %)
+   Number of clocks:  1
+
+     Net clk_25m_c: 42 loads, 42 rising, 0 falling (Driver: PIO clk_25m )
+   Number of Clock Enables:  2
+     Net I1.R_tx_ser_1_sqmuxa_i: 5 loads, 4 LSLICEs
+     Net I1/un1_R_debounce_cnt_1_i: 16 loads, 16 LSLICEs
+   Number of LSRs:  2
+     Net I1/un1_byte_in_i: 17 loads, 17 LSLICEs
+     Net I1/R_tx_phase_0_sqmuxa: 2 loads, 2 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net I1/VCC: 50 loads
+     Net I1/un1_byte_in_i: 17 loads
+     Net I1/un1_R_debounce_cnt_1_i: 16 loads
+     Net I1/R_baudgen[16]: 14 loads
+     Net I1/un6_r_tx_tickcnt: 12 loads
+     Net I1/un1_R_tx_phase_1: 10 loads
+     Net I1/R_debounce_cnt[0]: 7 loads
+     Net I1/R_debounce_cnt[4]: 7 loads
+     Net I1/R_debounce_cnt[5]: 7 loads
+     Net I1/R_debounce_cnt[6]: 7 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+   No errors or warnings present.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+------------+
+| IO Name             | Direction | Levelmode | IO         | FIXEDDELAY |
+|                     |           |  IO_TYPE  | Register   |            |
++---------------------+-----------+-----------+------------+------------+
+| led[7]              | OUTPUT    | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| btn_center          | INPUT     | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| rs232_tx            | OUTPUT    | LVCMOS25  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| clk_25m             | INPUT     | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| btn_up              | INPUT     | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| btn_right           | INPUT     | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| btn_left            | INPUT     | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| btn_down            | INPUT     | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| led[3]              | OUTPUT    | LVCMOS25  |            |            |
+
++---------------------+-----------+-----------+------------+------------+
+| led[1]              | OUTPUT    | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| led[2]              | OUTPUT    | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| led[0]              | OUTPUT    | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| led[4]              | OUTPUT    | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| led[6]              | OUTPUT    | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| led[5]              | OUTPUT    | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Block VCC undriven or does not drive anything - clipped.
+Block GSR_INST undriven or does not drive anything - clipped.
+Signal N_44 was merged into signal btn_down_c
+Signal VCC undriven or does not drive anything - clipped.
+Signal I1/un1_R_debounce_cnt_3_s_31_s1_0_S1 undriven or does not drive anything
+     - clipped.
+Signal I1/un1_R_debounce_cnt_3_s_31_s1_0_COUT undriven or does not drive
+     anything - clipped.
+Signal I1/un4_r_baudgen_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal I1/un4_r_baudgen_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal I1/N_2 undriven or does not drive anything - clipped.
+Signal I1/un4_r_baudgen_cry_15_0_COUT undriven or does not drive anything -
+     clipped.
+Signal I1/un1_byte_in_0_I_1_0_S1 undriven or does not drive anything - clipped.
+Signal I1/un1_byte_in_0_I_1_0_S0 undriven or does not drive anything - clipped.
+Signal I1/N_3 undriven or does not drive anything - clipped.
+Signal I1/un1_byte_in_0_I_21_0_S1 undriven or does not drive anything - clipped.
+     
+Signal I1/un1_byte_in_0_I_21_0_S0 undriven or does not drive anything - clipped.
+     
+Signal I1/un1_byte_in_0_I_9_0_S0 undriven or does not drive anything - clipped.
+Signal I1/un1_byte_in_0_I_9_0_COUT undriven or does not drive anything -
+     clipped.
+Signal I1/un1_R_debounce_cnt_3_cry_0_s1_0_S1 undriven or does not drive anything
+     - clipped.
+Signal I1/un1_R_debounce_cnt_3_cry_0_s1_0_S0 undriven or does not drive anything
+     - clipped.
+Signal I1/N_1 undriven or does not drive anything - clipped.
+Block I28 was optimized away.
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 38 MB
+        
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

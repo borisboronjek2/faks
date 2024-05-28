@@ -1,0 +1,51 @@
+----------------------------------------------------------------------
+Report for cell lab2.verilog
+
+Register bits: 84 of 8352 (1%)
+PIC Latch:       0
+I/O cells:       15
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                               AND2        2       100.0
+                              CCU2B       29       100.0
+                            FD1P3AX        3       100.0
+                            FD1P3AY        8       100.0
+                            FD1P3IX       31       100.0
+                            FD1P3JX        6       100.0
+                            FD1S3AX       28       100.0
+                            FD1S3IX        6       100.0
+                                GSR        1       100.0
+                                 IB        6       100.0
+                           IFS1P3DX        1       100.0
+                                INV        2       100.0
+                                 OB        9       100.0
+                           OFS1P3BX        1       100.0
+                                OR2        2       100.0
+                                OR3        1       100.0
+                                OR4        2       100.0
+                           ORCALUT4       78       100.0
+                                PUR        1       100.0
+                                VHI        2       100.0
+                                VLO        2       100.0
+SUB MODULES 
+                          serial_tx        1       100.0
+                            
+                         TOTAL           222           
+----------------------------------------------------------------------
+Report for cell serial_tx.netlist
+     Instance path:  I1
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2B       29       100.0
+                            FD1P3AX        3       100.0
+                            FD1P3AY        8       100.0
+                            FD1P3IX       31       100.0
+                            FD1P3JX        6       100.0
+                            FD1S3AX       28       100.0
+                            FD1S3IX        6       100.0
+                                INV        1        50.0
+                           ORCALUT4       78       100.0
+                                VHI        1        50.0
+                                VLO        1        50.0
+                            
+                         TOTAL           192           

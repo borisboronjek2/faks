@@ -1,0 +1,23 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Wed Nov 04 18:45:16 2020 *
+NOTE DESIGN NAME: lab2 *
+NOTE DEVICE NAME: LFXP2-8E-5TQFP144 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS led[7] : 17 : out *
+NOTE PINS btn_center : 113 : in *
+NOTE PINS rs232_tx : 114 : out *
+NOTE PINS clk_25m : 61 : in *
+NOTE PINS btn_up : 125 : in *
+NOTE PINS btn_right : 123 : in *
+NOTE PINS btn_left : 122 : in *
+NOTE PINS btn_down : 127 : in *
+NOTE PINS led[3] : 116 : out *
+NOTE PINS led[1] : 129 : out *
+NOTE PINS led[2] : 120 : out *
+NOTE PINS led[0] : 115 : out *
+NOTE PINS led[4] : 124 : out *
+NOTE PINS led[6] : 119 : out *
+NOTE PINS led[5] : 121 : out *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: off *

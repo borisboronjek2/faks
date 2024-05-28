@@ -1,0 +1,270 @@
+
+             Lattice Mapping Report File for Design Module 'lab2'
+
+
+Design Information
+------------------
+
+Command line:   map -a LatticeXP2 -p LFXP2-8E -t TQFP144 -s 5 -oc Commercial
+     lab2_impl1.ngd -o lab2_impl1_map.ncd -pr lab2_impl1.prf -mp lab2_impl1.mrp
+     -lpf C:/Users/boris/lab2/impl1/lab2_impl1_synplify.lpf -lpf
+     C:/Users/boris/lab2/lab2.lpf -gui 
+Target Vendor:  LATTICE
+Target Device:  LFXP2-8ETQFP144
+Target Performance:   5
+Mapper:  mg5a00,  version:  Diamond (64-bit) 3.11.0.396.4
+Mapped on:  11/04/20  16:27:22
+
+Design Summary
+--------------
+
+   Number of registers:     84 out of  6564 (1%)
+      PFU registers:           82 out of  6264 (1%)
+      PIO registers:            2 out of   300 (1%)
+   Number of SLICEs:        83 out of  4176 (2%)
+      SLICEs as Logic/ROM:     83 out of  4176 (2%)
+      SLICEs as RAM:            0 out of   756 (0%)
+      SLICEs as Carry:         29 out of  4176 (1%)
+   Number of LUT4s:        145 out of  8352 (2%)
+      Number used as logic LUTs:         87
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       58
+      Number used as shift registers:     0
+   Number of PIO sites used: 15 out of 100 (15%)
+   Number of PIO FIXEDDELAY:    0
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of block RAMs:  0 out of 12 (0%)
+   Number of CLKDIVs:  0 out of 2 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT36X36B          0
+   MULT18X18B          0
+   MULT18X18MACB       0
+   MULT18X18ADDSUBB    0
+   MULT18X18ADDSUBSUMB 0
+   MULT9X9B            0
+   MULT9X9ADDSUBB      0
+   MULT9X9ADDSUBSUMB   0
+   --------------------------------
+   Number of Used DSP Sites:  0 out of 32 (0 %)
+   Number of clocks:  1
+
+                                    Page 1
+
+
+
+
+Design:  lab2                                          Date:  11/04/20  16:27:22
+
+Design Summary (cont)
+---------------------
+     Net clk_25m_c: 49 loads, 49 rising, 0 falling (Driver: PIO clk_25m )
+   Number of Clock Enables:  3
+     Net N_38: 5 loads, 4 LSLICEs
+     Net I1/un1_R_debounce_cnt_1_i: 21 loads, 21 LSLICEs
+     Net I1/N_56_i: 2 loads, 2 LSLICEs
+   Number of LSRs:  2
+     Net I1/un1_byte_in_i: 23 loads, 23 LSLICEs
+     Net I1/R_tx_phase_0_sqmuxa: 2 loads, 2 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net I1/VCC: 50 loads
+     Net I1/un1_byte_in_i: 26 loads
+     Net I1/un1_R_debounce_cnt_1_i: 24 loads
+     Net I1/N_48: 11 loads
+     Net I1/R_baudgen[16]: 8 loads
+     Net I1/R_tx_tickcnt[0]: 7 loads
+     Net I1/R_tx_tickcnt[1]: 7 loads
+     Net btn_up_c: 6 loads
+     Net I1/R_tx_phase[0]: 6 loads
+     Net I1/R_tx_phase_RNIQHOO1[3]: 6 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+------------+
+| IO Name             | Direction | Levelmode | IO         | FIXEDDELAY |
+|                     |           |  IO_TYPE  | Register   |            |
++---------------------+-----------+-----------+------------+------------+
+| led[7]              | OUTPUT    | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| btn_center          | INPUT     | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| rs232_tx            | OUTPUT    | LVCMOS25  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| clk_25m             | INPUT     | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| btn_up              | INPUT     | LVCMOS25  | IN         |            |
++---------------------+-----------+-----------+------------+------------+
+| btn_right           | INPUT     | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| btn_left            | INPUT     | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| btn_down            | INPUT     | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+
+                                    Page 2
+
+
+
+
+Design:  lab2                                          Date:  11/04/20  16:27:22
+
+IO (PIO) Attributes (cont)
+--------------------------
+| led[3]              | OUTPUT    | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| led[1]              | OUTPUT    | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| led[2]              | OUTPUT    | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| led[0]              | OUTPUT    | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| led[4]              | OUTPUT    | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| led[6]              | OUTPUT    | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| led[5]              | OUTPUT    | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+
+Removed logic
+-------------
+
+Block VCC undriven or does not drive anything - clipped.
+Block GSR_INST undriven or does not drive anything - clipped.
+Signal N_4 was merged into signal btn_center_c
+Signal VCC undriven or does not drive anything - clipped.
+Signal I1/un1_R_debounce_cnt_3_s_31_s1_0_S1 undriven or does not drive anything
+     - clipped.
+Signal I1/un1_R_debounce_cnt_3_s_31_s1_0_COUT undriven or does not drive
+     anything - clipped.
+Signal I1/un4_r_baudgen_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal I1/un4_r_baudgen_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal I1/N_3 undriven or does not drive anything - clipped.
+Signal I1/un4_r_baudgen_cry_15_0_COUT undriven or does not drive anything -
+     clipped.
+Signal I1/un1_byte_in_0_I_1_0_S1 undriven or does not drive anything - clipped.
+Signal I1/un1_byte_in_0_I_1_0_S0 undriven or does not drive anything - clipped.
+Signal I1/N_4 undriven or does not drive anything - clipped.
+Signal I1/un1_byte_in_0_I_21_0_S1 undriven or does not drive anything - clipped.
+     
+Signal I1/un1_byte_in_0_I_21_0_S0 undriven or does not drive anything - clipped.
+     
+Signal I1/un1_byte_in_0_I_9_0_S0 undriven or does not drive anything - clipped.
+Signal I1/un1_byte_in_0_I_9_0_COUT undriven or does not drive anything -
+     clipped.
+Signal I1/un1_R_debounce_cnt_3_cry_0_s1_0_S1 undriven or does not drive anything
+     - clipped.
+Signal I1/un1_R_debounce_cnt_3_cry_0_s1_0_S0 undriven or does not drive anything
+     - clipped.
+Signal I1/N_1 undriven or does not drive anything - clipped.
+Block I45 was optimized away.
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 38 MB
+
+                                    Page 3
+
+
+
+
+Design:  lab2                                          Date:  11/04/20  16:27:22
+
+Run Time and Memory Usage (cont)
+--------------------------------
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 4
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights
+     reserved.

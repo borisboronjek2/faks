@@ -1,0 +1,1399 @@
+
+// Verilog netlist produced by program ldbanno, Version Diamond (64-bit) 3.11.0.396.4
+// ldbanno -n Verilog -o slova_impl1_vo.vo -w -neg -gui slova_impl1.ncd 
+// Netlist created on Wed Dec 02 23:22:19 2020
+// Netlist written on Wed Dec 02 23:22:35 2020
+// Design is for device LFXP2-8E
+// Design is for package TQFP144
+// Design is for performance grade 5
+
+`timescale 1 ns / 1 ps
+
+module slova ( btn_left, btn_right, btn_up, btn_down, btn_center, rs232_tx, 
+               clk_25m, led, sw );
+  input  btn_left, btn_right, btn_up, btn_down, btn_center, clk_25m;
+  input  [3:0] sw;
+  output rs232_tx;
+  output [7:0] led;
+  wire   \serializer/VCC , \serializer/R_debounce_cnt[0] , 
+         \serializer/un1_R_debounce_cnt_3_cry_0_s1 , btn_center_c, 
+         \serializer/a_1_i_a2_0_0[7] , \serializer/R_byte_old[6] , \sw_c[0] , 
+         \serializer/un1_byte_in_0_data_tmp[2] , \serializer/un1_byte_in_i , 
+         \led_c[4] , \serializer/R_byte_old[5] , \serializer/R_byte_old[4] , 
+         \led_c[5] , \serializer/R_byte_old[3] , \led_c[2] , 
+         \serializer/R_byte_old[2] , \led_c[3] , 
+         \serializer/un1_byte_in_0_data_tmp[0] , \serializer/R_byte_old[0] , 
+         \led_c[0] , \led_c[1] , \serializer/R_byte_old[1] , 
+         \serializer/R_baudgen[15] , \serializer/un4_r_baudgen[16] , 
+         \serializer/un4_r_baudgen[15] , clk_25m_c, 
+         \serializer/un4_r_baudgen_cry_14 , \serializer/R_baudgen[16] , 
+         \serializer/R_baudgen[14] , \serializer/R_baudgen[13] , 
+         \serializer/un4_r_baudgen[14] , \serializer/un4_r_baudgen[13] , 
+         \serializer/un4_r_baudgen_cry_12 , \serializer/R_baudgen[12] , 
+         \serializer/R_baudgen[11] , \serializer/un4_r_baudgen[12] , 
+         \serializer/un4_r_baudgen[11] , \serializer/un4_r_baudgen_cry_10 , 
+         \serializer/R_baudgen[10] , \serializer/R_baudgen[9] , 
+         \serializer/un4_r_baudgen[10] , \serializer/un4_r_baudgen[9] , 
+         \serializer/un4_r_baudgen_cry_8 , \serializer/R_baudgen[8] , 
+         \serializer/R_baudgen[7] , \serializer/un4_r_baudgen[8] , 
+         \serializer/un4_r_baudgen[7] , \serializer/un4_r_baudgen_cry_6 , 
+         \serializer/R_baudgen[6] , \serializer/R_baudgen[5] , 
+         \serializer/un4_r_baudgen[6] , \serializer/un4_r_baudgen[5] , 
+         \serializer/un4_r_baudgen_cry_4 , \serializer/R_baudgen[4] , 
+         \serializer/R_baudgen[3] , \serializer/un4_r_baudgen[4] , 
+         \serializer/un4_r_baudgen[3] , \serializer/un4_r_baudgen_cry_2 , 
+         \serializer/R_baudgen[2] , \serializer/R_baudgen[1] , 
+         \serializer/un4_r_baudgen[2] , \serializer/un4_r_baudgen[1] , 
+         \serializer/un4_r_baudgen_cry_0 , \serializer/R_baudgen[0] , 
+         \serializer/R_debounce_cnt[31] , 
+         \serializer/un1_R_debounce_cnt_3_s1[0] , 
+         \serializer/un1_R_debounce_cnt_1_i , 
+         \serializer/un1_R_debounce_cnt_3_cry_30_s1 , 
+         \serializer/R_debounce_cnt[30] , \serializer/R_debounce_cnt[29] , 
+         \serializer/un1_R_debounce_cnt_3_s1[1] , 
+         \serializer/un1_R_debounce_cnt_3_s1[2] , 
+         \serializer/un1_R_debounce_cnt_3_cry_28_s1 , 
+         \serializer/R_debounce_cnt[28] , \serializer/R_debounce_cnt[27] , 
+         \serializer/un1_R_debounce_cnt_3_s1[3] , 
+         \serializer/un1_R_debounce_cnt_3_s1[4] , 
+         \serializer/un1_R_debounce_cnt_3_cry_26_s1 , 
+         \serializer/R_debounce_cnt[26] , \serializer/R_debounce_cnt[25] , 
+         \serializer/un1_R_debounce_cnt_3_s1[5] , 
+         \serializer/un1_R_debounce_cnt_3_s1[6] , 
+         \serializer/un1_R_debounce_cnt_3_cry_24_s1 , 
+         \serializer/R_debounce_cnt[24] , \serializer/R_debounce_cnt[23] , 
+         \serializer/un1_R_debounce_cnt_3_s1[7] , 
+         \serializer/un1_R_debounce_cnt_3_s1[8] , 
+         \serializer/un1_R_debounce_cnt_3_cry_22_s1 , 
+         \serializer/R_debounce_cnt[22] , \serializer/R_debounce_cnt[21] , 
+         \serializer/un1_R_debounce_cnt_3_s1[9] , 
+         \serializer/un1_R_debounce_cnt_3_s1[10] , 
+         \serializer/un1_R_debounce_cnt_3_cry_20_s1 , 
+         \serializer/R_debounce_cnt[20] , \serializer/R_debounce_cnt[19] , 
+         \serializer/un1_R_debounce_cnt_3_s1[11] , 
+         \serializer/un1_R_debounce_cnt_3_s1[12] , 
+         \serializer/un1_R_debounce_cnt_3_cry_18_s1 , 
+         \serializer/R_debounce_cnt[18] , \serializer/R_debounce_cnt[17] , 
+         \serializer/un1_R_debounce_cnt_3_s1[13] , 
+         \serializer/un1_R_debounce_cnt_3_s1[14] , 
+         \serializer/un1_R_debounce_cnt_3_cry_16_s1 , 
+         \serializer/R_debounce_cnt[16] , \serializer/R_debounce_cnt[15] , 
+         \serializer/un1_R_debounce_cnt_3_s1[15] , 
+         \serializer/un1_R_debounce_cnt_3_s1[16] , 
+         \serializer/un1_R_debounce_cnt_3_cry_14_s1 , 
+         \serializer/R_debounce_cnt[14] , \serializer/R_debounce_cnt[13] , 
+         \serializer/un1_R_debounce_cnt_3_s1[17] , 
+         \serializer/un1_R_debounce_cnt_3_s1[18] , 
+         \serializer/un1_R_debounce_cnt_3_cry_12_s1 , 
+         \serializer/R_debounce_cnt[12] , \serializer/R_debounce_cnt[11] , 
+         \serializer/un1_R_debounce_cnt_3_s1[19] , 
+         \serializer/un1_R_debounce_cnt_3_s1[20] , 
+         \serializer/un1_R_debounce_cnt_3_cry_10_s1 , 
+         \serializer/R_debounce_cnt[10] , \serializer/R_debounce_cnt[9] , 
+         \serializer/un1_R_debounce_cnt_3_s1[21] , 
+         \serializer/un1_R_debounce_cnt_3_s1[22] , 
+         \serializer/un1_R_debounce_cnt_3_cry_8_s1 , 
+         \serializer/R_debounce_cnt[8] , \serializer/R_debounce_cnt[7] , 
+         \serializer/un1_R_debounce_cnt_3_s1[23] , 
+         \serializer/un1_R_debounce_cnt_3_s1[24] , 
+         \serializer/un1_R_debounce_cnt_3_cry_6_s1 , 
+         \serializer/R_debounce_cnt[6] , \serializer/R_debounce_cnt[5] , 
+         \serializer/un1_R_debounce_cnt_3_s1[25] , 
+         \serializer/un1_R_debounce_cnt_3_s1[26] , 
+         \serializer/un1_R_debounce_cnt_3_cry_4_s1 , 
+         \serializer/R_debounce_cnt[4] , \serializer/R_debounce_cnt[3] , 
+         \serializer/un1_R_debounce_cnt_3_s1[27] , 
+         \serializer/un1_R_debounce_cnt_3_s1[28] , 
+         \serializer/un1_R_debounce_cnt_3_cry_2_s1 , 
+         \serializer/R_debounce_cnt[2] , \serializer/R_debounce_cnt[1] , 
+         \serializer/un1_R_debounce_cnt_3_s1[29] , 
+         \serializer/un1_R_debounce_cnt_3_s1[30] , \serializer/R_baudgen_i[0] , 
+         \serializer/a[6] , btn_up_c, \modul_brojke.N_17 , btn_right_c, 
+         \modul_brojke.N_19 , btn_down_c, btn_left_c, \serializer/N_24 , 
+         \serializer/N_7 , \led_c[6] , \serializer/g0_3_6 , 
+         \serializer/g0_3_5 , \serializer/g0_3_4 , 
+         \serializer/un1_R_debounce_cnt_1_3 , 
+         \serializer/un14_r_debounce_cnt_30 , 
+         \serializer/un1_R_debounce_cnt_3[31] , \serializer/R_tx_ser_0_sqmuxa , 
+         \serializer/R_tx_phase[0] , \serializer/R_tx_phase[1] , 
+         \serializer/un14_r_debounce_cnt_0_0 , \serializer/g0_0_14 , 
+         \serializer/g0_0_15 , \serializer/R_tx_phase_7[1] , 
+         \serializer/R_tx_phase_7[0] , \serializer/R_tx_phase_0_sqmuxa , 
+         \serializer/g0_11 , \serializer/g0_12 , \serializer/g0_i_mb_1 , 
+         \serializer/g1_15 , \serializer/g1_14 , \serializer/N_207_0 , 
+         \serializer/R_tx_phase_7[3] , \serializer/R_tx_phase_7[2] , 
+         \serializer/R_tx_phase[2] , \serializer/R_tx_phase[3] , 
+         \serializer/r_tx_tickcnt12 , \serializer/un6_r_tx_tickcnt , 
+         \serializer/R_tx_ser[3] , \serializer/R_tx_ser[2] , 
+         \serializer/R_tx_ser_5[2] , \serializer/R_tx_ser_5[1] , 
+         \serializer.R_tx_ser_1_sqmuxa_i , \serializer/R_tx_ser[1] , 
+         \serializer/R_tx_ser[5] , \serializer/R_tx_ser[4] , 
+         \serializer/R_tx_ser_5[4] , \serializer/R_tx_ser_5[3] , 
+         \serializer/R_tx_ser[7] , \serializer/R_tx_ser[6] , 
+         \serializer/R_tx_ser_5[6] , \serializer/R_tx_ser_5[5] , 
+         \serializer/g0_10_sx , \serializer/g0_10_1 , \serializer/R_tx_ser[8] , 
+         \serializer/R_tx_ser_5[7] , \serializer/R_tx_tickcnt[0] , 
+         \serializer/R_tx_tickcnt[1] , \serializer/un1_R_tx_phase_1 , 
+         \serializer/R_tx_tickcnte_0[1] , \serializer/R_tx_tickcnt_e0 , 
+         \serializer/R_tx_tickcnt_n3 , \serializer/R_tx_tickcnt[3] , 
+         \serializer/R_tx_tickcnt_n2 , \serializer/R_tx_tickcnt[2] , 
+         \serializer/R_tx_tickcnte_0[3] , \serializer/R_tx_tickcnte_0[2] , 
+         \serializer/R_tx_tickcnt_n1 , \serializer/R_tx_tickcnt_fast[1] , 
+         \serializer/R_tx_tickcnt_fast[0] , 
+         \serializer/R_tx_tickcnte_0_fast[1] , 
+         \serializer/R_tx_tickcnt_e0_fast , \serializer/R_tx_tickcnt_fast[3] , 
+         \serializer/R_tx_tickcnt_fast[2] , 
+         \serializer/R_tx_tickcnte_0_fast[3] , 
+         \serializer/R_tx_tickcnte_0_fast[2] , \serializer/g0_0_7 , 
+         \serializer/g0_0_6 , \serializer/R_debounce_cnt_RNI9JGD2[2] , 
+         \serializer/un14_r_debounce_cnt_30_10 , \serializer/g0_0_5 , 
+         \serializer.R_tx_ser_5[0] , \serializer/g0_3_2 , 
+         \serializer/R_tx_phase_0_sqmuxa_2 , \serializer/g0_0_0 , 
+         \serializer/g1_0_0 , \serializer/un14_r_debounce_cnt_26_4 , 
+         \serializer/un14_r_debounce_cnt_26_5 , 
+         \serializer/un14_r_debounce_cnt_30_11 , \serializer/g0_1_4_0 , 
+         \serializer/g0_17_1 , \serializer/g0_1_5 , 
+         \serializer/un14_r_debounce_cnt_30_9 , \serializer/g2 , 
+         \serializer/R_debounce_cnt_RNIQ98L[12] , 
+         \serializer/R_debounce_cnt_RNIQ98L_0[12] , 
+         \serializer/R_debounce_cnt_RNI1CNA[30] , 
+         \serializer/R_debounce_cnt_RNI1TKI2[12] , \serializer/g0_0_7_1 , 
+         \serializer/R_tx_phase_RNO_5[1] , \serializer/g0_7 , 
+         \serializer/R_tx_phase_RNO_4[1] , \serializer/R_tx_phase_RNO_2[1] , 
+         \serializer/g0_0_8 , \serializer/g0_0_4_0 , 
+         \serializer/g0_13_N_6L10_1 , \serializer/g0_0_9_0_0 , 
+         \serializer/R_tx_phase_RNO_3[1] , \serializer/g0_1_13 , 
+         \serializer/g0_1_8 , \serializer/g0_1_11 , \serializer/g0_1_10 , 
+         \serializer/g0_1_3 , \serializer/g1_14_1 , \serializer/g1_7_0 , 
+         \serializer/g0_2_4 , \serializer/g0_1_4 , \serializer/g0_0_9 , 
+         \serializer/g0_1_5_0 , \serializer/g1_10 , \serializer/g1_9 , 
+         \serializer/g1_8 , \serializer/g1_9_0 , \serializer/g1_7_1 , 
+         \serializer/g1_9_2 , \serializer/g1_8_0 , 
+         \serializer/R_debounce_cnt_RNIQ40E6[23] , \serializer/g1_10_0 , 
+         \serializer/g0_0_sn , \serializer/R_debounce_cnt_RNI6IUF[16] , 
+         \serializer/R_debounce_cnt_RNI0D2O[10] , GND, rs232_tx_c, VCCI;
+
+  SCCU2B #(.CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), 
+    .INIT0_INITVAL(16'h0000), .INIT1_INITVAL(16'h33CC)) \serializer/SLICE_0 ( 
+    .M1(1'bX), .A1(1'bX), .B1(\serializer/R_debounce_cnt[0] ), .C1(1'bX), 
+    .D1(\serializer/VCC ), .DI1(1'bX), .DI0(1'bX), .A0(1'bX), .B0(1'bX), 
+    .C0(1'bX), .D0(1'bX), .FCI(1'bX), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .FCO(\serializer/un1_R_debounce_cnt_3_cry_0_s1 ), .F1(), .Q1(), 
+    .F0(), .Q0());
+  SCCU2B #(.CCU2_INJECT1_1("NO"), .INIT0_INITVAL(16'h6636), 
+    .INIT1_INITVAL(16'hFF00)) \serializer/SLICE_1 ( .M1(1'bX), .A1(1'bX), 
+    .B1(1'bX), .C1(1'bX), .D1(\serializer/VCC ), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\sw_c[0] ), .B0(\serializer/R_byte_old[6] ), 
+    .C0(\serializer/a_1_i_a2_0_0[7] ), .D0(btn_center_c), 
+    .FCI(\serializer/un1_byte_in_0_data_tmp[2] ), .M0(1'bX), .CE(1'bX), 
+    .CLK(1'bX), .LSR(1'bX), .FCO(), .F1(\serializer/un1_byte_in_i ), .Q1(), 
+    .F0(), .Q0());
+  SCCU2B #(.INIT0_INITVAL(16'h8241), .INIT1_INITVAL(16'h8421)) 
+    \serializer/SLICE_2 ( .M1(1'bX), .A1(\led_c[5] ), 
+    .B1(\serializer/R_byte_old[4] ), .C1(\serializer/R_byte_old[5] ), 
+    .D1(\led_c[4] ), .DI1(1'bX), .DI0(1'bX), .A0(\led_c[3] ), 
+    .B0(\serializer/R_byte_old[2] ), .C0(\led_c[2] ), 
+    .D0(\serializer/R_byte_old[3] ), 
+    .FCI(\serializer/un1_byte_in_0_data_tmp[0] ), .M0(1'bX), .CE(1'bX), 
+    .CLK(1'bX), .LSR(1'bX), .FCO(\serializer/un1_byte_in_0_data_tmp[2] ), 
+    .F1(), .Q1(), .F0(), .Q0());
+  SCCU2B #(.CCU2_INJECT1_0("NO"), .INIT0_INITVAL(16'h00FF), 
+    .INIT1_INITVAL(16'h9009)) \serializer/SLICE_3 ( .M1(1'bX), 
+    .A1(\serializer/R_byte_old[1] ), .B1(\led_c[1] ), .C1(\led_c[0] ), 
+    .D1(\serializer/R_byte_old[0] ), .DI1(1'bX), .DI0(1'bX), .A0(1'bX), 
+    .B0(1'bX), .C0(1'bX), .D0(\serializer/VCC ), .FCI(1'bX), .M0(1'bX), 
+    .CE(1'bX), .CLK(1'bX), .LSR(1'bX), 
+    .FCO(\serializer/un1_byte_in_0_data_tmp[0] ), .F1(), .Q1(), .F0(), .Q0());
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'hAA00), .INIT1_INITVAL(16'h0000), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) \serializer/SLICE_4 
+    ( .M1(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), 
+    .DI1(\serializer/un4_r_baudgen[16] ), .DI0(\serializer/un4_r_baudgen[15] ), 
+    .A0(\serializer/R_baudgen[15] ), .B0(1'bX), .C0(1'bX), 
+    .D0(\serializer/VCC ), .FCI(\serializer/un4_r_baudgen_cry_14 ), .M0(1'bX), 
+    .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), .FCO(), 
+    .F1(\serializer/un4_r_baudgen[16] ), .Q1(\serializer/R_baudgen[16] ), 
+    .F0(\serializer/un4_r_baudgen[15] ), .Q0(\serializer/R_baudgen[15] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'hCC00), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) \serializer/SLICE_5 
+    ( .M1(1'bX), .A1(1'bX), .B1(\serializer/R_baudgen[14] ), .C1(1'bX), 
+    .D1(\serializer/VCC ), .DI1(\serializer/un4_r_baudgen[14] ), 
+    .DI0(\serializer/un4_r_baudgen[13] ), .A0(1'bX), 
+    .B0(\serializer/R_baudgen[13] ), .C0(1'bX), .D0(\serializer/VCC ), 
+    .FCI(\serializer/un4_r_baudgen_cry_12 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(1'bX), .FCO(\serializer/un4_r_baudgen_cry_14 ), 
+    .F1(\serializer/un4_r_baudgen[14] ), .Q1(\serializer/R_baudgen[14] ), 
+    .F0(\serializer/un4_r_baudgen[13] ), .Q0(\serializer/R_baudgen[13] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'hCC00), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) \serializer/SLICE_6 
+    ( .M1(1'bX), .A1(1'bX), .B1(\serializer/R_baudgen[12] ), .C1(1'bX), 
+    .D1(\serializer/VCC ), .DI1(\serializer/un4_r_baudgen[12] ), 
+    .DI0(\serializer/un4_r_baudgen[11] ), .A0(1'bX), 
+    .B0(\serializer/R_baudgen[11] ), .C0(1'bX), .D0(\serializer/VCC ), 
+    .FCI(\serializer/un4_r_baudgen_cry_10 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(1'bX), .FCO(\serializer/un4_r_baudgen_cry_12 ), 
+    .F1(\serializer/un4_r_baudgen[12] ), .Q1(\serializer/R_baudgen[12] ), 
+    .F0(\serializer/un4_r_baudgen[11] ), .Q0(\serializer/R_baudgen[11] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'h55AA), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) \serializer/SLICE_7 
+    ( .M1(1'bX), .A1(1'bX), .B1(\serializer/R_baudgen[10] ), .C1(1'bX), 
+    .D1(\serializer/VCC ), .DI1(\serializer/un4_r_baudgen[10] ), 
+    .DI0(\serializer/un4_r_baudgen[9] ), .A0(\serializer/R_baudgen[9] ), 
+    .B0(1'bX), .C0(1'bX), .D0(\serializer/VCC ), 
+    .FCI(\serializer/un4_r_baudgen_cry_8 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(1'bX), .FCO(\serializer/un4_r_baudgen_cry_10 ), 
+    .F1(\serializer/un4_r_baudgen[10] ), .Q1(\serializer/R_baudgen[10] ), 
+    .F0(\serializer/un4_r_baudgen[9] ), .Q0(\serializer/R_baudgen[9] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'hCC00), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) \serializer/SLICE_8 
+    ( .M1(1'bX), .A1(1'bX), .B1(\serializer/R_baudgen[8] ), .C1(1'bX), 
+    .D1(\serializer/VCC ), .DI1(\serializer/un4_r_baudgen[8] ), 
+    .DI0(\serializer/un4_r_baudgen[7] ), .A0(1'bX), 
+    .B0(\serializer/R_baudgen[7] ), .C0(1'bX), .D0(\serializer/VCC ), 
+    .FCI(\serializer/un4_r_baudgen_cry_6 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(1'bX), .FCO(\serializer/un4_r_baudgen_cry_8 ), 
+    .F1(\serializer/un4_r_baudgen[8] ), .Q1(\serializer/R_baudgen[8] ), 
+    .F0(\serializer/un4_r_baudgen[7] ), .Q0(\serializer/R_baudgen[7] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'hCC00), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) \serializer/SLICE_9 
+    ( .M1(1'bX), .A1(1'bX), .B1(\serializer/R_baudgen[6] ), .C1(1'bX), 
+    .D1(\serializer/VCC ), .DI1(\serializer/un4_r_baudgen[6] ), 
+    .DI0(\serializer/un4_r_baudgen[5] ), .A0(1'bX), 
+    .B0(\serializer/R_baudgen[5] ), .C0(1'bX), .D0(\serializer/VCC ), 
+    .FCI(\serializer/un4_r_baudgen_cry_4 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(1'bX), .FCO(\serializer/un4_r_baudgen_cry_6 ), 
+    .F1(\serializer/un4_r_baudgen[6] ), .Q1(\serializer/R_baudgen[6] ), 
+    .F0(\serializer/un4_r_baudgen[5] ), .Q0(\serializer/R_baudgen[5] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'h55AA), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) \serializer/SLICE_10 
+    ( .M1(1'bX), .A1(1'bX), .B1(\serializer/R_baudgen[4] ), .C1(1'bX), 
+    .D1(\serializer/VCC ), .DI1(\serializer/un4_r_baudgen[4] ), 
+    .DI0(\serializer/un4_r_baudgen[3] ), .A0(\serializer/R_baudgen[3] ), 
+    .B0(1'bX), .C0(1'bX), .D0(\serializer/VCC ), 
+    .FCI(\serializer/un4_r_baudgen_cry_2 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(1'bX), .FCO(\serializer/un4_r_baudgen_cry_4 ), 
+    .F1(\serializer/un4_r_baudgen[4] ), .Q1(\serializer/R_baudgen[4] ), 
+    .F0(\serializer/un4_r_baudgen[3] ), .Q0(\serializer/R_baudgen[3] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("VHI"), .CCU2_INJECT1_0("NO"), 
+    .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) \serializer/SLICE_11 
+    ( .M1(1'bX), .A1(1'bX), .B1(\serializer/R_baudgen[2] ), .C1(1'bX), 
+    .D1(\serializer/VCC ), .DI1(\serializer/un4_r_baudgen[2] ), 
+    .DI0(\serializer/un4_r_baudgen[1] ), .A0(1'bX), 
+    .B0(\serializer/R_baudgen[1] ), .C0(1'bX), .D0(\serializer/VCC ), 
+    .FCI(\serializer/un4_r_baudgen_cry_0 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(1'bX), .FCO(\serializer/un4_r_baudgen_cry_2 ), 
+    .F1(\serializer/un4_r_baudgen[2] ), .Q1(\serializer/R_baudgen[2] ), 
+    .F0(\serializer/un4_r_baudgen[1] ), .Q0(\serializer/R_baudgen[1] ));
+  SCCU2B #(.CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), 
+    .INIT0_INITVAL(16'h0000), .INIT1_INITVAL(16'h33CC)) \serializer/SLICE_12 
+    ( .M1(1'bX), .A1(1'bX), .B1(\serializer/R_baudgen[0] ), .C1(1'bX), 
+    .D1(\serializer/VCC ), .DI1(1'bX), .DI0(1'bX), .A0(1'bX), .B0(1'bX), 
+    .C0(1'bX), .D0(1'bX), .FCI(1'bX), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .FCO(\serializer/un4_r_baudgen_cry_0 ), .F1(), .Q1(), .F0(), 
+    .Q0());
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("SIG"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h3300), .INIT1_INITVAL(16'h0000), .REG0_SD("VHI"), 
+    .CHECK_DI0(1'b1), .CHECK_CE(1'b1), .CHECK_LSR(1'b1)) \serializer/SLICE_13 
+    ( .M1(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), 
+    .DI0(\serializer/un1_R_debounce_cnt_3_s1[0] ), .A0(1'bX), 
+    .B0(\serializer/R_debounce_cnt[31] ), .C0(1'bX), .D0(\serializer/VCC ), 
+    .FCI(\serializer/un1_R_debounce_cnt_3_cry_30_s1 ), .M0(1'bX), 
+    .CE(\serializer/un1_R_debounce_cnt_1_i ), .CLK(clk_25m_c), 
+    .LSR(\serializer/un1_byte_in_i ), .FCO(), .F1(), .Q1(), 
+    .F0(\serializer/un1_R_debounce_cnt_3_s1[0] ), 
+    .Q0(\serializer/R_debounce_cnt[31] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("SIG"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_CE(1'b1), 
+    .CHECK_LSR(1'b1)) \serializer/SLICE_14 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\serializer/R_debounce_cnt[30] ), .C1(1'bX), .D1(\serializer/VCC ), 
+    .DI1(\serializer/un1_R_debounce_cnt_3_s1[1] ), 
+    .DI0(\serializer/un1_R_debounce_cnt_3_s1[2] ), .A0(1'bX), 
+    .B0(\serializer/R_debounce_cnt[29] ), .C0(1'bX), .D0(\serializer/VCC ), 
+    .FCI(\serializer/un1_R_debounce_cnt_3_cry_28_s1 ), .M0(1'bX), 
+    .CE(\serializer/un1_R_debounce_cnt_1_i ), .CLK(clk_25m_c), 
+    .LSR(\serializer/un1_byte_in_i ), 
+    .FCO(\serializer/un1_R_debounce_cnt_3_cry_30_s1 ), 
+    .F1(\serializer/un1_R_debounce_cnt_3_s1[1] ), 
+    .Q1(\serializer/R_debounce_cnt[30] ), 
+    .F0(\serializer/un1_R_debounce_cnt_3_s1[2] ), 
+    .Q0(\serializer/R_debounce_cnt[29] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("SIG"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h55AA), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_CE(1'b1), 
+    .CHECK_LSR(1'b1)) \serializer/SLICE_15 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\serializer/R_debounce_cnt[28] ), .C1(1'bX), .D1(\serializer/VCC ), 
+    .DI1(\serializer/un1_R_debounce_cnt_3_s1[3] ), 
+    .DI0(\serializer/un1_R_debounce_cnt_3_s1[4] ), 
+    .A0(\serializer/R_debounce_cnt[27] ), .B0(1'bX), .C0(1'bX), 
+    .D0(\serializer/VCC ), .FCI(\serializer/un1_R_debounce_cnt_3_cry_26_s1 ), 
+    .M0(1'bX), .CE(\serializer/un1_R_debounce_cnt_1_i ), .CLK(clk_25m_c), 
+    .LSR(\serializer/un1_byte_in_i ), 
+    .FCO(\serializer/un1_R_debounce_cnt_3_cry_28_s1 ), 
+    .F1(\serializer/un1_R_debounce_cnt_3_s1[3] ), 
+    .Q1(\serializer/R_debounce_cnt[28] ), 
+    .F0(\serializer/un1_R_debounce_cnt_3_s1[4] ), 
+    .Q0(\serializer/R_debounce_cnt[27] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("SIG"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_CE(1'b1), 
+    .CHECK_LSR(1'b1)) \serializer/SLICE_16 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\serializer/R_debounce_cnt[26] ), .C1(1'bX), .D1(\serializer/VCC ), 
+    .DI1(\serializer/un1_R_debounce_cnt_3_s1[5] ), 
+    .DI0(\serializer/un1_R_debounce_cnt_3_s1[6] ), .A0(1'bX), 
+    .B0(\serializer/R_debounce_cnt[25] ), .C0(1'bX), .D0(\serializer/VCC ), 
+    .FCI(\serializer/un1_R_debounce_cnt_3_cry_24_s1 ), .M0(1'bX), 
+    .CE(\serializer/un1_R_debounce_cnt_1_i ), .CLK(clk_25m_c), 
+    .LSR(\serializer/un1_byte_in_i ), 
+    .FCO(\serializer/un1_R_debounce_cnt_3_cry_26_s1 ), 
+    .F1(\serializer/un1_R_debounce_cnt_3_s1[5] ), 
+    .Q1(\serializer/R_debounce_cnt[26] ), 
+    .F0(\serializer/un1_R_debounce_cnt_3_s1[6] ), 
+    .Q0(\serializer/R_debounce_cnt[25] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("SIG"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_CE(1'b1), 
+    .CHECK_LSR(1'b1)) \serializer/SLICE_17 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\serializer/R_debounce_cnt[24] ), .C1(1'bX), .D1(\serializer/VCC ), 
+    .DI1(\serializer/un1_R_debounce_cnt_3_s1[7] ), 
+    .DI0(\serializer/un1_R_debounce_cnt_3_s1[8] ), .A0(1'bX), 
+    .B0(\serializer/R_debounce_cnt[23] ), .C0(1'bX), .D0(\serializer/VCC ), 
+    .FCI(\serializer/un1_R_debounce_cnt_3_cry_22_s1 ), .M0(1'bX), 
+    .CE(\serializer/un1_R_debounce_cnt_1_i ), .CLK(clk_25m_c), 
+    .LSR(\serializer/un1_byte_in_i ), 
+    .FCO(\serializer/un1_R_debounce_cnt_3_cry_24_s1 ), 
+    .F1(\serializer/un1_R_debounce_cnt_3_s1[7] ), 
+    .Q1(\serializer/R_debounce_cnt[24] ), 
+    .F0(\serializer/un1_R_debounce_cnt_3_s1[8] ), 
+    .Q0(\serializer/R_debounce_cnt[23] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("SIG"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h55AA), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_CE(1'b1), 
+    .CHECK_LSR(1'b1)) \serializer/SLICE_18 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\serializer/R_debounce_cnt[22] ), .C1(1'bX), .D1(\serializer/VCC ), 
+    .DI1(\serializer/un1_R_debounce_cnt_3_s1[9] ), 
+    .DI0(\serializer/un1_R_debounce_cnt_3_s1[10] ), 
+    .A0(\serializer/R_debounce_cnt[21] ), .B0(1'bX), .C0(1'bX), 
+    .D0(\serializer/VCC ), .FCI(\serializer/un1_R_debounce_cnt_3_cry_20_s1 ), 
+    .M0(1'bX), .CE(\serializer/un1_R_debounce_cnt_1_i ), .CLK(clk_25m_c), 
+    .LSR(\serializer/un1_byte_in_i ), 
+    .FCO(\serializer/un1_R_debounce_cnt_3_cry_22_s1 ), 
+    .F1(\serializer/un1_R_debounce_cnt_3_s1[9] ), 
+    .Q1(\serializer/R_debounce_cnt[22] ), 
+    .F0(\serializer/un1_R_debounce_cnt_3_s1[10] ), 
+    .Q0(\serializer/R_debounce_cnt[21] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("SIG"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .REG1_REGSET("SET"), 
+    .GSR("DISABLED"), .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), 
+    .REG1_SD("VHI"), .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), 
+    .CHECK_CE(1'b1), .CHECK_LSR(1'b1)) \serializer/SLICE_19 ( .M1(1'bX), 
+    .A1(1'bX), .B1(\serializer/R_debounce_cnt[20] ), .C1(1'bX), 
+    .D1(\serializer/VCC ), .DI1(\serializer/un1_R_debounce_cnt_3_s1[11] ), 
+    .DI0(\serializer/un1_R_debounce_cnt_3_s1[12] ), .A0(1'bX), 
+    .B0(\serializer/R_debounce_cnt[19] ), .C0(1'bX), .D0(\serializer/VCC ), 
+    .FCI(\serializer/un1_R_debounce_cnt_3_cry_18_s1 ), .M0(1'bX), 
+    .CE(\serializer/un1_R_debounce_cnt_1_i ), .CLK(clk_25m_c), 
+    .LSR(\serializer/un1_byte_in_i ), 
+    .FCO(\serializer/un1_R_debounce_cnt_3_cry_20_s1 ), 
+    .F1(\serializer/un1_R_debounce_cnt_3_s1[11] ), 
+    .Q1(\serializer/R_debounce_cnt[20] ), 
+    .F0(\serializer/un1_R_debounce_cnt_3_s1[12] ), 
+    .Q0(\serializer/R_debounce_cnt[19] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("SIG"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .REG0_REGSET("SET"), 
+    .GSR("DISABLED"), .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), 
+    .REG1_SD("VHI"), .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), 
+    .CHECK_CE(1'b1), .CHECK_LSR(1'b1)) \serializer/SLICE_20 ( .M1(1'bX), 
+    .A1(1'bX), .B1(\serializer/R_debounce_cnt[18] ), .C1(1'bX), 
+    .D1(\serializer/VCC ), .DI1(\serializer/un1_R_debounce_cnt_3_s1[13] ), 
+    .DI0(\serializer/un1_R_debounce_cnt_3_s1[14] ), .A0(1'bX), 
+    .B0(\serializer/R_debounce_cnt[17] ), .C0(1'bX), .D0(\serializer/VCC ), 
+    .FCI(\serializer/un1_R_debounce_cnt_3_cry_16_s1 ), .M0(1'bX), 
+    .CE(\serializer/un1_R_debounce_cnt_1_i ), .CLK(clk_25m_c), 
+    .LSR(\serializer/un1_byte_in_i ), 
+    .FCO(\serializer/un1_R_debounce_cnt_3_cry_18_s1 ), 
+    .F1(\serializer/un1_R_debounce_cnt_3_s1[13] ), 
+    .Q1(\serializer/R_debounce_cnt[18] ), 
+    .F0(\serializer/un1_R_debounce_cnt_3_s1[14] ), 
+    .Q0(\serializer/R_debounce_cnt[17] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("SIG"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .REG1_REGSET("SET"), 
+    .GSR("DISABLED"), .INIT0_INITVAL(16'h55AA), .INIT1_INITVAL(16'h33CC), 
+    .REG1_SD("VHI"), .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), 
+    .CHECK_CE(1'b1), .CHECK_LSR(1'b1)) \serializer/SLICE_21 ( .M1(1'bX), 
+    .A1(1'bX), .B1(\serializer/R_debounce_cnt[16] ), .C1(1'bX), 
+    .D1(\serializer/VCC ), .DI1(\serializer/un1_R_debounce_cnt_3_s1[15] ), 
+    .DI0(\serializer/un1_R_debounce_cnt_3_s1[16] ), 
+    .A0(\serializer/R_debounce_cnt[15] ), .B0(1'bX), .C0(1'bX), 
+    .D0(\serializer/VCC ), .FCI(\serializer/un1_R_debounce_cnt_3_cry_14_s1 ), 
+    .M0(1'bX), .CE(\serializer/un1_R_debounce_cnt_1_i ), .CLK(clk_25m_c), 
+    .LSR(\serializer/un1_byte_in_i ), 
+    .FCO(\serializer/un1_R_debounce_cnt_3_cry_16_s1 ), 
+    .F1(\serializer/un1_R_debounce_cnt_3_s1[15] ), 
+    .Q1(\serializer/R_debounce_cnt[16] ), 
+    .F0(\serializer/un1_R_debounce_cnt_3_s1[16] ), 
+    .Q0(\serializer/R_debounce_cnt[15] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("SIG"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_CE(1'b1), 
+    .CHECK_LSR(1'b1)) \serializer/SLICE_22 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\serializer/R_debounce_cnt[14] ), .C1(1'bX), .D1(\serializer/VCC ), 
+    .DI1(\serializer/un1_R_debounce_cnt_3_s1[17] ), 
+    .DI0(\serializer/un1_R_debounce_cnt_3_s1[18] ), .A0(1'bX), 
+    .B0(\serializer/R_debounce_cnt[13] ), .C0(1'bX), .D0(\serializer/VCC ), 
+    .FCI(\serializer/un1_R_debounce_cnt_3_cry_12_s1 ), .M0(1'bX), 
+    .CE(\serializer/un1_R_debounce_cnt_1_i ), .CLK(clk_25m_c), 
+    .LSR(\serializer/un1_byte_in_i ), 
+    .FCO(\serializer/un1_R_debounce_cnt_3_cry_14_s1 ), 
+    .F1(\serializer/un1_R_debounce_cnt_3_s1[17] ), 
+    .Q1(\serializer/R_debounce_cnt[14] ), 
+    .F0(\serializer/un1_R_debounce_cnt_3_s1[18] ), 
+    .Q0(\serializer/R_debounce_cnt[13] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("SIG"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .REG1_REGSET("SET"), 
+    .GSR("DISABLED"), .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), 
+    .REG1_SD("VHI"), .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), 
+    .CHECK_CE(1'b1), .CHECK_LSR(1'b1)) \serializer/SLICE_23 ( .M1(1'bX), 
+    .A1(1'bX), .B1(\serializer/R_debounce_cnt[12] ), .C1(1'bX), 
+    .D1(\serializer/VCC ), .DI1(\serializer/un1_R_debounce_cnt_3_s1[19] ), 
+    .DI0(\serializer/un1_R_debounce_cnt_3_s1[20] ), .A0(1'bX), 
+    .B0(\serializer/R_debounce_cnt[11] ), .C0(1'bX), .D0(\serializer/VCC ), 
+    .FCI(\serializer/un1_R_debounce_cnt_3_cry_10_s1 ), .M0(1'bX), 
+    .CE(\serializer/un1_R_debounce_cnt_1_i ), .CLK(clk_25m_c), 
+    .LSR(\serializer/un1_byte_in_i ), 
+    .FCO(\serializer/un1_R_debounce_cnt_3_cry_12_s1 ), 
+    .F1(\serializer/un1_R_debounce_cnt_3_s1[19] ), 
+    .Q1(\serializer/R_debounce_cnt[12] ), 
+    .F0(\serializer/un1_R_debounce_cnt_3_s1[20] ), 
+    .Q0(\serializer/R_debounce_cnt[11] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("SIG"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .REG0_REGSET("SET"), 
+    .GSR("DISABLED"), .INIT0_INITVAL(16'h55AA), .INIT1_INITVAL(16'h33CC), 
+    .REG1_SD("VHI"), .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), 
+    .CHECK_CE(1'b1), .CHECK_LSR(1'b1)) \serializer/SLICE_24 ( .M1(1'bX), 
+    .A1(1'bX), .B1(\serializer/R_debounce_cnt[10] ), .C1(1'bX), 
+    .D1(\serializer/VCC ), .DI1(\serializer/un1_R_debounce_cnt_3_s1[21] ), 
+    .DI0(\serializer/un1_R_debounce_cnt_3_s1[22] ), 
+    .A0(\serializer/R_debounce_cnt[9] ), .B0(1'bX), .C0(1'bX), 
+    .D0(\serializer/VCC ), .FCI(\serializer/un1_R_debounce_cnt_3_cry_8_s1 ), 
+    .M0(1'bX), .CE(\serializer/un1_R_debounce_cnt_1_i ), .CLK(clk_25m_c), 
+    .LSR(\serializer/un1_byte_in_i ), 
+    .FCO(\serializer/un1_R_debounce_cnt_3_cry_10_s1 ), 
+    .F1(\serializer/un1_R_debounce_cnt_3_s1[21] ), 
+    .Q1(\serializer/R_debounce_cnt[10] ), 
+    .F0(\serializer/un1_R_debounce_cnt_3_s1[22] ), 
+    .Q0(\serializer/R_debounce_cnt[9] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("SIG"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .REG0_REGSET("SET"), 
+    .GSR("DISABLED"), .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), 
+    .REG1_SD("VHI"), .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), 
+    .CHECK_CE(1'b1), .CHECK_LSR(1'b1)) \serializer/SLICE_25 ( .M1(1'bX), 
+    .A1(1'bX), .B1(\serializer/R_debounce_cnt[8] ), .C1(1'bX), 
+    .D1(\serializer/VCC ), .DI1(\serializer/un1_R_debounce_cnt_3_s1[23] ), 
+    .DI0(\serializer/un1_R_debounce_cnt_3_s1[24] ), .A0(1'bX), 
+    .B0(\serializer/R_debounce_cnt[7] ), .C0(1'bX), .D0(\serializer/VCC ), 
+    .FCI(\serializer/un1_R_debounce_cnt_3_cry_6_s1 ), .M0(1'bX), 
+    .CE(\serializer/un1_R_debounce_cnt_1_i ), .CLK(clk_25m_c), 
+    .LSR(\serializer/un1_byte_in_i ), 
+    .FCO(\serializer/un1_R_debounce_cnt_3_cry_8_s1 ), 
+    .F1(\serializer/un1_R_debounce_cnt_3_s1[23] ), 
+    .Q1(\serializer/R_debounce_cnt[8] ), 
+    .F0(\serializer/un1_R_debounce_cnt_3_s1[24] ), 
+    .Q0(\serializer/R_debounce_cnt[7] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("SIG"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .REG1_REGSET("SET"), 
+    .GSR("DISABLED"), .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), 
+    .REG1_SD("VHI"), .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), 
+    .CHECK_CE(1'b1), .CHECK_LSR(1'b1)) \serializer/SLICE_26 ( .M1(1'bX), 
+    .A1(1'bX), .B1(\serializer/R_debounce_cnt[6] ), .C1(1'bX), 
+    .D1(\serializer/VCC ), .DI1(\serializer/un1_R_debounce_cnt_3_s1[25] ), 
+    .DI0(\serializer/un1_R_debounce_cnt_3_s1[26] ), .A0(1'bX), 
+    .B0(\serializer/R_debounce_cnt[5] ), .C0(1'bX), .D0(\serializer/VCC ), 
+    .FCI(\serializer/un1_R_debounce_cnt_3_cry_4_s1 ), .M0(1'bX), 
+    .CE(\serializer/un1_R_debounce_cnt_1_i ), .CLK(clk_25m_c), 
+    .LSR(\serializer/un1_byte_in_i ), 
+    .FCO(\serializer/un1_R_debounce_cnt_3_cry_6_s1 ), 
+    .F1(\serializer/un1_R_debounce_cnt_3_s1[25] ), 
+    .Q1(\serializer/R_debounce_cnt[6] ), 
+    .F0(\serializer/un1_R_debounce_cnt_3_s1[26] ), 
+    .Q0(\serializer/R_debounce_cnt[5] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("SIG"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .REG1_REGSET("SET"), 
+    .GSR("DISABLED"), .INIT0_INITVAL(16'h55AA), .INIT1_INITVAL(16'h33CC), 
+    .REG1_SD("VHI"), .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), 
+    .CHECK_CE(1'b1), .CHECK_LSR(1'b1)) \serializer/SLICE_27 ( .M1(1'bX), 
+    .A1(1'bX), .B1(\serializer/R_debounce_cnt[4] ), .C1(1'bX), 
+    .D1(\serializer/VCC ), .DI1(\serializer/un1_R_debounce_cnt_3_s1[27] ), 
+    .DI0(\serializer/un1_R_debounce_cnt_3_s1[28] ), 
+    .A0(\serializer/R_debounce_cnt[3] ), .B0(1'bX), .C0(1'bX), 
+    .D0(\serializer/VCC ), .FCI(\serializer/un1_R_debounce_cnt_3_cry_2_s1 ), 
+    .M0(1'bX), .CE(\serializer/un1_R_debounce_cnt_1_i ), .CLK(clk_25m_c), 
+    .LSR(\serializer/un1_byte_in_i ), 
+    .FCO(\serializer/un1_R_debounce_cnt_3_cry_4_s1 ), 
+    .F1(\serializer/un1_R_debounce_cnt_3_s1[27] ), 
+    .Q1(\serializer/R_debounce_cnt[4] ), 
+    .F0(\serializer/un1_R_debounce_cnt_3_s1[28] ), 
+    .Q0(\serializer/R_debounce_cnt[3] ));
+  SCCU2B #(.CLKMUX("SIG"), .CEMUX("SIG"), .LSRMUX("SIG"), 
+    .CCU2_INJECT1_0("NO"), .CCU2_INJECT1_1("NO"), .GSR("DISABLED"), 
+    .INIT0_INITVAL(16'h33CC), .INIT1_INITVAL(16'h33CC), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_CE(1'b1), 
+    .CHECK_LSR(1'b1)) \serializer/SLICE_28 ( .M1(1'bX), .A1(1'bX), 
+    .B1(\serializer/R_debounce_cnt[2] ), .C1(1'bX), .D1(\serializer/VCC ), 
+    .DI1(\serializer/un1_R_debounce_cnt_3_s1[29] ), 
+    .DI0(\serializer/un1_R_debounce_cnt_3_s1[30] ), .A0(1'bX), 
+    .B0(\serializer/R_debounce_cnt[1] ), .C0(1'bX), .D0(\serializer/VCC ), 
+    .FCI(\serializer/un1_R_debounce_cnt_3_cry_0_s1 ), .M0(1'bX), 
+    .CE(\serializer/un1_R_debounce_cnt_1_i ), .CLK(clk_25m_c), 
+    .LSR(\serializer/un1_byte_in_i ), 
+    .FCO(\serializer/un1_R_debounce_cnt_3_cry_2_s1 ), 
+    .F1(\serializer/un1_R_debounce_cnt_3_s1[29] ), 
+    .Q1(\serializer/R_debounce_cnt[2] ), 
+    .F0(\serializer/un1_R_debounce_cnt_3_s1[30] ), 
+    .Q0(\serializer/R_debounce_cnt[1] ));
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("VHI"), .GSR("DISABLED"), .SRMODE("ASYNC"), 
+    .LSRONMUX(0), .LUT0_INITVAL(16'h00FF), .REG0_SD("VHI"), .CHECK_DI0(1'b1)) 
+    \serializer/SLICE_29 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), .A1(1'bX), 
+    .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), 
+    .DI0(\serializer/R_baudgen_i[0] ), .A0(1'bX), .B0(1'bX), .C0(1'bX), 
+    .D0(\serializer/R_baudgen[0] ), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), 
+    .LSR(1'bX), .OFX1(), .F1(), .Q1(), .OFX0(), 
+    .F0(\serializer/R_baudgen_i[0] ), .Q0(\serializer/R_baudgen[0] ));
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("VHI"), .GSR("DISABLED"), .SRMODE("ASYNC"), 
+    .LSRONMUX(0), .LUT0_INITVAL(16'h3F2E), .LUT1_INITVAL(16'hFCB8), 
+    .REG1_SD("VHI"), .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) 
+    \serializer/SLICE_30 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), .A1(btn_up_c), 
+    .B1(\sw_c[0] ), .C1(\serializer/a[6] ), .D1(btn_center_c), 
+    .DI1(\led_c[2] ), .DI0(\led_c[0] ), .A0(btn_right_c), .B0(\sw_c[0] ), 
+    .C0(\modul_brojke.N_17 ), .D0(btn_center_c), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(1'bX), .OFX1(), .F1(\led_c[2] ), 
+    .Q1(\serializer/R_byte_old[2] ), .OFX0(), .F0(\led_c[0] ), 
+    .Q0(\serializer/R_byte_old[0] ));
+  SLOGICB #(.M0MUX("SIG"), .CLKMUX("SIG"), .CEMUX("VHI"), .GSR("DISABLED"), 
+    .SRMODE("ASYNC"), .LSRONMUX(0), .LUT0_INITVAL(16'hFFFE), 
+    .LUT1_INITVAL(16'h00FB), .REG0_SD("VHI"), .CHECK_DI0(1'b1)) 
+    \serializer/SLICE_31 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), .A1(btn_up_c), 
+    .B1(btn_down_c), .C1(btn_right_c), .D1(\modul_brojke.N_19 ), .DI1(1'bX), 
+    .DI0(\led_c[1] ), .A0(btn_up_c), .B0(btn_center_c), .C0(\serializer/N_24 ), 
+    .D0(btn_left_c), .M0(\sw_c[0] ), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), 
+    .OFX1(), .F1(), .Q1(), .OFX0(\led_c[1] ), .F0(), 
+    .Q0(\serializer/R_byte_old[1] ));
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("VHI"), .GSR("DISABLED"), .SRMODE("ASYNC"), 
+    .LSRONMUX(0), .LUT0_INITVAL(16'h3330), .LUT1_INITVAL(16'hFC74), 
+    .REG1_SD("VHI"), .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) 
+    \serializer/SLICE_32 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/a_1_i_a2_0_0[7] ), .B1(\sw_c[0] ), .C1(btn_up_c), 
+    .D1(btn_center_c), .DI1(\led_c[4] ), .DI0(\led_c[3] ), .A0(1'bX), 
+    .B0(\sw_c[0] ), .C0(btn_right_c), .D0(btn_center_c), .M0(1'bX), .CE(1'bX), 
+    .CLK(clk_25m_c), .LSR(1'bX), .OFX1(), .F1(\led_c[4] ), 
+    .Q1(\serializer/R_byte_old[4] ), .OFX0(), .F0(\led_c[3] ), 
+    .Q0(\serializer/R_byte_old[3] ));
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("VHI"), .GSR("DISABLED"), .SRMODE("ASYNC"), 
+    .LSRONMUX(0), .LUT0_INITVAL(16'h30FF), .LUT1_INITVAL(16'h5511), 
+    .REG1_SD("VHI"), .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) 
+    \serializer/SLICE_33 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), .A1(\sw_c[0] ), 
+    .B1(\serializer/a_1_i_a2_0_0[7] ), .C1(1'bX), .D1(btn_center_c), 
+    .DI1(\led_c[6] ), .DI0(\led_c[5] ), .A0(1'bX), 
+    .B0(\serializer/a_1_i_a2_0_0[7] ), .C0(\sw_c[0] ), .D0(\serializer/N_7 ), 
+    .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), .OFX1(), 
+    .F1(\led_c[6] ), .Q1(\serializer/R_byte_old[6] ), .OFX0(), .F0(\led_c[5] ), 
+    .Q0(\serializer/R_byte_old[5] ));
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), .GSR("DISABLED"), 
+    .LUT0_INITVAL(16'h8877), .LUT1_INITVAL(16'hA000), .REG0_SD("VHI"), 
+    .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) \serializer/SLICE_34 ( .M1(1'bX), 
+    .FXA(1'bX), .FXB(1'bX), .A1(\serializer/g0_3_4 ), .B1(1'bX), 
+    .C1(\serializer/g0_3_5 ), .D1(\serializer/g0_3_6 ), .DI1(1'bX), 
+    .DI0(\serializer/un1_R_debounce_cnt_3[31] ), 
+    .A0(\serializer/un14_r_debounce_cnt_30 ), 
+    .B0(\serializer/un1_R_debounce_cnt_1_3 ), .C0(1'bX), 
+    .D0(\serializer/R_debounce_cnt[0] ), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), 
+    .LSR(\serializer/un1_byte_in_i ), .OFX1(), 
+    .F1(\serializer/un1_R_debounce_cnt_1_3 ), .Q1(), .OFX0(), 
+    .F0(\serializer/un1_R_debounce_cnt_3[31] ), 
+    .Q0(\serializer/R_debounce_cnt[0] ));
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), .GSR("DISABLED"), 
+    .LUT0_INITVAL(16'h55EA), .LUT1_INITVAL(16'h3C44), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) 
+    \serializer/SLICE_35 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/un14_r_debounce_cnt_0_0 ), .B1(\serializer/R_tx_phase[1] ), 
+    .C1(\serializer/R_tx_phase[0] ), .D1(\serializer/R_tx_ser_0_sqmuxa ), 
+    .DI1(\serializer/R_tx_phase_7[1] ), .DI0(\serializer/R_tx_phase_7[0] ), 
+    .A0(\serializer/R_tx_ser_0_sqmuxa ), .B0(\serializer/g0_0_15 ), 
+    .C0(\serializer/g0_0_14 ), .D0(\serializer/R_tx_phase[0] ), .M0(1'bX), 
+    .CE(1'bX), .CLK(clk_25m_c), .LSR(\serializer/R_tx_phase_0_sqmuxa ), 
+    .OFX1(), .F1(\serializer/R_tx_phase_7[1] ), 
+    .Q1(\serializer/R_tx_phase[1] ), .OFX0(), 
+    .F0(\serializer/R_tx_phase_7[0] ), .Q0(\serializer/R_tx_phase[0] ));
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("VHI"), .LSRMUX("SIG"), .GSR("DISABLED"), 
+    .LUT0_INITVAL(16'hAAA8), .LUT1_INITVAL(16'hAA2A), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_LSR(1'b1)) 
+    \serializer/SLICE_36 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/g0_i_mb_1 ), .B1(\serializer/g0_12 ), 
+    .C1(\serializer/g0_11 ), .D1(\serializer/R_tx_ser_0_sqmuxa ), 
+    .DI1(\serializer/R_tx_phase_7[3] ), .DI0(\serializer/R_tx_phase_7[2] ), 
+    .A0(\serializer/N_207_0 ), .B0(\serializer/g1_14 ), 
+    .C0(\serializer/g1_15 ), .D0(\serializer/R_tx_ser_0_sqmuxa ), .M0(1'bX), 
+    .CE(1'bX), .CLK(clk_25m_c), .LSR(\serializer/R_tx_phase_0_sqmuxa ), 
+    .OFX1(), .F1(\serializer/R_tx_phase_7[3] ), 
+    .Q1(\serializer/R_tx_phase[3] ), .OFX0(), 
+    .F0(\serializer/R_tx_phase_7[2] ), .Q0(\serializer/R_tx_phase[2] ));
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("SIG"), .REG0_REGSET("SET"), 
+    .REG1_REGSET("SET"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .LUT0_INITVAL(16'hB8F0), .LUT1_INITVAL(16'hB8F0), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_CE(1'b1)) 
+    \serializer/SLICE_37 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_tx_ser[3] ), .B1(\serializer/un6_r_tx_tickcnt ), 
+    .C1(\serializer/R_byte_old[1] ), .D1(\serializer/r_tx_tickcnt12 ), 
+    .DI1(\serializer/R_tx_ser_5[2] ), .DI0(\serializer/R_tx_ser_5[1] ), 
+    .A0(\serializer/R_tx_ser[2] ), .B0(\serializer/un6_r_tx_tickcnt ), 
+    .C0(\serializer/R_byte_old[0] ), .D0(\serializer/r_tx_tickcnt12 ), 
+    .M0(1'bX), .CE(\serializer.R_tx_ser_1_sqmuxa_i ), .CLK(clk_25m_c), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/R_tx_ser_5[2] ), 
+    .Q1(\serializer/R_tx_ser[2] ), .OFX0(), .F0(\serializer/R_tx_ser_5[1] ), 
+    .Q0(\serializer/R_tx_ser[1] ));
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("SIG"), .REG0_REGSET("SET"), 
+    .REG1_REGSET("SET"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .LUT0_INITVAL(16'hE4CC), .LUT1_INITVAL(16'hDF80), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_CE(1'b1)) 
+    \serializer/SLICE_38 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/r_tx_tickcnt12 ), .B1(\serializer/R_tx_ser[5] ), 
+    .C1(\serializer/un6_r_tx_tickcnt ), .D1(\serializer/R_byte_old[3] ), 
+    .DI1(\serializer/R_tx_ser_5[4] ), .DI0(\serializer/R_tx_ser_5[3] ), 
+    .A0(\serializer/un6_r_tx_tickcnt ), .B0(\serializer/R_byte_old[2] ), 
+    .C0(\serializer/R_tx_ser[4] ), .D0(\serializer/r_tx_tickcnt12 ), .M0(1'bX), 
+    .CE(\serializer.R_tx_ser_1_sqmuxa_i ), .CLK(clk_25m_c), .LSR(1'bX), 
+    .OFX1(), .F1(\serializer/R_tx_ser_5[4] ), .Q1(\serializer/R_tx_ser[4] ), 
+    .OFX0(), .F0(\serializer/R_tx_ser_5[3] ), .Q0(\serializer/R_tx_ser[3] ));
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("SIG"), .REG0_REGSET("SET"), 
+    .REG1_REGSET("SET"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .LUT0_INITVAL(16'hF780), .LUT1_INITVAL(16'hF870), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_CE(1'b1)) 
+    \serializer/SLICE_39 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/r_tx_tickcnt12 ), .B1(\serializer/un6_r_tx_tickcnt ), 
+    .C1(\serializer/R_byte_old[5] ), .D1(\serializer/R_tx_ser[7] ), 
+    .DI1(\serializer/R_tx_ser_5[6] ), .DI0(\serializer/R_tx_ser_5[5] ), 
+    .A0(\serializer/r_tx_tickcnt12 ), .B0(\serializer/un6_r_tx_tickcnt ), 
+    .C0(\serializer/R_tx_ser[6] ), .D0(\serializer/R_byte_old[4] ), .M0(1'bX), 
+    .CE(\serializer.R_tx_ser_1_sqmuxa_i ), .CLK(clk_25m_c), .LSR(1'bX), 
+    .OFX1(), .F1(\serializer/R_tx_ser_5[6] ), .Q1(\serializer/R_tx_ser[6] ), 
+    .OFX0(), .F0(\serializer/R_tx_ser_5[5] ), .Q0(\serializer/R_tx_ser[5] ));
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("SIG"), .REG0_REGSET("SET"), 
+    .REG1_REGSET("SET"), .GSR("DISABLED"), .SRMODE("ASYNC"), .LSRONMUX(0), 
+    .LUT0_INITVAL(16'hEA2A), .LUT1_INITVAL(16'h0C04), .REG1_SD("VHI"), 
+    .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1), .CHECK_CE(1'b1)) 
+    \serializer/SLICE_40 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/g0_10_1 ), .B1(\serializer/R_baudgen[16] ), 
+    .C1(\serializer/g0_10_sx ), .D1(\serializer/R_tx_phase[0] ), 
+    .DI1(\serializer/R_tx_ser_0_sqmuxa ), .DI0(\serializer/R_tx_ser_5[7] ), 
+    .A0(\serializer/R_byte_old[6] ), .B0(\serializer/r_tx_tickcnt12 ), 
+    .C0(\serializer/un6_r_tx_tickcnt ), .D0(\serializer/R_tx_ser[8] ), 
+    .M0(1'bX), .CE(\serializer.R_tx_ser_1_sqmuxa_i ), .CLK(clk_25m_c), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/R_tx_ser_0_sqmuxa ), 
+    .Q1(\serializer/R_tx_ser[8] ), .OFX0(), .F0(\serializer/R_tx_ser_5[7] ), 
+    .Q0(\serializer/R_tx_ser[7] ));
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("VHI"), .GSR("DISABLED"), .SRMODE("ASYNC"), 
+    .LSRONMUX(0), .LUT0_INITVAL(16'hAF50), .LUT1_INITVAL(16'h9CCC), 
+    .REG1_SD("VHI"), .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) 
+    \serializer/SLICE_41 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/un1_R_tx_phase_1 ), .B1(\serializer/R_tx_tickcnt[1] ), 
+    .C1(\serializer/R_baudgen[16] ), .D1(\serializer/R_tx_tickcnt[0] ), 
+    .DI1(\serializer/R_tx_tickcnte_0[1] ), .DI0(\serializer/R_tx_tickcnt_e0 ), 
+    .A0(\serializer/un1_R_tx_phase_1 ), .B0(1'bX), 
+    .C0(\serializer/R_baudgen[16] ), .D0(\serializer/R_tx_tickcnt[0] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), .OFX1(), 
+    .F1(\serializer/R_tx_tickcnte_0[1] ), .Q1(\serializer/R_tx_tickcnt[1] ), 
+    .OFX0(), .F0(\serializer/R_tx_tickcnt_e0 ), 
+    .Q0(\serializer/R_tx_tickcnt[0] ));
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("VHI"), .GSR("DISABLED"), .SRMODE("ASYNC"), 
+    .LSRONMUX(0), .LUT0_INITVAL(16'hBA8A), .LUT1_INITVAL(16'hF2D0), 
+    .REG1_SD("VHI"), .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) 
+    \serializer/SLICE_42 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_baudgen[16] ), .B1(\serializer/un1_R_tx_phase_1 ), 
+    .C1(\serializer/R_tx_tickcnt[3] ), .D1(\serializer/R_tx_tickcnt_n3 ), 
+    .DI1(\serializer/R_tx_tickcnte_0[3] ), 
+    .DI0(\serializer/R_tx_tickcnte_0[2] ), .A0(\serializer/R_tx_tickcnt[2] ), 
+    .B0(\serializer/un1_R_tx_phase_1 ), .C0(\serializer/R_baudgen[16] ), 
+    .D0(\serializer/R_tx_tickcnt_n2 ), .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/R_tx_tickcnte_0[3] ), 
+    .Q1(\serializer/R_tx_tickcnt[3] ), .OFX0(), 
+    .F0(\serializer/R_tx_tickcnte_0[2] ), .Q0(\serializer/R_tx_tickcnt[2] ));
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("VHI"), .GSR("DISABLED"), .SRMODE("ASYNC"), 
+    .LSRONMUX(0), .LUT0_INITVAL(16'hAF50), .LUT1_INITVAL(16'hDC8C), 
+    .REG1_SD("VHI"), .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) 
+    \serializer/SLICE_43 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/un1_R_tx_phase_1 ), .B1(\serializer/R_tx_tickcnt_fast[1] ), 
+    .C1(\serializer/R_baudgen[16] ), .D1(\serializer/R_tx_tickcnt_n1 ), 
+    .DI1(\serializer/R_tx_tickcnte_0_fast[1] ), 
+    .DI0(\serializer/R_tx_tickcnt_e0_fast ), 
+    .A0(\serializer/un1_R_tx_phase_1 ), .B0(1'bX), 
+    .C0(\serializer/R_baudgen[16] ), .D0(\serializer/R_tx_tickcnt_fast[0] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), .OFX1(), 
+    .F1(\serializer/R_tx_tickcnte_0_fast[1] ), 
+    .Q1(\serializer/R_tx_tickcnt_fast[1] ), .OFX0(), 
+    .F0(\serializer/R_tx_tickcnt_e0_fast ), 
+    .Q0(\serializer/R_tx_tickcnt_fast[0] ));
+  SLOGICB #(.CLKMUX("SIG"), .CEMUX("VHI"), .GSR("DISABLED"), .SRMODE("ASYNC"), 
+    .LSRONMUX(0), .LUT0_INITVAL(16'hFB40), .LUT1_INITVAL(16'hF4B0), 
+    .REG1_SD("VHI"), .REG0_SD("VHI"), .CHECK_DI1(1'b1), .CHECK_DI0(1'b1)) 
+    \serializer/SLICE_44 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/un1_R_tx_phase_1 ), .B1(\serializer/R_baudgen[16] ), 
+    .C1(\serializer/R_tx_tickcnt_fast[3] ), .D1(\serializer/R_tx_tickcnt_n3 ), 
+    .DI1(\serializer/R_tx_tickcnte_0_fast[3] ), 
+    .DI0(\serializer/R_tx_tickcnte_0_fast[2] ), 
+    .A0(\serializer/un1_R_tx_phase_1 ), .B0(\serializer/R_baudgen[16] ), 
+    .C0(\serializer/R_tx_tickcnt_n2 ), .D0(\serializer/R_tx_tickcnt_fast[2] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(clk_25m_c), .LSR(1'bX), .OFX1(), 
+    .F1(\serializer/R_tx_tickcnte_0_fast[3] ), 
+    .Q1(\serializer/R_tx_tickcnt_fast[3] ), .OFX0(), 
+    .F0(\serializer/R_tx_tickcnte_0_fast[2] ), 
+    .Q0(\serializer/R_tx_tickcnt_fast[2] ));
+  SLOGICB #(.LUT0_INITVAL(16'h0200), .LUT1_INITVAL(16'h7FFF)) 
+    \serializer/SLICE_45 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_debounce_cnt_RNI9JGD2[2] ), .B1(\serializer/g0_3_6 ), 
+    .C1(\serializer/g0_0_6 ), .D1(\serializer/g0_0_7 ), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\serializer/g0_0_5 ), .B0(\serializer/R_debounce_cnt[20] ), 
+    .C0(\serializer/R_debounce_cnt[21] ), 
+    .D0(\serializer/un14_r_debounce_cnt_30_10 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(\serializer/un1_R_debounce_cnt_1_i ), 
+    .Q1(), .OFX0(), .F0(\serializer/g0_0_7 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0080), .LUT1_INITVAL(16'h0001)) 
+    \serializer/SLICE_46 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_tx_phase[2] ), .B1(\serializer/R_tx_phase[1] ), 
+    .C1(\serializer/R_tx_phase[3] ), .D1(\serializer/R_tx_phase[0] ), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/R_tx_ser[1] ), 
+    .B0(\serializer/R_baudgen[16] ), .C0(\serializer/un6_r_tx_tickcnt ), 
+    .D0(\serializer/un1_R_tx_phase_1 ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/un1_R_tx_phase_1 ), .Q1(), .OFX0(), 
+    .F0(\serializer.R_tx_ser_5[0] ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h8000), .LUT1_INITVAL(16'h3CF0)) 
+    \serializer/SLICE_47 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), .A1(1'bX), 
+    .B1(\serializer/g0_3_2 ), .C1(\serializer/R_tx_phase[3] ), 
+    .D1(\serializer/un6_r_tx_tickcnt ), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\serializer/R_tx_tickcnt_fast[3] ), 
+    .B0(\serializer/R_tx_tickcnt_fast[1] ), 
+    .C0(\serializer/R_tx_tickcnt_fast[2] ), 
+    .D0(\serializer/R_tx_tickcnt_fast[0] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/g0_i_mb_1 ), .Q1(), .OFX0(), 
+    .F0(\serializer/un6_r_tx_tickcnt ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h1000), .LUT1_INITVAL(16'h8800)) 
+    \serializer/SLICE_48 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_tx_phase_0_sqmuxa_2 ), .B1(\serializer/R_baudgen[16] ), 
+    .C1(1'bX), .D1(\serializer/un6_r_tx_tickcnt ), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\serializer/R_tx_phase[0] ), .B0(\serializer/R_tx_phase[2] ), 
+    .C0(\serializer/R_tx_phase[3] ), .D0(\serializer/R_tx_phase[1] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), 
+    .F1(\serializer/R_tx_phase_0_sqmuxa ), .Q1(), .OFX0(), 
+    .F0(\serializer/R_tx_phase_0_sqmuxa_2 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'h8000)) 
+    \serializer/SLICE_49 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/g0_0_0 ), .B1(\serializer/g0_0_5 ), 
+    .C1(\serializer/un14_r_debounce_cnt_30_10 ), .D1(\serializer/g0_0_6 ), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/R_debounce_cnt[29] ), 
+    .B0(\serializer/R_debounce_cnt[30] ), .C0(\serializer/R_debounce_cnt[27] ), 
+    .D0(\serializer/R_debounce_cnt[28] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/un14_r_debounce_cnt_30 ), .Q1(), 
+    .OFX0(), .F0(\serializer/un14_r_debounce_cnt_30_10 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h6CCC), .LUT1_INITVAL(16'hAA00)) 
+    \serializer/SLICE_50 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_tx_phase[1] ), .B1(1'bX), .C1(1'bX), 
+    .D1(\serializer/R_tx_phase[0] ), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\serializer/g1_0_0 ), .B0(\serializer/R_tx_phase[2] ), 
+    .C0(\serializer/un6_r_tx_tickcnt ), .D0(\serializer/R_baudgen[16] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), 
+    .F1(\serializer/g1_0_0 ), .Q1(), .OFX0(), .F0(\serializer/N_207_0 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'h0300)) 
+    \serializer/SLICE_51 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), .A1(1'bX), 
+    .B1(\serializer/R_debounce_cnt[2] ), .C1(\serializer/R_debounce_cnt[3] ), 
+    .D1(\serializer/un14_r_debounce_cnt_26_4 ), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\serializer/R_debounce_cnt[13] ), .B0(\serializer/R_debounce_cnt[15] ), 
+    .C0(\serializer/R_debounce_cnt[14] ), .D0(\serializer/R_debounce_cnt[12] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), 
+    .F1(\serializer/g0_3_4 ), .Q1(), .OFX0(), 
+    .F0(\serializer/un14_r_debounce_cnt_26_4 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'h3FFF)) 
+    \serializer/SLICE_52 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), .A1(1'bX), 
+    .B1(\serializer/g0_1_4_0 ), .C1(\serializer/un14_r_debounce_cnt_30_11 ), 
+    .D1(\serializer/un14_r_debounce_cnt_26_5 ), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\serializer/R_debounce_cnt[7] ), .B0(\serializer/R_debounce_cnt[6] ), 
+    .C0(\serializer/R_debounce_cnt[4] ), .D0(\serializer/R_debounce_cnt[5] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), 
+    .F1(\serializer/g0_17_1 ), .Q1(), .OFX0(), .F0(\serializer/g0_1_4_0 ), 
+    .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'h2000)) 
+    \serializer/SLICE_53 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/g2 ), .B1(\serializer/g0_17_1 ), 
+    .C1(\serializer/un14_r_debounce_cnt_30_9 ), .D1(\serializer/g0_1_5 ), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/R_debounce_cnt[15] ), 
+    .B0(\serializer/R_debounce_cnt[12] ), .C0(\serializer/R_debounce_cnt[14] ), 
+    .D0(\serializer/R_debounce_cnt[13] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/g0_12 ), .Q1(), .OFX0(), 
+    .F0(\serializer/g0_1_5 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'h0200)) 
+    \serializer/SLICE_54 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/g0_3_5 ), .B1(\serializer/R_debounce_cnt[2] ), 
+    .C1(\serializer/R_debounce_cnt[3] ), 
+    .D1(\serializer/R_debounce_cnt_RNIQ98L[12] ), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\serializer/R_debounce_cnt[7] ), .B0(\serializer/R_debounce_cnt[6] ), 
+    .C0(\serializer/R_debounce_cnt[0] ), .D0(\serializer/R_debounce_cnt[1] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), 
+    .F1(\serializer/R_debounce_cnt_RNI9JGD2[2] ), .Q1(), .OFX0(), 
+    .F0(\serializer/g0_3_5 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'h7FFF)) 
+    \serializer/SLICE_55 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_debounce_cnt_RNI1CNA[30] ), 
+    .B1(\serializer/un14_r_debounce_cnt_30_9 ), 
+    .C1(\serializer/R_debounce_cnt_RNIQ98L_0[12] ), 
+    .D1(\serializer/un14_r_debounce_cnt_26_5 ), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\serializer/R_debounce_cnt[10] ), .B0(\serializer/R_debounce_cnt[11] ), 
+    .C0(\serializer/R_debounce_cnt[9] ), .D0(\serializer/R_debounce_cnt[8] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), 
+    .F1(\serializer/R_debounce_cnt_RNI1TKI2[12] ), .Q1(), .OFX0(), 
+    .F0(\serializer/un14_r_debounce_cnt_26_5 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'h7FFF)) 
+    \serializer/SLICE_56 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_tx_phase_RNO_4[1] ), .B1(\serializer/g0_7 ), 
+    .C1(\serializer/R_tx_phase_RNO_5[1] ), .D1(\serializer/g0_0_7_1 ), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/R_debounce_cnt[10] ), 
+    .B0(\serializer/R_debounce_cnt[8] ), .C0(\serializer/R_debounce_cnt[11] ), 
+    .D0(\serializer/R_debounce_cnt[9] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/R_tx_phase_RNO_2[1] ), .Q1(), .OFX0(), 
+    .F0(\serializer/g0_0_7_1 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'h0050)) 
+    \serializer/SLICE_57 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_debounce_cnt[22] ), .B1(1'bX), .C1(\serializer/g0_0_8 ), 
+    .D1(\serializer/R_debounce_cnt[28] ), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\serializer/R_debounce_cnt[31] ), .B0(\serializer/R_debounce_cnt[14] ), 
+    .C0(\serializer/R_debounce_cnt[15] ), .D0(\serializer/R_debounce_cnt[7] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), 
+    .F1(\serializer/g0_0_4_0 ), .Q1(), .OFX0(), .F0(\serializer/g0_0_8 ), 
+    .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'h0020)) 
+    \serializer/SLICE_58 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/g0_0_9_0_0 ), .B1(\serializer/R_debounce_cnt[25] ), 
+    .C1(\serializer/g0_13_N_6L10_1 ), .D1(\serializer/R_debounce_cnt[26] ), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/R_debounce_cnt[13] ), 
+    .B0(\serializer/R_debounce_cnt[12] ), .C0(\serializer/R_debounce_cnt[4] ), 
+    .D0(\serializer/R_debounce_cnt[5] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/R_tx_phase_RNO_3[1] ), .Q1(), .OFX0(), 
+    .F0(\serializer/g0_0_9_0_0 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h8000), .LUT1_INITVAL(16'h0001)) 
+    \serializer/SLICE_59 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_debounce_cnt[30] ), .B1(\serializer/R_debounce_cnt[29] ), 
+    .C1(\serializer/R_debounce_cnt[27] ), .D1(\serializer/R_debounce_cnt[1] ), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/g0_1_11 ), .B0(\serializer/g0_7 ), 
+    .C0(\serializer/g0_1_8 ), .D0(\serializer/g0_1_13 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(\serializer/g0_7 ), .Q1(), .OFX0(), 
+    .F0(\serializer/g0_0_14 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0040), .LUT1_INITVAL(16'h0303)) 
+    \serializer/SLICE_60 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), .A1(1'bX), 
+    .B1(\serializer/R_debounce_cnt[24] ), .C1(\serializer/R_debounce_cnt[23] ), 
+    .D1(1'bX), .DI1(1'bX), .DI0(1'bX), .A0(\serializer/R_debounce_cnt[25] ), 
+    .B0(\serializer/g0_1_3 ), .C0(\serializer/g0_1_10 ), 
+    .D0(\serializer/R_debounce_cnt[26] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/g0_1_3 ), .Q1(), .OFX0(), 
+    .F0(\serializer/g0_1_13 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'hDFFF)) 
+    \serializer/SLICE_61 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/g2 ), .B1(\serializer/g1_7_0 ), .C1(\serializer/g1_14_1 ), 
+    .D1(\serializer/un14_r_debounce_cnt_30_9 ), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\serializer/R_debounce_cnt[16] ), .B0(\serializer/R_debounce_cnt[18] ), 
+    .C0(\serializer/R_debounce_cnt[19] ), .D0(\serializer/R_debounce_cnt[17] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), 
+    .F1(\serializer/g1_14 ), .Q1(), .OFX0(), 
+    .F0(\serializer/un14_r_debounce_cnt_30_9 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h8000), .LUT1_INITVAL(16'hFFFE)) 
+    \serializer/SLICE_62 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_byte_old[6] ), .B1(\serializer/R_byte_old[4] ), 
+    .C1(\serializer/R_byte_old[2] ), .D1(\serializer/g0_2_4 ), .DI1(1'bX), 
+    .DI0(1'bX), .A0(\serializer/g0_0_7_1 ), .B0(\serializer/g2 ), 
+    .C0(\serializer/g0_0_8 ), .D0(\serializer/g0_0_9_0_0 ), .M0(1'bX), 
+    .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(\serializer/g2 ), .Q1(), 
+    .OFX0(), .F0(\serializer/g0_0_15 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h8800), .LUT1_INITVAL(16'h0001)) 
+    \serializer/SLICE_63 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_debounce_cnt[2] ), .B1(\serializer/R_debounce_cnt[20] ), 
+    .C1(\serializer/R_debounce_cnt[21] ), .D1(\serializer/R_debounce_cnt[3] ), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/g0_1_5_0 ), 
+    .B0(\serializer/g0_0_9 ), .C0(1'bX), .D0(\serializer/g0_1_4 ), .M0(1'bX), 
+    .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(\serializer/g0_0_9 ), 
+    .Q1(), .OFX0(), .F0(\serializer/g0_11 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'hFFFD), .LUT1_INITVAL(16'hFFFE)) 
+    \serializer/SLICE_64 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_debounce_cnt[14] ), .B1(\serializer/R_debounce_cnt[12] ), 
+    .C1(\serializer/R_debounce_cnt[13] ), .D1(\serializer/R_debounce_cnt[15] ), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/g0_0_9 ), .B0(\serializer/g1_8 ), 
+    .C0(\serializer/g1_9 ), .D0(\serializer/g1_10 ), .M0(1'bX), .CE(1'bX), 
+    .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(\serializer/g1_10 ), .Q1(), .OFX0(), 
+    .F0(\serializer/g1_15 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'h0300)) 
+    \serializer/SLICE_65 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), .A1(1'bX), 
+    .B1(\serializer/R_debounce_cnt[1] ), .C1(\serializer/R_debounce_cnt[4] ), 
+    .D1(\serializer/g1_9_0 ), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\serializer/R_debounce_cnt[21] ), .B0(\serializer/R_debounce_cnt[6] ), 
+    .C0(\serializer/R_debounce_cnt[3] ), .D0(\serializer/R_debounce_cnt[2] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), 
+    .F1(\serializer/g1_7_1 ), .Q1(), .OFX0(), .F0(\serializer/g1_9_0 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'h0400)) 
+    \serializer/SLICE_66 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_debounce_cnt[28] ), 
+    .B1(\serializer/un14_r_debounce_cnt_30_11 ), 
+    .C1(\serializer/R_debounce_cnt[22] ), 
+    .D1(\serializer/un14_r_debounce_cnt_26_5 ), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\serializer/R_debounce_cnt[25] ), .B0(\serializer/R_debounce_cnt[24] ), 
+    .C0(\serializer/R_debounce_cnt[23] ), .D0(\serializer/R_debounce_cnt[26] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), 
+    .F1(\serializer/g1_14_1 ), .Q1(), .OFX0(), 
+    .F0(\serializer/un14_r_debounce_cnt_30_11 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'h8000)) 
+    \serializer/SLICE_67 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/g1_7_1 ), .B1(\serializer/g2 ), .C1(\serializer/g1_8_0 ), 
+    .D1(\serializer/g1_9_2 ), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\serializer/R_debounce_cnt[20] ), .B0(\serializer/R_debounce_cnt[7] ), 
+    .C0(\serializer/R_debounce_cnt[5] ), .D0(\serializer/R_debounce_cnt[31] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), 
+    .F1(\serializer/R_debounce_cnt_RNIQ40E6[23] ), .Q1(), .OFX0(), 
+    .F0(\serializer/g1_8_0 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0010), .LUT1_INITVAL(16'h8CCC)) 
+    \serializer/SLICE_68 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/un1_R_tx_phase_1 ), .B1(\serializer/g1_10_0 ), 
+    .C1(\serializer/R_baudgen[16] ), .D1(\serializer/un6_r_tx_tickcnt ), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/R_debounce_cnt[22] ), 
+    .B0(\serializer/R_debounce_cnt[25] ), .C0(\serializer/R_debounce_cnt[0] ), 
+    .D0(\serializer/R_debounce_cnt[26] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/g0_0_sn ), .Q1(), .OFX0(), 
+    .F0(\serializer/g1_10_0 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0010), .LUT1_INITVAL(16'h0011)) 
+    \serializer/SLICE_69 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_debounce_cnt[16] ), .B1(\serializer/R_debounce_cnt[17] ), 
+    .C1(1'bX), .D1(\serializer/R_debounce_cnt[18] ), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\serializer/R_debounce_cnt[19] ), .B0(\serializer/R_debounce_cnt[22] ), 
+    .C0(\serializer/R_debounce_cnt_RNI6IUF[16] ), 
+    .D0(\serializer/R_debounce_cnt[31] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/R_debounce_cnt_RNI6IUF[16] ), .Q1(), 
+    .OFX0(), .F0(\serializer/g0_0_6 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0010), .LUT1_INITVAL(16'h0101)) 
+    \serializer/SLICE_70 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_debounce_cnt[10] ), .B1(\serializer/R_debounce_cnt[9] ), 
+    .C1(\serializer/R_debounce_cnt[8] ), .D1(1'bX), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\serializer/R_debounce_cnt[4] ), .B0(\serializer/R_debounce_cnt[11] ), 
+    .C0(\serializer/R_debounce_cnt_RNI0D2O[10] ), 
+    .D0(\serializer/R_debounce_cnt[5] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/R_debounce_cnt_RNI0D2O[10] ), .Q1(), 
+    .OFX0(), .F0(\serializer/g0_3_6 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'h0001)) 
+    \serializer/SLICE_71 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_debounce_cnt[15] ), .B1(\serializer/R_debounce_cnt[12] ), 
+    .C1(\serializer/R_debounce_cnt[13] ), .D1(\serializer/R_debounce_cnt[14] ), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/R_debounce_cnt[15] ), 
+    .B0(\serializer/R_debounce_cnt[12] ), .C0(\serializer/R_debounce_cnt[13] ), 
+    .D0(\serializer/R_debounce_cnt[14] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/R_debounce_cnt_RNIQ98L_0[12] ), .Q1(), 
+    .OFX0(), .F0(\serializer/R_debounce_cnt_RNIQ98L[12] ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0011), .LUT1_INITVAL(16'h0011)) SLICE_72( 
+    .M1(1'bX), .FXA(1'bX), .FXB(1'bX), .A1(btn_up_c), .B1(btn_right_c), 
+    .C1(1'bX), .D1(btn_left_c), .DI1(1'bX), .DI0(1'bX), .A0(btn_up_c), 
+    .B0(btn_right_c), .C0(1'bX), .D0(btn_left_c), .M0(1'bX), .CE(1'bX), 
+    .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(\serializer/a_1_i_a2_0_0[7] ), .Q1(), 
+    .OFX0(), .F0(\modul_brojke.N_17 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'hD8D8)) SLICE_73( 
+    .M1(1'bX), .FXA(1'bX), .FXB(1'bX), .A1(btn_right_c), .B1(btn_down_c), 
+    .C1(btn_center_c), .D1(1'bX), .DI1(1'bX), .DI0(1'bX), .A0(btn_right_c), 
+    .B0(btn_down_c), .C0(btn_center_c), .D0(btn_left_c), .M0(1'bX), .CE(1'bX), 
+    .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(\serializer/a[6] ), .Q1(), .OFX0(), 
+    .F0(\modul_brojke.N_19 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h6CCC), .LUT1_INITVAL(16'h5AAA)) 
+    \serializer/SLICE_74 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_tx_tickcnt[2] ), .B1(1'bX), 
+    .C1(\serializer/R_tx_tickcnt[1] ), .D1(\serializer/R_tx_tickcnt[0] ), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/R_tx_tickcnt[2] ), 
+    .B0(\serializer/R_tx_tickcnt[3] ), .C0(\serializer/R_tx_tickcnt[1] ), 
+    .D0(\serializer/R_tx_tickcnt[0] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/R_tx_tickcnt_n2 ), .Q1(), .OFX0(), 
+    .F0(\serializer/R_tx_tickcnt_n3 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0002), .LUT1_INITVAL(16'h0100)) 
+    \serializer/SLICE_75 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_debounce_cnt[28] ), .B1(\serializer/R_debounce_cnt[22] ), 
+    .C1(\serializer/R_debounce_cnt[27] ), .D1(\serializer/R_debounce_cnt[0] ), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/R_debounce_cnt[0] ), 
+    .B0(\serializer/R_debounce_cnt[6] ), .C0(\serializer/R_debounce_cnt[28] ), 
+    .D0(\serializer/R_debounce_cnt[22] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/g0_1_5_0 ), .Q1(), .OFX0(), 
+    .F0(\serializer/g0_1_11 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'hFFFE)) 
+    \serializer/SLICE_76 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_debounce_cnt[29] ), .B1(\serializer/R_debounce_cnt[30] ), 
+    .C1(\serializer/R_debounce_cnt[27] ), .D1(\serializer/R_debounce_cnt[1] ), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/R_debounce_cnt[29] ), 
+    .B0(\serializer/R_debounce_cnt[30] ), .C0(\serializer/R_debounce_cnt[31] ), 
+    .D0(\serializer/R_debounce_cnt[1] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/g1_8 ), .Q1(), .OFX0(), 
+    .F0(\serializer/g0_1_4 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h4F40), .LUT1_INITVAL(16'h4444)) 
+    \serializer/SLICE_77 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/un1_R_tx_phase_1 ), .B1(\serializer/R_baudgen[16] ), 
+    .C1(1'bX), .D1(1'bX), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\serializer/R_debounce_cnt_RNI1TKI2[12] ), 
+    .B0(\serializer/R_debounce_cnt_RNIQ40E6[23] ), .C0(\serializer/g0_0_sn ), 
+    .D0(\serializer/R_tx_ser_0_sqmuxa ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/r_tx_tickcnt12 ), .Q1(), .OFX0(), 
+    .F0(\serializer.R_tx_ser_1_sqmuxa_i ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'hFFFE), .LUT1_INITVAL(16'h4000)) 
+    \serializer/SLICE_78 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_tx_phase_RNO_2[1] ), .B1(\serializer/g2 ), 
+    .C1(\serializer/g0_0_4_0 ), .D1(\serializer/R_tx_phase_RNO_3[1] ), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/R_byte_old[1] ), 
+    .B0(\serializer/R_byte_old[0] ), .C0(\serializer/R_byte_old[5] ), 
+    .D0(\serializer/R_byte_old[3] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/un14_r_debounce_cnt_0_0 ), .Q1(), 
+    .OFX0(), .F0(\serializer/g0_2_4 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'h0303)) 
+    \serializer/SLICE_79 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), .A1(1'bX), 
+    .B1(\serializer/R_debounce_cnt[20] ), .C1(\serializer/R_debounce_cnt[21] ), 
+    .D1(1'bX), .DI1(1'bX), .DI0(1'bX), .A0(\serializer/R_debounce_cnt[24] ), 
+    .B0(\serializer/R_debounce_cnt[25] ), .C0(\serializer/R_debounce_cnt[26] ), 
+    .D0(\serializer/R_debounce_cnt[23] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/g0_0_0 ), .Q1(), .OFX0(), 
+    .F0(\serializer/g0_0_5 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'h0001)) 
+    \serializer/SLICE_80 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_debounce_cnt[23] ), .B1(\serializer/R_debounce_cnt[24] ), 
+    .C1(\serializer/R_debounce_cnt[16] ), .D1(\serializer/R_debounce_cnt[17] ), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/R_debounce_cnt[16] ), 
+    .B0(\serializer/R_debounce_cnt[18] ), .C0(\serializer/R_debounce_cnt[19] ), 
+    .D0(\serializer/R_debounce_cnt[17] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/g0_13_N_6L10_1 ), .Q1(), .OFX0(), 
+    .F0(\serializer/g0_1_8 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'h0001)) 
+    \serializer/SLICE_81 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_debounce_cnt[18] ), .B1(\serializer/R_debounce_cnt[21] ), 
+    .C1(\serializer/R_debounce_cnt[20] ), .D1(\serializer/R_debounce_cnt[19] ), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/R_debounce_cnt[2] ), 
+    .B0(\serializer/R_debounce_cnt[21] ), .C0(\serializer/R_debounce_cnt[20] ), 
+    .D0(\serializer/R_debounce_cnt[3] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/R_tx_phase_RNO_4[1] ), .Q1(), .OFX0(), 
+    .F0(\serializer/g0_1_10 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0001), .LUT1_INITVAL(16'h0033)) 
+    \serializer/SLICE_82 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), .A1(1'bX), 
+    .B1(\serializer/R_debounce_cnt[30] ), .C1(1'bX), 
+    .D1(\serializer/R_debounce_cnt[28] ), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\serializer/R_debounce_cnt[29] ), .B0(\serializer/R_debounce_cnt[24] ), 
+    .C0(\serializer/R_debounce_cnt[23] ), .D0(\serializer/R_debounce_cnt[27] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), 
+    .F1(\serializer/R_debounce_cnt_RNI1CNA[30] ), .Q1(), .OFX0(), 
+    .F0(\serializer/g1_9_2 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'hFFFE), .LUT1_INITVAL(16'h0100)) 
+    \serializer/SLICE_83 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_debounce_cnt[6] ), .B1(\serializer/R_debounce_cnt[2] ), 
+    .C1(\serializer/R_debounce_cnt[3] ), .D1(\serializer/R_debounce_cnt[0] ), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/R_debounce_cnt[7] ), 
+    .B0(\serializer/R_debounce_cnt[5] ), .C0(\serializer/R_debounce_cnt[4] ), 
+    .D0(\serializer/R_debounce_cnt[31] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(\serializer/R_tx_phase_RNO_5[1] ), .Q1(), .OFX0(), 
+    .F0(\serializer/g1_9 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h8000), .LUT1_INITVAL(16'h0101)) 
+    \serializer/SLICE_84 ( .M1(1'bX), .FXA(1'bX), .FXB(1'bX), 
+    .A1(\serializer/R_tx_phase[2] ), .B1(\serializer/R_tx_phase[1] ), 
+    .C1(\serializer/R_tx_phase[3] ), .D1(1'bX), .DI1(1'bX), .DI0(1'bX), 
+    .A0(\serializer/R_tx_phase[2] ), .B0(\serializer/R_tx_phase[1] ), 
+    .C0(\serializer/R_baudgen[16] ), .D0(\serializer/R_tx_phase[0] ), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), 
+    .F1(\serializer/g0_10_1 ), .Q1(), .OFX0(), .F0(\serializer/g0_3_2 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0003)) \serializer/SLICE_85 ( .M1(1'bX), 
+    .FXA(1'bX), .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), 
+    .DI1(1'bX), .DI0(1'bX), .A0(1'bX), .B0(btn_center_c), .C0(btn_right_c), 
+    .D0(btn_up_c), .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), 
+    .F1(), .Q1(), .OFX0(), .F0(\serializer/N_7 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h33CC)) \serializer/SLICE_86 ( .M1(1'bX), 
+    .FXA(1'bX), .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), 
+    .DI1(1'bX), .DI0(1'bX), .A0(1'bX), .B0(\serializer/R_tx_tickcnt[1] ), 
+    .C0(1'bX), .D0(\serializer/R_tx_tickcnt[0] ), .M0(1'bX), .CE(1'bX), 
+    .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(), .Q1(), .OFX0(), 
+    .F0(\serializer/R_tx_tickcnt_n1 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'hCC00)) \serializer/SLICE_87 ( .M1(1'bX), 
+    .FXA(1'bX), .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), 
+    .DI1(1'bX), .DI0(1'bX), .A0(1'bX), .B0(btn_down_c), .C0(1'bX), 
+    .D0(btn_right_c), .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), 
+    .F1(), .Q1(), .OFX0(), .F0(\serializer/N_24 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'hDDDD)) \serializer/SLICE_88 ( .M1(1'bX), 
+    .FXA(1'bX), .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/R_debounce_cnt[0] ), 
+    .B0(\serializer/R_debounce_cnt[6] ), .C0(1'bX), .D0(1'bX), .M0(1'bX), 
+    .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(), .Q1(), .OFX0(), 
+    .F0(\serializer/g1_7_0 ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h7FFF)) \serializer/SLICE_89 ( .M1(1'bX), 
+    .FXA(1'bX), .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), 
+    .DI1(1'bX), .DI0(1'bX), .A0(\serializer/R_tx_tickcnt_fast[2] ), 
+    .B0(\serializer/R_tx_tickcnt_fast[1] ), .C0(\serializer/R_tx_tickcnt[3] ), 
+    .D0(\serializer/R_tx_tickcnt_fast[0] ), .M0(1'bX), .CE(1'bX), .CLK(1'bX), 
+    .LSR(1'bX), .OFX1(), .F1(), .Q1(), .OFX0(), .F0(\serializer/g0_10_sx ), 
+    .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'hFFFF)) \serializer/SLICE_90 ( .M1(1'bX), 
+    .FXA(1'bX), .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), 
+    .DI1(1'bX), .DI0(1'bX), .A0(1'bX), .B0(1'bX), .C0(1'bX), .D0(1'bX), 
+    .M0(1'bX), .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(), .Q1(), 
+    .OFX0(), .F0(\serializer/VCC ), .Q0());
+  SLOGICB #(.LUT0_INITVAL(16'h0000)) SLICE_91( .M1(1'bX), .FXA(1'bX), 
+    .FXB(1'bX), .A1(1'bX), .B1(1'bX), .C1(1'bX), .D1(1'bX), .DI1(1'bX), 
+    .DI0(1'bX), .A0(1'bX), .B0(1'bX), .C0(1'bX), .D0(1'bX), .M0(1'bX), 
+    .CE(1'bX), .CLK(1'bX), .LSR(1'bX), .OFX1(), .F1(), .Q1(), .OFX0(), 
+    .F0(GND), .Q0());
+  rs232_tx rs232_tx_I( .IOLDO(rs232_tx_c), .rs232_tx(rs232_tx));
+  rs232_tx_MGIOL rs232_tx_MGIOL( .IOLDO(rs232_tx_c), 
+    .ONEG0(\serializer.R_tx_ser_5[0] ), .CE(\serializer.R_tx_ser_1_sqmuxa_i ), 
+    .CLK(clk_25m_c));
+  btn_left btn_left_I( .PADDI(btn_left_c), .btn_left(btn_left));
+  sw_0_ \sw[0]_I ( .PADDI(\sw_c[0] ), .sw0(sw[0]));
+  led_7_ \led[7]_I ( .PADDO(GND), .led7(led[7]));
+  led_6_ \led[6]_I ( .PADDO(\led_c[6] ), .led6(led[6]));
+  led_5_ \led[5]_I ( .PADDO(\led_c[5] ), .led5(led[5]));
+  led_4_ \led[4]_I ( .PADDO(\led_c[4] ), .led4(led[4]));
+  led_3_ \led[3]_I ( .PADDO(\led_c[3] ), .led3(led[3]));
+  led_2_ \led[2]_I ( .PADDO(\led_c[2] ), .led2(led[2]));
+  led_1_ \led[1]_I ( .PADDO(\led_c[1] ), .led1(led[1]));
+  led_0_ \led[0]_I ( .PADDO(\led_c[0] ), .led0(led[0]));
+  clk_25m clk_25m_I( .PADDI(clk_25m_c), .clk_25m(clk_25m));
+  btn_center btn_center_I( .PADDI(btn_center_c), .btn_center(btn_center));
+  btn_down btn_down_I( .PADDI(btn_down_c), .btn_down(btn_down));
+  btn_up btn_up_I( .PADDI(btn_up_c), .btn_up(btn_up));
+  btn_right btn_right_I( .PADDI(btn_right_c), .btn_right(btn_right));
+  VHI VHI_INST( .Z(VCCI));
+  PUR PUR_INST( .PUR(VCCI));
+  GSR GSR_INST( .GSR(VCCI));
+endmodule
+
+module rs232_tx ( input IOLDO, output rs232_tx );
+
+  ec2iobuf rs232_tx_pad( .I(IOLDO), .PAD(rs232_tx));
+
+  specify
+    (IOLDO => rs232_tx) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module ec2iobuf ( input I, output PAD );
+
+  OB INST5( .I(I), .O(PAD));
+endmodule
+
+module gnd ( output PWR0 );
+
+  VLO INST1( .Z(PWR0));
+endmodule
+
+module rs232_tx_MGIOL ( output IOLDO, input ONEG0, CE, CLK );
+  wire   GNDI, ONEG0_dly, CLK_dly, CE_dly;
+
+  mfflsre \serializer_R_tx_serio[0] ( .D0(ONEG0_dly), .SP(CE_dly), 
+    .CK(CLK_dly), .LSR(GNDI), .Q(IOLDO));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (CLK => IOLDO) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, ONEG0, 0:0:0, 0:0:0,,,, CLK_dly, ONEG0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module mfflsre ( input D0, SP, CK, LSR, output Q );
+
+  FD1P3BX INST01( .D(D0), .SP(SP), .CK(CK), .PD(LSR), .Q(Q));
+  defparam INST01.GSR = "DISABLED";
+endmodule
+
+module btn_left ( output PADDI, input btn_left );
+
+  ec2iobuf0001 btn_left_pad( .Z(PADDI), .PAD(btn_left));
+
+  specify
+    (btn_left => PADDI) = (0:0:0,0:0:0);
+    $width (posedge btn_left, 0:0:0);
+    $width (negedge btn_left, 0:0:0);
+  endspecify
+
+endmodule
+
+module ec2iobuf0001 ( output Z, input PAD );
+
+  IBPD INST1( .I(PAD), .O(Z));
+endmodule
+
+module sw_0_ ( output PADDI, input sw0 );
+
+  ec2iobuf0001 \sw_pad[0] ( .Z(PADDI), .PAD(sw0));
+
+  specify
+    (sw0 => PADDI) = (0:0:0,0:0:0);
+    $width (posedge sw0, 0:0:0);
+    $width (negedge sw0, 0:0:0);
+  endspecify
+
+endmodule
+
+module led_7_ ( input PADDO, output led7 );
+
+  ec2iobuf \led_pad[7] ( .I(PADDO), .PAD(led7));
+
+  specify
+    (PADDO => led7) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_6_ ( input PADDO, output led6 );
+
+  ec2iobuf \led_pad[6] ( .I(PADDO), .PAD(led6));
+
+  specify
+    (PADDO => led6) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_5_ ( input PADDO, output led5 );
+
+  ec2iobuf \led_pad[5] ( .I(PADDO), .PAD(led5));
+
+  specify
+    (PADDO => led5) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_4_ ( input PADDO, output led4 );
+
+  ec2iobuf \led_pad[4] ( .I(PADDO), .PAD(led4));
+
+  specify
+    (PADDO => led4) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_3_ ( input PADDO, output led3 );
+
+  ec2iobuf \led_pad[3] ( .I(PADDO), .PAD(led3));
+
+  specify
+    (PADDO => led3) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_2_ ( input PADDO, output led2 );
+
+  ec2iobuf \led_pad[2] ( .I(PADDO), .PAD(led2));
+
+  specify
+    (PADDO => led2) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_1_ ( input PADDO, output led1 );
+
+  ec2iobuf \led_pad[1] ( .I(PADDO), .PAD(led1));
+
+  specify
+    (PADDO => led1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module led_0_ ( input PADDO, output led0 );
+
+  ec2iobuf \led_pad[0] ( .I(PADDO), .PAD(led0));
+
+  specify
+    (PADDO => led0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module clk_25m ( output PADDI, input clk_25m );
+
+  ec2iobuf0002 clk_25m_pad( .Z(PADDI), .PAD(clk_25m));
+
+  specify
+    (clk_25m => PADDI) = (0:0:0,0:0:0);
+    $width (posedge clk_25m, 0:0:0);
+    $width (negedge clk_25m, 0:0:0);
+  endspecify
+
+endmodule
+
+module ec2iobuf0002 ( output Z, input PAD );
+
+  IB INST1( .I(PAD), .O(Z));
+endmodule
+
+module btn_center ( output PADDI, input btn_center );
+
+  ec2iobuf0001 btn_center_pad( .Z(PADDI), .PAD(btn_center));
+
+  specify
+    (btn_center => PADDI) = (0:0:0,0:0:0);
+    $width (posedge btn_center, 0:0:0);
+    $width (negedge btn_center, 0:0:0);
+  endspecify
+
+endmodule
+
+module btn_down ( output PADDI, input btn_down );
+
+  ec2iobuf0001 btn_down_pad( .Z(PADDI), .PAD(btn_down));
+
+  specify
+    (btn_down => PADDI) = (0:0:0,0:0:0);
+    $width (posedge btn_down, 0:0:0);
+    $width (negedge btn_down, 0:0:0);
+  endspecify
+
+endmodule
+
+module btn_up ( output PADDI, input btn_up );
+
+  ec2iobuf0001 btn_up_pad( .Z(PADDI), .PAD(btn_up));
+
+  specify
+    (btn_up => PADDI) = (0:0:0,0:0:0);
+    $width (posedge btn_up, 0:0:0);
+    $width (negedge btn_up, 0:0:0);
+  endspecify
+
+endmodule
+
+module btn_right ( output PADDI, input btn_right );
+
+  ec2iobuf0001 btn_right_pad( .Z(PADDI), .PAD(btn_right));
+
+  specify
+    (btn_right => PADDI) = (0:0:0,0:0:0);
+    $width (posedge btn_right, 0:0:0);
+    $width (negedge btn_right, 0:0:0);
+  endspecify
+
+endmodule

@@ -1,0 +1,5 @@
+# OOP
+
+Na ovom kolegiju ces nauciti svoj drugi programski jezik: Java. 
+
+Ovo je jedini predmet koji sam prenosio s prve godine. Nije toliko tezak samo sam ja bio puno ljen za raditi ista za njega tad. Predmet se Izmjenio dva puta od kada sam ga ja prvi puta polagao. Kada sam prvi put polagao predmet labosi su nosili 50%. Tjedan dana prije labosa dobio bi pripremu za labos. Labosi su bili online i sastojali su se od 2 dijeli: teorija i zadaci. Teoriju bi se naucilo napamet sa labosa od prijasnjih godina koje su studenti sakupili, a zadaci bi bili slicni onima sa pripreme, pa se uvijek isplatilo odraditi pripremu. Ne znam jel to jos tako funkcionira. Ispiti su bili na papiru, ali vise nisu. Sada se koliko ja znam pisu na laptopima i imaju autograder koji je katastrofalan. Ne gleda ti koliko si dobro napisao kod nego ti za svaku gresku ili proust u implementaciji zadatka skida dio bodova. Za ovaj predmet preporucam kontinuirano vjezbanje pisanja koda u Javi. Imas neke zadatke za vjezbu uz predavanja koji ti mogu doci kao dobra praksa za Javu.

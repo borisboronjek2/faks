@@ -1,0 +1,14 @@
+@P:  Worst Slack : -0.058
+@P:  count|clk_25m - Estimated Frequency : 197.7 MHz
+@P:  count|clk_25m - Requested Frequency : 200.0 MHz
+@P:  count|clk_25m - Estimated Period : 5.058
+@P:  count|clk_25m - Requested Period : 5.000
+@P:  count|clk_25m - Slack : -0.058
+@P:  debouncer|R_key_last_derived_clock - Estimated Frequency : 490.5 MHz
+@P:  debouncer|R_key_last_derived_clock - Requested Frequency : 200.0 MHz
+@P:  debouncer|R_key_last_derived_clock - Estimated Period : 2.039
+@P:  debouncer|R_key_last_derived_clock - Requested Period : 5.000
+@P:  debouncer|R_key_last_derived_clock - Slack : 5.923
+@P:  Total Area : 4.0
+@P:  Total Area : 0.0
+@P:  CPU Time : 0h:00m:01s

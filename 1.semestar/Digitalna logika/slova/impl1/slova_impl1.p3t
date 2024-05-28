@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "slova_impl1.log"
+-o "slova_impl1.csv"
+-pr "slova_impl1.prf"

@@ -1,0 +1,1 @@
+@W: MT529 :"c:\users\boris\lab48_ar\debouncer.vhd":21:1:21:2|Found inferred clock count|clk_25m which controls 34 sequential elements including I_debouncer.R_debounce_cnt[31:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
