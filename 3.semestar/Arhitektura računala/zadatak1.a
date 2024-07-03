@@ -1,0 +1,83 @@
+        ORG     0x0
+        
+        MOV SP, #0x3200 ;inicijalizacija stoga
+        MOV R0, #0X500 ;adresa podataka
+        MOV R9, #0X1000 ;adresa u koju upisujemo rezultate
+
+        MOV R11, #0x80
+        ADD R11,R11, #0x8000
+        ADD R11,R11, #0x800000
+        ADD R11,R11, #0x80000000 ;R11 = 0x80808080
+        MOV R10, #0XFF
+        ADD R10, R10, #0xFF00
+        ADD R10, R10, #0xFF0000
+        ADD R10, R10, #0xFF000000 ;R10 = 0xFFFFFFFF
+        
+        
+GLAVNI  LDR R1, [R0], #4
+        CMP R1, R11 ;provjeravamo jesmo li dosli do kraja podataka
+        BEQ KRAJ
+
+        LDR R2, [R0], #4 ;ucitavamo operande u   R2 i R3
+        LDR R3, [R0], #4
+
+        CMP R1, #0 ;skacemo u potrebnu operaciju
+        BEQ ZBROJI
+
+        CMP R1, #0b1
+        BEQ ODUZMI
+
+        CMP R1, #0b10
+        BEQ MNOZI
+
+        ;Djeljenje, nepotrebno provjeravati je li R1 = 3
+        STMFD SP!, {R2, R3} ;stavljamo argumente na stog
+        SUB   SP, SP, #4 ;mjesto za rezultat
+        BL DIJELI
+        LDR R4, [SP] ;ucitavamo rezultat sa stoga
+        ADD   SP, SP, #12 ;ciscenje stoga
+        STR R4, [R9], #4 ;upisujemo rezultat na potrebnu adresu i pomicemo registar za 4
+        BL GLAVNI
+
+ZBROJI  ADD R4, R2, R3
+        STR R4, [R9], #4
+        B GLAVNI
+
+ODUZMI  SUB R4, R2, R3
+        STR R4, [R9], #4
+        B GLAVNI
+
+MNOZI   MUL R4, R2, R3
+        STR R4, [R9], #4
+        B GLAVNI
+
+DIJELI  LDR   R5, [SP, #4]  ;ucitavamo prvi operand sa stoga u R5
+        LDR   R6, [SP, #8]  ;drugi operand u R6
+        MOV R7, #0 ;postavljamo brojac na 0
+        CMP R6, #0 ;provjeravamo je li djeljitelj = 0
+        BEQ KRAJ_FUN
+        
+        CMP R5, #0
+        MOVMI R8, #1;ako je r5 negativan stavljamo R8 u 1
+        CMP R6, #0
+        EORMI R8, R8, #1;ako je r8 negativan onda radimo R8 xor 1, R8 = 0 operandi su istog predznaka
+
+        ORRS R5, R5, R5;pretvaramo operande u poz. brojeve ako vec nisu
+        RSBMI R5, R5, #0
+
+        ORRS R6, R6, R6
+        RSBMI R6, R6, #0
+        
+
+PETLJA  SUBS R5, R5, R6 ;oduzimanje djeljitelja od djeljenika
+        ADDGE R7, R7, #1 ;ako je operacija uspjela, povecati rezultat za 1
+        BGE PETLJA ;povratak na pocetak petlje
+
+KRAJ_FUN 
+         CMP R8, #0
+         RSBNE R7, R7, #0;u slucaju da je R8 = 1, rezultat pretvaramo u negativni broj
+         STR R7, [SP] ;spremanje rezultata na stog
+         MOV PC, LR ;povratak u glavni dio 
+
+KRAJ    STR R10, [R9] ;0xFFFFFFFF na kraj
+        SWI 0X123456

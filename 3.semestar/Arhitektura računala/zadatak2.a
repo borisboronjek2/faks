@@ -1,0 +1,116 @@
+        ORG 0
+        B MAIN
+
+        ORG 0x18
+        B IRQ
+
+        ORG 0x1C
+
+BRZI    LDR R8, RTCADR
+        STR R9, [R8, #8]
+        MOV R9, #0
+        STR R9, [R8, #12]
+
+        SUBS PC, LR, #4
+
+MAIN    MSR CPSR, #0b11010010
+        MOV R13, #0x10000
+        MSR CPSR, #0b11010011
+        MOV R13, #0xFC00
+
+        MOV R0, #5
+        BL RTCIN
+        BL DMACIN
+
+        MRS R1, CPSR
+        BIC R1, R1, #0b11000000
+        MSR CPSR, R1
+
+        LDR R1, DMACADR
+
+        MRS R2, CPSR
+        BIC R2, R2, #0b11000000
+        MSR CPSR, R2
+
+LOOP    CMP R0, #0
+        BEQ END
+        MOV R2, #1 
+        STR R0, [R1, #0]
+
+RADI    CMP R5, #1
+        BNE RADI
+        MOV R5, #0
+        LDR R2, CITAJ
+        STR R2, [R1, #16]
+        LDR R2, PISI
+        STR R2, [R1, #20]
+        SUBS R0, R0, #1
+        B LOOP
+
+END     SWI 123456
+
+DMACADR DW 0x00FF0000
+RTCADR  DW 0xFFFF0E00
+KRAJ    DW 0x80808080
+
+CITAJ   DW 0x500
+PISI    DW 0x700
+
+        ORG 0x500
+        DW 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+
+        ORG 0x700
+        DW 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 
+
+        ORG 0x800
+
+RTCIN   STMFD SP!, {R0, R1}
+        LDR R0, RTCADR
+           
+        MOV R1, #3
+        STR R1, [R0, #4]
+        MOV R1, #1
+        STR R1, [R0, #16]
+        
+        LDMFD SP!, {R0, R1}
+        MOV PC, LR
+
+DMACIN  STMFD SP!, {R0, R1}
+        LDR R0, DMACADR
+        LDR R1, CITAJ
+        STR R1, [R0, #16]
+        LDR R1, PISI
+        STR R1, [R0, #20]
+        MOV R1, #0x000A
+        STR R1, [R0, #24]
+        MOV R1, #0b10101100
+        STR R1, [R0, #28]
+ 
+        LDMFD SP!, {R0, R1}
+        MOV PC, LR
+
+IRQ     STMFD SP!, {R0, R1, R2, LR}
+        LDR R0, DMACADR
+        LDR R1, KRAJ
+        LDR R2, [R0, #20]
+        STR R1, [R2, #0]
+        STR R0, [R0, #4]
+      
+        BL GOTOVO
+
+        LDMFD SP!, {R0, R1, R2, LR}
+        SUBS PC, LR, #4
+
+
+GOTOVO  MOV R5, #1
+        MOV PC, LR
+
+
+
+
+
+
+
+
+
+

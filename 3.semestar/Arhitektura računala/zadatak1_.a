@@ -1,0 +1,93 @@
+        ORG 0
+        B MAIN
+
+        ORG 0x18
+        B IRQ
+
+MAIN    MSR CPSR, #0b11010010
+        MOV R13, #0x10000
+        MSR CPSR, #0b11010011
+        MOV R13, #0xFC00
+
+        BL RTCIN
+        BL GPIOIN
+
+
+        MRS R0, CPSR
+        BIC R0, R0, #0b10000000
+        MSR CPSR, R0
+
+        LDR R1, GPIOADR
+        MOV R2, #0b00100000
+        STR R2, [R1, #0]
+
+RADI    B RADI
+
+        SWI 123456
+GPIOADR DW 0xFFFF0B00
+RTCADR  DW 0xFFFF0E00
+
+RTCIN   STMFD SP!, {R0, R1}
+        LDR R0, RTCADR
+
+        MOV R1, #5
+        STR R1, [R0, #4]
+
+        MOV R1, #0
+        STR R1, [R0, #12]
+
+        MOV R1, #1
+        STR R1, [R0, #16]
+
+        LDMFD SP!, {R0, R1}
+        MOV PC, LR
+
+GPIOIN  STMFD SP!, {R0, R1}
+        LDR R0, GPIOADR
+        MOV R1, #0b11100000
+        STR R1, [R0, #8]
+
+        LDMFD SP!, {R0, R1}
+        MOV PC, LR
+
+IRQ     STMFD SP!, {R0-R3}
+
+        LDR R0, RTCADR
+
+        LDR R2, GPIOADR
+        LDR R3, [R2, #0]
+
+        MOV R1, #1
+        STR R1, [R0, #8]
+
+        MOV R1, #0
+        STR R1, [R0, #12]
+
+        CMP R3, #0b01000000
+        BEQ STOP
+        CMP R3, #0b00100000
+        BEQ CEKAJ
+        CMP R3, #0b01100000
+        BEQ KRENI
+        CMP R3, #0b10000000
+        BEQ USPORI
+
+STOP    MOVEQ R3, #0b00100000
+        STREQ R3, [R2, #0]
+        BEQ END
+
+CEKAJ   MOVEQ R3, #0b01100000
+        STREQ R3, [R2, #0]
+        BEQ END
+
+
+KRENI   MOVEQ R3, #0b10000000
+        STREQ R3, [R2, #0]
+        BEQ END
+
+
+USPORI  MOVEQ R3, #0b01000000
+        STREQ R3, [R2, #0]
+
+END     LDMFD SP!, {R0-R3}
+        SUBS PC, LR, #4

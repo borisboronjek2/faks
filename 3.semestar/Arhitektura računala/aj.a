@@ -1,0 +1,64 @@
+ORG 0                   ; glavni program ovaj org I ne mora
+MOV SP, #0x10000        ; inicijalizacija stoga
+
+MOV R7, #0x1000 ; adresa bloka 1000
+STMFD SP!, {R7} ; spremanje parametra na stog
+
+BL OBRADI               ; poziv potprograma
+ADD SP, SP, #4  ; uklanjanje parametra
+
+KRAJ            SWI 123456 
+
+
+
+
+OBRADI  STMFD SP!, {R0, R1, R2, R3, LR} ; spremi kontekst i LR
+
+LDR R1, [SP,#20]        ; učitavanje parametra: R1=adresa bloka
+MOV R2, #0x100          ; brojač za petlju
+
+LDR R3, PODATAK         ; podatak za zamjenu 
+
+LOOP            LDR R0, [R1]            ; učitaj 32-bitni broj iz bloka
+
+STR R0, PARAM   ; pa ga stavi kao parametar iza naredbe BL
+
+BL PARITET              ; odredi paritet pomoću potprograma PARITET
+PARAM           DW 0                    ; mjesto za parametar    
+
+; brojeve s neparnim paritetom treba zamijeniti sa F0F0F0F0
+
+CMP R0, #1              ; ispitaj rezultat potprograma PARITET
+BNE DALJE
+ZAMIJENI        STR R3, [R1]    ; upiši novi podatak u blok              
+
+; umjesto BNE+STR može samo STREQ R3, [R1] 
+DALJE           ADD R1, R1, #4  ; pomak adrese u bloku
+SUBS R2, R2, #1 ; smanjenje brojača petlje
+BNE LOOP
+
+LDMFD SP!, {R0, R1, R2, R3, LR} ; obnova konteksta
+MOV PC, LR              ; povratak iz potprograma
+
+; podatak se ne može se izravno napisati u ALU-naredbama 
+PODATAK DW 0xF0F0F0F0
+
+PARITET STMFD SP!, {R1,R2}      ; spremi kontekst
+LDR R2, [LR], #4                ; učitaj parametar...
+; ...i pomakni povratnu adresu
+
+MOV R0, #0                      ; početna vrijednost brojača jedinica
+MOV R1, #32                     ; brojač za petlju
+
+LOOP2           MOVS    R2, R2, LSR #1  ; najniži bit u zastavicu C
+ADDCS   R0, R0, #1              ; C==1 --> povećaj brojač jedinica
+; može i bezuvjetno zbrajanje 
+; s prijenosom: ADC R0, R0, #0 
+
+SUBS R1, R1, #1         ; smanji brojač petlje i ponavljaj
+BNE LOOP2
+
+AND R0, R0, #1          ; pretvori brojač jedinica u rezultat
+
+LDMFD SP!, {R1,R2}      ; obnova konteksta i povratak
+MOV PC,LR
