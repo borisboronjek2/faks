@@ -1,0 +1,3 @@
+# SRS
+
+labosi su dosta lagani. prvi labos ti je napisati algoritam za enkripciju i dekripciju. drugi labos ti je napisati program koji preko terminala/cmda funkcionira kao login page. treci labos je simulacija napada na web stranicu. cetvrti labos je konfiguriranje firewalla. Problem kod ovog predmeta su pragovi na MI i ZI, ako ne uspijes skupit pragove, a blizu si praga idi na uvide uglavnom ces uspjeti izvuci nesto jer su ispiti uglavnom opisnog tipa.

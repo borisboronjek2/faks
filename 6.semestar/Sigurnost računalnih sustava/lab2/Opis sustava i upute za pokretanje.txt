@@ -1,0 +1,28 @@
+Opis sustava:
+Ova aplikacija omogućava upravljanje korisničkim imenima i lozinkama te prijavu korisnika putem naredbenog retka.
+
+Zaštitne mjere:
+1. Korištenje SHA-256 za sažimanje lozinki:
+   - Lozinke se sažimaju korištenjem SHA-256 algoritma prije pohrane, čime se osigurava jednosmjerni proces enkripcije.
+2. Korištenje soli uz lozinke:
+   - Svaki korisnik ima jedinstvenu sol koja se generira prilikom stvaranja računa, što dodatno otežava napade brute force ili rainbow tablicama.
+3. Kriptiranje podataka na odmoru:
+   - Koristi se AES-256 GCM za kriptiranje osjetljivih podataka u datoteci `flags.txt`.
+4. Zaštita od napada snimanja:
+   - Koristi se konzolni ulaz za unos lozinki kako bi se spriječilo snimanje lozinki tijekom unosa.
+   
+Upute za pokretanje:
+1. u CMD-u/powershellu/terminalu se postavljamo na direktorij gdje se nalazi kod
+2. upisati: javac Main.java
+3. pokrecemo kod sa argumentima:
+	opcije:
+	a) java Main usermgmt add <user>
+		Dodavanje novog korisničkog imena
+	b) java Main usermgmt passwd <user>
+		Promjenu lozinke postojećeg korisničkog imena
+	c) java Main usermgmt forcepass <user>
+		Forsiranje promjene lozinke korisničkog imena
+	d) java Main usermgmt dell <user>
+		Uklanjanje postojećeg korisničkog imena
+	e) java Main login <user>
+		Prijava korisnika u sustav

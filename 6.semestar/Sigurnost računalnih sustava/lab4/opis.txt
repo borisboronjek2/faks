@@ -1,0 +1,6 @@
+Prvo sam postavio početna pravila koja su osigurala da se sav promet osim onog koji je eksplicitno dopušten automatski odbacuje. Ovo uključuje pravila za prihvaćanje uspostavljenih veza, kao i pravila za dopuštanje određenih tipova prometa.
+Dopušten je pristup web poslužitelju na određenim TCP portovima (80 i 443) s bilo koje adrese.
+Konfigurirao sam pravila koja dopuštaju pristup DNS poslužitelju na određenim UDP i TCP portovima (53) s bilo koje adrese.
+Postavio sam pravila koja ograničavaju pristup SSH poslužitelju s određene adrese u lokalnoj mreži "Private".
+Ostala pravila uključuju dopuštanje pristupa određenim uslugama samo s određenih adresa ili prema određenim destinacijama, kao i zabranu pristupa određenim uslugama i mrežnim segmentima.
+Konačno, osigurao sam da su sva pravila postavljena u skladu s sigurnosnim zahtjevima sustava.

@@ -1,0 +1,18 @@
+Opis sustava:
+Sustav koristi AES-GCM protokol za enkripciju, osiguravajući integritet i povjerljivost podataka.
+Ključ za enkripciju se izvodi iz lozinke korištenjem PBKDF2WithHmacSHA512 funkcije uz dodatak salt-a.
+Prilikom svake enkripcije, generiraju se novi inicijalizacijski vektor (IV) i salt kako bi se osigurala jedinstvenost i sigurnost procesa enkripcije.
+Inicijalizacijski vektor (IV) i salt pohranjeni su u odvojenim datotekama radi kasnije upotrebe.
+Enkriptirani podaci su pohranjeni u datoteci data.txt.
+
+Upute za pokretanje:
+1. u CMD-u/powershellu/terminalu se postavljamo na direktorij gdje se nalazi kod
+2. upisati: javac Main.java
+3. pokrecemo kod sa argumentima:
+	opcije:
+	a) java Main init <masterPassword>
+		brisanje svih starih podataka, inicijalizacija glavne zaporke
+	b) java Main put <masterPassword> <address> <password>
+		dodavanje novog para (adresa,lozinka) ili promjena lozinke za postojeću adresu
+	c) java Main get <masterPassword> <address>
+		dohvacanje lozinke za odredenu adresu

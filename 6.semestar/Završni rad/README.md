@@ -1,0 +1,3 @@
+# ZAVRAD
+
+Ovisi o mentoru.
