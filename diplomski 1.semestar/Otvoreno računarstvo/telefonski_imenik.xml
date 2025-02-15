@@ -1,0 +1,42 @@
+<imenik>
+    <osoba>
+        <ime>Ante</ime>
+        <prezime>Antunović</prezime>
+        <brojeviTelefona>
+            <broj>
+                <brojTelefona>0911234567</brojTelefona>
+                <vrsta>privatni</vrsta>
+            </broj>
+            <broj>
+                <brojTelefona>0921234567</brojTelefona>
+                <vrsta>poslovni</vrsta>
+            </broj>
+        </brojeviTelefona>
+        <adresa>Selska cesta 12, Zagreb</adresa>
+        <email>ante.antunovic@gmail.com</email>
+    </osoba>
+    <osoba>
+        <ime>Ivo</ime>
+        <prezime>Ivić</prezime>
+        <brojeviTelefona>
+            <broj>
+                <brojTelefona>0977654321</brojTelefona>
+                <vrsta>privatni</vrsta>
+            </broj>
+        </brojeviTelefona>
+        <adresa>Ulica grada Vukovara 65, Zagreb</adresa>
+        <email>ivo.ivic@email.com</email>
+    </osoba>
+    <osoba>
+        <ime>Petar</ime>
+        <prezime>Petrović</prezime>
+        <brojeviTelefona>
+            <broj>
+                <brojTelefona>0987654321</brojTelefona>
+                <vrsta>poslovni</vrsta>
+            </broj>
+        </brojeviTelefona>
+        <adresa>Savska cesta 7, Zagreb</adresa>
+        <email>petar.petrovic@email.com</email>
+    </osoba>
+</imenik>

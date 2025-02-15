@@ -1,0 +1,133 @@
+Backend:
+
+const express = require('express');
+const cors = require('cors');
+const axios = require('axios');
+const fs = require('fs');
+
+const app = express();
+const PORT = 3000;
+
+app.use(cors());
+app.use(express.json());
+
+const LOCATIONS_API = 'https://example.com/api/locations';
+const AVAILABILITY_API = 'https://example.com/api/availability';
+
+app.get('/api/slobodna-mjesta', async (req, res) => {
+    const { grad, datum } = req.query;
+    
+    if (!grad || !datum) {
+        return res.status(400).json({ error: 'Grad i datum su obavezni parametri.' });
+    }
+
+    try {
+        const lokacijeResponse = await axios.get(`${LOCATIONS_API}?grad=${grad}`);
+        const lokacije = lokacijeResponse.data;
+
+        const slobodnaMjestaPromises = lokacije.map(async (lokacija) => {
+            const dostupnostResponse = await axios.get(`${AVAILABILITY_API}?lokacija=${lokacija}&datum=${datum}`);
+            return { lokacija, slobodnaMjesta: dostupnostResponse.data.slobodnaMjesta };
+        });
+
+        const rezultati = await Promise.all(slobodnaMjestaPromises);
+        res.json(rezultati);
+    } catch (error) {
+        res.status(500).json({ error: 'Greška pri dohvaćanju podataka.' });
+    }
+});
+
+app.get('/api/preuzmi-podatke', async (req, res) => {
+    const { grad, datum } = req.query;
+    
+    if (!grad || !datum) {
+        return res.status(400).json({ error: 'Grad i datum su obavezni parametri.' });
+    }
+
+    try {
+        const lokacijeResponse = await axios.get(`${LOCATIONS_API}?grad=${grad}`);
+        const lokacije = lokacijeResponse.data;
+
+        const slobodnaMjestaPromises = lokacije.map(async (lokacija) => {
+            const dostupnostResponse = await axios.get(`${AVAILABILITY_API}?lokacija=${lokacija}&datum=${datum}`);
+            return { lokacija, slobodnaMjesta: dostupnostResponse.data.slobodnaMjesta };
+        });
+
+        const rezultati = await Promise.all(slobodnaMjestaPromises);
+        
+        const filePath = `./slobodna_mjesta_${grad}_${datum}.json`;
+        fs.writeFileSync(filePath, JSON.stringify(rezultati, null, 2));
+
+        res.download(filePath, (err) => {
+            if (err) {
+                res.status(500).json({ error: 'Greška pri preuzimanju podataka.' });
+            }
+            fs.unlinkSync(filePath);
+        });
+    } catch (error) {
+        res.status(500).json({ error: 'Greška pri dohvaćanju podataka.' });
+    }
+});
+
+app.listen(PORT, () => {
+    console.log(`Server pokrenut na http://localhost:${PORT}`);
+});
+
+Frontend:
+
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slobodna Mjesta</title>
+</head>
+<body>
+    <form id="searchForm">
+        <input type="text" id="grad" placeholder="Unesite grad" required>
+        <input type="date" id="datum" required>
+        <button type="submit">Pretraži</button>
+	<button id="preuzmi">Preuzmi podatke</button>
+    </form>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Lokacija</th>
+                <th>Slobodna mjesta</th>
+            </tr>
+        </thead>
+        <tbody id="rezultati"></tbody>
+    </table>
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const grad = document.getElementById('grad').value;
+            const datum = document.getElementById('datum').value;
+
+            const response = await fetch(`http://localhost:3000/api/slobodna-mjesta?grad=${grad}&datum=${datum}`);
+            const data = await response.json();
+
+            const tbody = document.getElementById('rezultati');
+            tbody.innerHTML = '';
+            data.forEach(item => {
+                const row = `<tr><td>${item.lokacija}</td><td>${item.slobodnaMjesta}</td></tr>`;
+                tbody.innerHTML += row;
+            });
+        });
+
+	document.getElementById('preuzmi').addEventListener('click', async function() {
+        	const grad = document.getElementById('grad').value;
+        	const datum = document.getElementById('datum').value;
+
+	        if (!grad || !datum) {
+        	    alert('Molimo unesite grad i datum.');
+            	return;
+        	}
+
+        	window.location.href = `http://localhost:3000/api/preuzmi-podatke?grad=${grad}&datum=${datum}`;
+    	});
+    </script>
+</body>
+</html>

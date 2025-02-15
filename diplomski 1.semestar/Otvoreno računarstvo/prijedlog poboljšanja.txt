@@ -1,0 +1,17 @@
+JUCE je framework otvorenog koda za C++ koji se koristi za razvoj multiplatformskih aplikacija i softvera, s posebnim fokusom na audioprogramiranje i glazbenu tehnologiju.
+
+za ovaj projekt možemo prijaviti pogreške i prijedloge unapređenja na nekoliko načina:
+
+1. JUCE forum:
+	1. potrebno se je prijaviti na stranici https://forum.juce.com/
+	2. pritisnemo na + New Topic, te nam se pokaže prozor za stvaranje diskusije
+	3. u tom prozoru se nalaze 3 polja: naslov nove diskusije, kategorija i polje gdje možemo napisati opis problema/poboljšanja
+	4. nakon ispunjavanja ovih polja pritisnemo na + Create Topic i čekamo odgovor/rješenje developera
+	komentar: čitanjem po forumu developeri JUCE frameworka češće odgovaraju i prate diskusije otvorene na forumu nego issue-e poslane na github
+2. Github:
+	1. potrebno je prijaviti se na github i otvoriti repozitorij JUCE frameworka na stranici https://github.com/juce-framework/JUCE
+	2. pritisnemo na issues -> new issue
+	3. dobivamo prikaz sa odabirom bug report, JUCE support, feature request. za pogrešku biramo bug report, a za prijedlog unapređenja feature requests
+		-> pritiskom na bug report dobivamo obrazac za prijavljivanje pogrešaka na kojem se nalaze polja: Title, Detailed steps on how to produce the bug, What is the expected behaviour, Operating Systems, What versions of operationg systems, architectures, Plug-in formats (if applicable), Plug-in host applications (DAWs) (if applicable) i Testing on the develop branch. Kada popunimo ova polja pritisnemo na create i time smo napravili našu prijavu pogreške.
+		-> pritiskom na feature request budemo preusmjereni na stranicu za forum za koju je gore opisan postupak prijave pogreške/prijedloga unapređenja
+	komentar: ako imamo nekakvo rješenje za prijavljeni problem/prijedlog poboljšanja možemo otvoriti pull request pomoću kojeg možemo implementirati svoje rješenje te poslati na pregled te ako je rješenje prihvaćeno bit će dodano u projekt

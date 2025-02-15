@@ -1,0 +1,10 @@
+Grad Bjelovar - Razina 0
+	svi upiti se vrše POST metodom, ali postoje dodatne QUERY i FILTER metode za pretragu i filtriranje što bi moglo dati veću razinu zrelosti API-ja.
+	Naime ne postoji poseban URI za svaki resurs, te time ovaj API ne zadovalja razinu 1, te ostaje na razini 0.
+
+Copernicus OData - Razina 3 -> krivo -> razina 1
+	ovaj API koristi više različitih URI-ja za resurse, te u odgovorima nam daje URI-je za navigiranje između rezličitih resursa/stanja aplikacije
+
+Kvaliteta zraka - Razina 1
+	svaki resurs ima svoj uri koliko sam skužio.
+	nigdje se ne spominje korištenje metoda, pa pretpostavljam da se koristi samo GET i POST i time ne može biti razina veća od 1

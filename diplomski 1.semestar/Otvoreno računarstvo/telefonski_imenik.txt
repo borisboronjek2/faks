@@ -1,0 +1,7 @@
+JSON validator: https://jsonlint.com/
+XML validator: https://www.xmlvalidation.com/
+
+tri greske:
+1. kod pisanja xml-a sam napravio gresku pri postavljanju hijerarhije za brojeve telefona
+2. nisam napisao pocetnu i zavrsnu uglatu zagradu u JSON fileu {}
+3. zaboravio sam koristiti uglaste zagrade za JSON

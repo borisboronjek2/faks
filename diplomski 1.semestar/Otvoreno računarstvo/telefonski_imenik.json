@@ -1,0 +1,46 @@
+{ 
+ "imenik": {
+        "osobe": [
+            {
+                "ime": "Ante",
+                "prezime": "Antunović",
+                "brojeviTelefona": [
+                    {
+                        "brojTelefona": "0911234567",
+                        "vrsta": "privatni"
+                    },
+                    {
+                        "brojTelefona": "0921234567",
+                        "vrsta": "poslovni"
+                    }
+                ],
+                "adresa": "Selska cesta 12, Zagreb",
+                "email": "ante.antunovic@gmail.com"
+            },
+            {
+                "ime": "Ivo",
+                "prezime": "Ivić",
+                "brojeviTelefona": [
+                    {
+                        "brojTelefona": "0977654321",
+                        "vrsta": "privatni"
+                    }
+                ],
+                "adresa": "Ulica grada Vukovara 65, Zagreb",
+                "email": "ivo.ivic@email.com"
+            },
+            {
+                "ime": "Petar",
+                "prezime": "Petrović",
+                "brojeviTelefona": [
+                    {
+                        "brojTelefona": "0987654321",
+                        "vrsta": "poslovni"
+                    }
+                ],
+                "adresa": "Savska cesta 7, Zagreb",
+                "email": "petar.petrovic@email.com"
+            }
+        ]
+    }
+}
