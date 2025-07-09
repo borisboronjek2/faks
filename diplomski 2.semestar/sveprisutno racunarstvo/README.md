@@ -1,4 +1,4 @@
-# SVERAC
+# SVERAC - obavezni
 
 Ovo ti je jedini ozbiljan predmet na prvoj godini RI smjera.
 
@@ -13,3 +13,11 @@ ZI nosi 25 bodova od cega su 10 teorija, a 15 zadaci. Vrijede savjeti isti kao i
 Sudjelovanje u nastavi nosi 15 bodova. imaš dvije zadaće od kuće koje se brzo daju napraviti i budu nenajavljeni blicevi na predavanju koji te tjeraju da kontinuirano ucis ako ides na predavanje.
 
 Usmeni nosi 15bodova kontinuirano i nema prag. Na rokovima je druga prica. Tamo usmeni nosi 20bodova s pragom od 50%. Nisam isao pa ne znam kako je.
+
+Ocjena: 3
+Bodovanje:
+    sudjelovanje: 8.2/15b
+    Labosi: 25/25b
+    MI: 15.5/20b
+    ZI: 12.55/25b
+    Usmeni: N/A

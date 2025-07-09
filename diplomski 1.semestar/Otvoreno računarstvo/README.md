@@ -1,4 +1,4 @@
-# OR
+# OR - jezgreni
 
 Upisi bolje paralelizam i konkurentnost
 
@@ -15,3 +15,11 @@ na usmeni nisam iso pa nemam komentara
 nebi preporucio ovaj predmet jer je prevelika obaveza za nekog ko je zaposlen i jer su ispiti odvratni za ucenje iako nije tezak predmet
 
 link na github s mojim labosom (gledaj releasove za svaki pojedincani ak te zanima): [labosi](https://github.com/borisboronjek2/HrvatskiGradovi).
+
+Ocjena: 4
+Bodovanje:
+    predavanja: 17.2/20b
+    Labosi: 23/25b
+    MI: 13.25/20b
+    ZI: 17.25/25b
+    Usmeni: N/A

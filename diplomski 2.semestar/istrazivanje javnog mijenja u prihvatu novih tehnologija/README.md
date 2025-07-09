@@ -1,4 +1,4 @@
-# IJMUPNT
+# IJMUPNT - transverzalni
 
 Transverzalni - free
 
@@ -9,3 +9,9 @@ MI se nauci tak da prodes kroz one pitalice na memoruzo sto je neko pripremio na
 ZI se vald vec godinama ponavlja pa za to potencijalno ne moras ni ucit jer imas slikano od prije.
 
 Najlaksi transferzalni do sad.
+
+Ocjena: 5
+Bodovanje:
+    Anketa: 27/30b
+    MI: 27/35b
+    ZI: 32/35b

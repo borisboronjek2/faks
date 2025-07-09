@@ -1,4 +1,4 @@
-# PPKS
+# PPKS - izborni
 
 Predmet je ove godine malo promjenjen u odnosu na prethodne. Prvi ciklus se promjenio iz nekog uvoda u python u neki predemt o signalima, sta ja znam. Drugi ciklus je ostao isti -> WebDevelopment. Također zbog promjena na predmetu ove godine su uveli mogucnost polaganja predmeta preko projekta.
 
@@ -11,3 +11,7 @@ Sad ne znam kako je bilo ovima na klasicnom polaganju, al mislim da im je isto b
 Mislim da ne mozes pogrijesti s upisom ovog predmeta bez obzira na nacin polaganja koji odaberes.
 
 Link na github projekta: [projekt](https://github.com/borisboronjek2/PPKS).
+
+Ocjena: 5
+Bodovanje:
+    Projekt: 91/100b

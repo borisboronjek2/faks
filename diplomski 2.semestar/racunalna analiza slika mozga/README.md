@@ -1,4 +1,4 @@
-# RASM
+# RASM - izborni
 
 Sta reci o ovom predmetu. Moze biti ili najlaksi prolaz ikad ili najnaporniji predmet u semestru.
 
@@ -7,3 +7,11 @@ Bude 5 labosa koji se odraduju na faklutetu u obliku kratkih provjera znanja na 
 MI nam se 90% ponovio od prosle godine pa je bilo lagano, a ZI nismo imali slikano od prije nego samo sto se pisalo po discordu(po tome sto je bilo na ZI i sto je bilo na discordu vjerujem da se i ZI ponovio).
 
 Da nismo imali stara pitanja ovaj predmet bi bio uzasan za uciti. Ako vjerujes da ce ostati isto ko ove godine upisi.
+
+Ocjena: 3
+Bodovanje:
+    Labosi: 27.6/30b
+    MI: 22/25b
+    ZI: 16/35b
+    Bonus bodovi: N/A
+    Usmeni: N/A

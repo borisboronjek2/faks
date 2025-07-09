@@ -1,4 +1,4 @@
-# PROAGE
+# PROAGE - izborni profila
 
 Divan predmet koji ima hrpu komponenti.
 
@@ -13,3 +13,12 @@ Na predmetu se također prati dolaznost. To nosi 5 bodova i nema prag tako da ni
 Zadnja komponenta predmeta je usmeni koji je dosta opusten. Pitaju ugl pitanja sa ZI i nesto malo dodatno, al to budu neka osnovna pitanja o agentima(npr. svojstva agenata). Usmeni nosi 15 bodova sa pragom od 5 bodova. Niko nije pao na usmenom ko je izaso.
 
 Jos jedna dodatna stvar. Predmet ima prag za prolaz 55 za razliku od vecine predmeta, ali stvarno nije tesko za skupiti.
+
+Ocjena: 5
+Bodovanje:
+    predavanja: 5/5b
+    seminar: 19/20b
+    Labosi: 28.5/30b
+    MI: 8.5/15b
+    ZI: 9.5/15b
+    Usmeni: 15/15b
