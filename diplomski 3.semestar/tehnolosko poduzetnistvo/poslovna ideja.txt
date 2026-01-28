@@ -1,0 +1,5 @@
+Nedjeljnik - sustav za optimizaciju rasporeda radnih nedjelja
+
+Nedjeljnik je pametni sustav za optimizaciju radnih nedjelja namijenjen velikim trgovačkim lancima. Uz pretplatu, trgovci dostavljaju podatke o prometu i zaradi, 
+a sustav automatski generira raspored koji povećava zaradu, učinkovitost i zadovoljstvo kupaca. Klijenti se mogu uključiti i u zajedničku mrežu svih trgovaca, gdje se rasporedi kreiraju 
+na temelju šire baze podataka, što omogućuje preciznije planiranje i bolju usklađenost ponude s potražnjom. Nedjeljnik donosi pametnije, pravednije i profitabilnije raspoređivanje radnih nedjelja bez dodatnog truda trgovca.
